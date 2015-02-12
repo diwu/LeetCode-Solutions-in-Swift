@@ -40,7 +40,7 @@ func twoSum(numbers: Array<Int>, target: Int) -> Array<Int> {
 }
 
 // test cases
-twoSum([2, 7, 11, 15], 9)
-twoSum([5, 5], 10)
+twoSum([2, 7, 11, 15], 9)   //[1, 2]
+twoSum([5, 5], 10)          //[1, 2]
 
 
