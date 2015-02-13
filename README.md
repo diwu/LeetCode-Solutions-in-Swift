@@ -5,4 +5,5 @@
 ###All solutions are tested in the Playgournd of Xcode 6.3 Beta with Swift 1.2
 
 ### 1. Medium - [Two Sum](https://oj.leetcode.com/problems/two-sum/) 
+### 2. Medium - [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) 
 
