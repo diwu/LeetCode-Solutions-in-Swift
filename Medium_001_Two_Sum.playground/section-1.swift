@@ -28,7 +28,7 @@ func twoSum(numbers: Array<Int>, target: Int) -> Array<Int> {
 
     for i in 0..<numbers.count {
         var numberToFind: Int = target - numbers[i]
-        if let numberToFindIndex = hashMap[numberToFind]? {
+        if let numberToFindIndex = hashMap[numberToFind] {
             result.append(numberToFindIndex + 1)
             result.append(i + 1)
             return result
