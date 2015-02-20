@@ -3,7 +3,7 @@
 
 ## LeetCode Solutions in Swift
 ###All solutions are tested in Xcode 6.3 Beta with Swift 1.2
-### Progress: 6 / 179 = 3.4%
+### Progress: 7 / 179 = 3.9%
 
 1. Medium - [Two Sum](https://oj.leetcode.com/problems/two-sum/) 
 2. Medium - [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) 
@@ -11,4 +11,4 @@
 4. Hard - [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)
 5. Medium - [Longest Palindromic Substring](https://oj.leetcode.com/problems/longest-palindromic-substring/)
 6. Easy - [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/)
-
+7. Easy - [Reverse Integer ](https://oj.leetcode.com/problems/reverse-integer/)
