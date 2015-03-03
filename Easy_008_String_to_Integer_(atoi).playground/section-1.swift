@@ -35,57 +35,35 @@ extension String {
     }
 }
 
-extension String.UTF8View {
-    subscript (index: Int) -> UTF8.CodeUnit {
-        return self[advance(self.startIndex, index)]
-    }
-}
-
 func atoi(str: String) -> Int {
-    var sign: Bool = true   // positive by default
-    var base: Int = 0, i: Int = 0
-    while str[i] == " " {
-        i++
-    }
-    if str[i] == "-" {
-        sign = false
-        i++
-    } else if str[i] == "+" {
-        sign = true
-        i++
-    }
-
-    var zero: Int = Int(String("0").utf8[0])
-    var nine: Int = Int(String("9").utf8[0])
-
-    var len: Int = count(str)
-    var tmp: Int = Int(str.utf8[i])
-
-    while tmp >= zero && tmp <= nine {
-        if base > Int.max/10 || (base == Int.max/10 && tmp > zero + 7) {
-            if sign {
-                return Int.max
-            } else {
-                return Int.min
+    var i: Int = 0, sign: Bool = true, len: Int = count(str), base: Int = 0
+    for j in 0..<len {
+        if str[j] == " " || str[j] == "+" {
+            continue
+        } else if str[j] == "-" {
+            sign = false
+            continue
+        } else {
+            if let integerValue = String(str[j]).toInt() {
+                if integerValue >= 0 && integerValue <= 9 {
+                    if base > Int.max/10 || (base == Int.max/10 && integerValue > 7) {
+                        if sign {
+                            return Int.max
+                        } else {
+                            return Int.min
+                        }
+                    }
+                    base = integerValue + 10 * base
+                }
             }
         }
-        base = tmp - zero + 10 * base
-        ++i
-        if i < len {
-            tmp = Int(str.utf8[i])
-        } else {
-            break
-        }
     }
-
     if sign {
         return base
     } else {
         return 0 - base
     }
 }
-
-"123"
 
 atoi("123")                     //123
 atoi("     123")                //123
