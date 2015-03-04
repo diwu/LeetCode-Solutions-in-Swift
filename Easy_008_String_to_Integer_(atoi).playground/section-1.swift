@@ -38,23 +38,24 @@ extension String {
 func atoi(str: String) -> Int {
     var i: Int = 0, sign: Bool = true, len: Int = count(str), base: Int = 0
     for j in 0..<len {
+        var zeroString: String = String("0")
+        var zeroValue: Int = Int(zeroString.utf8[zeroString.utf8.startIndex])
         if str[j] == " " || str[j] == "+" {
             continue
         } else if str[j] == "-" {
             sign = false
             continue
         } else {
-            if let integerValue = String(str[j]).toInt() {
-                if integerValue >= 0 && integerValue <= 9 {
-                    if base > Int.max/10 || (base == Int.max/10 && integerValue > 7) {
-                        if sign {
-                            return Int.max
-                        } else {
-                            return Int.min
-                        }
+            var integerValue: Int = Int(str.utf8[advance(str.utf8.startIndex, j)]) - zeroValue
+            if integerValue >= 0 && integerValue <= 9 {
+                if base > Int.max/10 || (base == Int.max/10 && integerValue > 7) {
+                    if sign {
+                        return Int.max
+                    } else {
+                        return Int.min
                     }
-                    base = integerValue + 10 * base
                 }
+                base = integerValue + 10 * base
             }
         }
     }
