@@ -3,7 +3,7 @@
 
 ## LeetCode Solutions in Swift
 ###All solutions are tested in Xcode 6.3 Beta with Swift 1.2
-### Progress: 9 / 180 = 5.0%
+### Progress: 10 / 180 = 5.6%
 
 1. Medium - [Two Sum](https://oj.leetcode.com/problems/two-sum/) 
 2. Medium - [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) 
@@ -14,3 +14,4 @@
 7. Easy - [Reverse Integer ](https://oj.leetcode.com/problems/reverse-integer/)
 8. Easy - [String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/)
 9. Easy - [Palindrome Number](https://oj.leetcode.com/problems/palindrome-number/)
+10. Hard - [Regular Expression Matching](https://oj.leetcode.com/problems/regular-expression-matching/)
