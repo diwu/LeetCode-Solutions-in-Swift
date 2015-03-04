@@ -35,6 +35,7 @@ extension String {
     }
 }
 
+// O (N)
 func atoi(str: String) -> Int {
     var i: Int = 0, sign: Bool = true, len: Int = count(str), base: Int = 0
     for j in 0..<len {
