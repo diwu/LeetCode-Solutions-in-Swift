@@ -77,6 +77,9 @@
 		50A7F7D31AA9970700F84E86 /* Solutions */ = {
 			isa = PBXGroup;
 			children = (
+				50A7F7F81AA9992600F84E86 /* Hard */,
+				50A7F7F71AA9992000F84E86 /* Medium */,
+				50A7F7F61AA9991100F84E86 /* Easy */,
 				50A7F7D61AA9970700F84E86 /* AppDelegate.swift */,
 				50A7F7D81AA9970700F84E86 /* ViewController.swift */,
 				50A7F7DA1AA9970700F84E86 /* Main.storyboard */,
@@ -110,6 +113,27 @@
 				50A7F7EB1AA9970700F84E86 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50A7F7F61AA9991100F84E86 /* Easy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Easy;
+			sourceTree = "<group>";
+		};
+		50A7F7F71AA9992000F84E86 /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Medium;
+			sourceTree = "<group>";
+		};
+		50A7F7F81AA9992600F84E86 /* Hard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Hard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
