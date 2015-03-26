@@ -18,6 +18,9 @@
 		50A7F8031AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F8021AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift */; };
 		50A7F8041AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F8021AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift */; };
 		50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F8051AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift */; };
+		91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91394F341AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift */; };
+		91394F361AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91394F341AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift */; };
+		91394F381AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91394F371AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		50A7F7FF1AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_006_ZigZag_Conversion_Test.swift; path = Easy/Easy_006_ZigZag_Conversion_Test.swift; sourceTree = "<group>"; };
 		50A7F8021AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_001_Two_Sum.swift; path = Medium/Medium_001_Two_Sum.swift; sourceTree = "<group>"; };
 		50A7F8051AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_001_Two_Sum_Test.swift; path = Medium/Medium_001_Two_Sum_Test.swift; sourceTree = "<group>"; };
+		91394F341AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_002_Add_Two_Numbers.swift; path = Medium/Medium_002_Add_Two_Numbers.swift; sourceTree = "<group>"; };
+		91394F371AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_002_Add_Two_Numbers_Test.swift; path = Medium/Medium_002_Add_Two_Numbers_Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				50A7F8021AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift */,
+				91394F341AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				50A7F8051AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift */,
+				91394F371AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -271,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
 				50A7F8031AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
 				50A7F7FA1AA999C900F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
@@ -282,10 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91394F361AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				50A7F8011AA99E5100F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
 				50A7F8001AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift in Sources */,
 				50A7F8041AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
+				91394F381AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +483,7 @@
 				50A7F7F21AA9970700F84E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50A7F7F31AA9970700F84E86 /* Build configuration list for PBXNativeTarget "SolutionsTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +492,7 @@
 				50A7F7F51AA9970700F84E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
