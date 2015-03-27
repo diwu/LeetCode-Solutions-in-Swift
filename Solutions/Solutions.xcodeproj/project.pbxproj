@@ -24,6 +24,9 @@
 		91492D581AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */; };
 		91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */; };
 		91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5A1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift */; };
+		91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */; };
+		91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */; };
+		91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5F1AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift */; };
 		91A29F161AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A29F151AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift */; };
 		91A29F171AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A29F151AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift */; };
 		91AE3A011AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A001AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift */; };
@@ -63,6 +66,8 @@
 		91394F371AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_002_Add_Two_Numbers_Test.swift; path = Medium/Medium_002_Add_Two_Numbers_Test.swift; sourceTree = "<group>"; };
 		91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_007_Reverse_Integer.swift; path = Easy/Easy_007_Reverse_Integer.swift; sourceTree = "<group>"; };
 		91492D5A1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_007_Reverse_Integer_Test.swift; path = Easy/Easy_007_Reverse_Integer_Test.swift; sourceTree = "<group>"; };
+		91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Easy_008_String_to_Integer_(atoi).swift"; path = "Easy/Easy_008_String_to_Integer_(atoi).swift"; sourceTree = "<group>"; };
+		91492D5F1AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_008_String_to_Integer_atoi_Test.swift; path = Easy/Easy_008_String_to_Integer_atoi_Test.swift; sourceTree = "<group>"; };
 		91A29F151AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_003_Longest_Substring_Without_Repeating_Characters.swift; path = Medium/Medium_003_Longest_Substring_Without_Repeating_Characters.swift; sourceTree = "<group>"; };
 		91AE3A001AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift; path = Medium/Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift; sourceTree = "<group>"; };
 		91AE3A021AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_004_Median_Of_Two_Sorted_Arrays.swift; path = Hard/Hard_004_Median_Of_Two_Sorted_Arrays.swift; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 			children = (
 				50A7F7F91AA999C900F84E86 /* Easy_006_ZigZag_Conversion.swift */,
 				91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */,
+				91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 			children = (
 				50A7F7FF1AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift */,
 				91492D5A1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift */,
+				91492D5F1AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -309,6 +316,7 @@
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
 				91AE3A091AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
+				91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */,
 				91492D581AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				50A7F8031AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
 				91AE3A031AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */,
@@ -330,11 +338,13 @@
 				91A29F171AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
 				91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
+				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */,
 				91AE3A011AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift in Sources */,
 				50A7F8001AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift in Sources */,
 				50A7F8041AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
 				91AE3A0A1AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
 				91AE3A0D1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift in Sources */,
+				91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */,
 				91394F381AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
