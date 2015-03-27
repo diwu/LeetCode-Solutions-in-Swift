@@ -24,6 +24,9 @@
 		91A29F161AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A29F151AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift */; };
 		91A29F171AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A29F151AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift */; };
 		91AE3A011AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A001AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift */; };
+		91AE3A031AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A021AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift */; };
+		91AE3A041AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A021AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift */; };
+		91AE3A071AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A051AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 		91394F371AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_002_Add_Two_Numbers_Test.swift; path = Medium/Medium_002_Add_Two_Numbers_Test.swift; sourceTree = "<group>"; };
 		91A29F151AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_003_Longest_Substring_Without_Repeating_Characters.swift; path = Medium/Medium_003_Longest_Substring_Without_Repeating_Characters.swift; sourceTree = "<group>"; };
 		91AE3A001AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift; path = Medium/Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift; sourceTree = "<group>"; };
+		91AE3A021AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_004_Median_Of_Two_Sorted_Arrays.swift; path = Hard/Hard_004_Median_Of_Two_Sorted_Arrays.swift; sourceTree = "<group>"; };
+		91AE3A051AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift; path = Hard/Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 		50A7F7F81AA9992600F84E86 /* Hard */ = {
 			isa = PBXGroup;
 			children = (
+				91AE3A021AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 		50A7F7FD1AA99B2900F84E86 /* Hard */ = {
 			isa = PBXGroup;
 			children = (
+				91AE3A051AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -288,6 +295,7 @@
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
 				50A7F8031AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
+				91AE3A031AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */,
 				50A7F7FA1AA999C900F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
 				91A29F161AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
 				50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */,
@@ -298,6 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AE3A071AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift in Sources */,
+				91AE3A041AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */,
 				91394F361AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				50A7F8011AA99E5100F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
