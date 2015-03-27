@@ -25,7 +25,7 @@ Inspired by @dylan_yu at https://oj.leetcode.com/discuss/10493/easy-to-understan
 */
 
 // Helper
-extension String {
+private extension String {
     subscript (index: Int) -> Character {
         return self[advance(self.startIndex, index)]
     }
