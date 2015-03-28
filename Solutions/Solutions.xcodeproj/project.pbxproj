@@ -24,8 +24,8 @@
 		91492D581AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */; };
 		91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */; };
 		91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5A1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift */; };
-		91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */; };
-		91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */; };
+		91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift */; };
+		91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift */; };
 		91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D5F1AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift */; };
 		91492D621AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D611AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift */; };
 		91492D631AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91492D611AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift */; };
@@ -72,7 +72,7 @@
 		91394F371AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_002_Add_Two_Numbers_Test.swift; path = Medium/Medium_002_Add_Two_Numbers_Test.swift; sourceTree = "<group>"; };
 		91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_007_Reverse_Integer.swift; path = Easy/Easy_007_Reverse_Integer.swift; sourceTree = "<group>"; };
 		91492D5A1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_007_Reverse_Integer_Test.swift; path = Easy/Easy_007_Reverse_Integer_Test.swift; sourceTree = "<group>"; };
-		91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Easy_008_String_to_Integer_(atoi).swift"; path = "Easy/Easy_008_String_to_Integer_(atoi).swift"; sourceTree = "<group>"; };
+		91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_008_String_to_Integer_atoi.swift; path = Easy/Easy_008_String_to_Integer_atoi.swift; sourceTree = "<group>"; };
 		91492D5F1AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_008_String_to_Integer_atoi_Test.swift; path = Easy/Easy_008_String_to_Integer_atoi_Test.swift; sourceTree = "<group>"; };
 		91492D611AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_009_Palindrome_Number.swift; path = Easy/Easy_009_Palindrome_Number.swift; sourceTree = "<group>"; };
 		91492D641AC58D4200D3A514 /* Easy_009_Palindrome_Number_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_009_Palindrome_Number_Test.swift; path = Easy/Easy_009_Palindrome_Number_Test.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			children = (
 				50A7F7F91AA999C900F84E86 /* Easy_006_ZigZag_Conversion.swift */,
 				91492D571AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift */,
-				91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift */,
+				91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift */,
 				91492D611AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift */,
 			);
 			name = Easy;
@@ -330,7 +330,7 @@
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
 				91AE3A091AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
-				91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */,
+				91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				91492D581AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				50A7F8031AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
 				91492D671AC58F6000D3A514 /* Hard_010_Regular_Expression_Matching.swift in Sources */,
@@ -357,7 +357,7 @@
 				91A29F171AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
 				91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
-				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_(atoi).swift in Sources */,
+				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				91AE3A011AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift in Sources */,
 				50A7F8001AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift in Sources */,
 				50A7F8041AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
