@@ -2,8 +2,8 @@
 
 
 ## LeetCode Solutions in Swift
-###All solutions are tested in Xcode 6.3 Beta with Swift 1.2
-### Progress: 10 / 180 = 5.6%
+###All solutions are tested in Xcode 6.3 Beta 4 (Build: 6D554n) with Swift 1.2
+### Progress: 10 / 182 = 5.5%
 
 1. Medium - [Two Sum](https://oj.leetcode.com/problems/two-sum/) 
 2. Medium - [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) 
