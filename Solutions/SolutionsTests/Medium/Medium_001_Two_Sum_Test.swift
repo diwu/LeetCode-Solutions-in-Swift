@@ -20,3 +20,8 @@ class Medium_001_Two_Sum_Test: XCTestCase {
         XCTAssert(arr1 == arr2, "Medium_001_Two_Sum_Test #2")
     }
 }
+
+/*
+twoSum([2, 7, 11, 15], 9)   //[1, 2]
+twoSum([5, 5], 10)          //[1, 2]
+*/

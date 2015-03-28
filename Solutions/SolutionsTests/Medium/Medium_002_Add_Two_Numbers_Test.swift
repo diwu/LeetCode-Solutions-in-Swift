@@ -57,3 +57,11 @@ class Medium_002_Add_Two_Numbers_Test: XCTestCase {
         XCTAssert(numericalValue == 1007, "Medium_002_Add_Two_Numbers_Test #1")
     }
 }
+
+/*
+// Test Case
+// 2 -> 4 -> 5
+// 5 -> 6 -> 4
+// Result:
+// 7 -> 0 -> 0 -> 1
+*/

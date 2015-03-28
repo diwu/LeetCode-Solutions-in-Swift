@@ -30,3 +30,11 @@ class Easy_007_Reverse_Integer_Test: XCTestCase {
         XCTAssert(v == 0, "Easy_007_Reverse_Integer_Test #5")
     }
 }
+
+/*
+reverse(123)                    //321
+reverse(-1)                     //-1
+reverse(0)                      //0
+reverse(7995774586302733229)    //overflow
+reverse(-7995774586302733229)   //overflow
+*/

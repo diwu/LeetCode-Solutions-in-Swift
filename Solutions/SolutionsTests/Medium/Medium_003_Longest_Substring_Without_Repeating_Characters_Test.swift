@@ -29,3 +29,10 @@ class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase
         XCTAssert(v == 0, "Medium_003_Longest_Substring_Without_Repeating_Characters_Test #4")
     }
 }
+
+/*
+longest("abcabcdzaba")  //5
+longest("aaaa")         //1
+longest("aaabbbc")      //2
+longest("")             //0
+*/

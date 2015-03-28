@@ -50,3 +50,16 @@ class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase {
         XCTAssert(v == "baaeaab", "Medium_005_Longest_Palindromic_Substring_Test #10")
     }
 }
+
+/*
+longest("a")            //a
+longest("aab")          //aa
+longest("abb")          //bb
+longest("abbc")         //bb
+longest("abbaaac")      //abba
+longest("aaaaaa")       //aaaaaa
+longest("abbbaaaaaa")   //aaaaaa
+longest("abbbaaaaaab")  //baaaaaab
+longest("abbbaaeeaab")  //baaeeaab
+longest("abbbaaeaab")   //baaeaab
+*/

@@ -15,3 +15,7 @@ class Easy_006_ZigZag_Conversion_Test: XCTestCase {
         XCTAssert(str1 == str2, "Easy_006_ZigZag_Conversion_Test #1")
     }
 }
+
+/*
+"PAYPALISHIRING" -> "PAHNAPLSIIGYIR"
+*/
