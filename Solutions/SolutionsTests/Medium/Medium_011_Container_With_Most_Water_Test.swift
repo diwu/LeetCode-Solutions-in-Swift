@@ -36,4 +36,12 @@ class Medium_011_Container_With_Most_Water_Test: XCTestCase {
     }
 }
 
+/*
+    [1, 1]          => 1
+    [1, 2]          => 1
+    [1, 2, 1]       => 2
+    [2, 1, 2]       => 4
+    [2, 2, 1, 1]    => 3
+*/
+
 
