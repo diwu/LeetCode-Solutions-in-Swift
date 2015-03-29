@@ -2,8 +2,8 @@
 
 
 ##LeetCode Solutions in Swift
-Prepare yourself for an iOS job interview by studying high quality LeetCode problems solutions in Swift.
-###All solutions are tested in Xcode 6.3 Beta 4 (Build: 6D554n) with Swift 1.2. 
+* Prepare yourself for an iOS job interview by studying high quality LeetCode problem solutions in Swift.
+* All solutions are written in Swift 1.2. All test cases are tested in Xcode 6.3 Beta 4 (Build: 6D554n) with Swift 1.2. 
 
 ### Progress: 11 / 182 = 6.0%.
 
