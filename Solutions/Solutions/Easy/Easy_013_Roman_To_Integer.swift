@@ -22,6 +22,8 @@ private extension String {
 }
 
 class Easy_013_Roman_To_Integer {
+    // O (N)
+    // One pass
     class func romanToInt(# s: String) -> Int {
         var result: Int = 0
         var length: Int = count(s)
