@@ -9,15 +9,20 @@
 import XCTest
 
 class Medium_012_Integer_To_Roman_Test: XCTestCase {
+
+    let probleName: String = "Medium_012_Integer_To_Roman_Test"
+
     func test_001() {
         var num: Int = 1
-        var v: String = Medium_012_Integer_To_Roman.integerToRoman(num: num)
-        XCTAssert(v == "I", "012: \(num) => \(v)")
+        var r: String = Medium_012_Integer_To_Roman.integerToRoman(num: num)
+        var e: String = "I"
+        assertHelper(r == e, problemName: probleName, input: num, resultValue: r, expectedValue: e)
     }
     func test_002() {
         var num: Int = 3999
-        var v: String = Medium_012_Integer_To_Roman.integerToRoman(num: num)
-        XCTAssert(v == "MMMCMXCIX", "012: \(num) => \(v)")
+        var r: String = Medium_012_Integer_To_Roman.integerToRoman(num: num)
+        var e: String = "MMMCMXCIX"
+        assertHelper(r == e, problemName: probleName, input: num, resultValue: r, expectedValue: e)
     }
 
 }
