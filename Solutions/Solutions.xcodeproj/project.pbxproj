@@ -48,6 +48,10 @@
 		91AE3A091AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A081AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift */; };
 		91AE3A0A1AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A081AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift */; };
 		91AE3A0D1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE3A0B1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift */; };
+		91DCF23C1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF23B1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift */; };
+		91DCF23D1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF23B1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift */; };
+		91DCF23F1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF23E1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift */; };
+		91DCF2411AC9207900F9CB65 /* SolutionsTestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF2401AC9207900F9CB65 /* SolutionsTestsHelper.swift */; };
 		91EF6D6F1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF6D6E1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift */; };
 		91EF6D701AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF6D6E1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift */; };
 		91EF6D721AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF6D711AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift */; };
@@ -97,6 +101,9 @@
 		91AE3A051AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift; path = Hard/Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift; sourceTree = "<group>"; };
 		91AE3A081AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_005_Longest_Palindromic_Substring.swift; path = Medium/Medium_005_Longest_Palindromic_Substring.swift; sourceTree = "<group>"; };
 		91AE3A0B1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_005_Longest_Palindromic_Substring_Test.swift; path = Medium/Medium_005_Longest_Palindromic_Substring_Test.swift; sourceTree = "<group>"; };
+		91DCF23B1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_014_Longest_Common_Prefix.swift; path = Easy/Easy_014_Longest_Common_Prefix.swift; sourceTree = "<group>"; };
+		91DCF23E1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_014_Longest_Common_Prefix_Test.swift; path = Easy/Easy_014_Longest_Common_Prefix_Test.swift; sourceTree = "<group>"; };
+		91DCF2401AC9207900F9CB65 /* SolutionsTestsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionsTestsHelper.swift; sourceTree = "<group>"; };
 		91EF6D6E1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_013_Roman_To_Integer.swift; path = Easy/Easy_013_Roman_To_Integer.swift; sourceTree = "<group>"; };
 		91EF6D711AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_013_Roman_To_Integer_Test.swift; path = Easy/Easy_013_Roman_To_Integer_Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +171,7 @@
 		50A7F7E91AA9970700F84E86 /* SolutionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				91DCF2401AC9207900F9CB65 /* SolutionsTestsHelper.swift */,
 				50A7F7FD1AA99B2900F84E86 /* Hard */,
 				50A7F7FC1AA99B2300F84E86 /* Medium */,
 				50A7F7FB1AA99B1C00F84E86 /* Easy */,
@@ -188,6 +196,7 @@
 				91492D5C1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift */,
 				91492D611AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift */,
 				91EF6D6E1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift */,
+				91DCF23B1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -222,6 +231,7 @@
 				91492D5F1AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift */,
 				91492D641AC58D4200D3A514 /* Easy_009_Palindrome_Number_Test.swift */,
 				91EF6D711AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift */,
+				91DCF23E1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -349,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5263CF5C1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
+				91DCF23C1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				5263CF591AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
@@ -377,9 +388,11 @@
 				50A7F8011AA99E5100F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
 				5263CF571AC79C130073631F /* Medium_011_Container_With_Most_Water_Test.swift in Sources */,
 				5263CF5A1AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
+				91DCF23D1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
 				91EF6D701AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
 				91492D6A1AC58F7A00D3A514 /* Hard_010_Regular_Expression_Matching_Test.swift in Sources */,
+				91DCF2411AC9207900F9CB65 /* SolutionsTestsHelper.swift in Sources */,
 				91EF6D721AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift in Sources */,
 				91492D651AC58D4200D3A514 /* Easy_009_Palindrome_Number_Test.swift in Sources */,
 				91A29F171AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
@@ -392,6 +405,7 @@
 				50A7F8041AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
 				91AE3A0A1AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
 				91AE3A0D1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift in Sources */,
+				91DCF23F1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift in Sources */,
 				91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */,
 				91492D631AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */,
 				5263CF5D1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
