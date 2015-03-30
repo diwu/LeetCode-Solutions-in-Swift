@@ -1,11 +1,11 @@
 ![](http://swiftlang.eu/swift.png)
 
 
-##LeetCode Solutions in Swift
+###LeetCode Solutions in Swift
 * Prepare yourself for an iOS job interview by studying high quality LeetCode problem solutions in Swift.
 * All solutions are written in Swift 1.2. All test cases are tested in Xcode 6.3 Beta 4 (Build: 6D554n) with Swift 1.2. 
 
-### Progress: 13 / 182 = 7.1%.
+### Progress: 14 / 182 = 7.7%.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift)
@@ -20,3 +20,6 @@
 11. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_011_Container_With_Most_Water.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_011_Container_With_Most_Water_Test.swift)
 12. [Integer To Roman](https://leetcode.com/problems/integer-to-roman/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_012_Integer_To_Roman.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_012_Integer_To_Roman_Test.swift)
 13. [Roman To Integer](https://leetcode.com/problems/roman-to-integer/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_013_Roman_To_Integer.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_013_Roman_To_Integer_Test.swift)
+14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_014_Longest_Common_Prefix.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_014_Longest_Common_Prefix_Test.swift)
+
+###Email: diwufet@gmail.com
