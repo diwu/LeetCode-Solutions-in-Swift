@@ -20,7 +20,6 @@ private extension String {
     }
     subscript (integerRange: Range<Int>) -> String {
         return self[advance(startIndex, integerRange.startIndex)..<advance(startIndex, integerRange.endIndex+1, self.endIndex)]
-
     }
 }
 
