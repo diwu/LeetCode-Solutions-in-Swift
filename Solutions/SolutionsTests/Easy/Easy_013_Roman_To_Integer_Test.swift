@@ -10,19 +10,19 @@ import XCTest
 
 class Easy_013_Roman_To_Integer_Test: XCTestCase {
 
-    let problemName: String = "Easy_013_Roman_To_Integer_Test"
+    let ProblemName: String = "Easy_013_Roman_To_Integer"
 
     func test_001() {
-        var s: String = "I"
-        var i: Int = 1
-        var v: Int = Easy_013_Roman_To_Integer.romanToInt(s: s)
-        assertHelper(v == i, problemName: problemName, input: s, resultValue: v, expectedValue: i)
+        var input: String = "I"
+        var expected: Int = 1
+        var result: Int = Easy_013_Roman_To_Integer.romanToInt(s: input)
+        assertHelper(result == expected, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_002() {
-        var s: String = "MMMCMXCIX"
-        var i: Int = 3999
-        var v: Int = Easy_013_Roman_To_Integer.romanToInt(s: s)
-        assertHelper(v == i, problemName: problemName, input: s, resultValue: v, expectedValue: i)
+        var input: String = "MMMCMXCIX"
+        var expected: Int = 3999
+        var result: Int = Easy_013_Roman_To_Integer.romanToInt(s: input)
+        assertHelper(result == expected, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
     }
 }
 
