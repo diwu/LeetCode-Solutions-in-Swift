@@ -23,7 +23,7 @@ Inspired by @peerlessbloom at https://leetcode.com/discuss/10756/my-accepted-o-n
 
 class Medium_015_3Sum {
     // O (N^2)
-    class func threeSum( num: [Int]) -> [[Int]] {
+    class func threeSum(num: [Int]) -> [[Int]] {
         var res: [[Int]] = []
         if count(num) < 3 {
             return res
