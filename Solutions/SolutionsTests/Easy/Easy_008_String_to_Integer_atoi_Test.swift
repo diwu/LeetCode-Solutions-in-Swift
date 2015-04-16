@@ -9,49 +9,74 @@
 import XCTest
 
 class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
+
+    let ProbleName: String = "Easy_008_String_to_Integer_atoi"
+
     func test_001() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("123")
-        XCTAssert(v == 123, "Easy_008_String_to_Integer_atoi_Test #1")
+        var input: String = "123"
+        var expected: Int = 123
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_002() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("     123")
-        XCTAssert(v == 123, "Easy_008_String_to_Integer_atoi_Test #2")
+        var input: String = "     123"
+        var expected: Int = 123
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_003() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("    +123")
-        XCTAssert(v == 123, "Easy_008_String_to_Integer_atoi_Test #3")
+        var input: String = "    +123"
+        var expected: Int = 123
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_004() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("-123")
-        XCTAssert(v == -123, "Easy_008_String_to_Integer_atoi_Test #4")
+        var input: String = "-123"
+        var expected: Int = -123
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_005() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("    -123")
-        XCTAssert(v == -123, "Easy_008_String_to_Integer_atoi_Test #5")
+        var input: String = "    -123"
+        var expected: Int = -123
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_006() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi(String(Int.max))
-        XCTAssert(v == 9223372036854775807, "Easy_008_String_to_Integer_atoi_Test #6")
+        var input: String = String(Int.max)
+        var expected: Int = 9223372036854775807
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_007() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("  9223372036854775808")
-        XCTAssert(v == 9223372036854775807, "Easy_008_String_to_Integer_atoi_Test #7")
+        var input: String = "  9223372036854775808"
+        var expected: Int = 9223372036854775807
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_008() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi("  9223372036854775806")
-        XCTAssert(v == 9223372036854775806, "Easy_008_String_to_Integer_atoi_Test #8")
+        var input: String = "  9223372036854775806"
+        var expected: Int = 9223372036854775806
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_009() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi(String(Int.min))
-        XCTAssert(v == -9223372036854775808, "Easy_008_String_to_Integer_atoi_Test #9")
+        var input: String = String(Int.min)
+        var expected: Int = -9223372036854775808
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_010() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi(" -9223372036854775809")
-        XCTAssert(v == -9223372036854775808, "Easy_008_String_to_Integer_atoi_Test #10")
+        var input: String = " -9223372036854775809"
+        var expected: Int = -9223372036854775808
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_011() {
-        var v: Int = Easy_008_String_to_Integer_atoi.atoi(" -9223372036854775806")
-        XCTAssert(v == -9223372036854775806, "Easy_008_String_to_Integer_atoi_Test #11")
+        var input: String = " -9223372036854775806"
+        var expected: Int = -9223372036854775806
+        var result = Easy_008_String_to_Integer_atoi.atoi(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 }
 
