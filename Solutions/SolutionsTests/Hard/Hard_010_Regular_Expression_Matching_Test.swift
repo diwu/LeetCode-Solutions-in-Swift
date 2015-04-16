@@ -9,41 +9,62 @@
 import XCTest
 
 class Hard_010_Regular_Expression_Matching_Test: XCTestCase {
+
+    let ProbleName: String = "Hard_010_Regular_Expression_Matching"
+
     func test_001() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aa", p: "a")
-        XCTAssert(v == false, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aa", "a"]
+        var expected: Bool = false
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_002() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aa", p: "aa")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aa", "aa"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_003() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aaa", p: "aa")
-        XCTAssert(v == false, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aaa", "aa"]
+        var expected: Bool = false
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_004() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aa", p: "a*")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aa", "a*"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_005() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aa", p: ".*")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aa", ".*"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_006() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("ab", p: ".*")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["ab", ".*"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_007() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aab", p: "c*a*b")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aab", "c*a*b"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_008() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("aaaaab", p: "c*a*b")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["aaaaab", "c*a*b"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_009() {
-        var v: Bool = Hard_010_Regular_Expression_Matching.isMatch("ab", p: "c*ab")
-        XCTAssert(v == true, "Hard_010_Regular_Expression_Matching_Test")
+        var input: [String] = ["ab", "c*ab"]
+        var expected: Bool = true
+        var result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 }
 

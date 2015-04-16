@@ -77,7 +77,7 @@ class Hard_010_Regular_Expression_Matching {
         }
     }
     
-    class func isMatch(s: String, p: String) -> Bool {
+    class func isMatch(# s: String, p: String) -> Bool {
         return isMatchHelper(s, p: p, indexS: 0, indexP: 0)
     }
 }
