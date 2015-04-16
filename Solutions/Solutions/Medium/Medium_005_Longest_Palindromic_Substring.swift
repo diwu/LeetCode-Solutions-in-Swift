@@ -14,12 +14,12 @@ Inspired by @hanleyChu at https://oj.leetcode.com/discuss/9948/a-very-brief-o-n-
 
 // Helper
 private extension String {
-    subscript (index: Int) -> Character {
-        var i: Index = advance(self.startIndex, index)
-        return self[i]
+    subscript (i: Int) -> Character {
+        var index: Index = advance(self.startIndex, i)
+        return self[index]
     }
-    subscript (integerRange: Range<Int>) -> String {
-        return self[advance(startIndex, integerRange.startIndex)..<advance(startIndex, integerRange.endIndex+1, self.endIndex)]
+    subscript (intRange: Range<Int>) -> String {
+        return self[advance(self.startIndex, intRange.startIndex) ..< advance(self.startIndex, intRange.endIndex)]
     }
 }
 
@@ -48,6 +48,6 @@ class Medium_005_Longest_Palindromic_Substring {
                 longestIndex = currentIndex
             }
         }
-        return s[longestIndex - longestLength + 1 ..< longestIndex]
+        return s[longestIndex - longestLength + 1 ..< longestIndex + 1]
     }
 }

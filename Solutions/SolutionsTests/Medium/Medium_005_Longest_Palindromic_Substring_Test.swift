@@ -9,45 +9,68 @@
 import XCTest
 
 class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase {
-    func testCase001() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("a")
-        XCTAssert(v == "a", "Medium_005_Longest_Palindromic_Substring_Test #1")
+
+    let ProbleName: String = "Medium_005_Longest_Palindromic_Substring"
+
+    func test_001() {
+        var input: String = "a"
+        var expected: String = "a"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase002() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("aab")
-        XCTAssert(v == "aa", "Medium_005_Longest_Palindromic_Substring_Test #2")
+    func test_002() {
+        var input: String = "aab"
+        var expected: String = "aa"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase003() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abb")
-        XCTAssert(v == "bb", "Medium_005_Longest_Palindromic_Substring_Test #3")
+    func test_003() {
+        var input: String = "abb"
+        var expected: String = "bb"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase004() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abbc")
-        XCTAssert(v == "bb", "Medium_005_Longest_Palindromic_Substring_Test #4")
+    func test_004() {
+        var input: String = "abbc"
+        var expected: String = "bb"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase005() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abbaaac")
-        XCTAssert(v == "abba", "Medium_005_Longest_Palindromic_Substring_Test #5")
+    func test_005() {
+        var input: String = "abbaaac"
+        var expected: String = "abba"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase006() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("aaaaaa")
-        XCTAssert(v == "aaaaaa", "Medium_005_Longest_Palindromic_Substring_Test #6")
+    func test_006() {
+        var input: String = "aaaaaa"
+        var expected: String = "aaaaaa"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase007() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abbbaaaaaa")
-        XCTAssert(v == "aaaaaa", "Medium_005_Longest_Palindromic_Substring_Test #7")
+    func test_007() {
+        var input: String = "abbbaaaaaa"
+        var expected: String = "aaaaaa"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase008() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abbbaaaaaab")
-        XCTAssert(v == "baaaaaab", "Medium_005_Longest_Palindromic_Substring_Test #8")
+    func test_008() {
+        var input: String = "abbbaaaaaab"
+        var expected: String = "baaaaaab"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase009() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abbbaaeeaab")
-        XCTAssert(v == "baaeeaab", "Medium_005_Longest_Palindromic_Substring_Test #9")
+    func test_009() {
+        var input: String = "abbbaaeeaab"
+        var expected: String = "baaeeaab"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
-    func testCase010() {
-        var v = Medium_005_Longest_Palindromic_Substring.longest("abbbaaeaab")
-        XCTAssert(v == "baaeaab", "Medium_005_Longest_Palindromic_Substring_Test #10")
+    func test_010() {
+        var input: String = "abbbaaeaab"
+        var expected: String = "baaeaab"
+        var result = Medium_005_Longest_Palindromic_Substring.longest(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 }
 
