@@ -9,25 +9,38 @@
 import XCTest
 
 class Easy_007_Reverse_Integer_Test: XCTestCase {
+
+    let ProbleName: String = "Easy_007_Reverse_Integer"
+
     func test_001() {
-        var v: Int = Easy_007_Reverse_Integer.reverse(123)
-        XCTAssert(v == 321, "Easy_007_Reverse_Integer_Test #1")
+        var input: Int = 123
+        var expected: Int = 321
+        var result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_002() {
-        var v: Int = Easy_007_Reverse_Integer.reverse(-1)
-        XCTAssert(v == -1, "Easy_007_Reverse_Integer_Test #2")
+        var input: Int = -1
+        var expected: Int = -1
+        var result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_003() {
-        var v: Int = Easy_007_Reverse_Integer.reverse(0)
-        XCTAssert(v == 0, "Easy_007_Reverse_Integer_Test #3")
+        var input: Int = 0
+        var expected: Int = 0
+        var result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_004() {
-        var v: Int = Easy_007_Reverse_Integer.reverse(7995774586302733229)
-        XCTAssert(v == 0, "Easy_007_Reverse_Integer_Test #4")
+        var input: Int = 7995774586302733229
+        var expected: Int = 0
+        var result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_005() {
-        var v: Int = Easy_007_Reverse_Integer.reverse(-7995774586302733229)
-        XCTAssert(v == 0, "Easy_007_Reverse_Integer_Test #5")
+        var input: Int = -7995774586302733229
+        var expected: Int = 0
+        var result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 }
 
