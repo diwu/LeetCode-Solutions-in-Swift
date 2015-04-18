@@ -33,7 +33,7 @@ private extension String {
 
 class Easy_006_ZigZag_Conversion {
     // O (N)
-    class func convert(s: String, nRows: Int) -> String {
+    class func convert(# s: String, nRows: Int) -> String {
         var arr = Array<String>(count: nRows, repeatedValue: String())
         var i = 0, len = count(s)
         while i < len {

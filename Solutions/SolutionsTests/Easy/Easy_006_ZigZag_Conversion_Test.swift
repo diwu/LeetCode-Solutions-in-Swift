@@ -9,10 +9,14 @@
 import XCTest
 
 class Easy_006_ZigZag_Conversion_Test: XCTestCase {
+
+    let ProbleName: String = "Easy_006_ZigZag_Conversion"
+
     func testCase001() {
-        var str1: String = Easy_006_ZigZag_Conversion.convert("PAYPALISHIRING", nRows:3)
-        var str2: String = "PAHNAPLSIIGYIR"
-        XCTAssert(str1 == str2, "Easy_006_ZigZag_Conversion_Test #1")
+        var input: [AnyObject] = ["PAYPALISHIRING", 3]
+        var expected: String = "PAHNAPLSIIGYIR"
+        var result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 }
 
