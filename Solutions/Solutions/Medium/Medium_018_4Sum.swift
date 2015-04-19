@@ -46,6 +46,7 @@ class Medium_018_4Sum {
         }
     }
 
+    // O (N^3)
     class func fourSum(# num: [Int], target: Int) -> [[Int]] {
         var res: [[Int]] = []
         if count(num) < 4 {
