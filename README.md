@@ -2,8 +2,10 @@
 
 
 ###LeetCode Solutions in Swift
-* Prepare yourself for an iOS job interview by studying high quality LeetCode problem solutions in Swift.
-* All solutions are written in Swift 1.2. All test cases are tested in Xcode 6.4 Beta (Build: 6E7) with Swift 1.2. 
+* For iOS job interviews.
+* Written in Swift 1.2.
+* Test cases included (XCTest).
+* Run with the latest Xcode (6.4 Beta Build 6E7).
 * Best time / space complexity guaranteed.
 
 ### Progress: 17 / 192 = 8.9%.
@@ -25,5 +27,6 @@
 15. [3Sum](https://leetcode.com/problems/3sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_015_3Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_015_3Sum_Test.swift)
 16. [3Sum Closest](https://leetcode.com/problems/3sum-closest/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_016_3Sum_Closest.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_016_3Sum_Closest_Test.swift)
 17. [Letter Combinations of A Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift)
+18. [4Sum](https://leetcode.com/problems/4sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_018_4Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_018_4Sum_Test.swift)
 
 ###Email: diwufet@gmail.com
