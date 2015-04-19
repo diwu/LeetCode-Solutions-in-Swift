@@ -13,6 +13,9 @@
 		5093659F1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */; };
 		509365A01AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */; };
 		509365A21AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A11AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift */; };
+		509365A41AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */; };
+		509365A51AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */; };
+		509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A61AE3515E00FD41FD /* Medium_018_4Sum_Test.swift */; };
 		50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D61AA9970700F84E86 /* AppDelegate.swift */; };
 		50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D81AA9970700F84E86 /* ViewController.swift */; };
 		50A7F7DC1AA9970700F84E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A7F7DA1AA9970700F84E86 /* Main.storyboard */; };
@@ -81,6 +84,8 @@
 		504D4FA21ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_016_3Sum_Closest_Test.swift; path = Medium/Medium_016_3Sum_Closest_Test.swift; sourceTree = "<group>"; };
 		5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_017_Letter_Combinations_Of_A_Phone_Number.swift; path = Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number.swift; sourceTree = "<group>"; };
 		509365A11AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift; path = Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift; sourceTree = "<group>"; };
+		509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_018_4Sum.swift; path = Medium/Medium_018_4Sum.swift; sourceTree = "<group>"; };
+		509365A61AE3515E00FD41FD /* Medium_018_4Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_018_4Sum_Test.swift; path = Medium/Medium_018_4Sum_Test.swift; sourceTree = "<group>"; };
 		50A7F7D11AA9970700F84E86 /* Solutions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solutions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A7F7D51AA9970700F84E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A7F7D61AA9970700F84E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +233,7 @@
 				50E1BFB91AD28EAC009308B6 /* Medium_015_3Sum.swift */,
 				504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */,
 				5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */,
+				509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				50E1BFBC1AD28EC6009308B6 /* Medium_015_3Sum_Test.swift */,
 				504D4FA21ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift */,
 				509365A11AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift */,
+				509365A61AE3515E00FD41FD /* Medium_018_4Sum_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -384,6 +391,7 @@
 				91DCF23C1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				5263CF591AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
+				509365A41AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
 				91AE3A091AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
 				91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
@@ -414,6 +422,7 @@
 				509365A01AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
 				5263CF571AC79C130073631F /* Medium_011_Container_With_Most_Water_Test.swift in Sources */,
 				5263CF5A1AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
+				509365A51AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */,
 				91DCF23D1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
 				91EF6D701AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
@@ -424,6 +433,7 @@
 				91A29F171AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
 				91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
+				509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
 				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				5263CF5F1AC7D9AF0073631F /* Medium_012_Integer_To_Roman_Test.swift in Sources */,
