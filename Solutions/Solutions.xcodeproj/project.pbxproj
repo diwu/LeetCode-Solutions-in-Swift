@@ -16,6 +16,9 @@
 		509365A41AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */; };
 		509365A51AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */; };
 		509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A61AE3515E00FD41FD /* Medium_018_4Sum_Test.swift */; };
+		509365A91AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */; };
+		509365AA1AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */; };
+		509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365AB1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift */; };
 		50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D61AA9970700F84E86 /* AppDelegate.swift */; };
 		50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D81AA9970700F84E86 /* ViewController.swift */; };
 		50A7F7DC1AA9970700F84E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A7F7DA1AA9970700F84E86 /* Main.storyboard */; };
@@ -86,6 +89,8 @@
 		509365A11AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift; path = Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift; sourceTree = "<group>"; };
 		509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_018_4Sum.swift; path = Medium/Medium_018_4Sum.swift; sourceTree = "<group>"; };
 		509365A61AE3515E00FD41FD /* Medium_018_4Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_018_4Sum_Test.swift; path = Medium/Medium_018_4Sum_Test.swift; sourceTree = "<group>"; };
+		509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_019_Remove_Nth_Node_From_End_Of_List.swift; path = Easy/Easy_019_Remove_Nth_Node_From_End_Of_List.swift; sourceTree = "<group>"; };
+		509365AB1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift; path = Easy/Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift; sourceTree = "<group>"; };
 		50A7F7D11AA9970700F84E86 /* Solutions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solutions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A7F7D51AA9970700F84E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A7F7D61AA9970700F84E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +222,7 @@
 				91492D611AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift */,
 				91EF6D6E1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift */,
 				91DCF23B1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift */,
+				509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				91492D641AC58D4200D3A514 /* Easy_009_Palindrome_Number_Test.swift */,
 				91EF6D711AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift */,
 				91DCF23E1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift */,
+				509365AB1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -389,6 +396,7 @@
 				5093659F1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
 				5263CF5C1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
 				91DCF23C1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
+				509365A91AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */,
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				5263CF591AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
 				509365A41AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */,
@@ -434,6 +442,7 @@
 				91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
 				509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */,
+				509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
 				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				5263CF5F1AC7D9AF0073631F /* Medium_012_Integer_To_Roman_Test.swift in Sources */,
@@ -445,6 +454,7 @@
 				91AE3A0A1AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
 				509365A21AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift in Sources */,
 				91AE3A0D1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift in Sources */,
+				509365AA1AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */,
 				91DCF23F1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift in Sources */,
 				91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */,
 				91492D631AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */,
