@@ -31,4 +31,5 @@
 19. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_019_Remove_Nth_Node_From_End_Of_List.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift)
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_020_Valid_Parentheses.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_020_Valid_Parentheses_Test.swift)
 
-###[Email](diwufet@163.com), [LinkedIn](https://www.linkedin.com/in/diwup)
+###<diwufet@163.com>
+###[LinkedIn](https://www.linkedin.com/in/diwup)
