@@ -11,8 +11,8 @@ import XCTest
 class Medium_018_4Sum_Test: XCTestCase {
 
     static let ProblemName: String = "Medium_018_4Sum"
-    static let TimeOutName = ProblemName + " Time Out"
-    static let TimeOut = 0.001
+    static let TimeOutName = ProblemName + Default_Timeout_Suffix
+    static let TimeOut = Default_Timeout_Value
 
     func test_001() {
         var input: [AnyObject] = [[1, 0, -1], 0]

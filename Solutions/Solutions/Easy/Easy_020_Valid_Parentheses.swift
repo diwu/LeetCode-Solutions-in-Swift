@@ -2,6 +2,8 @@
 
 https://leetcode.com/problems/valid-parentheses/
 
+#20 Valid_Parentheses
+
 Level: easy
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
