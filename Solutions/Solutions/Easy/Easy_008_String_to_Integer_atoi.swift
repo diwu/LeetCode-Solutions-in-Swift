@@ -42,9 +42,9 @@ class Easy_008_String_to_Integer_atoi {
         for j in 0..<len {
             var zeroString: String = String("0")
             var zeroValue: Int = Int(zeroString.utf8[zeroString.utf8.startIndex])
-            if str[j] == " " || str[j] == "+" {
+            if base == 0 && str[j] == " " || str[j] == "+" {
                 continue
-            } else if str[j] == "-" {
+            } else if base == 0 && str[j] == "-" {
                 sign = false
                 continue
             } else {
