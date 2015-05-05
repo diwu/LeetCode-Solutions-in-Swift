@@ -28,6 +28,9 @@
 		509365A91AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */; };
 		509365AA1AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */; };
 		509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365AB1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift */; };
+		5098BC351AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5098BC341AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift */; };
+		5098BC361AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5098BC341AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift */; };
+		5098BC381AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5098BC371AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift */; };
 		50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D61AA9970700F84E86 /* AppDelegate.swift */; };
 		50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D81AA9970700F84E86 /* ViewController.swift */; };
 		50A7F7DC1AA9970700F84E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A7F7DA1AA9970700F84E86 /* Main.storyboard */; };
@@ -106,6 +109,8 @@
 		509365A61AE3515E00FD41FD /* Medium_018_4Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_018_4Sum_Test.swift; path = Medium/Medium_018_4Sum_Test.swift; sourceTree = "<group>"; };
 		509365A81AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_019_Remove_Nth_Node_From_End_Of_List.swift; path = Easy/Easy_019_Remove_Nth_Node_From_End_Of_List.swift; sourceTree = "<group>"; };
 		509365AB1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift; path = Easy/Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift; sourceTree = "<group>"; };
+		5098BC341AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_023_Merge_K_Sorted_Lists.swift; path = Hard/Hard_023_Merge_K_Sorted_Lists.swift; sourceTree = "<group>"; };
+		5098BC371AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_023_Merge_K_Sorted_Lists_Test.swift; path = Hard/Hard_023_Merge_K_Sorted_Lists_Test.swift; sourceTree = "<group>"; };
 		50A7F7D11AA9970700F84E86 /* Solutions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solutions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A7F7D51AA9970700F84E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A7F7D61AA9970700F84E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +272,7 @@
 			children = (
 				91AE3A021AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift */,
 				91492D661AC58F6000D3A514 /* Hard_010_Regular_Expression_Matching.swift */,
+				5098BC341AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			children = (
 				91AE3A051AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift */,
 				91492D691AC58F7A00D3A514 /* Hard_010_Regular_Expression_Matching_Test.swift */,
+				5098BC371AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -419,6 +426,7 @@
 				5030D3971AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */,
 				91DCF23C1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				509365A91AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */,
+				5098BC351AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift in Sources */,
 				91394F351AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				5263CF591AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
 				505825B41AF89CA70081F4FA /* Medium_022_Generate_Parentheses.swift in Sources */,
@@ -461,6 +469,7 @@
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
 				91EF6D701AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
 				91492D6A1AC58F7A00D3A514 /* Hard_010_Regular_Expression_Matching_Test.swift in Sources */,
+				5098BC381AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift in Sources */,
 				91DCF2411AC9207900F9CB65 /* SolutionsTestsHelper.swift in Sources */,
 				91EF6D721AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift in Sources */,
 				91492D651AC58D4200D3A514 /* Easy_009_Palindrome_Number_Test.swift in Sources */,
@@ -489,6 +498,7 @@
 				5263CF5D1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
 				91394F381AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift in Sources */,
 				5030D39A1AE8F1A7005FADA6 /* Easy_021_Merge_Two_Sorted_Lists_Test.swift in Sources */,
+				5098BC361AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift in Sources */,
 				505825B51AF89CA70081F4FA /* Medium_022_Generate_Parentheses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
