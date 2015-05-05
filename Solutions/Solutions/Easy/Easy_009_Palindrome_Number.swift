@@ -26,7 +26,6 @@ class Easy_009_Palindrome_Number {
     // O (N)
     class func isPalindrome(x: Int) -> Bool {
         var palindromeX: Int = 0
-        var inputX: Int = x
         var tmp: Int = x
         while tmp > 0 {
             if palindromeX >= Int.max / 10 {
@@ -35,6 +34,6 @@ class Easy_009_Palindrome_Number {
             palindromeX = palindromeX * 10 + tmp % 10
             tmp = tmp / 10
         }
-        return palindromeX == inputX
+        return palindromeX == x
     }
 }

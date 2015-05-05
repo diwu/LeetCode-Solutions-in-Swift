@@ -10,49 +10,57 @@ import XCTest
 
 class Easy_009_Palindrome_Number_Test: XCTestCase {
 
-    let ProbleName: String = "Easy_009_Palindrome_Number"
+    private static let ProblemName: String = "Easy_009_Palindrome_Number"
+    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
+    private static let TimeOut = Default_Timeout_Value
 
     func test_001() {
         var input: Int = -121
         var expected: Bool = false
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_002() {
         var input: Int = 121
         var expected: Bool = true
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_003() {
         var input: Int = 0
         var expected: Bool = true
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_004() {
         var input: Int = Int.max
         var expected: Bool = false
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_005() {
         var input: Int = Int.min
         var expected: Bool = false
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_006() {
         var input: Int = 1999999999999999999
         var expected: Bool = false
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_007() {
         var input: Int = -1999999999999999999
         var expected: Bool = false
-        var result = Easy_009_Palindrome_Number.isPalindrome(input)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        asyncHelper(input: input, expected: expected)
+    }
+    func asyncHelper(# input: Int, expected: Bool ) {
+        var expectation: XCTestExpectation = self.expectationWithDescription(Easy_009_Palindrome_Number_Test.TimeOutName)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            var result: Bool = Easy_009_Palindrome_Number.isPalindrome(input)
+            assertHelper(result == expected, problemName: Easy_009_Palindrome_Number_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            expectation.fulfill()
+        })
+        waitForExpectationsWithTimeout(Easy_009_Palindrome_Number_Test.TimeOut) { (error: NSError!) -> Void in
+            if error != nil {
+                assertHelper(false, problemName: Easy_009_Palindrome_Number_Test.ProblemName, input: input, resultValue: Easy_009_Palindrome_Number_Test.TimeOutName, expectedValue: expected)
+            }
+        }
     }
 }
 
