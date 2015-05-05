@@ -14,6 +14,7 @@ Inspired by @wksora at https://leetcode.com/discuss/9279/a-java-solution-based-o
 
 import Foundation
 
+// O (N x logK), where N is the total number of elements, K is the number of lists
 class Hard_023_Merge_K_Sorted_Lists {
     class Node {
         var value: Int
@@ -30,7 +31,7 @@ class Hard_023_Merge_K_Sorted_Lists {
         if l2 == nil {
             return l1
         }
-        var head: Node? = nil
+        var curr: Node? = nil
         var prev: Node? = nil
         while l1 != nil && l2 != nil {
             if l1!.value > l2!.value {
@@ -39,8 +40,8 @@ class Hard_023_Merge_K_Sorted_Lists {
                 } else {
                     prev!.next = l2
                 }
-                if head == nil {
-                    head = prev
+                if curr == nil {
+                    curr = prev
                 } else {
                     prev = prev!.next
                 }
@@ -51,8 +52,8 @@ class Hard_023_Merge_K_Sorted_Lists {
                 } else {
                     prev!.next = l1
                 }
-                if head == nil {
-                    head = prev
+                if curr == nil {
+                    curr = prev
                 } else {
                     prev = prev!.next
                 }
@@ -63,7 +64,7 @@ class Hard_023_Merge_K_Sorted_Lists {
             l1 = l2
         }
         prev!.next = l1
-        return head
+        return curr
     }
     class func mergeKLists(lists: [Node?]) -> Node? {
         if lists.count == 0 {

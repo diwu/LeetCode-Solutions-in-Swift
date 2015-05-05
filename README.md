@@ -4,11 +4,11 @@
 ###LeetCode Solutions in Swift
 * For iOS job interviews.
 * Written in Swift 1.2.
-* Test cases driven (XCTest).
+* Test cases included (XCTest).
 * Run with the latest Xcode (6.4 Beta 2 Build 6E14).
 * Best time / space complexity guaranteed.
 
-### Progress: 22 / 197 = 11.2%.
+### Progress: 23 / 197 = 11.7%.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift)
@@ -32,6 +32,7 @@
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_020_Valid_Parentheses.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_020_Valid_Parentheses_Test.swift)
 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_021_Merge_Two_Sorted_Lists.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_021_Merge_Two_Sorted_Lists_Test.swift)
 22. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_022_Generate_Parentheses.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_022_Generate_Parentheses_Test.swift)
+23. [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_023_Merge_K_Sorted_Lists.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_023_Merge_K_Sorted_Lists_Test.swift)
 
 ###<diwufet@163.com>
 ###[LinkedIn](https://www.linkedin.com/in/diwup)
