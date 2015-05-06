@@ -1,4 +1,4 @@
-![](http://swiftlang.eu/swift.png)
+![](http://swiftlang.eu/swift.png) ![](https://raw.githubusercontent.com/diwu/LeetCode-Solutions-in-Swift/master/Solutions/example_screen_shot.png)
 
 
 ###LeetCode Solutions in Swift
