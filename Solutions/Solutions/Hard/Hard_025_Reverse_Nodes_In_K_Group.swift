@@ -21,7 +21,7 @@ For k = 2, you should return: 2->1->4->3->5
 
 For k = 3, you should return: 3->2->1->4->5
 
-Inspired by @shpolsky at https://leetcode.com/discuss/21301/short-but-recursive-java-code-with-comments
+Inspired by @sean hyuntaek and @shpolsky at https://leetcode.com/discuss/6113/my-solution-accepted-in-java and https://leetcode.com/discuss/21301/short-but-recursive-java-code-with-comments
 
 */
 
