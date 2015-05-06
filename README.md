@@ -1,4 +1,4 @@
-![](http://swiftlang.eu/swift.png) ![](https://raw.githubusercontent.com/diwu/LeetCode-Solutions-in-Swift/master/Solutions/example_screen_shot.png)
+![](http://swiftlang.eu/swift.png) ![](https://raw.githubusercontent.com/diwu/LeetCode-Solutions-in-Swift/master/Solutions/example_screen_shot.png) ![](https://raw.githubusercontent.com/diwu/LeetCode-Solutions-in-Swift/master/Solutions/example_screen_shot_2.png)
 
 
 ###LeetCode Solutions in Swift
