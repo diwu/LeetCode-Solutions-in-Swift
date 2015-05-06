@@ -36,7 +36,38 @@ class Hard_025_Reverse_Nodes_In_K_Group {
             self.next = next
         }
     }
+    // iteration， takes O(1) space
     class func reverseKGroup(var # head: Node?, k: Int) -> Node? {
+        if head == nil {
+            return nil
+        }
+        var dummy: Node = Node(value: 0, next: head)
+        var prev: Node? = dummy
+        var curr: Node? = head
+        while curr != nil {
+            var pilot: Node? = prev?.next
+            var remaining: Int = k
+            while pilot != nil && remaining > 0 {
+                remaining--
+                pilot = pilot?.next
+            }
+            if remaining > 0 {
+                break
+            }
+            while curr?.next !== pilot {
+                var tmp: Node? = curr?.next?.next
+                curr?.next?.next = prev?.next
+                prev?.next = curr?.next
+                curr?.next = tmp
+            }
+            prev = curr
+            curr = curr?.next
+        }
+        return dummy.next
+    }
+    /*
+    // recursive, takes O (N) space
+    class func reverseKGroup_recursive(var # head: Node?, k: Int) -> Node? {
         var curr: Node? = head
         var count: Int = 0
         while curr != nil && count != k {
@@ -44,7 +75,7 @@ class Hard_025_Reverse_Nodes_In_K_Group {
             count++
         }
         if count == k {
-            curr = reverseKGroup(head: curr, k: k)
+            curr = reverseKGroup_recursive(head: curr, k: k)
             while count-- > 0 {
                 var tmp: Node? = head?.next
                 head?.next = curr
@@ -55,4 +86,5 @@ class Hard_025_Reverse_Nodes_In_K_Group {
         }
         return head
     }
+    */
 }
