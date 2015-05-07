@@ -8,7 +8,7 @@
 * Run with the latest Xcode (6.4 Beta 2 Build 6E14).
 * Best time / space complexity guaranteed.
 
-### Progress: 26 / 197 = 13.2%.
+### Progress: 27 / 198 = 13.6%.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift)
@@ -36,6 +36,7 @@
 24. [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_024_Swap_Nodes_In_Pairs.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_024_Swap_Nodes_In_Pairs_Test.swift)
 25. [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_025_Reverse_Nodes_In_K_Group.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_025_Reverse_Nodes_In_K_Group_Test.swift)
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_026_Remove_Duplicates_from_Sorted_Array.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_026_Remove_Duplicates_from_Sorted_Array_Test.swift)
+27. [Remove Element](https://leetcode.com/problems/remove-element/)- Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_027_Remove_Element.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_027_Remove_Element_Test.swift)
 
 ###<diwufet@163.com>
 ###[LinkedIn](https://www.linkedin.com/in/diwup)
