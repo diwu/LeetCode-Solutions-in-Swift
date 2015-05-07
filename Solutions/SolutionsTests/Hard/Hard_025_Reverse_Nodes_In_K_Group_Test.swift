@@ -11,7 +11,7 @@ import XCTest
 class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
     private static let ProblemName: String = "Hard_025_Reverse_Nodes_In_K_Group"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 9999
+    private static let TimeOut = Default_Timeout_Value
     private typealias Node = Hard_025_Reverse_Nodes_In_K_Group.Node
     func test_001() {
         var input: [Any] = [helper1([1, 2, 3, 4]), 2]

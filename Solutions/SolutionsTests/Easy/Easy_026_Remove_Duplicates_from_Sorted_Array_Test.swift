@@ -11,7 +11,7 @@ import XCTest
 class Easy_026_Remove_Duplicates_from_Sorted_Array_Test: XCTestCase {
     private static let ProblemName: String = "Easy_026_Remove_Duplicates_from_Sorted_Array"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 9999
+    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         var input: [Int] = [1, 2, 2, 3]
         var expected: [Int] = [1, 2, 3]
