@@ -8,7 +8,7 @@
 * Run with the latest Xcode (6.4 Beta 2 Build 6E14).
 * Best time / space complexity guaranteed.
 
-### Progress: 28 / 199 = 14.1%.
+### Progress: 29 / 199 = 14.6%.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift)
@@ -37,7 +37,8 @@
 25. [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_025_Reverse_Nodes_In_K_Group.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_025_Reverse_Nodes_In_K_Group_Test.swift)
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_026_Remove_Duplicates_from_Sorted_Array.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_026_Remove_Duplicates_from_Sorted_Array_Test.swift)
 27. [Remove Element](https://leetcode.com/problems/remove-element/)- Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_027_Remove_Element.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_027_Remove_Element_Test.swift)
-28. [Implement strStr()](https://leetcode.com/problems/implement-strstr/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_028_Implement_StrStr.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_028_Implement_StrStr_Test.swift) - KMP, Brute-force
+28. [Implement strStr()](https://leetcode.com/problems/implement-strstr/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_028_Implement_StrStr.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_028_Implement_StrStr_Test.swift) - KMP: t=O(M+N), s=O(N). Brute-force: t=O(M*N), s=O(1).
+29. [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_029_Divide_Two_Integers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_029_Divide_Two_Integers_Test.swift) - t=O((logN)^2), s=O(1)
 
 ###<diwufet@163.com>
 ###[LinkedIn](https://www.linkedin.com/in/diwup)
