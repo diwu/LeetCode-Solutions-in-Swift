@@ -64,7 +64,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
     private func asyncHelper(# input: [Any], expected: [Int]) {
         var expectation: XCTestExpectation = self.expectationWithDescription(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var unwrapped: Node? = self.unwrap(input[0]) as? Node
+            var unwrapped: Node? = unwrap(input[0]) as? Node
             var result: [Int] = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: unwrapped, k: input[1] as! Int))
             assertHelper(expected == result, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             expectation.fulfill()
@@ -74,14 +74,5 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
                 assertHelper(false, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName, expectedValue: expected)
             }
         }
-    }
-    private func unwrap(any:Any) -> Any? {
-        let mi:MirrorType = reflect(any)
-        if mi.disposition != .Optional {
-            return any
-        }
-        if mi.count == 0 { return nil }
-        let (name,some) = mi[0]
-        return some.value
     }
 }
