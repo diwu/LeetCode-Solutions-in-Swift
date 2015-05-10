@@ -11,7 +11,7 @@ import XCTest
 let Default_Timeout_Value = 0.01
 let Default_Timeout_Suffix: String = " Time Out"
 
-func assertHelper(@autoclosure expression: () -> BooleanType, # problemName: String , # input: Any, # resultValue: Any, # expectedValue: AnyObject) {
+func assertHelper(@autoclosure expression: () -> BooleanType, # problemName: String , # input: Any, # resultValue: Any, # expectedValue: Any) {
     XCTAssert(expression(), "\n====================================\nProblem: \(problemName)\n====================================\nInput: \"\(input)\"\n====================================\nExpected: \"\(expectedValue)\"\n====================================\nResult: \"\(resultValue)\"\n====================================\n")
 }
 
