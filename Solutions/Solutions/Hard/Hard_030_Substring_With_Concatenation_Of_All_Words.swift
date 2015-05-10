@@ -59,7 +59,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
             for var j = i; j < stringLength; j += wordLength {
                 s1 = s![j..<j+wordLength]
                 if dict1[s1] == nil {
-                    dict2 = [String: Int]()
+                    dict2.removeAll(keepCapacity: false)
                     counter1 = 0
                     counter2 = j + wordLength
                 } else if dict2[s1] == nil || dict2[s1]! < dict1[s1]! {
@@ -87,7 +87,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
                     counter2 += wordLength
                 }
             }
-            dict2 = [String: Int]()
+            dict2.removeAll(keepCapacity: false)
         }
         return result
     }
