@@ -82,6 +82,11 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase {
         var expected: Set<Int> = Set([6, 10, 14])
         asyncHelper(input: input, expected: expected)
     }
+    func test_015() {
+        var input: [Any?] = ["abcdefabcdcdefbcdeabcdcdef", ["abcd", "bcde", "cdef", "abcd"]]
+        var expected: Set<Int> = Set([6])
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(var # input: [Any?], expected: Set<Int>) {
         var expectation: XCTestExpectation = self.expectationWithDescription(Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
