@@ -8,7 +8,7 @@
 * Run with the latest Xcode (6.4 Beta 2 Build 6E14).
 * Best time / space complexity guaranteed.
 
-### Progress: 30 / 199 = 15.1%.
+### Progress: 31 / 199 = 15.6%.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift)
@@ -40,6 +40,7 @@
 28. [Implement strStr()](https://leetcode.com/problems/implement-strstr/) - Easy - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Easy/Easy_028_Implement_StrStr.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Easy/Easy_028_Implement_StrStr_Test.swift) - KMP: t=O(M+N), s=O(N). Brute-force: t=O(MxN), s=O(1).
 29. [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_029_Divide_Two_Integers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_029_Divide_Two_Integers_Test.swift) - t=O((logN)^2), s=O(1)
 30. [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_030_Substring_With_Concatenation_Of_All_Words.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_030_Substring_With_Concatenation_Of_All_Words_Test.swift) - t=O(NxW), s=O(LxW), where N is the length of the string, W is the length of a word, L is the length of the words list.
+31. [Next Permutation](https://leetcode.com/problems/next-permutation/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_031_Next_Permutation.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_031_Next_Permutation_Test.swift) - t=O(N), s=O(1)
 
 ###<diwufet@163.com>
 ###[LinkedIn](https://www.linkedin.com/in/diwup)
