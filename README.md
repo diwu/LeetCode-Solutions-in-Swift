@@ -2,15 +2,15 @@
 
 
 ###LeetCode Solutions in Swift
-* For iOS job interviews.
-* Written in Swift 1.2.
-* Test cases included (XCTest).
-* Run with the latest Xcode (6.4 Beta 2 Build 6E14).
-* Best time / space complexity guaranteed.
+* Designed for your next iOS job interview.
+* Optimal solutions handpicked from the LeetCode community.
+* Best time/space complexity guaranteed.
+* Written in Swift 1.2 with Xcode 6.4 Beta 2.
+* Comprehensive test cases guarding against wrong answers and timeouts.
 
 ### Progress: 31 / 199 = 15.6%.
 
-1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) 
+1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift)
 3. [Longest Substring Without Repeating Characters ](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_003_Longest_Substring_Without_Repeating_Characters.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift)
 4. [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_004_Median_Of_Two_Sorted_Arrays.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift)
