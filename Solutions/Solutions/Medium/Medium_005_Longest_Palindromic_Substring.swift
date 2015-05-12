@@ -25,7 +25,7 @@ private extension String {
 
 class Medium_005_Longest_Palindromic_Substring {
     // Helper
-    class func isPalindrome(s: String, startPosition: Int, endPosition: Int) -> Bool {
+    class func isPalindrome(inout s: String, startPosition: Int, endPosition: Int) -> Bool {
         var len = endPosition - startPosition + 1
         for i in 0..<len/2 {
             if s[i + startPosition] != s[len - 1 - i + startPosition] {
@@ -36,14 +36,14 @@ class Medium_005_Longest_Palindromic_Substring {
     }
 
     // O (N ^ 2)
-    class func longest(s: String) -> String {
+    class func longest(var s: String) -> String {
         var longestLength = 0, longestIndex = 0, n = count(s)
         var len = 0
         for currentIndex in 0..<n {
-            if isPalindrome(s, startPosition: currentIndex - longestLength, endPosition: currentIndex) {
+            if isPalindrome(&s, startPosition: currentIndex - longestLength, endPosition: currentIndex) {
                 longestLength += 1
                 longestIndex = currentIndex
-            } else if currentIndex - longestLength - 1 >= 0 && isPalindrome(s, startPosition: currentIndex - longestLength - 1, endPosition: currentIndex) {
+            } else if currentIndex - longestLength - 1 >= 0 && isPalindrome(&s, startPosition: currentIndex - longestLength - 1, endPosition: currentIndex) {
                 longestLength += 2
                 longestIndex = currentIndex
             }
