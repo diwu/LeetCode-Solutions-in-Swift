@@ -8,7 +8,7 @@
 * Written with the latest Swift 1.2 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
 
-### Progress: 33 / 199 = 16.6%.
+### Progress: 34 / 200 = 17.0%.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
@@ -43,6 +43,7 @@
 31. [Next Permutation](https://leetcode.com/problems/next-permutation/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_031_Next_Permutation.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_031_Next_Permutation_Test.swift) - t=O(N), s=O(1)
 32. [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_032_Longest_Valid_Parentheses.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_032_Longest_Valid_Parentheses_Test.swift) - One pass, t=O(N), s=O(N)
 33. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_033_Search_In_Rotated_Sorted_Array.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_033_Search_In_Rotated_Sorted_Array_Test.swift) - t=O(logN), s=O(1)
+34. [Search for a Range](https://leetcode.com/problems/search-for-a-range/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_034_Search_For_A_Range.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_034_Search_For_A_Range_Test.swift) - t=O(logN), s=O(1)
 
 ###<diwufet@163.com>
 ###[LinkedIn](https://www.linkedin.com/in/diwup)
