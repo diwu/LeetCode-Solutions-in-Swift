@@ -4,6 +4,8 @@ https://leetcode.com/problems/valid-sudoku/
 
 #36 Valid Sudoku 
 
+Level: easy
+
 Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
 
 "Each row must have the numbers 1-9 occuring just once."
