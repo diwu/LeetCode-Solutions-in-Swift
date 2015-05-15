@@ -98,11 +98,13 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(var # input: [[Character]], expected: Bool) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Easy_036_Valid_Sudoku_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_036_Valid_Sudoku_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: Bool = Easy_036_Valid_Sudoku.isValidSudoku(input)
             assertHelper(expected == result, problemName: Easy_036_Valid_Sudoku_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Easy_036_Valid_Sudoku_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {

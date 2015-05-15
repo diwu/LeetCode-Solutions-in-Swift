@@ -40,7 +40,7 @@ class Medium_018_4Sum_Test: XCTestCase {
     }
 
     func asyncHelper(# input: [AnyObject], expected: [[Int]]) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Medium_018_4Sum_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_018_4Sum_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: [[Int]] = Medium_018_4Sum.fourSum(num: input[0] as! [Int], target: input[1] as! Int)
             if count(result) != count(expected) {
@@ -59,7 +59,9 @@ class Medium_018_4Sum_Test: XCTestCase {
                     }
                 }
             }
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Medium_018_4Sum_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {

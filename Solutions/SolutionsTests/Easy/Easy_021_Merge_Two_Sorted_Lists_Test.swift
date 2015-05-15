@@ -72,11 +72,13 @@ class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase {
     }
 
     private func asyncHelper(# input: [Node], expected: [Int] ) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Easy_021_Merge_Two_Sorted_Lists_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_021_Merge_Two_Sorted_Lists_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: [Int] = self.helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: input[1]))
             assertHelper(expected == result, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Easy_021_Merge_Two_Sorted_Lists_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {

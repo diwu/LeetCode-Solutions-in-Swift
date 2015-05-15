@@ -73,12 +73,14 @@ class Easy_028_Implement_StrStr_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(var # input: [Any?], expected: Int) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Easy_028_Implement_StrStr_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_028_Implement_StrStr_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)
             var result_KMP: Int = Easy_028_Implement_StrStr.strStr_KMP(hayStack: input[0] as! String?, needle: input[1] as! String?)
             assertHelper(expected == result_brute_force && result_brute_force == result_KMP, problemName: Easy_028_Implement_StrStr_Test.ProblemName, input: input, resultValue: ["brute force: \(result_brute_force)", "KMP: \(result_KMP)"], expectedValue: expected)
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Easy_028_Implement_StrStr_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {

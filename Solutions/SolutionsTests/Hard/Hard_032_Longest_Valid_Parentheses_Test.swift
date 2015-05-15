@@ -53,11 +53,13 @@ class Hard_032_Longest_Valid_Parentheses_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(var # input: String?, expected: Int) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Hard_032_Longest_Valid_Parentheses_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_032_Longest_Valid_Parentheses_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: Int = Hard_032_Longest_Valid_Parentheses.longestValidParentheses(input)
             assertHelper(expected == result, problemName: Hard_032_Longest_Valid_Parentheses_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Hard_032_Longest_Valid_Parentheses_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {

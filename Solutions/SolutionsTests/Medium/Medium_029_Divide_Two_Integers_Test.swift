@@ -128,11 +128,13 @@ class Medium_029_Divide_Two_Integers_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(var # input: [Int], expected: Int) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Medium_029_Divide_Two_Integers_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_029_Divide_Two_Integers_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: Int = Medium_029_Divide_Two_Integers.divide(dividend: input[0], divisor: input[1])
             assertHelper(expected == result, problemName: Medium_029_Divide_Two_Integers_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Medium_029_Divide_Two_Integers_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {

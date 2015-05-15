@@ -74,11 +74,13 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
         return res
     }
     private func asyncHelper(# input: [Node?], expected: [Int]) {
-        var expectation: XCTestExpectation = self.expectationWithDescription(Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: [Int] = self.helper2(Hard_023_Merge_K_Sorted_Lists.mergeKLists(input))
             assertHelper(expected == result, problemName: Hard_023_Merge_K_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-            expectation.fulfill()
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
         })
         waitForExpectationsWithTimeout(Hard_023_Merge_K_Sorted_Lists_Test.TimeOut) { (error: NSError!) -> Void in
             if error != nil {
