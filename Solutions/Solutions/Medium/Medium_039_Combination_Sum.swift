@@ -2,7 +2,7 @@
 
 https://leetcode.com/problems/combination-sum/
 
-#39
+#39 Combination Sum
 
 Level: medium
 
