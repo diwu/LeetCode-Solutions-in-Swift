@@ -25,7 +25,7 @@ isMatch("aa", ".*") → true
 isMatch("ab", ".*") → true
 isMatch("aab", "c*a*b") → true
 
-Inspired by @enriquewang https://oj.leetcode.com/discuss/9405/the-shortest-ac-code
+Inspired by @xiaohui7 at https://leetcode.com/discuss/18970/concise-recursive-and-dp-solutions-with-full-explanation-in
 
 */
 
@@ -34,50 +34,48 @@ private extension String {
     subscript (index: Int) -> Character {
         return self[advance(self.startIndex, index)]
     }
+    subscript (range: Range<Int>) -> String {
+        if range.endIndex > count(self) {
+            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, count(self))]
+        } else {
+            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, range.endIndex)]
+        }
+    }
 }
 
 class Hard_010_Regular_Expression_Matching {
-    // Whether 2 characters match or not
-    // Both characters are guaranteed to be valid
-    class func matchFirst(s: Character, p: Character) -> Bool {
-        return s == p || p == "."
-    }
-
-    class func isMatchHelper(s: String, p: String, indexS: Int, indexP: Int) -> Bool {
-
-        // If p is empty, s has to be empty for a match
-        if indexP >= count(p) {
-            return indexS >= count(s)
+    // recursion
+    class func isMatch_recursion(# s: String, p: String) -> Bool {
+        if count(p) == 0 {
+            return count(s) == 0
         }
-
-        // If p has 2 or more characters left and the second one is not a "*"
-        // Or, if p has only 1 character left
-        if (indexP + 1 < count(p) && p[indexP+1] != "*") || indexP + 1 >= count(p) {
-            // If the first characters of s and p doesn't match, return false
-            if !matchFirst(s[indexS], p: p[indexP]) {
-                return false
-            } else {
-                // Else, move s and p 1 character furthur and check again
-                return isMatchHelper(s, p: p, indexS: indexS+1, indexP: indexP+1)
-            }
+        if count(p) > 1 && p[1] == "*" {
+            return isMatch_recursion(s: s, p: p[2..<count(p)]) || count(s) != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<count(s)], p: p)
         } else {
-            // If s matches the post "*" part of p, return true
-            if isMatchHelper(s, p: p, indexS: indexS, indexP: indexP+2) {
-                return true
-            }
-            // Else, s needs to match the pre "*" part of p
-            var i: Int = 0
-            while indexS + i < count(s) && matchFirst(s[indexS+i], p: p[indexP]) {
-                i++
-                if isMatchHelper(s, p: p, indexS: indexS+i, indexP: indexP+2) {
-                    return true
+            return count(s) != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<count(s)], p: p[1..<count(p)])
+        }
+    }
+    // dp
+    class func isMatch(# s: String, p: String) -> Bool {
+        var m: Int = count(s)
+        var n: Int = count(p)
+        var f: [[Bool]] = Array<Array<Bool>>(count: m + 1, repeatedValue: Array<Bool>(count: n + 1, repeatedValue: false))
+        f[0][0] = true
+        for var i = 1; i <= m; i++ {
+            f[i][0] = false
+        }
+        for var i = 1; i <= n; i++ {
+            f[0][i] = i > 1 && "*" == p[i-1] && f[0][i-2]
+        }
+        for var i = 1; i <= m; i++ {
+            for var j = 1; j <= n; j++ {
+                if p[j-1] != "*" {
+                    f[i][j] = f[i - 1][j - 1] && (s[i - 1] == p[j - 1] || "." == p[j - 1])
+                } else {
+                     f[i][j] = f[i][j - 2] || (s[i - 1] == p[j - 2] || "." == p[j - 2]) && f[i - 1][j]
                 }
             }
-            return false
         }
-    }
-    
-    class func isMatch(# s: String, p: String) -> Bool {
-        return isMatchHelper(s, p: p, indexS: 0, indexP: 0)
+        return f[m][n]
     }
 }
