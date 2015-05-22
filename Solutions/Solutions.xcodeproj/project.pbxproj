@@ -25,6 +25,9 @@
 		502529941B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */; };
 		502529951B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */; };
 		502529971B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502529961B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift */; };
+		50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50254C971B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift */; };
+		50254C991B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50254C971B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift */; };
+		50254C9B1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50254C9A1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift */; };
 		502A8F771B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A8F761B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift */; };
 		502A8F781B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A8F761B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift */; };
 		502A8F7A1B02354800BE6CEB /* Medium_034_Search_For_A_Range_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A8F791B02354800BE6CEB /* Medium_034_Search_For_A_Range_Test.swift */; };
@@ -161,6 +164,8 @@
 		502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku_Test.swift; path = Easy/Easy_036_Valid_Sudoku_Test.swift; sourceTree = "<group>"; };
 		502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_037_Sudoku_Solver.swift; path = Hard/Hard_037_Sudoku_Solver.swift; sourceTree = "<group>"; };
 		502529961B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_037_Sudoku_Solver_Test.swift; path = Hard/Hard_037_Sudoku_Solver_Test.swift; sourceTree = "<group>"; };
+		50254C971B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_042_Trapping_Rain_Water.swift; path = Hard/Hard_042_Trapping_Rain_Water.swift; sourceTree = "<group>"; };
+		50254C9A1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_042_Trapping_Rain_Water_Test.swift; path = Hard/Hard_042_Trapping_Rain_Water_Test.swift; sourceTree = "<group>"; };
 		502A8F761B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_034_Search_For_A_Range.swift; path = Medium/Medium_034_Search_For_A_Range.swift; sourceTree = "<group>"; };
 		502A8F791B02354800BE6CEB /* Medium_034_Search_For_A_Range_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_034_Search_For_A_Range_Test.swift; path = Medium/Medium_034_Search_For_A_Range_Test.swift; sourceTree = "<group>"; };
 		502A8F7B1B024E4300BE6CEB /* Medium_035_Search_Insert_Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_035_Search_Insert_Position.swift; path = Medium/Medium_035_Search_Insert_Position.swift; sourceTree = "<group>"; };
@@ -381,6 +386,7 @@
 				5005A80F1B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift */,
 				502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */,
 				505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */,
+				50254C971B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				5005A8121B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift */,
 				502529961B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift */,
 				5058389A1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift */,
+				50254C9A1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -587,6 +594,7 @@
 				5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */,
 				502529941B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */,
 				502A8F7C1B024E4300BE6CEB /* Medium_035_Search_Insert_Position.swift in Sources */,
+				50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
 				50AEFEAD1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
 				50E1BFBA1AD28EAC009308B6 /* Medium_015_3Sum.swift in Sources */,
@@ -613,6 +621,7 @@
 				509365A51AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */,
 				5005E4DE1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift in Sources */,
 				91DCF23D1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
+				50254C991B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				50001EF91AFA65970060075D /* Easy_026_Remove_Duplicates_from_Sorted_Array.swift in Sources */,
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
 				91EF6D701AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
@@ -645,6 +654,7 @@
 				91AE3A011AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift in Sources */,
 				502A8F7F1B024E8100BE6CEB /* Medium_035_Search_Insert_Position_Test.swift in Sources */,
 				502A8F7D1B024E4300BE6CEB /* Medium_035_Search_Insert_Position.swift in Sources */,
+				50254C9B1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift in Sources */,
 				50A7F8001AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift in Sources */,
 				50A7F8041AA9A3CA00F84E86 /* Medium_001_Two_Sum.swift in Sources */,
 				91AE3A0A1AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
