@@ -11,7 +11,7 @@ import XCTest
 class Hard_044_Wildcard_Matching_Test: XCTestCase {
     private static let ProblemName: String = "Hard_044_Wildcard_Matching"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
+    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         var input: [String] = ["aa", "a"]
         var expected: Bool = false
