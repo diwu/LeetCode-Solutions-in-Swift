@@ -52,6 +52,9 @@
 		505838981B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */; };
 		505838991B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */; };
 		5058389B1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058389A1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift */; };
+		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
+		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
+		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
 		5093659F1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */; };
 		509365A01AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */; };
 		509365A21AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509365A11AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift */; };
@@ -185,6 +188,8 @@
 		505825B61AF89D200081F4FA /* Medium_022_Generate_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_022_Generate_Parentheses_Test.swift; path = Medium/Medium_022_Generate_Parentheses_Test.swift; sourceTree = "<group>"; };
 		505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_041_First_Missing_Positive.swift; path = Hard/Hard_041_First_Missing_Positive.swift; sourceTree = "<group>"; };
 		5058389A1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_041_First_Missing_Positive_Test.swift; path = Hard/Hard_041_First_Missing_Positive_Test.swift; sourceTree = "<group>"; };
+		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
+		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5093659E1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_017_Letter_Combinations_Of_A_Phone_Number.swift; path = Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number.swift; sourceTree = "<group>"; };
 		509365A11AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift; path = Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift; sourceTree = "<group>"; };
 		509365A31AE23CD600FD41FD /* Medium_018_4Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_018_4Sum.swift; path = Medium/Medium_018_4Sum.swift; sourceTree = "<group>"; };
@@ -393,6 +398,7 @@
 				502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */,
 				505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */,
 				50254C971B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift */,
+				5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				502529961B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift */,
 				5058389A1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift */,
 				50254C9A1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift */,
+				5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -595,6 +602,7 @@
 				91A29F161AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
 				50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */,
 				91EF6D6F1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
+				5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				91492D621AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */,
 				5098BC3A1AF90CE90009964D /* Medium_024_Swap_Nodes_In_Pairs.swift in Sources */,
 				5005A8101B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
@@ -645,6 +653,7 @@
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
 				509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */,
 				509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */,
+				5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				50AEFEAE1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
 				50001EF41AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
@@ -655,6 +664,7 @@
 				5263CF5F1AC7D9AF0073631F /* Medium_012_Integer_To_Roman_Test.swift in Sources */,
 				509D38661B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift in Sources */,
 				50D0C8F01AFDF5DE0057BE0A /* Easy_028_Implement_StrStr.swift in Sources */,
+				5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */,
 				502529921B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift in Sources */,
 				5058389B1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift in Sources */,
 				50AEFEB01AFF0CC20059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words_Test.swift in Sources */,

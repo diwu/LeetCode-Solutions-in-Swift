@@ -27,6 +27,11 @@ class Medium_043_Multiply_Strings_Test: XCTestCase {
         var expected: String = "66112151987897914185037067763780539471710428702996366"
         asyncHelper(input: input, expected: expected)
     }
+    func test_004() {
+        var input: [String] = ["0", "0"]
+        var expected: String = "0"
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(# input: [String], expected: String) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_043_Multiply_Strings_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
