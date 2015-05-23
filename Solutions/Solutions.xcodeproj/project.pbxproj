@@ -91,6 +91,9 @@
 		509D38651B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D38641B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift */; };
 		509D38661B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D38641B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift */; };
 		509D38681B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D38671B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift */; };
+		50A765151B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */; };
+		50A765161B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */; };
+		50A765181B10C968004F823B /* Hard_051_N_Queens_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A765171B10C968004F823B /* Hard_051_N_Queens_Test.swift */; };
 		50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D61AA9970700F84E86 /* AppDelegate.swift */; };
 		50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7F7D81AA9970700F84E86 /* ViewController.swift */; };
 		50A7F7DC1AA9970700F84E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A7F7DA1AA9970700F84E86 /* Main.storyboard */; };
@@ -232,6 +235,8 @@
 		5098BC3C1AF90CFE0009964D /* Medium_024_Swap_Nodes_In_Pairs_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_024_Swap_Nodes_In_Pairs_Test.swift; path = Medium/Medium_024_Swap_Nodes_In_Pairs_Test.swift; sourceTree = "<group>"; };
 		509D38641B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_032_Longest_Valid_Parentheses.swift; path = Hard/Hard_032_Longest_Valid_Parentheses.swift; sourceTree = "<group>"; };
 		509D38671B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_032_Longest_Valid_Parentheses_Test.swift; path = Hard/Hard_032_Longest_Valid_Parentheses_Test.swift; sourceTree = "<group>"; };
+		50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_051_N_Queens.swift; path = Hard/Hard_051_N_Queens.swift; sourceTree = "<group>"; };
+		50A765171B10C968004F823B /* Hard_051_N_Queens_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_051_N_Queens_Test.swift; path = Hard/Hard_051_N_Queens_Test.swift; sourceTree = "<group>"; };
 		50A7F7D11AA9970700F84E86 /* Solutions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solutions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A7F7D51AA9970700F84E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A7F7D61AA9970700F84E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -435,6 +440,7 @@
 				5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */,
 				5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */,
 				5081E3F71B10549900D8FD22 /* Hard_047_Permutations_II.swift */,
+				50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */,
 				5081E3F01B1050C300D8FD22 /* Hard_045_Jump_Game_II_Test.swift */,
 				5081E3FA1B1054A800D8FD22 /* Hard_047_Permutations_II_Test.swift */,
+				50A765171B10C968004F823B /* Hard_051_N_Queens_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -633,6 +640,7 @@
 				509365A41AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */,
 				50254C9D1B0F73AE0073B873 /* Medium_043_Multiply_Strings.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
+				50A765151B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */,
 				50001EF31AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
 				50C788071B0A4BDB00786829 /* Medium_040_Combination_Sum_II.swift in Sources */,
 				91AE3A091AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
@@ -736,6 +744,7 @@
 				509365A21AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift in Sources */,
 				50001EF61AF9F92D0060075D /* Hard_025_Reverse_Nodes_In_K_Group_Test.swift in Sources */,
 				91AE3A0D1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift in Sources */,
+				50A765161B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */,
 				50FF9DB61B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift in Sources */,
 				5039814A1AFB555900419435 /* Easy_027_Remove_Element.swift in Sources */,
 				509365AA1AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */,
@@ -758,6 +767,7 @@
 				502529951B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */,
 				50FF9DB81B08ED340066EDA7 /* Medium_039_Combination_Sum_Test.swift in Sources */,
 				50D0C8F71AFE38A30057BE0A /* Medium_029_Divide_Two_Integers_Test.swift in Sources */,
+				50A765181B10C968004F823B /* Hard_051_N_Queens_Test.swift in Sources */,
 				5005A8131B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift in Sources */,
 				505838991B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */,
 				50D0C8F21AFDF5FA0057BE0A /* Easy_028_Implement_StrStr_Test.swift in Sources */,
