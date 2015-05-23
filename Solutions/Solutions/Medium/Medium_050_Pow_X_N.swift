@@ -23,6 +23,6 @@ struct Medium_050_Pow_X_N {
             n = -n;
             x = 1/x;
         }
-        return ( n % 2 == 0) ? myPow(x: x*x, n: n/2) : x*myPow(x: x*x, n: n/2);
+        return ( n % 2 == 0) ? myPow(x: x*x, n: n/2) : x * myPow(x: x*x, n: n/2);
     }
 }
