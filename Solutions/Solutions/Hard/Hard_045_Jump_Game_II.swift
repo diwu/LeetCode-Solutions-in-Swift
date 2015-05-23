@@ -1,10 +1,25 @@
-//
-//  Hard_045_Jump_Game_II.swift
-//  Solutions
-//
-//  Created by Di Wu on 5/23/15.
-//  Copyright (c) 2015 diwu. All rights reserved.
-//
+/*
+
+https://leetcode.com/problems/jump-game-ii/
+
+#45 Jump Game II 
+
+Level: hard
+
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+Each element in the array represents your maximum jump length at that position.
+
+Your goal is to reach the last index in the minimum number of jumps.
+
+For example:
+Given array A = [2,3,1,1,4]
+
+The minimum number of jumps to reach the last index is 2. (Jump 1 step from index 0 to 1, then 3 steps to the last index.)
+
+Inspired by @chentao169 at https://leetcode.com/discuss/422/is-there-better-solution-for-jump-game-ii
+
+*/
 
 import Foundation
 
