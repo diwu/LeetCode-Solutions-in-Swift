@@ -22,6 +22,11 @@ class Medium_046_Permutations_Test: XCTestCase {
         var expected: [[Int]] = [[4, 3, 2, 1], [1, 2, 3, 4], [1, 2, 4, 3], [1, 3, 2, 4], [1, 3, 4, 2], [2, 1, 3, 4], [2, 1, 4, 3], [2, 3, 1, 4], [2, 3, 4, 1], [3, 1, 2, 4], [3, 1, 4, 2], [3, 2, 1, 4], [3, 2, 4, 1], [3, 4, 1, 2], [3, 4, 2, 1], [1, 4, 2, 3], [1, 4, 3, 2], [2, 4, 1, 3], [2, 4, 3, 1], [4, 1, 2, 3], [4, 1, 3, 2], [4, 2, 1, 3], [4, 2, 3, 1], [4, 3, 1, 2]]
         asyncHelper(input: input, expected: expected)
     }
+    func test_003() {
+        var input: [Int] = [1]
+        var expected: [[Int]] = [[1]]
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(# input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_046_Permutations_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
