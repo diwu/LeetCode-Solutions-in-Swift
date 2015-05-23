@@ -1,9 +1,43 @@
-//
-//  Medium_049_Anagrams.swift
-//  Solutions
-//
-//  Created by Di Wu on 5/23/15.
-//  Copyright (c) 2015 diwu. All rights reserved.
-//
+/*
+
+https://leetcode.com/problems/anagrams/
+
+#49 Anagrams
+
+Level: medium
+
+Given an array of strings, return all groups of strings that are anagrams.
+
+Note: All inputs will be in lower-case.
+
+Inspired by @zxyperfect at https://leetcode.com/discuss/18664/sharing-my-very-concise-solution-with-explanation
+
+*/
 
 import Foundation
+
+struct Medium_049_Anagrams {
+    static func anagrams(strings: [String]) ->[String] {
+        var result: [String] = []
+        var sortedStrings = strings;
+        var map = [String: [Int]]()
+        for var i = 0; i < count(strings); i++ {
+            var arr: [Character] = Array(sortedStrings[i])
+            arr.sort{$0 < $1}
+            sortedStrings[i] = String(arr)
+            if let unwrapped = map[sortedStrings[i]] {
+                map[sortedStrings[i]]!.append(i)
+            } else {
+                map[sortedStrings[i]] = [i]
+            }
+        }
+        for (string, intArr) in map {
+            if count(intArr) > 1 {
+                for var i = 0; i < count(intArr); i++ {
+                    result.append(strings[intArr[i]])
+                }
+            }
+        }
+        return result;
+    }
+}
