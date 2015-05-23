@@ -24,18 +24,12 @@ Inspired by @yuyibestman at https://leetcode.com/discuss/8472/share-my-o-n-time-
 import Foundation
 
 class Medium_031_Next_Permutation {
-    class func swap(inout # nums: [Int], i: Int, j: Int) {
-        var tmp: Int
-        tmp = nums[i]
-        nums[i] = nums[j]
-        nums[j] = tmp
-    }
     class func reverseInPlace(inout # nums: [Int], start: Int, end: Int) {
         if start > end {
             return
         }
         for var i = start; i < (start + end)/2; i++ {
-            swap(nums: &nums, i: i, j: start + end - i)
+            swap(&nums[i], &nums[start + end - i])
         }
     }
     class func nextPermutation(inout nums: [Int]) {
@@ -61,7 +55,7 @@ class Medium_031_Next_Permutation {
                 }
                 i--
             }
-            swap(nums: &nums, i: i, j: index - 1)
+            swap(&nums[i], &nums[index-1])
             reverseInPlace(nums: &nums, start: index, end: length - 1)
         }
     }
