@@ -19,6 +19,9 @@
 		5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */; };
 		5005E4DC1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */; };
 		5005E4DE1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DD1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift */; };
+		501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */; };
+		501E66941B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */; };
+		501E66961B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */; };
 		5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */; };
 		502529901B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */; };
 		502529921B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */; };
@@ -187,6 +190,8 @@
 		5005A8121B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_033_Search_In_Rotated_Sorted_Array_Test.swift; path = Hard/Hard_033_Search_In_Rotated_Sorted_Array_Test.swift; sourceTree = "<group>"; };
 		5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_020_Valid_Parentheses.swift; path = Easy/Easy_020_Valid_Parentheses.swift; sourceTree = "<group>"; };
 		5005E4DD1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_020_Valid_Parentheses_Test.swift; path = Easy/Easy_020_Valid_Parentheses_Test.swift; sourceTree = "<group>"; };
+		501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II.swift; path = Hard/Hard_052_N_Queens_II.swift; sourceTree = "<group>"; };
+		501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II_Test.swift; path = Hard/Hard_052_N_Queens_II_Test.swift; sourceTree = "<group>"; };
 		5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku.swift; path = Easy/Easy_036_Valid_Sudoku.swift; sourceTree = "<group>"; };
 		502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku_Test.swift; path = Easy/Easy_036_Valid_Sudoku_Test.swift; sourceTree = "<group>"; };
 		502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_037_Sudoku_Solver.swift; path = Hard/Hard_037_Sudoku_Solver.swift; sourceTree = "<group>"; };
@@ -441,6 +446,7 @@
 				5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */,
 				5081E3F71B10549900D8FD22 /* Hard_047_Permutations_II.swift */,
 				50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */,
+				501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 				5081E3F01B1050C300D8FD22 /* Hard_045_Jump_Game_II_Test.swift */,
 				5081E3FA1B1054A800D8FD22 /* Hard_047_Permutations_II_Test.swift */,
 				50A765171B10C968004F823B /* Hard_051_N_Queens_Test.swift */,
+				501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -665,6 +672,7 @@
 				5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */,
 				502529941B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */,
 				502A8F7C1B024E4300BE6CEB /* Medium_035_Search_Insert_Position.swift in Sources */,
+				501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
 				50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				5081E3F31B10537E00D8FD22 /* Medium_046_Permutations.swift in Sources */,
 				5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
@@ -702,6 +710,7 @@
 				91492D6A1AC58F7A00D3A514 /* Hard_010_Regular_Expression_Matching_Test.swift in Sources */,
 				5098BC381AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift in Sources */,
 				91DCF2411AC9207900F9CB65 /* SolutionsTestsHelper.swift in Sources */,
+				501E66961B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift in Sources */,
 				91EF6D721AC8EF6400D8C285 /* Easy_013_Roman_To_Integer_Test.swift in Sources */,
 				502A8F7A1B02354800BE6CEB /* Medium_034_Search_For_A_Range_Test.swift in Sources */,
 				91492D651AC58D4200D3A514 /* Easy_009_Palindrome_Number_Test.swift in Sources */,
@@ -709,6 +718,7 @@
 				5081E4081B10572E00D8FD22 /* Medium_050_Pow_X_N.swift in Sources */,
 				91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
+				501E66941B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
 				509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */,
 				509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */,
 				5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,

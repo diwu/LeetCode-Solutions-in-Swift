@@ -27,20 +27,34 @@ class Hard_051_N_Queens_Test: XCTestCase {
                 ".Q.."
             ]
         ]
-        var result = Hard_051_N_Queens.solveNQueens(input)
-        if count(result) != count(expected) {
-            assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-        } else {
-            for var i = 0; i < count(expected); i++ {
-                var flag = false
-                for var j = 0; j < count(result); j++ {
-                    if result[j] == expected[i] {
-                        flag = true
+        asyncHelper(input: input, expected: expected)
+    }
+    private func asyncHelper(# input: Int, expected: [[String]]) {
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_051_N_Queens_Test.TimeOutName)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            var result = Hard_051_N_Queens.solveNQueens(input)
+            if count(result) != count(expected) {
+                assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            } else {
+                for var i = 0; i < count(expected); i++ {
+                    var flag = false
+                    for var j = 0; j < count(result); j++ {
+                        if result[j] == expected[i] {
+                            flag = true
+                        }
+                    }
+                    if flag == false {
+                        assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
                     }
                 }
-                if flag == false {
-                    assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
-                }
+            }
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
+        })
+        waitForExpectationsWithTimeout(Hard_051_N_Queens_Test.TimeOut) { (error: NSError!) -> Void in
+            if error != nil {
+                assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: Hard_051_N_Queens_Test.TimeOutName, expectedValue: expected)
             }
         }
     }
