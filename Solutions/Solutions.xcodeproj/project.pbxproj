@@ -61,6 +61,9 @@
 		5064BB821B233453001B24B8 /* Medium_054_Spiral_Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB811B233453001B24B8 /* Medium_054_Spiral_Matrix.swift */; };
 		5064BB831B233453001B24B8 /* Medium_054_Spiral_Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB811B233453001B24B8 /* Medium_054_Spiral_Matrix.swift */; };
 		5064BB851B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB841B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift */; };
+		5064BB871B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */; };
+		5064BB881B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */; };
+		5064BB8A1B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */; };
 		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
@@ -224,6 +227,8 @@
 		5064BB7F1B232D59001B24B8 /* Medium_053_Maximum_Subarray_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_053_Maximum_Subarray_Test.swift; path = Medium/Medium_053_Maximum_Subarray_Test.swift; sourceTree = "<group>"; };
 		5064BB811B233453001B24B8 /* Medium_054_Spiral_Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_054_Spiral_Matrix.swift; path = Medium/Medium_054_Spiral_Matrix.swift; sourceTree = "<group>"; };
 		5064BB841B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_054_Spiral_Matrix_Test.swift; path = Medium/Medium_054_Spiral_Matrix_Test.swift; sourceTree = "<group>"; };
+		5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_055_Jump_Game.swift; path = Medium/Medium_055_Jump_Game.swift; sourceTree = "<group>"; };
+		5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_055_Jump_Game_Test.swift; path = Medium/Medium_055_Jump_Game_Test.swift; sourceTree = "<group>"; };
 		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
 		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_045_Jump_Game_II.swift; path = Hard/Hard_045_Jump_Game_II.swift; sourceTree = "<group>"; };
@@ -437,6 +442,7 @@
 				5081E4061B10572E00D8FD22 /* Medium_050_Pow_X_N.swift */,
 				5064BB791B232D19001B24B8 /* Medium_053_Maximum_Subarray.swift */,
 				5064BB811B233453001B24B8 /* Medium_054_Spiral_Matrix.swift */,
+				5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -512,6 +518,7 @@
 				5081E4091B10573F00D8FD22 /* Medium_050_Pow_X_N_Test.swift */,
 				5064BB7F1B232D59001B24B8 /* Medium_053_Maximum_Subarray_Test.swift */,
 				5064BB841B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift */,
+				5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -692,6 +699,7 @@
 				50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				5081E3F31B10537E00D8FD22 /* Medium_046_Permutations.swift in Sources */,
 				5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
+				5064BB871B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */,
 				50AEFEAD1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
 				50E1BFBA1AD28EAC009308B6 /* Medium_015_3Sum.swift in Sources */,
 			);
@@ -704,6 +712,7 @@
 				5030D3981AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */,
 				50E1BFBD1AD28EC6009308B6 /* Medium_015_3Sum_Test.swift in Sources */,
 				91492D681AC58F6000D3A514 /* Hard_010_Regular_Expression_Matching.swift in Sources */,
+				5064BB881B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */,
 				91AE3A071AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift in Sources */,
 				91AE3A041AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */,
 				50EC15C41B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */,
@@ -801,6 +810,7 @@
 				505838991B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */,
 				50D0C8F21AFDF5FA0057BE0A /* Easy_028_Implement_StrStr_Test.swift in Sources */,
 				502529901B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
+				5064BB8A1B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift in Sources */,
 				91394F381AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift in Sources */,
 				5081E3FB1B1054A800D8FD22 /* Hard_047_Permutations_II_Test.swift in Sources */,
 				5030D39A1AE8F1A7005FADA6 /* Easy_021_Merge_Two_Sorted_Lists_Test.swift in Sources */,
