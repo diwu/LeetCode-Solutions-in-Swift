@@ -25,13 +25,13 @@ struct Medium_049_Anagrams {
             var arr: [Character] = Array(sortedStrings[i].characters)
             arr.sortInPlace {$0 < $1}
             sortedStrings[i] = String(arr)
-            if let unwrapped = map[sortedStrings[i]] {
+            if let _ = map[sortedStrings[i]] {
                 map[sortedStrings[i]]!.append(i)
             } else {
                 map[sortedStrings[i]] = [i]
             }
         }
-        for (string, intArr) in map {
+        for (_, intArr) in map {
             if intArr.count > 1 {
                 for var i = 0; i < intArr.count; i++ {
                     result.append(strings[intArr[i]])

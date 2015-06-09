@@ -50,13 +50,13 @@ class Medium_054_Spiral_Matrix_Test: XCTestCase {
     private func asyncHelper(input  input: [[Int]], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_054_Spiral_Matrix_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result = Medium_054_Spiral_Matrix.spiralOrder(input)
+            let result = Medium_054_Spiral_Matrix.spiralOrder(input)
             assertHelper(result == expected, problemName: Medium_054_Spiral_Matrix_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_054_Spiral_Matrix_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_054_Spiral_Matrix_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_054_Spiral_Matrix_Test.ProblemName, input: input, resultValue: Medium_054_Spiral_Matrix_Test.TimeOutName, expectedValue: expected)
             }

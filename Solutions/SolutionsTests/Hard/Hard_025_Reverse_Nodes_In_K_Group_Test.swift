@@ -64,14 +64,14 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
     private func asyncHelper(input  input: [Any], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var unwrapped: Node? = unwrap(input[0]) as? Node
-            var result: [Int] = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: unwrapped, k: input[1] as! Int))
+            let unwrapped: Node? = unwrap(input[0]) as? Node
+            let result: [Int] = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: unwrapped, k: input[1] as! Int))
             assertHelper(expected == result, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName, expectedValue: expected)
             }

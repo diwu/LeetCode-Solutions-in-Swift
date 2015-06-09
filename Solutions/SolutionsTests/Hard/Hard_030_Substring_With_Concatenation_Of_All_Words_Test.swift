@@ -90,13 +90,13 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase {
     private func asyncHelper(var input  input: [Any?], expected: Set<Int>) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: [Int] = Hard_030_Substring_With_Concatenation_Of_All_Words.findSubstring(s: input[0] as! String?, words: input[1] as! [String])
+            let result: [Int] = Hard_030_Substring_With_Concatenation_Of_All_Words.findSubstring(s: input[0] as! String?, words: input[1] as! [String])
             assertHelper(expected == Set(result), problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName, expectedValue: expected)
             }

@@ -31,13 +31,13 @@ class Easy_038_Count_And_Say_Test: XCTestCase {
     private func asyncHelper(input  input: Int, expected: String) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_038_Count_And_Say_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: String = Easy_038_Count_And_Say.countAndSay(input)
+            let result: String = Easy_038_Count_And_Say.countAndSay(input)
             assertHelper(expected == result, problemName: Easy_038_Count_And_Say_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_038_Count_And_Say_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Easy_038_Count_And_Say_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_038_Count_And_Say_Test.ProblemName, input: input, resultValue: Easy_038_Count_And_Say_Test.TimeOutName, expectedValue: expected)
             }

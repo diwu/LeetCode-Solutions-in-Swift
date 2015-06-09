@@ -52,7 +52,7 @@ class Hard_051_N_Queens_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_051_N_Queens_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Hard_051_N_Queens_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: Hard_051_N_Queens_Test.TimeOutName, expectedValue: expected)
             }

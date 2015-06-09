@@ -21,13 +21,13 @@ class Hard_052_N_Queens_II_Test: XCTestCase {
     private func asyncHelper(input  input: Int, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_052_N_Queens_II_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result = Hard_052_N_Queens_II.totalNQueens(input)
+            let result = Hard_052_N_Queens_II.totalNQueens(input)
             assertHelper(result == expected, problemName: Hard_052_N_Queens_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_052_N_Queens_II_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Hard_052_N_Queens_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_052_N_Queens_II_Test.ProblemName, input: input, resultValue: Hard_052_N_Queens_II_Test.TimeOutName, expectedValue: expected)
             }

@@ -30,6 +30,10 @@ class Medium_012_Integer_To_Roman {
 
     // O (1)
     class func integerToRoman(num  num: Int) -> String {
-        return M[num/1000] + C[(num%1000)/100] + X[(num%100)/10] + I[num%10]
+        let m = M[num/1000]
+        let c = C[(num%1000)/100]
+        let x = X[(num%100)/10]
+        let i = I[num%10]
+        return m + c + x + i
     }
 }

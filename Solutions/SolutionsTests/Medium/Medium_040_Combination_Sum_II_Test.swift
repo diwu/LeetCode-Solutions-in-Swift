@@ -71,7 +71,7 @@ class Medium_040_Combination_Sum_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_040_Combination_Sum_II_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_040_Combination_Sum_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_040_Combination_Sum_II_Test.ProblemName, input: input, resultValue: Medium_040_Combination_Sum_II_Test.TimeOutName, expectedValue: expected)
             }

@@ -65,13 +65,13 @@ class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase {
     private func asyncHelper(var input  input: [AnyObject], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: Int = Hard_033_Search_In_Rotated_Sorted_Array.search(nums: input[0] as! [Int], target: input[1] as! Int)
+            let result: Int = Hard_033_Search_In_Rotated_Sorted_Array.search(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Hard_033_Search_In_Rotated_Sorted_Array_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_033_Search_In_Rotated_Sorted_Array_Test.ProblemName, input: input, resultValue: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

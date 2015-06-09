@@ -45,13 +45,13 @@ class Medium_055_Jump_Game_Test: XCTestCase {
     private func asyncHelper(input  input: [Int], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_055_Jump_Game_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result = Medium_055_Jump_Game.canJump(input)
+            let result = Medium_055_Jump_Game.canJump(input)
             assertHelper(result == expected, problemName: Medium_055_Jump_Game_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_055_Jump_Game_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_055_Jump_Game_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_055_Jump_Game_Test.ProblemName, input: input, resultValue: Medium_055_Jump_Game_Test.TimeOutName, expectedValue: expected)
             }

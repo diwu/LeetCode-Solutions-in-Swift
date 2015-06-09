@@ -35,7 +35,7 @@ class Medium_048_Rotate_Image_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_048_Rotate_Image_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_048_Rotate_Image_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_048_Rotate_Image_Test.ProblemName, input: input, resultValue: Medium_048_Rotate_Image_Test.TimeOutName, expectedValue: expected)
             }

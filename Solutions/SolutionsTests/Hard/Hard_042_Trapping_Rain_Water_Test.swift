@@ -50,13 +50,13 @@ class Hard_042_Trapping_Rain_Water_Test: XCTestCase {
     private func asyncHelper(input  input: [Int], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_042_Trapping_Rain_Water_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: Int = Hard_042_Trapping_Rain_Water.trap(input)
+            let result: Int = Hard_042_Trapping_Rain_Water.trap(input)
             assertHelper(expected == result, problemName: Hard_042_Trapping_Rain_Water_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_042_Trapping_Rain_Water_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Hard_042_Trapping_Rain_Water_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_042_Trapping_Rain_Water_Test.ProblemName, input: input, resultValue: Hard_042_Trapping_Rain_Water_Test.TimeOutName, expectedValue: expected)
             }

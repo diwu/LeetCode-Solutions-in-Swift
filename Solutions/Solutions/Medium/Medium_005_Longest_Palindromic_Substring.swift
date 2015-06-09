@@ -38,7 +38,7 @@ class Medium_005_Longest_Palindromic_Substring {
     // O (N ^ 2)
     class func longest(var s: String) -> String {
         var longestLength = 0, longestIndex = 0, n = s.characters.count
-        var len = 0
+        _ = 0
         for currentIndex in 0..<n {
             if isPalindrome(&s, startPosition: currentIndex - longestLength, endPosition: currentIndex) {
                 longestLength += 1

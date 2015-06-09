@@ -75,14 +75,14 @@ class Easy_028_Implement_StrStr_Test: XCTestCase {
     private func asyncHelper(var input  input: [Any?], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_028_Implement_StrStr_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)
-            var result_KMP: Int = Easy_028_Implement_StrStr.strStr_KMP(hayStack: input[0] as! String?, needle: input[1] as! String?)
+            let result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)
+            let result_KMP: Int = Easy_028_Implement_StrStr.strStr_KMP(hayStack: input[0] as! String?, needle: input[1] as! String?)
             assertHelper(expected == result_brute_force && result_brute_force == result_KMP, problemName: Easy_028_Implement_StrStr_Test.ProblemName, input: input, resultValue: ["brute force: \(result_brute_force)", "KMP: \(result_KMP)"], expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_028_Implement_StrStr_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Easy_028_Implement_StrStr_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_028_Implement_StrStr_Test.ProblemName, input: input, resultValue: Easy_028_Implement_StrStr_Test.TimeOutName, expectedValue: expected)
             }

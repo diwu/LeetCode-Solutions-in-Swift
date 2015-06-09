@@ -51,7 +51,7 @@ class Medium_046_Permutations_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_046_Permutations_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_046_Permutations_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_046_Permutations_Test.ProblemName, input: input, resultValue: Medium_046_Permutations_Test.TimeOutName, expectedValue: expected)
             }

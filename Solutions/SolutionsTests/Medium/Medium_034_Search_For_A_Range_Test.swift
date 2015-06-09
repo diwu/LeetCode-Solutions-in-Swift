@@ -60,13 +60,13 @@ class Medium_034_Search_For_A_Range_Test: XCTestCase {
     private func asyncHelper(var input  input: [AnyObject], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_034_Search_For_A_Range_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: [Int] = Medium_034_Search_For_A_Range.searchRange(nums: input[0] as! [Int], target: input[1] as! Int)
+            let result: [Int] = Medium_034_Search_For_A_Range.searchRange(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Medium_034_Search_For_A_Range_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_034_Search_For_A_Range_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_034_Search_For_A_Range_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_034_Search_For_A_Range_Test.ProblemName, input: input, resultValue: Medium_034_Search_For_A_Range_Test.TimeOutName, expectedValue: expected)
             }

@@ -55,13 +55,13 @@ class Easy_026_Remove_Duplicates_from_Sorted_Array_Test: XCTestCase {
     private func asyncHelper(var input  input: [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: Int = Easy_026_Remove_Duplicates_from_Sorted_Array.removeDuplicates(&input)
+            let result: Int = Easy_026_Remove_Duplicates_from_Sorted_Array.removeDuplicates(&input)
             assertHelper(expected == Array(input[0..<result]), problemName: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.ProblemName, input: input, resultValue: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

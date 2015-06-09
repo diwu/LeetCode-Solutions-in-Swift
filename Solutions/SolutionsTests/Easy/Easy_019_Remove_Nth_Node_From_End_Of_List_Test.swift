@@ -74,13 +74,13 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase {
     func asyncHelper(input  input: [AnyObject], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: [Int] = self.helper2(Easy_019_Remove_Nth_Node_From_End_Of_List.removeNthFromEnd(self.helper1(input[0] as! [Int]), n: input[1] as! Int))
+            let result: [Int] = self.helper2(Easy_019_Remove_Nth_Node_From_End_Of_List.removeNthFromEnd(self.helper1(input[0] as! [Int]), n: input[1] as! Int))
             assertHelper(expected == result, problemName: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.ProblemName, input: input, resultValue: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName, expectedValue: expected)
             }

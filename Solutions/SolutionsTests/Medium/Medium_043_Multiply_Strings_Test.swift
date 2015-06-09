@@ -35,13 +35,13 @@ class Medium_043_Multiply_Strings_Test: XCTestCase {
     private func asyncHelper(input  input: [String], expected: String) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_043_Multiply_Strings_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var result: String = Medium_043_Multiply_Strings.multiply(num1: input[0], num2: input[1])
+            let result: String = Medium_043_Multiply_Strings.multiply(num1: input[0], num2: input[1])
             assertHelper(expected == result, problemName: Medium_043_Multiply_Strings_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_043_Multiply_Strings_Test.TimeOut) { (error: NSError!) -> Void in
+        waitForExpectationsWithTimeout(Medium_043_Multiply_Strings_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_043_Multiply_Strings_Test.ProblemName, input: input, resultValue: Medium_043_Multiply_Strings_Test.TimeOutName, expectedValue: expected)
             }

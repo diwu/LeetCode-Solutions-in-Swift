@@ -38,7 +38,7 @@ private extension String {
 class Easy_008_String_to_Integer_atoi {
     // O (N)
     class func atoi(str: String) -> Int {
-        var i: Int = 0, sign: Bool = true, len: Int = str.characters.count, base: Int = 0
+        var sign: Bool = true, len: Int = str.characters.count, base: Int = 0
         for j in 0..<len {
             let zeroString: String = String("0")
             let zeroValue: Int = Int(zeroString.utf8[zeroString.utf8.startIndex])
