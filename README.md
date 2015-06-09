@@ -1,16 +1,21 @@
-![](https://raw.githubusercontent.com/diwu/LeetCode-Solutions-in-Swift/master/Solutions/swift.png) ![](https://raw.githubusercontent.com/diwu/LeetCode-Solutions-in-Swift/master/Solutions/example_screen_shot.png)
+[![](https://img.shields.io/badge/swift-2.0-orange.svg)](https://developer.apple.com/swift/blog/?id=29)
+[![](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/linkedin-Di%20Wu-orange.svg)](https://www.linkedin.com/in/diwup)
 
 
-###LeetCode Solutions in Swift
+####LeetCode Solutions in Swift 2.0
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 1.2 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
+* A Work in Progress. Now at 55 / 213 = 25.8%.
 
-###A Work in Progress. Now at 55 / 213 = 25.8%.
+[![](https://img.shields.io/badge/progress-55%20%2F%20213-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-328-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
-1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
+1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
 3. [Longest Substring Without Repeating Characters ](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/) - Medium - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Medium/Medium_003_Longest_Substring_Without_Repeating_Characters.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift) - t=O(N), s=O(1)
 4. [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) - Hard - [Solution](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/Solutions/Hard/Hard_004_Median_Of_Two_Sorted_Arrays.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Hard/Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift) - t=O(log(min(m,n))), s=O(1)
@@ -70,4 +75,4 @@
 
 [LinkedIn](https://www.linkedin.com/in/diwup)
 
-Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios.
+Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果.
