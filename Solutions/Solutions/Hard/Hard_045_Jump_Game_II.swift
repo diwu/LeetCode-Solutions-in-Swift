@@ -28,7 +28,7 @@ struct Hard_045_Jump_Game_II {
         var result = 0;
         var last = 0;
         var curr = 0;
-        for var i = 0; i < count(nums); i++ {
+        for var i = 0; i < nums.count; i++ {
             if (i > last) {
                 last = curr;
                 result++;

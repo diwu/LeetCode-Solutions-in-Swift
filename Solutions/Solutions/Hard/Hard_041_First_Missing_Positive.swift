@@ -22,16 +22,16 @@ import Foundation
 
 struct Hard_041_First_Missing_Positive {
     static func firstMissingPositive(var nums: [Int]) -> Int {
-        for var i = 0; i < count(nums); i++ {
-            while nums[i] > 0 && nums[i] <= count(nums) && nums[nums[i]-1] != nums[i] {
+        for var i = 0; i < nums.count; i++ {
+            while nums[i] > 0 && nums[i] <= nums.count && nums[nums[i]-1] != nums[i] {
                 swap(&nums[i], &nums[nums[i]-1])
             }
         }
-        for var i = 0; i < count(nums); i++ {
+        for var i = 0; i < nums.count; i++ {
             if(nums[i] != i+1) {
                 return i + 1;
             }
         }
-        return count(nums) + 1;
+        return nums.count + 1;
     }
 }

@@ -38,16 +38,16 @@ private extension String {
 }
 
 struct Hard_044_Wildcard_Matching {
-    static func isMatch(# s: String, p: String) -> Bool {
+    static func isMatch(s  s: String, p: String) -> Bool {
         var sIndex = 0
         var pIndex = 0
         var match = 0
         var startIndex = -1
-        while sIndex < count(s) {
-            if pIndex < count(p) && (p[pIndex] == "?" || s[sIndex] == p[pIndex]) {
+        while sIndex < s.characters.count {
+            if pIndex < p.characters.count && (p[pIndex] == "?" || s[sIndex] == p[pIndex]) {
                 sIndex++
                 pIndex++
-            } else if pIndex < count(p) && p[pIndex] == "*" {
+            } else if pIndex < p.characters.count && p[pIndex] == "*" {
                 startIndex = pIndex
                 match = sIndex
                 pIndex++
@@ -59,9 +59,9 @@ struct Hard_044_Wildcard_Matching {
                 return false
             }
         }
-        while pIndex < count(p) && p[pIndex] == "*" {
+        while pIndex < p.characters.count && p[pIndex] == "*" {
             pIndex++
         }
-        return pIndex == count(p)
+        return pIndex == p.characters.count
     }
 }

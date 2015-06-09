@@ -14,8 +14,8 @@ class Easy_006_ZigZag_Conversion_Test: XCTestCase {
 
     func testCase001() {
         var input: [AnyObject] = ["PAYPALISHIRING", 3]
-        var expected: String = "PAHNAPLSIIGYIR"
-        var result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
+        let expected: String = "PAHNAPLSIIGYIR"
+        let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 }

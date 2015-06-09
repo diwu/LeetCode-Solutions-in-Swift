@@ -27,13 +27,13 @@ import Foundation
 struct Medium_054_Spiral_Matrix {
     static func spiralOrder(matrix: [[Int]]) -> [Int] {
         var res = [Int]()
-        if count(matrix) == 0 {
+        if matrix.count == 0 {
             return res
         }
         var rowBegin = 0
-        var rowEnd = count(matrix) - 1
+        var rowEnd = matrix.count - 1
         var colBegin = 0
-        var colEnd = count(matrix[0]) - 1
+        var colEnd = matrix[0].count - 1
         while rowBegin <= rowEnd && colBegin <= colEnd {
             //Traverse Right
             for var i = colBegin; i <= colEnd; i++ {

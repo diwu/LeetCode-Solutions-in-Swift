@@ -30,7 +30,7 @@ class Easy_020_Valid_Parentheses {
         dict["]"] = "["
         dict[")"] = "("
         dict["}"] = "{"
-        for i in 0..<count(s) {
+        for i in 0..<s.characters.count {
             temp = s[i]
             if temp == ")" || temp == "}" || temp == "]" {
                 if stack.count == 0 || stack.last != dict[temp] {

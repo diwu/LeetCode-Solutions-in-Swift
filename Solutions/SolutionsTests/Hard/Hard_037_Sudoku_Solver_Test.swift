@@ -13,7 +13,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value * 100
     func test_001() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -26,7 +26,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: [[Character]] = [
+        let expected: [[Character]] = [
             ["5", "3", "4", "6", "7", "8", "9", "1", "2"],
             ["6", "7", "2", "1", "9", "5", "3", "4", "8"],
             ["1", "9", "8", "3", "4", "2", "5", "6", "7"],
@@ -42,7 +42,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             [".", "3", ".", ".", "7", ".", "9", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -55,7 +55,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: [[Character]] = [
+        let expected: [[Character]] = [
             ["5", "3", "4", "6", "7", "8", "9", "1", "2"],
             ["6", "7", "2", "1", "9", "5", "3", "4", "8"],
             ["1", "9", "8", "3", "4", "2", "5", "6", "7"],
@@ -71,7 +71,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -84,7 +84,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
             [".", ".", ".", "4", ".", "9", ".", ".", "5"],
             ["3", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: [[Character]] = [
+        let expected: [[Character]] = [
             ["5", "3", "4", "6", "7", "8", "9", "1", "2"],
             ["6", "7", "2", "1", "9", "5", "3", "4", "8"],
             ["1", "9", "8", "3", "4", "2", "5", "6", "7"],
@@ -100,7 +100,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", ".", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -113,7 +113,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: [[Character]] = [
+        let expected: [[Character]] = [
             ["5", "3", "4", "6", "7", "8", "9", "1", "2"],
             ["6", "7", "2", "1", "9", "5", "3", "4", "8"],
             ["1", "9", "8", "3", "4", "2", "5", "6", "7"],
@@ -128,7 +128,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var # input: [[Character]], expected: [[Character]]) {
+    private func asyncHelper(var input  input: [[Character]], expected: [[Character]]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_037_Sudoku_Solver_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             Hard_037_Sudoku_Solver.solveSudoku(&input)

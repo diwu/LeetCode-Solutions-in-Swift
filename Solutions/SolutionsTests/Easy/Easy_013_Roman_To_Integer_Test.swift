@@ -13,15 +13,15 @@ class Easy_013_Roman_To_Integer_Test: XCTestCase {
     let ProblemName: String = "Easy_013_Roman_To_Integer"
 
     func test_001() {
-        var input: String = "I"
-        var expected: Int = 1
-        var result: Int = Easy_013_Roman_To_Integer.romanToInt(s: input)
+        let input: String = "I"
+        let expected: Int = 1
+        let result: Int = Easy_013_Roman_To_Integer.romanToInt(s: input)
         assertHelper(result == expected, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_002() {
-        var input: String = "MMMCMXCIX"
-        var expected: Int = 3999
-        var result: Int = Easy_013_Roman_To_Integer.romanToInt(s: input)
+        let input: String = "MMMCMXCIX"
+        let expected: Int = 3999
+        let result: Int = Easy_013_Roman_To_Integer.romanToInt(s: input)
         assertHelper(result == expected, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
     }
 }

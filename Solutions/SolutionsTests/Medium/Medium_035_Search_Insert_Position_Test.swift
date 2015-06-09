@@ -13,56 +13,56 @@ class Medium_035_Search_Insert_Position_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [AnyObject] = [[1,3,5,6], 5]
-        var expected: Int = 2
+        let input: [AnyObject] = [[1,3,5,6], 5]
+        let expected: Int = 2
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [AnyObject] = [[1,3,5,6], 2]
-        var expected: Int = 1
+        let input: [AnyObject] = [[1,3,5,6], 2]
+        let expected: Int = 1
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [AnyObject] = [[1,3,5,6], 7]
-        var expected: Int = 4
+        let input: [AnyObject] = [[1,3,5,6], 7]
+        let expected: Int = 4
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [AnyObject] = [[1,3,5,6], 0]
-        var expected: Int = 0
+        let input: [AnyObject] = [[1,3,5,6], 0]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [AnyObject] = [[], 999]
-        var expected: Int = 0
+        let input: [AnyObject] = [[], 999]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_006() {
-        var input: [AnyObject] = [[1], 1]
-        var expected: Int = 0
+        let input: [AnyObject] = [[1], 1]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_007() {
-        var input: [AnyObject] = [[1], 0]
-        var expected: Int = 0
+        let input: [AnyObject] = [[1], 0]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_008() {
-        var input: [AnyObject] = [[1], 2]
-        var expected: Int = 1
+        let input: [AnyObject] = [[1], 2]
+        let expected: Int = 1
         asyncHelper(input: input, expected: expected)
     }
     func test_009() {
-        var input: [AnyObject] = [[1,3,5,6], 1]
-        var expected: Int = 0
+        let input: [AnyObject] = [[1,3,5,6], 1]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_010() {
-        var input: [AnyObject] = [[1,3,5,6], 6]
-        var expected: Int = 3
+        let input: [AnyObject] = [[1,3,5,6], 6]
+        let expected: Int = 3
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var # input: [AnyObject], expected: Int) {
+    private func asyncHelper(var input  input: [AnyObject], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_035_Search_Insert_Position_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: Int = Medium_035_Search_Insert_Position.searchInsert(nums: input[0] as! [Int], target: input[1] as! Int)

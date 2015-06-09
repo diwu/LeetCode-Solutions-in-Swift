@@ -14,7 +14,7 @@ Inspired by @garysui at https://leetcode.com/discuss/15755/optimal-solution
 
 private extension String {
     subscript (i: Int) -> Character {
-        var index: Index = advance(self.startIndex, i)
+        let index: Index = advance(self.startIndex, i)
         return self[index]
     }
     subscript (intRange: Range<Int>) -> String {
@@ -25,15 +25,15 @@ private extension String {
 class Easy_014_Longest_Common_Prefix {
     class func longestCommonPrefix( arr: [String]?) -> String {
         if let unwrapped = arr {
-            if count(unwrapped) == 0 {
+            if unwrapped.count == 0 {
                 return ""
             } else {
-                var stringLength: Int = count(unwrapped[0])
+                let stringLength: Int = unwrapped[0].characters.count
                 for var i = 0; i < stringLength; i++ {
-                    var c: Character = unwrapped[0][i]
-                    var arrCount: Int = count(unwrapped)
+                    let c: Character = unwrapped[0][i]
+                    let arrCount: Int = unwrapped.count
                     for var j = 1; j < arrCount; j++ {
-                        if i == count(unwrapped[j]) || unwrapped[j][i] != c {
+                        if i == unwrapped[j].characters.count || unwrapped[j][i] != c {
                             return unwrapped[0][0..<i]
                         }
                     }

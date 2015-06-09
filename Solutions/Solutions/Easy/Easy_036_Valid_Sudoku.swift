@@ -28,7 +28,7 @@ Inspired by @bigwolfandtiger at https://leetcode.com/discuss/17990/sharing-my-ea
 import Foundation
 
 class Easy_036_Valid_Sudoku {
-    class func isPartiallyValid(# board: [[Character]], x1: Int, y1: Int, x2: Int, y2: Int) -> Bool {
+    class func isPartiallyValid(board  board: [[Character]], x1: Int, y1: Int, x2: Int, y2: Int) -> Bool {
         var singleSet: Set<Character> = Set()
         for var i = x1; i <= x2; i++ {
             for var j = y1; j <= y2; j++ {

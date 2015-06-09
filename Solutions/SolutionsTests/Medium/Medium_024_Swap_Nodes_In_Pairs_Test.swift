@@ -14,39 +14,39 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
     private typealias Node = Medium_024_Swap_Nodes_In_Pairs.Node
     func test_001() {
-        var input: Node? = helper1([1, 2, 3, 4])
-        var expected: [Int] = [2, 1, 4, 3]
+        let input: Node? = helper1([1, 2, 3, 4])
+        let expected: [Int] = [2, 1, 4, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: Node? = helper1([])
-        var expected: [Int] = []
+        let input: Node? = helper1([])
+        let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: Node? = helper1([1])
-        var expected: [Int] = [1]
+        let input: Node? = helper1([1])
+        let expected: [Int] = [1]
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: Node? = helper1([1, 2])
-        var expected: [Int] = [2, 1]
+        let input: Node? = helper1([1, 2])
+        let expected: [Int] = [2, 1]
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: Node? = helper1([1, 2, 3])
-        var expected: [Int] = [2, 1, 3]
+        let input: Node? = helper1([1, 2, 3])
+        let expected: [Int] = [2, 1, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_006() {
-        var input: Node? = helper1([1, 2, 3, 4, 5])
-        var expected: [Int] = [2, 1, 4, 3, 5]
+        let input: Node? = helper1([1, 2, 3, 4, 5])
+        let expected: [Int] = [2, 1, 4, 3, 5]
         asyncHelper(input: input, expected: expected)
     }
     private func helper1(intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
-            var node: Node = Node(value: i, next: nil)
+            let node: Node = Node(value: i, next: nil)
             nodeArray.append(node)
         }
         if nodeArray.count == 0 {
@@ -66,7 +66,7 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(# input: Node?, expected: [Int]) {
+    private func asyncHelper(input  input: Node?, expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: [Int] = self.helper2(Medium_024_Swap_Nodes_In_Pairs.swapPairs(input))

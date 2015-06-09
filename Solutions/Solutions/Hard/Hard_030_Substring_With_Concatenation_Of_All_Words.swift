@@ -23,8 +23,8 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        if range.endIndex > count(self) {
-            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, count(self))]
+        if range.endIndex > self.characters.count {
+            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, self.characters.count)]
         } else {
             return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, range.endIndex)]
         }
@@ -32,16 +32,16 @@ private extension String {
 }
 
 class Hard_030_Substring_With_Concatenation_Of_All_Words {
-    class func findSubstring(# s: String?, words: [String]) -> [Int] {
-        if s == nil || count(words) == 0 {
+    class func findSubstring(s  s: String?, words: [String]) -> [Int] {
+        if s == nil || words.count == 0 {
             return []
         }
         var result: [Int] = []
         var dict1: [String: Int] = [String: Int]()
         var dict2: [String: Int] = [String: Int]()
-        var stringLength: Int = count(s!)
-        var wordsListSize: Int = count(words)
-        var wordLength: Int = count(words[0])
+        let stringLength: Int = (s!).characters.count
+        let wordsListSize: Int = words.count
+        let wordLength: Int = words[0].characters.count
         for var i = 0; i < wordsListSize; i++ {
             if dict1[words[i]] == nil {
                 dict1[words[i]] = 1

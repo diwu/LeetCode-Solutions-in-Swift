@@ -25,12 +25,12 @@ class Medium_015_3Sum {
     // O (N^2)
     class func threeSum(num: [Int]) -> [[Int]] {
         var res: [[Int]] = []
-        if count(num) < 3 {
+        if num.count < 3 {
             return res
         } else {
-            var sorted: [Int] = num.sorted{$0 < $1}
+            var sorted: [Int] = num.sort {$0 < $1}
             var twoSum: Int
-            var size: Int = count(sorted)
+            let size: Int = sorted.count
             for var i = 0; i <  size - 2; {
                 var l: Int = i + 1
                 var r: Int = size - 1
@@ -44,17 +44,17 @@ class Medium_015_3Sum {
                         three.append(sorted[l])
                         three.append(sorted[r])
                         res.append(three)
-                        do {
+                        repeat {
                             l++
                         } while l < r && sorted[l-1] == sorted[l]
-                        do {
+                        repeat {
                             r--
                         } while l < r && sorted[r+1] == sorted[r]
                     } else {
                         r--
                     }
                 }
-                do {
+                repeat {
                     i++
                 } while i < size - 1 && sorted[i-1] == sorted[i]
             }

@@ -13,7 +13,7 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -26,11 +26,11 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: Bool = true
+        let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -43,11 +43,11 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             ["5", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: Bool = false
+        let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -60,11 +60,11 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
             [".", "1", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: Bool = false
+        let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -77,11 +77,11 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: Bool = false
+        let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [[Character]] = [
+        let input: [[Character]] = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -94,10 +94,10 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
         ]
-        var expected: Bool = true
+        let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var # input: [[Character]], expected: Bool) {
+    private func asyncHelper(var input  input: [[Character]], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_036_Valid_Sudoku_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: Bool = Easy_036_Valid_Sudoku.isValidSudoku(input)

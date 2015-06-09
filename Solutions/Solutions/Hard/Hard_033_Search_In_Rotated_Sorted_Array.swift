@@ -21,11 +21,11 @@ Inspired by @sean hyuntaek at https://leetcode.com/discuss/5707/algorithm-using-
 import Foundation
 
 class Hard_033_Search_In_Rotated_Sorted_Array {
-    class func search(# nums: [Int], target: Int) -> Int {
+    class func search(nums  nums: [Int], target: Int) -> Int {
         var start: Int = 0
-        var end: Int = count(nums) - 1
+        var end: Int = nums.count - 1
         while start <= end {
-            var mid: Int = (start + end) / 2
+            let mid: Int = (start + end) / 2
             if nums[mid] == target {
                 return mid
             }

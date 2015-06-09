@@ -19,18 +19,18 @@ Inspired by @TransMatrix at https://leetcode.com/discuss/10609/a-non-recursive-c
 import Foundation
 
 struct Hard_047_Permutations_II {
-    private static func reverseInPlace(inout # nums: [Int], var begin: Int, var end: Int) {
+    private static func reverseInPlace(inout nums  nums: [Int], var begin: Int, var end: Int) {
         while begin < end {
             swap(&nums[begin++], &nums[end--]);
         }
     }
     static func permuteUnique(var nums: [Int]) -> [[Int]] {
         var result = [[Int]]()
-        nums.sort{$0 < $1}
+        nums.sortInPlace {$0 < $1}
         result.append(nums)
         while true {
             var i: Int
-            for i = count(nums) - 1; i > 0; i-- {
+            for i = nums.count - 1; i > 0; i-- {
                 if nums[i-1] < nums[i] {
                     break
                 }
@@ -39,13 +39,13 @@ struct Hard_047_Permutations_II {
                 break
             }
             var j: Int
-            for j = count(nums) - 1; j > i - 1; j-- {
+            for j = nums.count - 1; j > i - 1; j-- {
                 if nums[j] > nums[i-1] {
                     break
                 }
             }
             swap(&nums[i-1], &nums[j])
-            reverseInPlace(nums: &nums, begin: i, end: count(nums)-1)
+            reverseInPlace(nums: &nums, begin: i, end: nums.count-1)
             result.append(nums)
         }
         return result

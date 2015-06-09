@@ -17,7 +17,7 @@ Inspired by @lucastan & @ngcl at https://leetcode.com/discuss/11358/simple-o-log
 import Foundation
 
 class Medium_029_Divide_Two_Integers {
-    class func divide(# dividend: Int, divisor: Int) -> Int {
+    class func divide(dividend  dividend: Int, divisor: Int) -> Int {
         if divisor == 0 {
             return Int.max
         }
@@ -32,7 +32,7 @@ class Medium_029_Divide_Two_Integers {
         }
         var answer: UInt = 0
         var absDividend: UInt = dividend == Int.min ? UInt(UInt(Int.max) + 1) : UInt(abs(dividend))
-        var absDivisor: UInt = divisor == Int.min ? UInt(UInt(Int.max) + 1) : UInt(abs(divisor))
+        let absDivisor: UInt = divisor == Int.min ? UInt(UInt(Int.max) + 1) : UInt(abs(divisor))
         while absDividend >= absDivisor {
             var tmp: UInt = UInt(absDivisor)
             var power: UInt = 1

@@ -10,37 +10,37 @@ import XCTest
 
 class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase {
     func testCase001() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1, 2, 10], b: [30, 40, 50])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1, 2, 10], b: [30, 40, 50])
         XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #1")
     }
 
     func testCase002() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [1])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [1])
         XCTAssert(v == 1, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #2")
     }
 
     func testCase003() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1, 2], b: [1])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1, 2], b: [1])
         XCTAssert(v == 1, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #3")
     }
 
     func testCase004() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [10, 20, 30])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [10, 20, 30])
         XCTAssert(v == 15, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #4")
     }
 
     func testCase005() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [10, 20, 30, 40])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [10, 20, 30, 40])
         XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #5")
     }
 
     func testCase006() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([10, 20, 30], b: [10, 20, 30])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([10, 20, 30], b: [10, 20, 30])
         XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #6")
     }
 
     func testCase007() {
-        var v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([], b: [10, 20, 30])
+        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([], b: [10, 20, 30])
         XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #7")
     }
 }

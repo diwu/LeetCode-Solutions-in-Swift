@@ -22,7 +22,7 @@ struct Medium_053_Maximum_Subarray {
         var best = nums[0];
         var current = nums[0];
         
-        for var i = 1; i < count(nums); i++ {
+        for var i = 1; i < nums.count; i++ {
             current = max(current + nums[i], nums[i]);
             best = max(current, best);
         }

@@ -13,8 +13,8 @@ class Hard_051_N_Queens_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: Int = 4
-        var expected: [[String]] = [
+        let input: Int = 4
+        let expected: [[String]] = [
             [
                 ".Q..",
                 "...Q",
@@ -29,16 +29,16 @@ class Hard_051_N_Queens_Test: XCTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(# input: Int, expected: [[String]]) {
+    private func asyncHelper(input  input: Int, expected: [[String]]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_051_N_Queens_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result = Hard_051_N_Queens.solveNQueens(input)
-            if count(result) != count(expected) {
+            if result.count != expected.count {
                 assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             } else {
-                for var i = 0; i < count(expected); i++ {
+                for var i = 0; i < expected.count; i++ {
                     var flag = false
-                    for var j = 0; j < count(result); j++ {
+                    for var j = 0; j < result.count; j++ {
                         if result[j] == expected[i] {
                             flag = true
                         }

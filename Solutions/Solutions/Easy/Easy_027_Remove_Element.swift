@@ -17,7 +17,7 @@ Inspired by @daxianji007 at https://leetcode.com/discuss/3753/my-solution-for-yo
 import Foundation
 
 class Easy_027_Remove_Element {
-    class func removeElement(inout # arr: [Int], elem: Int) -> Int {
+    class func removeElement(inout arr  arr: [Int], elem: Int) -> Int {
         var begin: Int = 0
         for var i = 0; i < arr.count; i++ {
             if arr[i] != elem {

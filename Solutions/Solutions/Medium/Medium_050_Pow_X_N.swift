@@ -15,7 +15,7 @@ Inspired by @pei heng at https://leetcode.com/discuss/17005/short-and-easy-to-un
 import Foundation
 
 struct Medium_050_Pow_X_N {
-    static func myPow(var # x: Double, var n: Int) -> Double {
+    static func myPow(var x  x: Double, var n: Int) -> Double {
         if n == 0 {
             return 1;
         }

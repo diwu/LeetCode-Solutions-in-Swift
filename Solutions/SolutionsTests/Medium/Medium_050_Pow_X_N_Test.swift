@@ -13,21 +13,21 @@ class Medium_050_Pow_X_N_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [Any] = [987.654, 4]
-        var expected: Double = pow(987.654, 4)
+        let input: [Any] = [987.654, 4]
+        let expected: Double = pow(987.654, 4)
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Any] = [987.654, 0]
-        var expected: Double = pow(987.654, 0)
+        let input: [Any] = [987.654, 0]
+        let expected: Double = pow(987.654, 0)
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Any] = [-987.654, 3]
-        var expected: Double = pow(-987.654, 3)
+        let input: [Any] = [-987.654, 3]
+        let expected: Double = pow(-987.654, 3)
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(# input: [Any], expected: Double) {
+    private func asyncHelper(input  input: [Any], expected: Double) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_050_Pow_X_N_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result = Medium_050_Pow_X_N.myPow(x: input[0] as! Double, n: input[1] as! Int)

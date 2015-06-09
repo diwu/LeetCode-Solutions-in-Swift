@@ -24,8 +24,8 @@ class Easy_021_Merge_Two_Sorted_Lists {
             self.next = next
         }
     }
-    class func mergeTwoLists(var # l1: Node?, var l2: Node?) -> Node? {
-        var dummy: Node = Node()
+    class func mergeTwoLists(var l1  l1: Node?, var l2: Node?) -> Node? {
+        let dummy: Node = Node()
         var tail: Node? = dummy
         while l1 != nil && l2 != nil {
             if l1!.value < l2!.value {

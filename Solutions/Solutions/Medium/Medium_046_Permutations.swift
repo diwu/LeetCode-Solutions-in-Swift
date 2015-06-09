@@ -19,12 +19,12 @@ Inspired by @xiaohui7 at https://leetcode.com/discuss/18212/my-elegant-recursive
 import Foundation
 
 struct Medium_046_Permutations {
-    private static func permuteRecursive(var # nums: [Int], begin: Int, inout result: [[Int]]) {
-        if begin >= count(nums) {
+    private static func permuteRecursive(var nums  nums: [Int], begin: Int, inout result: [[Int]]) {
+        if begin >= nums.count {
             result.append(nums)
             return
         }
-        for var i = begin; i < count(nums); i++ {
+        for var i = begin; i < nums.count; i++ {
             swap(&nums[begin], &nums[i])
             permuteRecursive(nums: nums, begin: begin + 1, result: &result)
             swap(&nums[begin], &nums[i])

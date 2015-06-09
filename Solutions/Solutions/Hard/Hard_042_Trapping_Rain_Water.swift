@@ -21,11 +21,11 @@ import Foundation
 
 struct Hard_042_Trapping_Rain_Water {
     static func trap(nums: [Int]) -> Int {
-        if count(nums) == 0 {
+        if nums.count == 0 {
             return 0
         }
         var left = 0
-        var right = count(nums) - 1
+        var right = nums.count - 1
         var block = 0
         var all = 0
         var currLevel = 0

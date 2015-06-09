@@ -13,15 +13,15 @@ class Medium_012_Integer_To_Roman_Test: XCTestCase {
     let ProbleName: String = "Medium_012_Integer_To_Roman"
 
     func test_001() {
-        var input: Int = 1
-        var result: String = Medium_012_Integer_To_Roman.integerToRoman(num: input)
-        var expected: String = "I"
+        let input: Int = 1
+        let result: String = Medium_012_Integer_To_Roman.integerToRoman(num: input)
+        let expected: String = "I"
         assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
     func test_002() {
-        var input: Int = 3999
-        var result: String = Medium_012_Integer_To_Roman.integerToRoman(num: input)
-        var expected: String = "MMMCMXCIX"
+        let input: Int = 3999
+        let result: String = Medium_012_Integer_To_Roman.integerToRoman(num: input)
+        let expected: String = "MMMCMXCIX"
         assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
 

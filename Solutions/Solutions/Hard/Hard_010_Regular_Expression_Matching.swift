@@ -35,8 +35,8 @@ private extension String {
         return self[advance(self.startIndex, index)]
     }
     subscript (range: Range<Int>) -> String {
-        if range.endIndex > count(self) {
-            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, count(self))]
+        if range.endIndex > self.characters.count {
+            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, self.characters.count)]
         } else {
             return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, range.endIndex)]
         }
@@ -45,20 +45,20 @@ private extension String {
 
 class Hard_010_Regular_Expression_Matching {
     // recursion
-    class func isMatch_recursion(# s: String, p: String) -> Bool {
-        if count(p) == 0 {
-            return count(s) == 0
+    class func isMatch_recursion(s  s: String, p: String) -> Bool {
+        if p.characters.count == 0 {
+            return s.characters.count == 0
         }
-        if count(p) > 1 && p[1] == "*" {
-            return isMatch_recursion(s: s, p: p[2..<count(p)]) || count(s) != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<count(s)], p: p)
+        if p.characters.count > 1 && p[1] == "*" {
+            return isMatch_recursion(s: s, p: p[2..<p.characters.count]) || s.characters.count != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<s.characters.count], p: p)
         } else {
-            return count(s) != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<count(s)], p: p[1..<count(p)])
+            return s.characters.count != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<s.characters.count], p: p[1..<p.characters.count])
         }
     }
     // dp
-    class func isMatch(# s: String, p: String) -> Bool {
-        var m: Int = count(s)
-        var n: Int = count(p)
+    class func isMatch(s  s: String, p: String) -> Bool {
+        let m: Int = s.characters.count
+        let n: Int = p.characters.count
         var f: [[Bool]] = Array<Array<Bool>>(count: m + 1, repeatedValue: Array<Bool>(count: n + 1, repeatedValue: false))
         f[0][0] = true
         for var i = 1; i <= m; i++ {

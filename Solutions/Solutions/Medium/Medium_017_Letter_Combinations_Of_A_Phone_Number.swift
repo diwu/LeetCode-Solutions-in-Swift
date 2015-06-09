@@ -48,15 +48,15 @@ class Medium_017_Letter_Combinations_Of_A_Phone_Number {
         "9": "wxyz"
     ]
     class func letterCombinations(digits: String) -> [String] {
-        if count(digits) == 0 {
+        if digits.characters.count == 0 {
             return [""]
         }
         var result: [String] = []
-        var temp: [String] = letterCombinations(digits[1..<count(digits)])
-        var s: String = String(digits[0])
+        var temp: [String] = letterCombinations(digits[1..<digits.characters.count])
+        let s: String = String(digits[0])
         if let unwrapped: String = dig2char[s] {
-            for var i = 0; i < count(unwrapped); i++ {
-                for var t = 0; t < count(temp); t++ {
+            for var i = 0; i < unwrapped.characters.count; i++ {
+                for var t = 0; t < temp.count; t++ {
                     result.append(String(unwrapped[i])+temp[t])
                 }
             }

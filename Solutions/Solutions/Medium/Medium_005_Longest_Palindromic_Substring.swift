@@ -15,7 +15,7 @@ Inspired by @hanleyChu at https://oj.leetcode.com/discuss/9948/a-very-brief-o-n-
 // Helper
 private extension String {
     subscript (i: Int) -> Character {
-        var index: Index = advance(self.startIndex, i)
+        let index: Index = advance(self.startIndex, i)
         return self[index]
     }
     subscript (intRange: Range<Int>) -> String {
@@ -26,7 +26,7 @@ private extension String {
 class Medium_005_Longest_Palindromic_Substring {
     // Helper
     class func isPalindrome(inout s: String, startPosition: Int, endPosition: Int) -> Bool {
-        var len = endPosition - startPosition + 1
+        let len = endPosition - startPosition + 1
         for i in 0..<len/2 {
             if s[i + startPosition] != s[len - 1 - i + startPosition] {
                 return false
@@ -37,7 +37,7 @@ class Medium_005_Longest_Palindromic_Substring {
 
     // O (N ^ 2)
     class func longest(var s: String) -> String {
-        var longestLength = 0, longestIndex = 0, n = count(s)
+        var longestLength = 0, longestIndex = 0, n = s.characters.count
         var len = 0
         for currentIndex in 0..<n {
             if isPalindrome(&s, startPosition: currentIndex - longestLength, endPosition: currentIndex) {

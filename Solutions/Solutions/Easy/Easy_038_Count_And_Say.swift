@@ -36,7 +36,7 @@ class Easy_038_Count_And_Say {
             result = ""
             var counter = 1
             var say: Character = previous[0]
-            for var j = 1; j < count(previous); j++ {
+            for var j = 1; j < previous.characters.count; j++ {
                 if previous[j] != say {
                     result = "\(result)\(counter)\(say)"
                     counter = 1

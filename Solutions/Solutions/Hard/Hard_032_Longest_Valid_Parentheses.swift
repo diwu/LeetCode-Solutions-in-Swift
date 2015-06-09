@@ -29,13 +29,13 @@ class Hard_032_Longest_Valid_Parentheses {
         if s == nil {
             return 0
         }
-        if count(s!) <= 1 {
+        if (s!).characters.count <= 1 {
             return 0
         }
         var currentMax: Int = 0
-        var longest: [Int] = Array<Int>(count: count(s!), repeatedValue: 0)
-        for var i = 1; i < count(s!); i++ {
-            var tmp: Int = i - longest[i-1] - 1
+        var longest: [Int] = Array<Int>(count: (s!).characters.count, repeatedValue: 0)
+        for var i = 1; i < (s!).characters.count; i++ {
+            let tmp: Int = i - longest[i-1] - 1
             if s![i] == ")" && tmp >= 0 && s![tmp] == "(" {
                 longest[i] = longest[i-1] + 2 + ((tmp - 1 >= 0) ? longest[tmp-1] : 0)
                 currentMax = max(longest[i], currentMax)

@@ -14,21 +14,21 @@ class Medium_022_Generate_Parentheses_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
 
     func test_001() {
-        var input: Int = 1
-        var expected: [String] = ["()"]
+        let input: Int = 1
+        let expected: [String] = ["()"]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: Int = 0
-        var expected: [String] = [""]
+        let input: Int = 0
+        let expected: [String] = [""]
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: Int = 3
-        var expected: [String] = ["((()))", "(()())", "(())()", "()(())", "()()()"]
+        let input: Int = 3
+        let expected: [String] = ["((()))", "(()())", "(())()", "()(())", "()()()"]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(# input: Int, expected: [String]) {
+    private func asyncHelper(input  input: Int, expected: [String]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_022_Generate_Parentheses_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: [String] = Medium_022_Generate_Parentheses.generateParenthesis(input)

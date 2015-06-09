@@ -13,22 +13,22 @@ class Easy_038_Count_And_Say_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: Int = 1
-        var expected: String = "11"
+        let input: Int = 1
+        let expected: String = "11"
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: Int = 8
-        var expected: String = "31131211131221"
+        let input: Int = 8
+        let expected: String = "31131211131221"
         asyncHelper(input: input, expected: expected)
 
     }
     func test_003() {
-        var input: Int = 9
-        var expected: String = "13211311123113112211"
+        let input: Int = 9
+        let expected: String = "13211311123113112211"
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(# input: Int, expected: String) {
+    private func asyncHelper(input  input: Int, expected: String) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_038_Count_And_Say_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: String = Easy_038_Count_And_Say.countAndSay(input)

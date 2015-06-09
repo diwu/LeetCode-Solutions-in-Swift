@@ -26,7 +26,7 @@ class Medium_001_Two_Sum {
         var result: Array = Array<Int>()
 
         for i in 0..<numbers.count {
-            var numberToFind: Int = target - numbers[i]
+            let numberToFind: Int = target - numbers[i]
             if let numberToFindIndex = hashMap[numberToFind] {
                 result.append(numberToFindIndex + 1)
                 result.append(i + 1)

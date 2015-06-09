@@ -15,8 +15,8 @@ Inspired by @MissMary at https://leetcode.com/discuss/15790/share-my-o-log-min-m
 class Hard_004_Median_Of_Two_Sorted_Arrays {
     // O (log(min(m, n)))
     class func median2(a: [Int], b: [Int]) -> Double {
-        var m = count(a)
-        var n = count(b)
+        let m = a.count
+        let n = b.count
 
         if m > n {
             return median2(b, b: a)
@@ -24,8 +24,8 @@ class Hard_004_Median_Of_Two_Sorted_Arrays {
 
         var iMin = 0, iMax = m
         while iMin <= iMax {
-            var i = (iMin + iMax) >> 1
-            var j = ((m + n + 1) >> 1) - i
+            let i = (iMin + iMax) >> 1
+            let j = ((m + n + 1) >> 1) - i
             if j > 0 && i < m && b[j-1] > a[i] {
                 iMin = i + 1
             } else if i > 0 && j < n && a[i-1] > b[j] {

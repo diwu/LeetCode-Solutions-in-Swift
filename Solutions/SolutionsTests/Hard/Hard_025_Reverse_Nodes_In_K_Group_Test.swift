@@ -14,34 +14,34 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
     private typealias Node = Hard_025_Reverse_Nodes_In_K_Group.Node
     func test_001() {
-        var input: [Any] = [helper1([1, 2, 3, 4]), 2]
-        var expected: [Int] = [2, 1, 4, 3]
+        let input: [Any] = [helper1([1, 2, 3, 4]), 2]
+        let expected: [Int] = [2, 1, 4, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Any] = [helper1([1, 2, 3, 4]), 1]
-        var expected: [Int] = [1, 2, 3, 4]
+        let input: [Any] = [helper1([1, 2, 3, 4]), 1]
+        let expected: [Int] = [1, 2, 3, 4]
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Any] = [helper1([1, 2, 3, 4]), 3]
-        var expected: [Int] = [3, 2, 1, 4]
+        let input: [Any] = [helper1([1, 2, 3, 4]), 3]
+        let expected: [Int] = [3, 2, 1, 4]
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [Any] = [helper1([]), 3]
-        var expected: [Int] = []
+        let input: [Any] = [helper1([]), 3]
+        let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [Any] = [helper1([1, 2, 3, 4]), 999]
-        var expected: [Int] = [1, 2, 3, 4]
+        let input: [Any] = [helper1([1, 2, 3, 4]), 999]
+        let expected: [Int] = [1, 2, 3, 4]
         asyncHelper(input: input, expected: expected)
     }
     private func helper1(intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
-            var node: Node = Node(value: i, next: nil)
+            let node: Node = Node(value: i, next: nil)
             nodeArray.append(node)
         }
         if nodeArray.count == 0 {
@@ -61,7 +61,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(# input: [Any], expected: [Int]) {
+    private func asyncHelper(input  input: [Any], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var unwrapped: Node? = unwrap(input[0]) as? Node

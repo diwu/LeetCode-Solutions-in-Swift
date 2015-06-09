@@ -13,31 +13,31 @@ class Easy_027_Remove_Element_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [Any] = [[1, 2, 2, 3], 2]
-        var expected: [Int] = [1, 3]
+        let input: [Any] = [[1, 2, 2, 3], 2]
+        let expected: [Int] = [1, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Any] = [[1, 2, 3], 4]
-        var expected: [Int] = [1, 2, 3]
+        let input: [Any] = [[1, 2, 3], 4]
+        let expected: [Int] = [1, 2, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Any] = [[], 4]
-        var expected: [Int] = []
+        let input: [Any] = [[], 4]
+        let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [Any] = [[1, 2, 2, 3, 6, 7, 6, 8, 1, 3, 2, 6], 6]
-        var expected: [Int] = [1, 2, 2, 3, 7, 8, 1, 3, 2]
+        let input: [Any] = [[1, 2, 2, 3, 6, 7, 6, 8, 1, 3, 2, 6], 6]
+        let expected: [Int] = [1, 2, 2, 3, 7, 8, 1, 3, 2]
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [Any] = [[1], 1]
-        var expected: [Int] = []
+        let input: [Any] = [[1], 1]
+        let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var # input: [Any], expected: [Int]) {
+    private func asyncHelper(var input  input: [Any], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_027_Remove_Element_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var arr: [Int] = input[0] as! [Int]

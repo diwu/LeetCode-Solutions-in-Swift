@@ -23,9 +23,9 @@ private extension String {
 }
 
 struct Medium_043_Multiply_Strings {
-    static func multiply(# num1: String, num2: String) -> String {
-        var sum = Array<Character>(count: count(num1)+count(num2), repeatedValue: "0")
-        for var i = count(num1) - 1; i >= 0; i-- {
+    static func multiply(num1  num1: String, num2: String) -> String {
+        var sum = Array<Character>(count: num1.characters.count+num2.characters.count, repeatedValue: "0")
+        for var i = num1.characters.count - 1; i >= 0; i-- {
             var carry = 0
             var dict: [Character: Int] = [
                 "0": 0,
@@ -39,14 +39,14 @@ struct Medium_043_Multiply_Strings {
                 "8": 8,
                 "9": 9,
             ]
-            for var j = count(num2) - 1; j >= 0; j-- {
-                var tmp: Int = dict[sum[i + j + 1]]! + dict[num1[i]]! * dict[num2[j]]! + carry;
+            for var j = num2.characters.count - 1; j >= 0; j-- {
+                let tmp: Int = dict[sum[i + j + 1]]! + dict[num1[i]]! * dict[num2[j]]! + carry;
                 sum[i + j + 1] = Character("\(tmp % 10)")
                 carry = tmp / 10;
             }
             sum[i] = Character("\(dict[sum[i]]! + carry)")
         }
-        for var i = count(sum) - 1; i>=0; i-- {
+        for var i = sum.count - 1; i>=0; i-- {
             if sum[i] != "0" {
                 return String(sum[0...i])
             }

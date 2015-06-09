@@ -16,7 +16,7 @@ Inspired by @makeittrue at https://leetcode.com/discuss/2369/solution-for-this-q
 
 private extension String {
     subscript (index: Int) -> Character {
-        var i: Index = advance(self.startIndex, index)
+        let i: Index = advance(self.startIndex, index)
         return self[i]
     }
 }
@@ -24,11 +24,11 @@ private extension String {
 class Easy_013_Roman_To_Integer {
     // O (N)
     // One pass
-    class func romanToInt(# s: String) -> Int {
+    class func romanToInt(s  s: String) -> Int {
         var result: Int = 0
-        var length: Int = count(s)
+        let length: Int = s.characters.count
         for var i = length-1; i >= 0; i-- {
-            var c: Character = s[i]
+            let c: Character = s[i]
             switch c {
             case "I":
                 result += result >= 5 ? -1 : 1

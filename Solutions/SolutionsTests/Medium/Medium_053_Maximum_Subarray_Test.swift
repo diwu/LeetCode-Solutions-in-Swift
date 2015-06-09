@@ -13,46 +13,46 @@ class Medium_053_Maximum_Subarray_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [Int] = [-2 , 1, -3, 4, -1, 2, 1, -5, 4]
-        var expected: Int = 6
+        let input: [Int] = [-2 , 1, -3, 4, -1, 2, 1, -5, 4]
+        let expected: Int = 6
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Int] = [-1]
-        var expected: Int = -1
+        let input: [Int] = [-1]
+        let expected: Int = -1
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Int] = [0]
-        var expected: Int = 0
+        let input: [Int] = [0]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [Int] = [1]
-        var expected: Int = 1
+        let input: [Int] = [1]
+        let expected: Int = 1
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [Int] = [-4, -2, -3, -5]
-        var expected: Int = -2
+        let input: [Int] = [-4, -2, -3, -5]
+        let expected: Int = -2
         asyncHelper(input: input, expected: expected)
     }
     func test_006() {
-        var input: [Int] = [1, 2, 3]
-        var expected: Int = 6
+        let input: [Int] = [1, 2, 3]
+        let expected: Int = 6
         asyncHelper(input: input, expected: expected)
     }
     func test_007() {
-        var input: [Int] = [1, 2, 3, -199, 999, -1000, 199]
-        var expected: Int = 999
+        let input: [Int] = [1, 2, 3, -199, 999, -1000, 199]
+        let expected: Int = 999
         asyncHelper(input: input, expected: expected)
     }
     func test_008() {
-        var input: [Int] = [1, 196, 3, -199, 999, -1000, 199]
-        var expected: Int = 1000
+        let input: [Int] = [1, 196, 3, -199, 999, -1000, 199]
+        let expected: Int = 1000
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(# input: [Int], expected: Int) {
+    private func asyncHelper(input  input: [Int], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_053_Maximum_Subarray_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result = Medium_053_Maximum_Subarray.maxSubArray(input)

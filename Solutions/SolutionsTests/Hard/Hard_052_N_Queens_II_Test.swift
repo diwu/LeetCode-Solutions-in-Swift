@@ -18,7 +18,7 @@ class Hard_052_N_Queens_II_Test: XCTestCase {
             asyncHelper(input: i, expected: expected[i])
         }
     }
-    private func asyncHelper(# input: Int, expected: Int) {
+    private func asyncHelper(input  input: Int, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_052_N_Queens_II_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result = Hard_052_N_Queens_II.totalNQueens(input)

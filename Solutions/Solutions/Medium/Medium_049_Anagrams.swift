@@ -21,9 +21,9 @@ struct Medium_049_Anagrams {
         var result: [String] = []
         var sortedStrings = strings;
         var map = [String: [Int]]()
-        for var i = 0; i < count(strings); i++ {
-            var arr: [Character] = Array(sortedStrings[i])
-            arr.sort{$0 < $1}
+        for var i = 0; i < strings.count; i++ {
+            var arr: [Character] = Array(sortedStrings[i].characters)
+            arr.sortInPlace {$0 < $1}
             sortedStrings[i] = String(arr)
             if let unwrapped = map[sortedStrings[i]] {
                 map[sortedStrings[i]]!.append(i)
@@ -32,8 +32,8 @@ struct Medium_049_Anagrams {
             }
         }
         for (string, intArr) in map {
-            if count(intArr) > 1 {
-                for var i = 0; i < count(intArr); i++ {
+            if intArr.count > 1 {
+                for var i = 0; i < intArr.count; i++ {
                     result.append(strings[intArr[i]])
                 }
             }

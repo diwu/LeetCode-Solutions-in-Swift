@@ -14,7 +14,7 @@ Inspired by @heiyanbin at https://oj.leetcode.com/discuss/6168/my-o-n-solution
 
 private extension String {
     subscript (index: Int) -> Character {
-        var i: Index = advance(self.startIndex, index)
+        let i: Index = advance(self.startIndex, index)
         return self[i]
     }
 }
@@ -22,7 +22,7 @@ private extension String {
 class Medium_003_Longest_Substring_Without_Repeating_Characters {
     // O (N)
     class func longest(s: String) -> Int {
-        var len: Int = count(s)
+        let len: Int = s.characters.count
         if len < 2 {
             return len
         } else {

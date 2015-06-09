@@ -18,8 +18,8 @@ class Medium_002_Add_Two_Numbers_Test: XCTestCase {
         // 5 -> 6 -> 4
         // Result:
         // 7 -> 0 -> 0 -> 1
-        var dummy1: ListNode = ListNode()
-        var dummy2: ListNode = ListNode()
+        let dummy1: ListNode = ListNode()
+        let dummy2: ListNode = ListNode()
 
         var tmp: ListNode? = ListNode(nodeValue: 2, nodeNext: nil)
         dummy1.next = tmp

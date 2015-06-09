@@ -15,36 +15,36 @@ class Easy_020_Valid_Parentheses_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
 
     func test_001() {
-        var input: String = "()"
-        var expected: Bool = true
+        let input: String = "()"
+        let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
 
     func test_002() {
-        var input: String = ""
-        var expected: Bool = true
+        let input: String = ""
+        let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
 
     func test_003() {
-        var input: String = "()[]{}"
-        var expected: Bool = true
+        let input: String = "()[]{}"
+        let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
 
     func test_004() {
-        var input: String = "(]"
-        var expected: Bool = false
+        let input: String = "(]"
+        let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
 
     func test_005() {
-        var input: String = "([)]"
-        var expected: Bool = false
+        let input: String = "([)]"
+        let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
 
-    func asyncHelper(# input: String, expected: Bool ) {
+    func asyncHelper(input  input: String, expected: Bool ) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_020_Valid_Parentheses_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: Bool = Easy_020_Valid_Parentheses.isValid(input)

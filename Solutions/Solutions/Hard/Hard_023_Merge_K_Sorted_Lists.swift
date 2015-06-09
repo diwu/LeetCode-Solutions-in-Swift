@@ -24,7 +24,7 @@ class Hard_023_Merge_K_Sorted_Lists {
             self.next = next
         }
     }
-    class func mergeTwoLists(var # l1: Node?, var l2: Node?) -> Node? {
+    class func mergeTwoLists(var l1  l1: Node?, var l2: Node?) -> Node? {
         if l1 == nil {
             return l2
         }

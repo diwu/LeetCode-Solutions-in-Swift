@@ -15,14 +15,14 @@ Inspired by @qiqjiao at https://leetcode.com/discuss/743/whats-your-solution
 import Foundation
 
 struct Hard_052_N_Queens_II {
-    private static func dfs(# h: Int, r: Int, l: Int, inout answer: Int, inout limit: Int) {
+    private static func dfs(h  h: Int, r: Int, l: Int, inout answer: Int, inout limit: Int) {
         if h == limit {
             answer++
             return
         }
         var position = limit & (~(h|r|l))
         while position > 0 {
-            var p = position & (-position)
+            let p = position & (-position)
             position -= p
             dfs(h: h+p, r: (r+p)<<1, l: (l+p)>>1, answer: &answer, limit: &limit)
         }

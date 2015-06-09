@@ -26,9 +26,9 @@ import Foundation
 struct Medium_055_Jump_Game {
     static func canJump(nums: [Int]) -> Bool {
         var i = 0
-        for var reach = 0; i < count(nums) && i <= reach; i++ {
+        for var reach = 0; i < nums.count && i <= reach; i++ {
             reach = max(i + nums[i], reach)
         }
-        return i == count(nums)
+        return i == nums.count
     }
 }

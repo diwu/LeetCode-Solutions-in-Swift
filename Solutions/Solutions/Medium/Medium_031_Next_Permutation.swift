@@ -24,7 +24,7 @@ Inspired by @yuyibestman at https://leetcode.com/discuss/8472/share-my-o-n-time-
 import Foundation
 
 class Medium_031_Next_Permutation {
-    class func reverseInPlace(inout # nums: [Int], start: Int, end: Int) {
+    class func reverseInPlace(inout nums  nums: [Int], start: Int, end: Int) {
         if start > end {
             return
         }
@@ -33,7 +33,7 @@ class Medium_031_Next_Permutation {
         }
     }
     class func nextPermutation(inout nums: [Int]) {
-        var length: Int = count(nums)
+        let length: Int = nums.count
         if length < 2 {
             return
         }
@@ -47,7 +47,7 @@ class Medium_031_Next_Permutation {
         if index == 0 {
             reverseInPlace(nums: &nums, start: 0, end: length - 1)
         } else {
-            var value: Int = nums[index - 1]
+            let value: Int = nums[index - 1]
             var i: Int = length - 1
             while i >= index {
                 if nums[i] > value {

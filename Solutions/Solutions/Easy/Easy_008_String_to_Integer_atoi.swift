@@ -38,17 +38,17 @@ private extension String {
 class Easy_008_String_to_Integer_atoi {
     // O (N)
     class func atoi(str: String) -> Int {
-        var i: Int = 0, sign: Bool = true, len: Int = count(str), base: Int = 0
+        var i: Int = 0, sign: Bool = true, len: Int = str.characters.count, base: Int = 0
         for j in 0..<len {
-            var zeroString: String = String("0")
-            var zeroValue: Int = Int(zeroString.utf8[zeroString.utf8.startIndex])
+            let zeroString: String = String("0")
+            let zeroValue: Int = Int(zeroString.utf8[zeroString.utf8.startIndex])
             if base == 0 && str[j] == " " || str[j] == "+" {
                 continue
             } else if base == 0 && str[j] == "-" {
                 sign = false
                 continue
             } else {
-                var integerValue: Int = Int(str.utf8[advance(str.utf8.startIndex, j)]) - zeroValue
+                let integerValue: Int = Int(str.utf8[advance(str.utf8.startIndex, j)]) - zeroValue
                 if integerValue >= 0 && integerValue <= 9 {
                     if base > Int.max/10 || (base == Int.max/10 && integerValue > 7) {
                         if sign {

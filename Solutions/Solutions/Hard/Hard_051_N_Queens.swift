@@ -34,17 +34,17 @@ Inspired by @qqz003 at https://leetcode.com/discuss/22526/c-6ms-solution-use-bit
 import Foundation
 
 struct Hard_051_N_Queens {
-    private static func getNq(# index: Int, n: Int) -> String {
+    private static func getNq(index  index: Int, n: Int) -> String {
         var charArr = [Character](count: n, repeatedValue: ".")
         charArr[index] = "Q"
         return String(charArr)
     }
-    private static func nQueens(# n: Int, p: Int, l: Int, m: Int, r: Int, inout answer: [String], inout result: [[String]]) {
+    private static func nQueens(n  n: Int, p: Int, l: Int, m: Int, r: Int, inout answer: [String], inout result: [[String]]) {
         if p >= n {
             result.append(answer)
             return
         }
-        var mask = l | m | r
+        let mask = l | m | r
         for var i = 0, b = 1; i < n; i++, b <<= 1 {
             if mask & b == 0 {
                 answer.append(getNq(index: i, n: n))

@@ -13,31 +13,31 @@ class Hard_045_Jump_Game_II_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [Int] = [2, 3, 1, 1, 4]
-        var expected: Int = 2
+        let input: [Int] = [2, 3, 1, 1, 4]
+        let expected: Int = 2
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Int] = [1]
-        var expected: Int = 0
+        let input: [Int] = [1]
+        let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Int] = [1, 1, 1]
-        var expected: Int = 2
+        let input: [Int] = [1, 1, 1]
+        let expected: Int = 2
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [Int] = [9, 8, 1, 3, 6, 7, 7, 1,9, 8, 8, 5, 6, 7, 1]
-        var expected: Int = 2
+        let input: [Int] = [9, 8, 1, 3, 6, 7, 7, 1,9, 8, 8, 5, 6, 7, 1]
+        let expected: Int = 2
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [Int] = [1, 1, 1, 3, 6, 7, 7, 1,9, 8, 8, 5, 6, 7, 1]
-        var expected: Int = 6
+        let input: [Int] = [1, 1, 1, 3, 6, 7, 7, 1,9, 8, 8, 5, 6, 7, 1]
+        let expected: Int = 6
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(# input: [Int], expected: Int) {
+    private func asyncHelper(input  input: [Int], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_045_Jump_Game_II_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result = Hard_045_Jump_Game_II.jump(input)

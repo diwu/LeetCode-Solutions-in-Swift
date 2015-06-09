@@ -19,8 +19,8 @@ Inspired by @power721 at https://leetcode.com/discuss/5958/afraid-cant-solve-pro
 import Foundation
 
 class Hard_037_Sudoku_Solver {
-    class func validate(inout # board: [[Character]], x: Int, y: Int) -> Bool {
-        var c: Character = board[x][y]
+    class func validate(inout board  board: [[Character]], x: Int, y: Int) -> Bool {
+        let c: Character = board[x][y]
         for var i = 0; i < 9; i++ {
             if y != i && board[x][i] == c {
                 return false
@@ -29,8 +29,8 @@ class Hard_037_Sudoku_Solver {
                 return false
             }
         }
-        var xx: Int = x / 3 * 3
-        var yy: Int = y / 3 * 3
+        let xx: Int = x / 3 * 3
+        let yy: Int = y / 3 * 3
         for var i = xx; i < xx + 3; i++ {
             for var j = yy; j < yy + 3; j++ {
                 if x != i && y != j && board[i][j] == c {
@@ -40,15 +40,15 @@ class Hard_037_Sudoku_Solver {
         }
         return true
     }
-    class func dfs(inout # board: [[Character]], position: Int) -> Bool {
-        var n = count(board)
+    class func dfs(inout board  board: [[Character]], position: Int) -> Bool {
+        let n = board.count
         if position == n * n {
             return true
         }
-        var x: Int = position / n
-        var y: Int = position % n
+        let x: Int = position / n
+        let y: Int = position % n
         if board[x][y] == "." {
-            var arr: [Character] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            let arr: [Character] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
             for c in arr {
                 board[x][y] = c
                 if validate(board: &board, x: x, y: y) && dfs(board: &board, position: position + 1) {

@@ -16,44 +16,44 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
     private typealias Node = Hard_023_Merge_K_Sorted_Lists.Node
 
     func test_001() {
-        var input: [Node?] = [helper1([1]), helper1([2])]
-        var expected: [Int] = [1, 2]
+        let input: [Node?] = [helper1([1]), helper1([2])]
+        let expected: [Int] = [1, 2]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Node?] = [helper1([]), helper1([2])]
-        var expected: [Int] = [2]
+        let input: [Node?] = [helper1([]), helper1([2])]
+        let expected: [Int] = [2]
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Node?] = [helper1([1]), helper1([])]
-        var expected: [Int] = [1]
+        let input: [Node?] = [helper1([1]), helper1([])]
+        let expected: [Int] = [1]
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [Node?] = [helper1([]), helper1([]), helper1([])]
-        var expected: [Int] = []
+        let input: [Node?] = [helper1([]), helper1([]), helper1([])]
+        let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        var input: [Node?] = [helper1([1]), helper1([3]), helper1([2])]
-        var expected: [Int] = [1, 2, 3]
+        let input: [Node?] = [helper1([1]), helper1([3]), helper1([2])]
+        let expected: [Int] = [1, 2, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_006() {
-        var input: [Node?] = [helper1([1, 2, 3, 6]), helper1([3, 4, 5]), helper1([3])]
-        var expected: [Int] = [1, 2, 3, 3, 3, 4, 5, 6]
+        let input: [Node?] = [helper1([1, 2, 3, 6]), helper1([3, 4, 5]), helper1([3])]
+        let expected: [Int] = [1, 2, 3, 3, 3, 4, 5, 6]
         asyncHelper(input: input, expected: expected)
     }
     func test_007() {
-        var input: [Node?] = [helper1([])]
-        var expected: [Int] = []
+        let input: [Node?] = [helper1([])]
+        let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
     private func helper1(intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
-            var node: Node = Node(value: i, next: nil)
+            let node: Node = Node(value: i, next: nil)
             nodeArray.append(node)
         }
         if nodeArray.count == 0 {
@@ -73,7 +73,7 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(# input: [Node?], expected: [Int]) {
+    private func asyncHelper(input  input: [Node?], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var result: [Int] = self.helper2(Hard_023_Merge_K_Sorted_Lists.mergeKLists(input))

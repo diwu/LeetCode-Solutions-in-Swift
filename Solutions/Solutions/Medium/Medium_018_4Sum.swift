@@ -47,18 +47,18 @@ class Medium_018_4Sum {
     }
 
     // O (N^3)
-    class func fourSum(# num: [Int], target: Int) -> [[Int]] {
+    class func fourSum(num  num: [Int], target: Int) -> [[Int]] {
         var res: [[Int]] = []
-        if count(num) < 4 {
+        if num.count < 4 {
             return res
         }
-        var sortedNum: [Int] = num.sorted{ $0 < $1 }
+        var sortedNum: [Int] = num.sort { $0 < $1 }
         var map: Dictionary<Int, [Pair]> = Dictionary<Int, [Pair]>()
         var array: [Int] = []
         for i in 0..<sortedNum.count {
             for j in i+1..<sortedNum.count {
-                var pair: Pair = Pair(a: sortedNum[i], ai: i, b: sortedNum[j], bi: j)
-                var sum = sortedNum[i] + sortedNum[j]
+                let pair: Pair = Pair(a: sortedNum[i], ai: i, b: sortedNum[j], bi: j)
+                let sum = sortedNum[i] + sortedNum[j]
                 if map[sum] != nil {
                     map[sum]!.append(pair)
                 } else {
@@ -86,10 +86,10 @@ class Medium_018_4Sum {
                 if let unwrapped = map[first] {
                     var list: [Pair] = unwrapped
                     for i in 0..<list.count {
-                        var a: Pair = list[i]
+                        let a: Pair = list[i]
                         if a.a == a.b {
                             for j in i+1..<list.count {
-                                var b: Pair = list[j]
+                                let b: Pair = list[j]
                                 if b.a == b.b {
                                     if a.bi < b.bi {
                                         res.append([a.a, a.b, b.a, b.b])
@@ -149,7 +149,7 @@ class Medium_018_4Sum {
         }
         return res
     }
-    class func lowerKey(# key: Int, arr: [Int]) -> Int? {
+    class func lowerKey(key  key: Int, arr: [Int]) -> Int? {
         if arr.count <= 0 {
             return nil;
         } else {
@@ -161,7 +161,7 @@ class Medium_018_4Sum {
             return nil
         }
     }
-    class func higherKey(# key: Int, arr: [Int]) -> Int? {
+    class func higherKey(key  key: Int, arr: [Int]) -> Int? {
         if arr.count <= 0 {
             return nil;
         } else {

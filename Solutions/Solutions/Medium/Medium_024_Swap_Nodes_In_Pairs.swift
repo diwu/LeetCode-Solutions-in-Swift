@@ -28,13 +28,13 @@ class Medium_024_Swap_Nodes_In_Pairs {
             self.next = next
         }
     }
-    class func swap(# next1: Node, next2: Node) -> Node {
+    class func swap(next1  next1: Node, next2: Node) -> Node {
         next1.next = next2.next
         next2.next = next1
         return next2
     }
     class func swapPairs(head: Node?) -> Node? {
-        var dummy: Node = Node(value: 0, next: nil)
+        let dummy: Node = Node(value: 0, next: nil)
         dummy.next = head
         for var curr: Node? = dummy; curr?.next != nil && curr?.next?.next != nil; curr = curr?.next?.next {
             curr?.next = swap(next1: curr!.next!, next2: curr!.next!.next!)
