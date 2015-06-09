@@ -10,7 +10,7 @@
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 1.2 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A Work in Progress. Now at 55 / 213 = 25.8%.
+* A work in progress. Now at 55 / 213 = 25.8%.
 
 [![](https://img.shields.io/badge/progress-55%20%2F%20213-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 [![](https://img.shields.io/badge/test%20cases-328-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
