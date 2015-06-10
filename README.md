@@ -7,7 +7,7 @@
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed.
-* Written with the latest Swift 1.2 language features in mind.
+* Written with the latest Swift 2.0 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Now at 56 / 215 = 26.0%.
 
