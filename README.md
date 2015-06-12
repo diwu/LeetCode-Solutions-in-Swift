@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
-[WWDC 2015 Session Video: What's New in Swift 2.0](https://developer.apple.com/videos/wwdc/2015/?id=106)
+WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/wwdc/2015/?id=106)
 
 ####LeetCode Solutions in Swift 2.0
 * Designed for your next iOS job interview.
