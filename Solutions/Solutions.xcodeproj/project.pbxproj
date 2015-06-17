@@ -470,6 +470,7 @@
 				5064BB811B233453001B24B8 /* Medium_054_Spiral_Matrix.swift */,
 				5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */,
 				5032CB571B31C0A400FCFE72 /* Medium_060_Permutation_Sequence.swift */,
+				505101B51B302A05005D74D5 /* Medium_059_Spiral_Matrix_II.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -550,6 +551,7 @@
 				5064BB841B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift */,
 				5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */,
 				5032CB5A1B31C0C600FCFE72 /* Medium_060_Permutation_Sequence_Test.swift */,
+				505101B81B302A43005D74D5 /* Medium_059_Spiral_Matrix_II_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
