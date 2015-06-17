@@ -10,10 +10,10 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.0 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Now at 57 / 217 = 26.3%.
+* A work in progress. Now at 59 / 217 = 27.2%.
 
-[![](https://img.shields.io/badge/progress-57%20%2F%20217-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-340-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-59%20%2F%20217-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-350-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
@@ -72,5 +72,7 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 55. [Jump Game](https://leetcode.com/problems/jump-game/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_055_Jump_Game.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_055_Jump_Game_Test.swift) - t=O(N), s=O(1)
 56. [Merge Intervals](https://leetcode.com/problems/merge-intervals/) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_056_Merge_Intervals.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_056_Merge_Intervals_Test.swift) - t=O(N\*logN), s=O(N)
 57. [Insert Interval](https://leetcode.com/discuss/3971/in-place-solution-ask-for-suggestion) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_057_Insert_Interval.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_057_Insert_Interval_Test.swift) - t=O(N), s=O(N)
+58. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) - Easy - [Solution](./Solutions/Solutions/Easy/Easy_058_Length_Of_Last_Word.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_058_Length_Of_Last_Word_Test.swift) - t=O(N), s=O(1)
+59. [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_059_Spiral_Matrix_II.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_059_Spiral_Matrix_II_Test.swift) - t=O(N^2), s=O(N^2)
 
 Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc.
