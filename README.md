@@ -10,10 +10,10 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.0 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Now at 63 / 225 = 28.0%.
+* A work in progress. Now at 64 / 225 = 28.4%.
 
-[![](https://img.shields.io/badge/progress-63%20%2F%20225-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-366-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-64%20%2F%20225-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-371-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
@@ -78,5 +78,6 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 61. [Rotate List](https://leetcode.com/problems/rotate-list/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_061_Rotate_List.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_061_Rotate_List_Test.swift) - t=O(N), s=O(1)
 62. [Unique Paths](https://leetcode.com/problems/unique-paths/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_062_Unique_Paths.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_062_Unique_Paths_Test.swift) - t=O(min(m, n)), s=O(1)
 63. [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_063_Unique_Paths_II.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_063_Unique_Paths_II_Test.swift) - t=O(m*n), s=O(1)
+64. [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_064_Minimum_Path_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_064_Minimum_Path_Sum_Test.swift) - t=O(m*n), s=O(1)
 
 Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc.
