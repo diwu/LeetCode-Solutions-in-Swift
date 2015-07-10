@@ -22,6 +22,9 @@
 		5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */; };
 		5005E4DC1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */; };
 		5005E4DE1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DD1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift */; };
+		501674F91B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501674F81B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift */; };
+		501674FA1B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501674F81B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift */; };
+		501674FC1B4FFB8A006B5FC6 /* Medium_063_Unique_Paths_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501674FB1B4FFB8A006B5FC6 /* Medium_063_Unique_Paths_II_Test.swift */; };
 		501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */; };
 		501E66941B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */; };
 		501E66961B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */; };
@@ -222,6 +225,8 @@
 		5005A8121B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_033_Search_In_Rotated_Sorted_Array_Test.swift; path = Hard/Hard_033_Search_In_Rotated_Sorted_Array_Test.swift; sourceTree = "<group>"; };
 		5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_020_Valid_Parentheses.swift; path = Easy/Easy_020_Valid_Parentheses.swift; sourceTree = "<group>"; };
 		5005E4DD1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_020_Valid_Parentheses_Test.swift; path = Easy/Easy_020_Valid_Parentheses_Test.swift; sourceTree = "<group>"; };
+		501674F81B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_063_Unique_Paths_II.swift; path = Medium/Medium_063_Unique_Paths_II.swift; sourceTree = "<group>"; };
+		501674FB1B4FFB8A006B5FC6 /* Medium_063_Unique_Paths_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_063_Unique_Paths_II_Test.swift; path = Medium/Medium_063_Unique_Paths_II_Test.swift; sourceTree = "<group>"; };
 		501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II.swift; path = Hard/Hard_052_N_Queens_II.swift; sourceTree = "<group>"; };
 		501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II_Test.swift; path = Hard/Hard_052_N_Queens_II_Test.swift; sourceTree = "<group>"; };
 		5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku.swift; path = Easy/Easy_036_Valid_Sudoku.swift; sourceTree = "<group>"; };
@@ -483,6 +488,7 @@
 				505101B51B302A05005D74D5 /* Medium_059_Spiral_Matrix_II.swift */,
 				500373131B385F8B00B96A2C /* Medium_061_Rotate_List.swift */,
 				504EB73B1B4581B200A0657B /* Medium_062_Unique_Paths.swift */,
+				501674F81B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				505101B81B302A43005D74D5 /* Medium_059_Spiral_Matrix_II_Test.swift */,
 				500373161B385FC300B96A2C /* Medium_061_Rotate_List_Test.swift */,
 				504EB73E1B4581CA00A0657B /* Medium_062_Unique_Paths_Test.swift */,
+				501674FB1B4FFB8A006B5FC6 /* Medium_063_Unique_Paths_II_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -707,6 +714,7 @@
 				509365A91AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */,
 				50AEFEB41AFF6D940059CF1B /* Medium_031_Next_Permutation.swift in Sources */,
 				503981491AFB555900419435 /* Easy_027_Remove_Element.swift in Sources */,
+				501674F91B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift in Sources */,
 				505838981B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */,
 				50FF9DB51B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift in Sources */,
 				509D38651B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift in Sources */,
@@ -846,6 +854,8 @@
 				91AE3A0A1AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
 				505101B71B302A05005D74D5 /* Medium_059_Spiral_Matrix_II.swift in Sources */,
 				509D38681B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift in Sources */,
+				501674FA1B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift in Sources */,
+				501674FC1B4FFB8A006B5FC6 /* Medium_063_Unique_Paths_II_Test.swift in Sources */,
 				509365A21AE1BD5B00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift in Sources */,
 				50001EF61AF9F92D0060075D /* Hard_025_Reverse_Nodes_In_K_Group_Test.swift in Sources */,
 				91AE3A0D1AC55AC3007EAEBA /* Medium_005_Longest_Palindromic_Substring_Test.swift in Sources */,
@@ -1008,11 +1018,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Solutions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "diwu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Debug;
 		};
@@ -1020,11 +1032,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Solutions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "diwu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Release;
 		};
