@@ -165,6 +165,9 @@
 		50EC15C31B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */; };
 		50EC15C41B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */; };
 		50EC15C61B05791700A231BF /* Easy_038_Count_And_Say_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC15C51B05791700A231BF /* Easy_038_Count_And_Say_Test.swift */; };
+		50F1DBAA1B5552D000B47809 /* Hard_065_Valid_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */; };
+		50F1DBAB1B5552D000B47809 /* Hard_065_Valid_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */; };
+		50F1DBAD1B55532300B47809 /* Hard_065_Valid_Number_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1DBAC1B55532300B47809 /* Hard_065_Valid_Number_Test.swift */; };
 		50FF9DB51B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF9DB41B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift */; };
 		50FF9DB61B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF9DB41B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift */; };
 		50FF9DB81B08ED340066EDA7 /* Medium_039_Combination_Sum_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF9DB71B08ED340066EDA7 /* Medium_039_Combination_Sum_Test.swift */; };
@@ -329,6 +332,8 @@
 		50E1BFBC1AD28EC6009308B6 /* Medium_015_3Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_015_3Sum_Test.swift; path = Medium/Medium_015_3Sum_Test.swift; sourceTree = "<group>"; };
 		50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_038_Count_And_Say.swift; path = Easy/Easy_038_Count_And_Say.swift; sourceTree = "<group>"; };
 		50EC15C51B05791700A231BF /* Easy_038_Count_And_Say_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_038_Count_And_Say_Test.swift; path = Easy/Easy_038_Count_And_Say_Test.swift; sourceTree = "<group>"; };
+		50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_065_Valid_Number.swift; path = Hard/Hard_065_Valid_Number.swift; sourceTree = "<group>"; };
+		50F1DBAC1B55532300B47809 /* Hard_065_Valid_Number_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_065_Valid_Number_Test.swift; path = Hard/Hard_065_Valid_Number_Test.swift; sourceTree = "<group>"; };
 		50FF9DB41B08ED1A0066EDA7 /* Medium_039_Combination_Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_039_Combination_Sum.swift; path = Medium/Medium_039_Combination_Sum.swift; sourceTree = "<group>"; };
 		50FF9DB71B08ED340066EDA7 /* Medium_039_Combination_Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_039_Combination_Sum_Test.swift; path = Medium/Medium_039_Combination_Sum_Test.swift; sourceTree = "<group>"; };
 		5263CF561AC79C130073631F /* Medium_011_Container_With_Most_Water_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_011_Container_With_Most_Water_Test.swift; path = Medium/Medium_011_Container_With_Most_Water_Test.swift; sourceTree = "<group>"; };
@@ -519,6 +524,7 @@
 				501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */,
 				503F0EBC1B288FC100B15633 /* Hard_056_Merge_Intervals.swift */,
 				508DE9991B2B487700A81EBD /* Hard_057_Insert_Interval.swift */,
+				50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 				501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */,
 				503F0EBF1B288FEA00B15633 /* Hard_056_Merge_Intervals_Test.swift */,
 				508DE99C1B2B488600A81EBD /* Hard_057_Insert_Interval_Test.swift */,
+				50F1DBAC1B55532300B47809 /* Hard_065_Valid_Number_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -737,6 +744,7 @@
 				50001EF81AFA65970060075D /* Easy_026_Remove_Duplicates_from_Sorted_Array.swift in Sources */,
 				509365A41AE23CD600FD41FD /* Medium_018_4Sum.swift in Sources */,
 				50254C9D1B0F73AE0073B873 /* Medium_043_Multiply_Strings.swift in Sources */,
+				50F1DBAA1B5552D000B47809 /* Hard_065_Valid_Number.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
 				50A765151B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */,
 				50001EF31AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
@@ -822,6 +830,7 @@
 				5081E4081B10572E00D8FD22 /* Medium_050_Pow_X_N.swift in Sources */,
 				91492D591AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				91492D5B1AC5860F00D3A514 /* Easy_007_Reverse_Integer_Test.swift in Sources */,
+				50F1DBAB1B5552D000B47809 /* Hard_065_Valid_Number.swift in Sources */,
 				503F0EC01B288FEA00B15633 /* Hard_056_Merge_Intervals_Test.swift in Sources */,
 				501E66941B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
 				509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */,
@@ -907,6 +916,7 @@
 				504EB73D1B4581B200A0657B /* Medium_062_Unique_Paths.swift in Sources */,
 				50D0C8F51AFE38340057BE0A /* Medium_029_Divide_Two_Integers.swift in Sources */,
 				5098BC361AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift in Sources */,
+				50F1DBAD1B55532300B47809 /* Hard_065_Valid_Number_Test.swift in Sources */,
 				5081E3F91B10549900D8FD22 /* Hard_047_Permutations_II.swift in Sources */,
 				50AEFEB71AFF6DC90059CF1B /* Medium_031_Next_Permutation_Test.swift in Sources */,
 				505825B51AF89CA70081F4FA /* Medium_022_Generate_Parentheses.swift in Sources */,
