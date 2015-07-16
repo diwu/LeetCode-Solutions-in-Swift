@@ -11,7 +11,7 @@ import XCTest
 class Hard_065_Valid_Number_Test: XCTestCase {
     private static let ProblemName: String = "Hard_065_Valid_Number"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 100
+    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: String = "+1"
         let expected: Bool = true

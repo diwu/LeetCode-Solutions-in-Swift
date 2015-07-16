@@ -64,6 +64,9 @@
 		50478BB81B57F925008F43D2 /* Easy_066_Plus_One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */; };
 		50478BB91B57F925008F43D2 /* Easy_066_Plus_One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */; };
 		50478BBB1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */; };
+		50478BBD1B580156008F43D2 /* Easy_067_Add_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BBC1B580156008F43D2 /* Easy_067_Add_Binary.swift */; };
+		50478BBE1B580156008F43D2 /* Easy_067_Add_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BBC1B580156008F43D2 /* Easy_067_Add_Binary.swift */; };
+		50478BC01B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BBF1B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift */; };
 		504D4FA01ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */; };
 		504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */; };
 		504D4FA31ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D4FA21ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift */; };
@@ -262,6 +265,8 @@
 		503F0EBF1B288FEA00B15633 /* Hard_056_Merge_Intervals_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_056_Merge_Intervals_Test.swift; path = Hard/Hard_056_Merge_Intervals_Test.swift; sourceTree = "<group>"; };
 		50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_066_Plus_One.swift; path = Easy/Easy_066_Plus_One.swift; sourceTree = "<group>"; };
 		50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_066_Plus_One_Test.swift; path = Easy/Easy_066_Plus_One_Test.swift; sourceTree = "<group>"; };
+		50478BBC1B580156008F43D2 /* Easy_067_Add_Binary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_067_Add_Binary.swift; path = Easy/Easy_067_Add_Binary.swift; sourceTree = "<group>"; };
+		50478BBF1B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_067_Add_Binary_Test.swift; path = Easy/Easy_067_Add_Binary_Test.swift; sourceTree = "<group>"; };
 		504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_016_3Sum_Closest.swift; path = Medium/Medium_016_3Sum_Closest.swift; sourceTree = "<group>"; };
 		504D4FA21ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_016_3Sum_Closest_Test.swift; path = Medium/Medium_016_3Sum_Closest_Test.swift; sourceTree = "<group>"; };
 		504EB73B1B4581B200A0657B /* Medium_062_Unique_Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_062_Unique_Paths.swift; path = Medium/Medium_062_Unique_Paths.swift; sourceTree = "<group>"; };
@@ -467,6 +472,7 @@
 				50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */,
 				505101B01B3020C6005D74D5 /* Easy_058_Length_Of_Last_Word.swift */,
 				50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */,
+				50478BBC1B580156008F43D2 /* Easy_067_Add_Binary.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 				50EC15C51B05791700A231BF /* Easy_038_Count_And_Say_Test.swift */,
 				505101B31B3020E6005D74D5 /* Easy_058_Length_Of_Last_Word_Test.swift */,
 				50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */,
+				50478BBF1B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -785,6 +792,7 @@
 				503F0EBD1B288FC100B15633 /* Hard_056_Merge_Intervals.swift in Sources */,
 				501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
 				50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
+				50478BBD1B580156008F43D2 /* Easy_067_Add_Binary.swift in Sources */,
 				5081E3F31B10537E00D8FD22 /* Medium_046_Permutations.swift in Sources */,
 				5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
 				5064BB871B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */,
@@ -856,6 +864,7 @@
 				502529971B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift in Sources */,
 				508DE99D1B2B488600A81EBD /* Hard_057_Insert_Interval_Test.swift in Sources */,
 				5032CB5B1B31C0C600FCFE72 /* Medium_060_Permutation_Sequence_Test.swift in Sources */,
+				50478BBE1B580156008F43D2 /* Easy_067_Add_Binary.swift in Sources */,
 				5098BC3B1AF90CE90009964D /* Medium_024_Swap_Nodes_In_Pairs.swift in Sources */,
 				5081E4031B10562F00D8FD22 /* Medium_049_Anagrams.swift in Sources */,
 				5032CB591B31C0A400FCFE72 /* Medium_060_Permutation_Sequence.swift in Sources */,
@@ -908,6 +917,7 @@
 				50C7880A1B0A4BF600786829 /* Medium_040_Combination_Sum_II_Test.swift in Sources */,
 				50C788081B0A4BDB00786829 /* Medium_040_Combination_Sum_II.swift in Sources */,
 				5263CF5D1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
+				50478BC01B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift in Sources */,
 				50254C9E1B0F73AE0073B873 /* Medium_043_Multiply_Strings.swift in Sources */,
 				5005A8111B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
 				502529951B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */,
