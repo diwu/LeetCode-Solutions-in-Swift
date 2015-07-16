@@ -61,6 +61,9 @@
 		503F0EBD1B288FC100B15633 /* Hard_056_Merge_Intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F0EBC1B288FC100B15633 /* Hard_056_Merge_Intervals.swift */; };
 		503F0EBE1B288FC100B15633 /* Hard_056_Merge_Intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F0EBC1B288FC100B15633 /* Hard_056_Merge_Intervals.swift */; };
 		503F0EC01B288FEA00B15633 /* Hard_056_Merge_Intervals_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F0EBF1B288FEA00B15633 /* Hard_056_Merge_Intervals_Test.swift */; };
+		50478BB81B57F925008F43D2 /* Easy_066_Plus_One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */; };
+		50478BB91B57F925008F43D2 /* Easy_066_Plus_One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */; };
+		50478BBB1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */; };
 		504D4FA01ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */; };
 		504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */; };
 		504D4FA31ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D4FA21ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift */; };
@@ -257,6 +260,8 @@
 		5039814B1AFB556800419435 /* Easy_027_Remove_Element_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_027_Remove_Element_Test.swift; path = Easy/Easy_027_Remove_Element_Test.swift; sourceTree = "<group>"; };
 		503F0EBC1B288FC100B15633 /* Hard_056_Merge_Intervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_056_Merge_Intervals.swift; path = Hard/Hard_056_Merge_Intervals.swift; sourceTree = "<group>"; };
 		503F0EBF1B288FEA00B15633 /* Hard_056_Merge_Intervals_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_056_Merge_Intervals_Test.swift; path = Hard/Hard_056_Merge_Intervals_Test.swift; sourceTree = "<group>"; };
+		50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_066_Plus_One.swift; path = Easy/Easy_066_Plus_One.swift; sourceTree = "<group>"; };
+		50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_066_Plus_One_Test.swift; path = Easy/Easy_066_Plus_One_Test.swift; sourceTree = "<group>"; };
 		504D4F9F1ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_016_3Sum_Closest.swift; path = Medium/Medium_016_3Sum_Closest.swift; sourceTree = "<group>"; };
 		504D4FA21ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_016_3Sum_Closest_Test.swift; path = Medium/Medium_016_3Sum_Closest_Test.swift; sourceTree = "<group>"; };
 		504EB73B1B4581B200A0657B /* Medium_062_Unique_Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_062_Unique_Paths.swift; path = Medium/Medium_062_Unique_Paths.swift; sourceTree = "<group>"; };
@@ -461,6 +466,7 @@
 				5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */,
 				50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */,
 				505101B01B3020C6005D74D5 /* Easy_058_Length_Of_Last_Word.swift */,
+				50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -547,6 +553,7 @@
 				502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */,
 				50EC15C51B05791700A231BF /* Easy_038_Count_And_Say_Test.swift */,
 				505101B31B3020E6005D74D5 /* Easy_058_Length_Of_Last_Word_Test.swift */,
+				50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -763,6 +770,7 @@
 				5081E4021B10562F00D8FD22 /* Medium_049_Anagrams.swift in Sources */,
 				50A7F7FA1AA999C900F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
 				500373141B385F8B00B96A2C /* Medium_061_Rotate_List.swift in Sources */,
+				50478BB81B57F925008F43D2 /* Easy_066_Plus_One.swift in Sources */,
 				91A29F161AC541F800E03380 /* Medium_003_Longest_Substring_Without_Repeating_Characters.swift in Sources */,
 				50A7F7D71AA9970700F84E86 /* AppDelegate.swift in Sources */,
 				91EF6D6F1AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
@@ -838,6 +846,7 @@
 				509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */,
 				5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				50AEFEAE1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
+				50478BBB1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
 				50001EF41AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
 				5081E3FE1B1054FF00D8FD22 /* Medium_048_Rotate_Image.swift in Sources */,
@@ -865,6 +874,7 @@
 				91AE3A011AC54E00007EAEBA /* Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift in Sources */,
 				502A8F7F1B024E8100BE6CEB /* Medium_035_Search_Insert_Position_Test.swift in Sources */,
 				501675011B500DF1006B5FC6 /* Medium_064_Minimum_Path_Sum_Test.swift in Sources */,
+				50478BB91B57F925008F43D2 /* Easy_066_Plus_One.swift in Sources */,
 				502A8F7D1B024E4300BE6CEB /* Medium_035_Search_Insert_Position.swift in Sources */,
 				50254C9B1B0F60740073B873 /* Hard_042_Trapping_Rain_Water_Test.swift in Sources */,
 				50A7F8001AA99B8400F84E86 /* Easy_006_ZigZag_Conversion_Test.swift in Sources */,
