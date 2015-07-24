@@ -31,6 +31,9 @@
 		501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */; };
 		501E66941B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */; };
 		501E66961B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */; };
+		501FB58D1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */; };
+		501FB58E1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */; };
+		501FB5901B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FB58F1B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift */; };
 		5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */; };
 		502529901B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */; };
 		502529921B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */; };
@@ -249,6 +252,8 @@
 		501675001B500DF1006B5FC6 /* Medium_064_Minimum_Path_Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_064_Minimum_Path_Sum_Test.swift; path = Medium/Medium_064_Minimum_Path_Sum_Test.swift; sourceTree = "<group>"; };
 		501E66921B14C5FE00108A45 /* Hard_052_N_Queens_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II.swift; path = Hard/Hard_052_N_Queens_II.swift; sourceTree = "<group>"; };
 		501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II_Test.swift; path = Hard/Hard_052_N_Queens_II_Test.swift; sourceTree = "<group>"; };
+		501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_070_Climbing_Stairs.swift; path = Easy/Easy_070_Climbing_Stairs.swift; sourceTree = "<group>"; };
+		501FB58F1B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_070_Climbing_Stairs_Test.swift; path = Easy/Easy_070_Climbing_Stairs_Test.swift; sourceTree = "<group>"; };
 		5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku.swift; path = Easy/Easy_036_Valid_Sudoku.swift; sourceTree = "<group>"; };
 		502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku_Test.swift; path = Easy/Easy_036_Valid_Sudoku_Test.swift; sourceTree = "<group>"; };
 		502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_037_Sudoku_Solver.swift; path = Hard/Hard_037_Sudoku_Solver.swift; sourceTree = "<group>"; };
@@ -483,6 +488,7 @@
 				505101B01B3020C6005D74D5 /* Easy_058_Length_Of_Last_Word.swift */,
 				50478BB71B57F925008F43D2 /* Easy_066_Plus_One.swift */,
 				50478BBC1B580156008F43D2 /* Easy_067_Add_Binary.swift */,
+				501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 				505101B31B3020E6005D74D5 /* Easy_058_Length_Of_Last_Word_Test.swift */,
 				50478BBA1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift */,
 				50478BBF1B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift */,
+				501FB58F1B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -746,6 +753,7 @@
 			files = (
 				5064BB821B233453001B24B8 /* Medium_054_Spiral_Matrix.swift in Sources */,
 				50D0C8F41AFE38340057BE0A /* Medium_029_Divide_Two_Integers.swift in Sources */,
+				501FB58D1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */,
 				5093659F1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
 				5263CF5C1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
 				5081E3EE1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift in Sources */,
@@ -836,6 +844,7 @@
 				509365A01AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
 				502A8F781B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift in Sources */,
 				50EC15C61B05791700A231BF /* Easy_038_Count_And_Say_Test.swift in Sources */,
+				501FB58E1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */,
 				5263CF571AC79C130073631F /* Medium_011_Container_With_Most_Water_Test.swift in Sources */,
 				5064BB801B232D59001B24B8 /* Medium_053_Maximum_Subarray_Test.swift in Sources */,
 				5263CF5A1AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
@@ -871,6 +880,7 @@
 				5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				50AEFEAE1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
 				50478BBB1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift in Sources */,
+				501FB5901B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
 				50001EF41AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
 				5081E3FE1B1054FF00D8FD22 /* Medium_048_Rotate_Image.swift in Sources */,
