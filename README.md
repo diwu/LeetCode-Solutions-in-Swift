@@ -10,10 +10,10 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.0 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Now at 68 / 230 = 29.6%.
+* A work in progress. Now at 69 / 231 = 29.9%.
 
-[![](https://img.shields.io/badge/progress-68%20%2F%20230-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-408-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-69%20%2F%20231-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-412-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
@@ -83,5 +83,6 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 66. [Plus One](https://leetcode.com/problems/plus-one/) - Easy - [Solution](./Solutions/Solutions/Easy/Easy_066_Plus_One.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_066_Plus_One_Test.swift) - t=O(N), s=O(1)
 67. [Add Binary](https://leetcode.com/problems/add-binary/) - Easy - [Solution](./Solutions/Solutions/Easy/Easy_067_Add_Binary.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_067_Add_Binary_Test.swift) - t=O(max(M,N)), s=O(max(M,N))
 68. [Text Justification](https://leetcode.com/problems/text-justification/) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_068_Text_Justification.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_068_Text_Justification_Test.swift) - t<=O(N\*L), s<=O(N\*L), where N is the length of the input words array, L is the required justified length
+69. [Sqrt(x)](https://leetcode.com/problems/sqrtx/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_069_Sqrt_X.swift) - [Test Cases](https://github.com/diwu/LeetCode-Solutions-in-Swift/blob/master/Solutions/SolutionsTests/Medium/Medium_069_Sqrt_X_Test.swift) - t=O(logN), s=O(1)
 
 Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc.
