@@ -177,6 +177,9 @@
 		50E1BFBA1AD28EAC009308B6 /* Medium_015_3Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1BFB91AD28EAC009308B6 /* Medium_015_3Sum.swift */; };
 		50E1BFBB1AD28EAC009308B6 /* Medium_015_3Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1BFB91AD28EAC009308B6 /* Medium_015_3Sum.swift */; };
 		50E1BFBD1AD28EC6009308B6 /* Medium_015_3Sum_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1BFBC1AD28EC6009308B6 /* Medium_015_3Sum_Test.swift */; };
+		50E1EEE61B672A08001DD020 /* Medium_071_Simplify_Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1EEE51B672A08001DD020 /* Medium_071_Simplify_Path.swift */; };
+		50E1EEE71B672A08001DD020 /* Medium_071_Simplify_Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1EEE51B672A08001DD020 /* Medium_071_Simplify_Path.swift */; };
+		50E1EEE91B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1EEE81B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift */; };
 		50EC15C31B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */; };
 		50EC15C41B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */; };
 		50EC15C61B05791700A231BF /* Easy_038_Count_And_Say_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC15C51B05791700A231BF /* Easy_038_Count_And_Say_Test.swift */; };
@@ -355,6 +358,8 @@
 		50D2F1161B60F60B00F83637 /* Medium_069_Sqrt_X_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_069_Sqrt_X_Test.swift; path = Medium/Medium_069_Sqrt_X_Test.swift; sourceTree = "<group>"; };
 		50E1BFB91AD28EAC009308B6 /* Medium_015_3Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_015_3Sum.swift; path = Medium/Medium_015_3Sum.swift; sourceTree = "<group>"; };
 		50E1BFBC1AD28EC6009308B6 /* Medium_015_3Sum_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_015_3Sum_Test.swift; path = Medium/Medium_015_3Sum_Test.swift; sourceTree = "<group>"; };
+		50E1EEE51B672A08001DD020 /* Medium_071_Simplify_Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_071_Simplify_Path.swift; path = Medium/Medium_071_Simplify_Path.swift; sourceTree = "<group>"; };
+		50E1EEE81B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_071_Simplify_Path_Test.swift; path = Medium/Medium_071_Simplify_Path_Test.swift; sourceTree = "<group>"; };
 		50EC15C21B05790400A231BF /* Easy_038_Count_And_Say.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_038_Count_And_Say.swift; path = Easy/Easy_038_Count_And_Say.swift; sourceTree = "<group>"; };
 		50EC15C51B05791700A231BF /* Easy_038_Count_And_Say_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_038_Count_And_Say_Test.swift; path = Easy/Easy_038_Count_And_Say_Test.swift; sourceTree = "<group>"; };
 		50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_065_Valid_Number.swift; path = Hard/Hard_065_Valid_Number.swift; sourceTree = "<group>"; };
@@ -529,6 +534,7 @@
 				501674F81B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift */,
 				501674FD1B500DDE006B5FC6 /* Medium_064_Minimum_Path_Sum.swift */,
 				50D2F1131B60F5A500F83637 /* Medium_069_Sqrt_X.swift */,
+				50E1EEE51B672A08001DD020 /* Medium_071_Simplify_Path.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -620,6 +626,7 @@
 				501674FB1B4FFB8A006B5FC6 /* Medium_063_Unique_Paths_II_Test.swift */,
 				501675001B500DF1006B5FC6 /* Medium_064_Minimum_Path_Sum_Test.swift */,
 				50D2F1161B60F60B00F83637 /* Medium_069_Sqrt_X_Test.swift */,
+				50E1EEE81B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -759,6 +766,7 @@
 				5081E3EE1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift in Sources */,
 				504EB73C1B4581B200A0657B /* Medium_062_Unique_Paths.swift in Sources */,
 				5030D3971AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */,
+				50E1EEE61B672A08001DD020 /* Medium_071_Simplify_Path.swift in Sources */,
 				91DCF23C1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				50D0C8EF1AFDF5DE0057BE0A /* Easy_028_Implement_StrStr.swift in Sources */,
 				509365A91AE4879F00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List.swift in Sources */,
@@ -852,6 +860,7 @@
 				5064BB851B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift in Sources */,
 				5005E4DE1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift in Sources */,
 				5081E4051B10564300D8FD22 /* Medium_049_Anagrams_Test.swift in Sources */,
+				50E1EEE91B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift in Sources */,
 				91DCF23D1AC9134500F9CB65 /* Easy_014_Longest_Common_Prefix.swift in Sources */,
 				50254C991B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				50001EF91AFA65970060075D /* Easy_026_Remove_Duplicates_from_Sorted_Array.swift in Sources */,
@@ -933,6 +942,7 @@
 				91DCF23F1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift in Sources */,
 				505825B71AF89D200081F4FA /* Medium_022_Generate_Parentheses_Test.swift in Sources */,
 				5081E3F61B10539100D8FD22 /* Medium_046_Permutations_Test.swift in Sources */,
+				50E1EEE71B672A08001DD020 /* Medium_071_Simplify_Path.swift in Sources */,
 				91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */,
 				500373151B385F8B00B96A2C /* Medium_061_Rotate_List.swift in Sources */,
 				50ADCDC41B5A351F001A3E3B /* Hard_068_Text_Justification_Test.swift in Sources */,
