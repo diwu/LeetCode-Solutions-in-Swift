@@ -100,6 +100,9 @@
 		506F20C81B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */; };
 		506F20C91B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */; };
 		506F20CB1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */; };
+		506F20CD1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */; };
+		506F20CE1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */; };
+		506F20D01B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CF1B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift */; };
 		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
@@ -304,6 +307,8 @@
 		5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_055_Jump_Game_Test.swift; path = Medium/Medium_055_Jump_Game_Test.swift; sourceTree = "<group>"; };
 		506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_072_Edit_Distance.swift; path = Hard/Hard_072_Edit_Distance.swift; sourceTree = "<group>"; };
 		506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_072_Edit_Distance_Test.swift; path = Hard/Hard_072_Edit_Distance_Test.swift; sourceTree = "<group>"; };
+		506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_073_Set_Matrix_Zeroes.swift; path = Medium/Medium_073_Set_Matrix_Zeroes.swift; sourceTree = "<group>"; };
+		506F20CF1B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_073_Set_Matrix_Zeroes_Test.swift; path = Medium/Medium_073_Set_Matrix_Zeroes_Test.swift; sourceTree = "<group>"; };
 		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
 		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_045_Jump_Game_II.swift; path = Hard/Hard_045_Jump_Game_II.swift; sourceTree = "<group>"; };
@@ -540,6 +545,7 @@
 				501674FD1B500DDE006B5FC6 /* Medium_064_Minimum_Path_Sum.swift */,
 				50D2F1131B60F5A500F83637 /* Medium_069_Sqrt_X.swift */,
 				50E1EEE51B672A08001DD020 /* Medium_071_Simplify_Path.swift */,
+				506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -633,6 +639,7 @@
 				501675001B500DF1006B5FC6 /* Medium_064_Minimum_Path_Sum_Test.swift */,
 				50D2F1161B60F60B00F83637 /* Medium_069_Sqrt_X_Test.swift */,
 				50E1EEE81B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift */,
+				506F20CF1B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -771,6 +778,7 @@
 				5093659F1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
 				5263CF5C1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
 				5081E3EE1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift in Sources */,
+				506F20CD1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */,
 				504EB73C1B4581B200A0657B /* Medium_062_Unique_Paths.swift in Sources */,
 				5030D3971AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */,
 				50E1EEE61B672A08001DD020 /* Medium_071_Simplify_Path.swift in Sources */,
@@ -961,6 +969,7 @@
 				50AEFEB51AFF6D940059CF1B /* Medium_031_Next_Permutation.swift in Sources */,
 				50001EFB1AFA65AD0060075D /* Easy_026_Remove_Duplicates_from_Sorted_Array_Test.swift in Sources */,
 				91492D631AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */,
+				506F20CE1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */,
 				50C7880A1B0A4BF600786829 /* Medium_040_Combination_Sum_II_Test.swift in Sources */,
 				50C788081B0A4BDB00786829 /* Medium_040_Combination_Sum_II.swift in Sources */,
 				5263CF5D1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
@@ -976,6 +985,7 @@
 				5005A8131B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift in Sources */,
 				505101B21B3020C6005D74D5 /* Easy_058_Length_Of_Last_Word.swift in Sources */,
 				505838991B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */,
+				506F20D01B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift in Sources */,
 				50D0C8F21AFDF5FA0057BE0A /* Easy_028_Implement_StrStr_Test.swift in Sources */,
 				502529901B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
 				5064BB8A1B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift in Sources */,
