@@ -14,27 +14,27 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
     private typealias Node = Hard_025_Reverse_Nodes_In_K_Group.Node
     func test_001() {
-        let input: [Any] = [helper1([1, 2, 3, 4]), 2]
+        let input: [AnyObject?] = [helper1([1, 2, 3, 4]), 2]
         let expected: [Int] = [2, 1, 4, 3]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        let input: [Any] = [helper1([1, 2, 3, 4]), 1]
+        let input: [AnyObject?] = [helper1([1, 2, 3, 4]), 1]
         let expected: [Int] = [1, 2, 3, 4]
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        let input: [Any] = [helper1([1, 2, 3, 4]), 3]
+        let input: [AnyObject?] = [helper1([1, 2, 3, 4]), 3]
         let expected: [Int] = [3, 2, 1, 4]
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        let input: [Any] = [helper1([]), 3]
+        let input: [AnyObject?] = [helper1([]), 3]
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        let input: [Any] = [helper1([1, 2, 3, 4]), 999]
+        let input: [AnyObject?] = [helper1([1, 2, 3, 4]), 999]
         let expected: [Int] = [1, 2, 3, 4]
         asyncHelper(input: input, expected: expected)
     }
@@ -61,11 +61,16 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(input  input: [Any], expected: [Int]) {
+    private func asyncHelper(input  input: [AnyObject?], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            let unwrapped: Node? = unwrap(input[0]) as? Node
-            let result: [Int] = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: unwrapped, k: input[1] as! Int))
+            var result: [Int]
+            if input[0] != nil {
+                let head: Node = input[0] as! Node
+                result = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: head, k: input[1] as! Int))
+            } else {
+                result = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: nil, k: input[1] as! Int))
+            }
             assertHelper(expected == result, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()

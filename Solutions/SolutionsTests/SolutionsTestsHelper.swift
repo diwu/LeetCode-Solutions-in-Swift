@@ -14,13 +14,3 @@ let Default_Timeout_Suffix: String = " Time Out"
 func assertHelper(@autoclosure expression: () -> BooleanType, problemName: String , input: Any, resultValue: Any, expectedValue: Any) {
     XCTAssert(expression(), "\n====================================\nProblem: \(problemName)\n====================================\nInput: \"\(input)\"\n====================================\nExpected: \"\(expectedValue)\"\n====================================\nResult: \"\(resultValue)\"\n====================================\n")
 }
-
-func unwrap(any:Any) -> Any? {
-    let mi:MirrorType = reflect(any)
-    if mi.disposition != .Optional {
-        return any
-    }
-    if mi.count == 0 { return nil }
-    let (_,some) = mi[0]
-    return some.value
-}
