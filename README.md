@@ -10,10 +10,10 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.0 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Now at 72 / 241 = 29.9%.
+* A work in progress. Now at 76 / 241 = 31.5%.
 
-[![](https://img.shields.io/badge/progress-72%20%2F%20241-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-435-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-76%20%2F%20241-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-449-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
@@ -87,5 +87,9 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 70. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - Easy - [Solution](./Solutions/Solutions/Easy/Easy_070_Climbing_Stairs.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_070_Climbing_Stairs_Test.swift) - t=O(N), s=O(1)
 71. [Simplify Path](https://leetcode.com/problems/simplify-path/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_071_Simplify_Path.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_071_Simplify_Path_Test.swift) - t=O(N), s=O(N)
 72. [Edit Distance](https://leetcode.com/problems/edit-distance/) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_072_Edit_Distance.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_072_Edit_Distance_Test.swift) - t=O(M\*N), s=O(min(M,N))
+73. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_073_Set_Matrix_Zeroes.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_073_Set_Matrix_Zeroes_Test.swift) - t=O(M\*N), s=O(1)
+74. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_074_Search_A_2D_Matrix.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_074_Search_A_2D_Matrix_Test.swift) - t=O(logN), s=O(1)
+75. [Sort Colors](https://leetcode.com/problems/sort-colors/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_075_Sort_Colors.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_075_Sort_Colors_Test.swift) - t=O(N), s=O(1), one pass
+76. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_076_Minimum_Window_Substring.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_076_Minimum_Window_Substring_Test.swift) - t=O(N), s=O(N)
 
 Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc.
