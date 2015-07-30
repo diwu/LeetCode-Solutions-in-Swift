@@ -103,6 +103,9 @@
 		506F20CD1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */; };
 		506F20CE1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */; };
 		506F20D01B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CF1B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift */; };
+		506F20D21B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20D11B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift */; };
+		506F20D31B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20D11B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift */; };
+		506F20D51B6A023D0092E687 /* Medium_074_Search_A_2D_Matrix_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20D41B6A023D0092E687 /* Medium_074_Search_A_2D_Matrix_Test.swift */; };
 		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
@@ -309,6 +312,8 @@
 		506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_072_Edit_Distance_Test.swift; path = Hard/Hard_072_Edit_Distance_Test.swift; sourceTree = "<group>"; };
 		506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_073_Set_Matrix_Zeroes.swift; path = Medium/Medium_073_Set_Matrix_Zeroes.swift; sourceTree = "<group>"; };
 		506F20CF1B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_073_Set_Matrix_Zeroes_Test.swift; path = Medium/Medium_073_Set_Matrix_Zeroes_Test.swift; sourceTree = "<group>"; };
+		506F20D11B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_074_Search_A_2D_Matrix.swift; path = Medium/Medium_074_Search_A_2D_Matrix.swift; sourceTree = "<group>"; };
+		506F20D41B6A023D0092E687 /* Medium_074_Search_A_2D_Matrix_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_074_Search_A_2D_Matrix_Test.swift; path = Medium/Medium_074_Search_A_2D_Matrix_Test.swift; sourceTree = "<group>"; };
 		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
 		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_045_Jump_Game_II.swift; path = Hard/Hard_045_Jump_Game_II.swift; sourceTree = "<group>"; };
@@ -546,6 +551,7 @@
 				50D2F1131B60F5A500F83637 /* Medium_069_Sqrt_X.swift */,
 				50E1EEE51B672A08001DD020 /* Medium_071_Simplify_Path.swift */,
 				506F20CC1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift */,
+				506F20D11B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -640,6 +646,7 @@
 				50D2F1161B60F60B00F83637 /* Medium_069_Sqrt_X_Test.swift */,
 				50E1EEE81B672A2A001DD020 /* Medium_071_Simplify_Path_Test.swift */,
 				506F20CF1B69F6160092E687 /* Medium_073_Set_Matrix_Zeroes_Test.swift */,
+				506F20D41B6A023D0092E687 /* Medium_074_Search_A_2D_Matrix_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -839,6 +846,7 @@
 				502A8F7C1B024E4300BE6CEB /* Medium_035_Search_Insert_Position.swift in Sources */,
 				503F0EBD1B288FC100B15633 /* Hard_056_Merge_Intervals.swift in Sources */,
 				501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
+				506F20D21B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift in Sources */,
 				50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				50478BBD1B580156008F43D2 /* Easy_067_Add_Binary.swift in Sources */,
 				5081E3F31B10537E00D8FD22 /* Medium_046_Permutations.swift in Sources */,
@@ -865,6 +873,7 @@
 				503F0EBE1B288FC100B15633 /* Hard_056_Merge_Intervals.swift in Sources */,
 				50A7F8011AA99E5100F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
 				5064BB831B233453001B24B8 /* Medium_054_Spiral_Matrix.swift in Sources */,
+				506F20D51B6A023D0092E687 /* Medium_074_Search_A_2D_Matrix_Test.swift in Sources */,
 				509365A01AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
 				502A8F781B02352E00BE6CEB /* Medium_034_Search_For_A_Range.swift in Sources */,
 				50EC15C61B05791700A231BF /* Easy_038_Count_And_Say_Test.swift in Sources */,
@@ -901,6 +910,7 @@
 				501E66941B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
 				509365A71AE3515E00FD41FD /* Medium_018_4Sum_Test.swift in Sources */,
 				505101B91B302A43005D74D5 /* Medium_059_Spiral_Matrix_II_Test.swift in Sources */,
+				506F20D31B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift in Sources */,
 				509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */,
 				5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				50AEFEAE1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
