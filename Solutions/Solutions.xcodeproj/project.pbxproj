@@ -109,6 +109,9 @@
 		506F20D71B6A084D0092E687 /* Medium_075_Sort_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20D61B6A084D0092E687 /* Medium_075_Sort_Colors.swift */; };
 		506F20D81B6A084D0092E687 /* Medium_075_Sort_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20D61B6A084D0092E687 /* Medium_075_Sort_Colors.swift */; };
 		506F20DA1B6A08870092E687 /* Medium_075_Sort_Colors_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20D91B6A08870092E687 /* Medium_075_Sort_Colors_Test.swift */; };
+		506F20DC1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */; };
+		506F20DD1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */; };
+		506F20DF1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */; };
 		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
@@ -319,6 +322,8 @@
 		506F20D41B6A023D0092E687 /* Medium_074_Search_A_2D_Matrix_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_074_Search_A_2D_Matrix_Test.swift; path = Medium/Medium_074_Search_A_2D_Matrix_Test.swift; sourceTree = "<group>"; };
 		506F20D61B6A084D0092E687 /* Medium_075_Sort_Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_075_Sort_Colors.swift; path = Medium/Medium_075_Sort_Colors.swift; sourceTree = "<group>"; };
 		506F20D91B6A08870092E687 /* Medium_075_Sort_Colors_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_075_Sort_Colors_Test.swift; path = Medium/Medium_075_Sort_Colors_Test.swift; sourceTree = "<group>"; };
+		506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_076_Minimum_Window_Substring.swift; path = Hard/Hard_076_Minimum_Window_Substring.swift; sourceTree = "<group>"; };
+		506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_076_Minimum_Window_Substring_Test.swift; path = Hard/Hard_076_Minimum_Window_Substring_Test.swift; sourceTree = "<group>"; };
 		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
 		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_045_Jump_Game_II.swift; path = Hard/Hard_045_Jump_Game_II.swift; sourceTree = "<group>"; };
@@ -585,6 +590,7 @@
 				50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */,
 				50ADCDBD1B5A34FD001A3E3B /* Hard_068_Text_Justification.swift */,
 				506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */,
+				506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -681,6 +687,7 @@
 				50F1DBAC1B55532300B47809 /* Hard_065_Valid_Number_Test.swift */,
 				50ADCDC31B5A351F001A3E3B /* Hard_068_Text_Justification_Test.swift */,
 				506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */,
+				506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -847,6 +854,7 @@
 				5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				91492D621AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */,
 				5098BC3A1AF90CE90009964D /* Medium_024_Swap_Nodes_In_Pairs.swift in Sources */,
+				506F20DC1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */,
 				5005A8101B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
 				50EC15C31B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */,
 				5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */,
@@ -947,6 +955,7 @@
 				502529921B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift in Sources */,
 				5058389B1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift in Sources */,
 				50AEFEB01AFF0CC20059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words_Test.swift in Sources */,
+				506F20DF1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift in Sources */,
 				5081E4001B10551300D8FD22 /* Medium_048_Rotate_Image_Test.swift in Sources */,
 				504D4FA31ADF7E4E002C7BFA /* Medium_016_3Sum_Closest_Test.swift in Sources */,
 				50E1BFBB1AD28EAC009308B6 /* Medium_015_3Sum.swift in Sources */,
@@ -989,6 +998,7 @@
 				50001EFB1AFA65AD0060075D /* Easy_026_Remove_Duplicates_from_Sorted_Array_Test.swift in Sources */,
 				91492D631AC58D2E00D3A514 /* Easy_009_Palindrome_Number.swift in Sources */,
 				506F20D81B6A084D0092E687 /* Medium_075_Sort_Colors.swift in Sources */,
+				506F20DD1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */,
 				506F20CE1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */,
 				50C7880A1B0A4BF600786829 /* Medium_040_Combination_Sum_II_Test.swift in Sources */,
 				50C788081B0A4BDB00786829 /* Medium_040_Combination_Sum_II.swift in Sources */,
