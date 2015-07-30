@@ -97,6 +97,9 @@
 		5064BB871B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */; };
 		5064BB881B233FB3001B24B8 /* Medium_055_Jump_Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */; };
 		5064BB8A1B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */; };
+		506F20C81B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */; };
+		506F20C91B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */; };
+		506F20CB1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */; };
 		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
@@ -299,6 +302,8 @@
 		5064BB841B233469001B24B8 /* Medium_054_Spiral_Matrix_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_054_Spiral_Matrix_Test.swift; path = Medium/Medium_054_Spiral_Matrix_Test.swift; sourceTree = "<group>"; };
 		5064BB861B233FB3001B24B8 /* Medium_055_Jump_Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_055_Jump_Game.swift; path = Medium/Medium_055_Jump_Game.swift; sourceTree = "<group>"; };
 		5064BB891B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_055_Jump_Game_Test.swift; path = Medium/Medium_055_Jump_Game_Test.swift; sourceTree = "<group>"; };
+		506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_072_Edit_Distance.swift; path = Hard/Hard_072_Edit_Distance.swift; sourceTree = "<group>"; };
+		506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_072_Edit_Distance_Test.swift; path = Hard/Hard_072_Edit_Distance_Test.swift; sourceTree = "<group>"; };
 		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
 		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_045_Jump_Game_II.swift; path = Hard/Hard_045_Jump_Game_II.swift; sourceTree = "<group>"; };
@@ -561,6 +566,7 @@
 				508DE9991B2B487700A81EBD /* Hard_057_Insert_Interval.swift */,
 				50F1DBA91B5552D000B47809 /* Hard_065_Valid_Number.swift */,
 				50ADCDBD1B5A34FD001A3E3B /* Hard_068_Text_Justification.swift */,
+				506F20C71B69BA6E0092E687 /* Hard_072_Edit_Distance.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -653,6 +659,7 @@
 				508DE99C1B2B488600A81EBD /* Hard_057_Insert_Interval_Test.swift */,
 				50F1DBAC1B55532300B47809 /* Hard_065_Valid_Number_Test.swift */,
 				50ADCDC31B5A351F001A3E3B /* Hard_068_Text_Justification_Test.swift */,
+				506F20CA1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -783,6 +790,7 @@
 				5263CF591AC79C590073631F /* Medium_011_Container_With_Most_Water.swift in Sources */,
 				505825B41AF89CA70081F4FA /* Medium_022_Generate_Parentheses.swift in Sources */,
 				505101B61B302A05005D74D5 /* Medium_059_Spiral_Matrix_II.swift in Sources */,
+				506F20C81B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */,
 				50D2F1141B60F5A500F83637 /* Medium_069_Sqrt_X.swift in Sources */,
 				508DE99A1B2B487700A81EBD /* Hard_057_Insert_Interval.swift in Sources */,
 				5032CB581B31C0A400FCFE72 /* Medium_060_Permutation_Sequence.swift in Sources */,
@@ -962,6 +970,7 @@
 				5005A8111B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
 				502529951B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */,
 				50FF9DB81B08ED340066EDA7 /* Medium_039_Combination_Sum_Test.swift in Sources */,
+				506F20CB1B69BACB0092E687 /* Hard_072_Edit_Distance_Test.swift in Sources */,
 				50D0C8F71AFE38A30057BE0A /* Medium_029_Divide_Two_Integers_Test.swift in Sources */,
 				50A765181B10C968004F823B /* Hard_051_N_Queens_Test.swift in Sources */,
 				5005A8131B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift in Sources */,
@@ -979,6 +988,7 @@
 				50F1DBAD1B55532300B47809 /* Hard_065_Valid_Number_Test.swift in Sources */,
 				5081E3F91B10549900D8FD22 /* Hard_047_Permutations_II.swift in Sources */,
 				50AEFEB71AFF6DC90059CF1B /* Medium_031_Next_Permutation_Test.swift in Sources */,
+				506F20C91B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */,
 				505825B51AF89CA70081F4FA /* Medium_022_Generate_Parentheses.swift in Sources */,
 				5064BB7B1B232D19001B24B8 /* Medium_053_Maximum_Subarray.swift in Sources */,
 			);
