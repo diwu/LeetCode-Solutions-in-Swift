@@ -12,7 +12,7 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Now at 72 / 241 = 29.9%.
 
-[![](https://img.shields.io/badge/progress-71%20%2F%20241-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-72%20%2F%20241-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 [![](https://img.shields.io/badge/test%20cases-435-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
