@@ -11,7 +11,7 @@ import XCTest
 class Hard_072_Edit_Distance_Test: XCTestCase {
     private static let ProblemName: String = "Hard_072_Edit_Distance"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
+    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [String] = ["horse", "ros"]
         let expected: Int = 3
@@ -55,6 +55,11 @@ class Hard_072_Edit_Distance_Test: XCTestCase {
     func test_009() {
         let input: [String] = ["ab", "ba"]
         let expected: Int = 2
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_010() {
+        let input: [String] = ["ros", "horse"]
+        let expected: Int = 3
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input input: [String], expected: Int) {
