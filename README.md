@@ -12,6 +12,9 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Now at 76 / 241 = 31.5%.
 
+Requires Xcode 7 Beta 4 (Build 7A165t).
+
+
 [![](https://img.shields.io/badge/progress-76%20%2F%20241-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 [![](https://img.shields.io/badge/test%20cases-449-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
