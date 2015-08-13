@@ -25,6 +25,8 @@ If nums = [1,2,3], a solution is:
 []
 ]
 
+Inspired by @thumike at https://leetcode.com/discuss/9213/my-solution-using-bit-manipulation
+
 */
 
 import Foundation
