@@ -12,7 +12,7 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Now at 79 / ( 256 Totol - 23 Paid Subscription ) = 33.9%.
 
-Requires Xcode 7 Beta 5 (Build 7A176x).
+Requires Xcode 7 Beta 6 (Build 7A192o).
 
 
 [![](https://img.shields.io/badge/progress-79%20%2F%20233-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
