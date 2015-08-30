@@ -32,14 +32,10 @@ Inspired by @xiaohui7 at https://leetcode.com/discuss/18970/concise-recursive-an
 // Helper
 private extension String {
     subscript (index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
     subscript (range: Range<Int>) -> String {
-        if range.endIndex > self.characters.count {
-            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, self.characters.count)]
-        } else {
-            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, range.endIndex)]
-        }
+        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex)]
     }
 }
 

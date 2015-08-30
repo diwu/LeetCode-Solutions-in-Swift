@@ -24,7 +24,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 
@@ -81,7 +81,7 @@ struct Hard_076_Minimum_Window_Substring {
         if minLen == Int.max {
             return ""
         }
-        let range = Range<String.Index>(start:advance(s.startIndex, minIdx), end:advance(s.startIndex, minIdx + minLen))
+        let range = Range<String.Index>(start: s.startIndex.advancedBy(minIdx), end: s.startIndex.advancedBy(minIdx + minLen))
         return s.substringWithRange(range)
     }
 }

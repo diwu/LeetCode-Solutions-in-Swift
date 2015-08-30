@@ -23,8 +23,8 @@ Inspired by @eaglesky1990 at https://leetcode.com/discuss/9148/my-simple-solutio
 import Foundation
 
 private extension String {
-    subscript (i: Int) -> Character {
-        return self[advance(self.startIndex, i)]
+    subscript (index: Int) -> Character {
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 

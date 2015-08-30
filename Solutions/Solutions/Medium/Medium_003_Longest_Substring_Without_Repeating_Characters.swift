@@ -14,8 +14,7 @@ Inspired by @heiyanbin at https://oj.leetcode.com/discuss/6168/my-o-n-solution
 
 private extension String {
     subscript (index: Int) -> Character {
-        let i: Index = advance(self.startIndex, index)
-        return self[i]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 

@@ -16,8 +16,7 @@ Inspired by @makeittrue at https://leetcode.com/discuss/2369/solution-for-this-q
 
 private extension String {
     subscript (index: Int) -> Character {
-        let i: Index = advance(self.startIndex, index)
-        return self[i]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 

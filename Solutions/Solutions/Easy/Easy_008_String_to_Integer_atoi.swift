@@ -31,7 +31,7 @@ Inspired by @yuruofeifei at https://oj.leetcode.com/discuss/8886/my-simple-solut
 // Helper
 private extension String {
     subscript (index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 
@@ -48,7 +48,7 @@ class Easy_008_String_to_Integer_atoi {
                 sign = false
                 continue
             } else {
-                let integerValue: Int = Int(str.utf8[advance(str.utf8.startIndex, j)]) - zeroValue
+                let integerValue: Int = Int(str.utf8[str.utf8.startIndex.advancedBy(j)]) - zeroValue
                 if integerValue >= 0 && integerValue <= 9 {
                     if base > Int.max/10 || (base == Int.max/10 && integerValue > 7) {
                         if sign {

@@ -23,11 +23,7 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        if range.endIndex > self.characters.count {
-            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, self.characters.count)]
-        } else {
-            return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, range.endIndex)]
-        }
+        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex, limit: self.endIndex)]
     }
 }
 

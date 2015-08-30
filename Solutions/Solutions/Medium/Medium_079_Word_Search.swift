@@ -30,7 +30,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 

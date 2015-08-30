@@ -27,7 +27,7 @@ Inspired by @dylan_yu at https://oj.leetcode.com/discuss/10493/easy-to-understan
 // Helper
 private extension String {
     subscript (index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 
@@ -46,7 +46,7 @@ class Easy_006_ZigZag_Conversion {
         }
         var res = String()
         for i in 0..<nRows {
-            res.extend(arr[i])
+            res += (arr[i])
         }
         return res
     }

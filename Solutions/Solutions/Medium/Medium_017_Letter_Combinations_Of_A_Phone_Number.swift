@@ -29,10 +29,10 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 private extension String {
     subscript(index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
     subscript(range: Range<Int>) -> String {
-        return self[advance(self.startIndex, range.startIndex)..<advance(self.startIndex, range.endIndex)]
+        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex)]
     }
 }
 

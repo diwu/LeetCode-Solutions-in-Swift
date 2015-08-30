@@ -24,7 +24,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
 }
 
@@ -32,7 +32,7 @@ class Easy_038_Count_And_Say {
     class func countAndSay(n: Int) -> String {
         var result: String = "1"
         for var i = 0; i < n; i++ {
-            var previous: String = result
+            let previous: String = result
             result = ""
             var counter = 1
             var say: Character = previous[0]

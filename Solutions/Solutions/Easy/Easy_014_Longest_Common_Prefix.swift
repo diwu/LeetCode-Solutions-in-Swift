@@ -14,11 +14,11 @@ Inspired by @garysui at https://leetcode.com/discuss/15755/optimal-solution
 
 private extension String {
     subscript (i: Int) -> Character {
-        let index: Index = advance(self.startIndex, i)
+        let index: Index = self.startIndex.advancedBy(i)
         return self[index]
     }
-    subscript (intRange: Range<Int>) -> String {
-        return self[advance(self.startIndex, intRange.startIndex) ..< advance(self.startIndex, intRange.endIndex)]
+    subscript (range: Range<Int>) -> String {
+        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex)]
     }
 }
 
