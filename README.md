@@ -10,13 +10,13 @@ WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.0 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Now at 79 / ( 256 Totol - 23 Paid Subscription ) = 33.9%.
+* A work in progress. Now at 80 / ( 273 Totol - 32 Paid Subscription ) = 33.2%.
 
 Requires Xcode 7 Beta 6 (Build 7A192o).
 
 
-[![](https://img.shields.io/badge/progress-79%20%2F%20233-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-459-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-80%20%2F%20241-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-465-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
@@ -97,5 +97,6 @@ Requires Xcode 7 Beta 6 (Build 7A192o).
 77. [Combinations](https://leetcode.com/problems/combinations/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_077_Combinations.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_077_Combinations_Test.swift) - t=O(Combination(n, k)+2^(k-1)), s is complicated.
 78. [Subsets](https://leetcode.com/problems/subsets/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_078_Subsets.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_078_Subsets_Test.swift) - t=O(N\*2^N), s=O(n\*2^N)
 79. [Word Search](https://leetcode.com/problems/word-search/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_079_Word_Search.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_079_Word_Search_Test.swift) - t=O(M\*N\*L), s=O(L), where L is the length of the word.
+80. [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift) - t=O(N), s=O(1)
 
 Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc.
