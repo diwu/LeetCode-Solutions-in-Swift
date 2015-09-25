@@ -2,23 +2,21 @@
 [![](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
-WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/wwdc/2015/?id=106)
-
 ####LeetCode Solutions in Swift 2.1
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Now at 82 / ( 278 Totol - 34 Paid Subscription ) = 33.6%.
+* A work in progress. Now at 83 / ( 286 Totol - 38 Paid Subscription ) = 33.5%.
 
 Requires Xcode 7.1 Beta 2 (Build 7B75).
 
 
-[![](https://img.shields.io/badge/progress-82%20%2F%20244-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-488-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/progress-83%20%2F%20248-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+[![](https://img.shields.io/badge/test%20cases-495-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
-1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) 
+1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) - Inspired by [@naveed.zafar](https://leetcode.com/discuss/10947/accepted-c-o-n-solution)
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1)
 3. [Longest Substring Without Repeating Characters ](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_003_Longest_Substring_Without_Repeating_Characters.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_003_Longest_Substring_Without_Repeating_Characters_Test.swift) - t=O(N), s=O(1)
 4. [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_004_Median_Of_Two_Sorted_Arrays.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift) - t=O(log(min(m,n))), s=O(1)
@@ -100,5 +98,6 @@ Requires Xcode 7.1 Beta 2 (Build 7B75).
 80. [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift) - t=O(N), s=O(1)
 81. [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_081_Search_In_Rotated_Sorted_Array_II.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_081_Search_In_Rotated_Sorted_Array_II_Test.swift) - average t=O(logN), worst case t=O(N), s=O(1) 
 82. [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_082_Remove_Duplicates_From_Sorted_List_II.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.swift) - t=O(N), s=O(1)
+83. [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) - Easy - [Solution](./Solutions/Solutions/Easy/Easy_083_Remove_Duplicates_From_Sorted_List.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_083_Remove_Duplicates_From_Sorted_List_Test.swift) - t=O(N), s=O(1) - Inspired by [@Tao2014](https://leetcode.com/discuss/7188/concise-solution-and-memory-freeing)
 
 Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc.
