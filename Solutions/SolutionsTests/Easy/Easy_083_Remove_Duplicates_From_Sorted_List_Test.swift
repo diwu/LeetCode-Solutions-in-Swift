@@ -1,41 +1,41 @@
 //
-//  Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.swift
+//  Easy_083_Remove_Duplicates_From_Sorted_List_Test.swift
 //  Solutions
 //
-//  Created by Di Wu on 9/8/15.
+//  Created by Di Wu on 9/25/15.
 //  Copyright © 2015 diwu. All rights reserved.
 //
 
 import XCTest
 
-class Medium_082_Remove_Duplicates_From_Sorted_List_II_Test: XCTestCase {
-    private static let ProblemName: String = "Medium_082_Remove_Duplicates_From_Sorted_List_II"
+class Easy_083_Remove_Duplicates_From_Sorted_List_Test: XCTestCase {
+    private static let ProblemName: String = "Easy_083_Remove_Duplicates_From_Sorted_List"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
-    private typealias Node = Medium_082_Remove_Duplicates_From_Sorted_List_II.Node
+    private typealias Node = Easy_083_Remove_Duplicates_From_Sorted_List.Node
     func test_001() {
         let input: [Int] = [1, 2, 3, 3, 4, 4, 5]
-        let expected: [Int] = [1, 2, 5]
+        let expected: [Int] = [1, 2, 3, 4, 5]
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
         let input: [Int] = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
-        let expected: [Int] = []
+        let expected: [Int] = [1, 2, 3, 4, 5]
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
         let input: [Int] = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
-        let expected: [Int] = [6]
+        let expected: [Int] = [1, 2, 3, 4, 5, 6]
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
         let input: [Int] = [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
-        let expected: [Int] = [0]
+        let expected: [Int] = [0, 1, 2, 3, 4, 5]
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
         let input: [Int] = [1, 1, 2, 2, 3, 4, 4, 5, 5]
-        let expected: [Int] = [3]
+        let expected: [Int] = [1, 2, 3, 4, 5]
         asyncHelper(input: input, expected: expected)
     }
     func test_006() {
@@ -67,17 +67,17 @@ class Medium_082_Remove_Duplicates_From_Sorted_List_II_Test: XCTestCase {
         return res
     }
     func asyncHelper(input  input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            let result: [Int] = self.helper2(Medium_082_Remove_Duplicates_From_Sorted_List_II.deleteDuplicates(self.helper1(input)))
-            assertHelper(expected == result, problemName: Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            let result: [Int] = self.helper2(Easy_083_Remove_Duplicates_From_Sorted_List.deleteDuplicates(self.helper1(input)))
+            assertHelper(expected == result, problemName: Easy_083_Remove_Duplicates_From_Sorted_List_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectationsWithTimeout(Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.ProblemName, input: input, resultValue: Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName: Easy_083_Remove_Duplicates_From_Sorted_List_Test.ProblemName, input: input, resultValue: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName, expectedValue: expected)
             }
         }
     }
