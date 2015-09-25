@@ -1,18 +1,18 @@
-[![](https://img.shields.io/badge/swift-2.0-orange.svg)](https://developer.apple.com/swift/blog/?id=29)
+[![](https://img.shields.io/badge/swift-2.1-orange.svg)](https://developer.apple.com/swift/blog/?id=29)
 [![](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
 
 WWDC 2015 Session: [What's New in Swift 2.0](https://developer.apple.com/videos/wwdc/2015/?id=106)
 
-####LeetCode Solutions in Swift 2.0
+####LeetCode Solutions in Swift 2.1
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed.
-* Written with the latest Swift 2.0 language features in mind.
+* Written with the latest Swift 2.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Now at 82 / ( 278 Totol - 34 Paid Subscription ) = 33.6%.
 
-Requires Xcode 7.1 Beta (Build 7B60).
+Requires Xcode 7.1 Beta 2 (Build 7B75).
 
 
 [![](https://img.shields.io/badge/progress-82%20%2F%20244-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
