@@ -1,7 +1,3 @@
-[![](https://img.shields.io/badge/swift-2.1-orange.svg)](https://developer.apple.com/swift/blog/?id=29)
-[![](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-
 ####LeetCode Solutions in Swift 2.1
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
@@ -10,11 +6,7 @@
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Now at 84 / ( 287 Totol - 38 Paid Subscription ) = 33.7%.
 
-Requires Xcode 7.1 Beta 2 (Build 7B75). Requires 64-bit simulators or devices.
-
-
-[![](https://img.shields.io/badge/progress-84%20%2F%20249-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
-[![](https://img.shields.io/badge/test%20cases-502-blue.svg)](https://github.com/diwu/LeetCode-Solutions-in-Swift)
+#####Requires Xcode 7.1 Beta 2 (Build 7B75). Requires 64-bit simulators or devices.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) - Inspired by [@naveed.zafar](https://leetcode.com/discuss/10947/accepted-c-o-n-solution)
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1) - Inspired by [@potpie](https://oj.leetcode.com/discuss/2308/is-this-algorithm-optimal-or-what)
