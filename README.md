@@ -4,9 +4,9 @@
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Current progress: **34.1%** = 85 / ( 287 Totol - 38 Paid Subscription ).
+* A work in progress. Current progress: **33.9%** = 85 / ( 291 Totol - 40 Paid Subscription ).
 
-#####Requires Xcode 7.1 Beta 2 (Build 7B75). Requires 64-bit simulators or devices.
+#####Requires Xcode 7.1 Beta 3 (Build 7B85). Requires 64-bit simulators or devices.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) - Inspired by [@naveed.zafar](https://leetcode.com/discuss/10947/accepted-c-o-n-solution)
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1) - Inspired by [@potpie](https://leetcode.com/discuss/2308/is-this-algorithm-optimal-or-what)
