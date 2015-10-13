@@ -133,6 +133,9 @@
 		5080834D1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */; };
 		5080834E1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */; };
 		508083501BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */; };
+		508083521BCD067200EB1B57 /* Hard_087_Scramble_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508083511BCD067200EB1B57 /* Hard_087_Scramble_String.swift */; };
+		508083531BCD067200EB1B57 /* Hard_087_Scramble_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508083511BCD067200EB1B57 /* Hard_087_Scramble_String.swift */; };
+		508083551BCD06EC00EB1B57 /* Hard_087_Scramble_String_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508083541BCD06EC00EB1B57 /* Hard_087_Scramble_String_Test.swift */; };
 		5081E3E91B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */; };
 		5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */; };
@@ -368,6 +371,8 @@
 		506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_076_Minimum_Window_Substring_Test.swift; path = Hard/Hard_076_Minimum_Window_Substring_Test.swift; sourceTree = "<group>"; };
 		5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_086_Partition_List.swift; path = Medium/Medium_086_Partition_List.swift; sourceTree = "<group>"; };
 		5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_086_Partition_List_Test.swift; path = Medium/Medium_086_Partition_List_Test.swift; sourceTree = "<group>"; };
+		508083511BCD067200EB1B57 /* Hard_087_Scramble_String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_087_Scramble_String.swift; path = Hard/Hard_087_Scramble_String.swift; sourceTree = "<group>"; };
+		508083541BCD06EC00EB1B57 /* Hard_087_Scramble_String_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_087_Scramble_String_Test.swift; path = Hard/Hard_087_Scramble_String_Test.swift; sourceTree = "<group>"; };
 		5081E3E81B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching.swift; path = Hard/Hard_044_Wildcard_Matching.swift; sourceTree = "<group>"; };
 		5081E3EB1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_044_Wildcard_Matching_Test.swift; path = Hard/Hard_044_Wildcard_Matching_Test.swift; sourceTree = "<group>"; };
 		5081E3ED1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_045_Jump_Game_II.swift; path = Hard/Hard_045_Jump_Game_II.swift; sourceTree = "<group>"; };
@@ -651,6 +656,7 @@
 				506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */,
 				505619251BBB877800CF4979 /* Hard_084_Largest_Rectangle_In_Histogram.swift */,
 				5056192A1BBBBFBF00CF4979 /* Hard_085_Maximal_Rectangle.swift */,
+				508083511BCD067200EB1B57 /* Hard_087_Scramble_String.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -758,6 +764,7 @@
 				506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */,
 				505619281BBB879100CF4979 /* Hard_084_Largest_Rectangle_In_Histogram_Test.swift */,
 				5056192D1BBBBFD800CF4979 /* Hard_085_Maximal_Rectangle_Test.swift */,
+				508083541BCD06EC00EB1B57 /* Hard_087_Scramble_String_Test.swift */,
 			);
 			name = Hard;
 			sourceTree = "<group>";
@@ -933,6 +940,7 @@
 				5098BC3A1AF90CE90009964D /* Medium_024_Swap_Nodes_In_Pairs.swift in Sources */,
 				50B4406B1B9F131A00F6892D /* Medium_081_Search_In_Rotated_Sorted_Array_II.swift in Sources */,
 				506F20DC1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */,
+				508083521BCD067200EB1B57 /* Hard_087_Scramble_String.swift in Sources */,
 				5005A8101B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
 				50EC15C31B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */,
 				5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */,
@@ -1114,6 +1122,7 @@
 				502529901B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */,
 				50604E231B7C727900081C1F /* Medium_078_Subsets.swift in Sources */,
 				50320EEE1BB5829800796416 /* Easy_083_Remove_Duplicates_From_Sorted_List_Test.swift in Sources */,
+				508083531BCD067200EB1B57 /* Hard_087_Scramble_String.swift in Sources */,
 				5064BB8A1B233FC0001B24B8 /* Medium_055_Jump_Game_Test.swift in Sources */,
 				91394F381AC3F398003DFF08 /* Medium_002_Add_Two_Numbers_Test.swift in Sources */,
 				5081E3FB1B1054A800D8FD22 /* Hard_047_Permutations_II_Test.swift in Sources */,
@@ -1124,6 +1133,7 @@
 				504EB73D1B4581B200A0657B /* Medium_062_Unique_Paths.swift in Sources */,
 				50D0C8F51AFE38340057BE0A /* Medium_029_Divide_Two_Integers.swift in Sources */,
 				5098BC361AF8D9310009964D /* Hard_023_Merge_K_Sorted_Lists.swift in Sources */,
+				508083551BCD06EC00EB1B57 /* Hard_087_Scramble_String_Test.swift in Sources */,
 				505619291BBB879100CF4979 /* Hard_084_Largest_Rectangle_In_Histogram_Test.swift in Sources */,
 				50F1DBAD1B55532300B47809 /* Hard_065_Valid_Number_Test.swift in Sources */,
 				5081E3F91B10549900D8FD22 /* Hard_047_Permutations_II.swift in Sources */,
