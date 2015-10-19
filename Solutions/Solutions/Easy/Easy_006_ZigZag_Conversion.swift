@@ -20,7 +20,7 @@ string convert(string text, int nRows);
 
 convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
 
-Inspired by @dylan_yu at https://oj.leetcode.com/discuss/10493/easy-to-understand-java-solution
+Inspired by @dylan_yu at https://leetcode.com/discuss/10493/easy-to-understand-java-solution
 
 */
 

@@ -24,7 +24,7 @@ For the purpose of this problem, assume that your function returns 0 when the re
 Update (2014-11-10):
 Test cases had been added to test the overflow behavior.
 
-Inspired by @wshaoxuan at https://oj.leetcode.com/discuss/120/how-do-we-handle-the-overflow-case
+Inspired by @wshaoxuan at https://leetcode.com/discuss/120/how-do-we-handle-the-overflow-case
 
 */
 
