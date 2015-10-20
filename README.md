@@ -1,3 +1,5 @@
+Before you start: [Why do interviewers care so much about algorithm and data structure?](https://www.quora.com/Why-do-interviewers-care-so-much-about-algorithm-and-data-structure)
+
 ####LeetCode Solutions in Swift 2.1
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
@@ -97,4 +99,4 @@
 87. [Scramble String](https://leetcode.com/problems/scramble-string/) - Hard - [Solution](./Solutions/Solutions/Hard/Hard_087_Scramble_String.swift) - [Test Cases](./Solutions/SolutionsTests/Hard/Hard_087_Scramble_String_Test.swift) - time and space complexity need further investigation - Inspired by [@Charles_p](https://leetcode.com/discuss/3632/any-better-solution) and [@dtx0](https://leetcode.com/discuss/3632/any-better-solution)
 88. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - Easy - [Solution](./Solutions/Solutions/Easy/Easy_088_Merge_Sorted_Array.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_088_Merge_Sorted_Array_Test.swift) - t=O(N), s=O(1) - Inspired by [@leetchunhui](https://leetcode.com/discuss/8233/this-is-my-ac-code-may-help-you)
 
-Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc, POJ, PKU Online Judge, OJ.
+Optional chaining, closure, subscript, enumeration, generic, extension, access control, automatic reference counting, string, character, nested type, type casting, protocol, xctestcase, xctest, online judge, oj, xcode, cocoa, cocoa touch, foundation, ios, 面试, 算法, 递归, 迭代, 找工作, 手机, 苹果, wwdc, POJ, PKU Online Judge, OJ, data structure, algorithm, algorithms, data structures, 数据结构, 算法与数据结构, interview, interviews, interviewer, interviewers, facebook, google, linkedin, apple, flag, cracking the coding interview, job, recruit, recruiter, recruiting.
