@@ -18,7 +18,7 @@ You could also try reversing an integer. However, if you have solved the problem
 
 There is a more generic way of solving this problem.
 
-Inspired by @hln9319 https://oj.leetcode.com/discuss/12693/neat-ac-java-code-o-n-time-complexity
+Inspired by @hln9319 https://leetcode.com/discuss/12693/neat-ac-java-code-o-n-time-complexity
 
 */
 

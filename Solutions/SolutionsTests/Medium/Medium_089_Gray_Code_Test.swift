@@ -13,7 +13,19 @@ class Medium_089_Gray_Code_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value * 10
     func test_001() {
+        let input: Int = 1
+        asyncHelper(input: input)
+    }
+    func test_002() {
         let input: Int = 2
+        asyncHelper(input: input)
+    }
+    func test_003() {
+        let input: Int = 3
+        asyncHelper(input: input)
+    }
+    func test_004() {
+        let input: Int = 4
         asyncHelper(input: input)
     }
     func twoNumberSatisfyGrayCodeRule(a a: Int, b: Int, N: Int) -> Bool {

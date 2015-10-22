@@ -24,7 +24,7 @@ If the first sequence of non-whitespace characters in str is not a valid integra
 
 If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.
 
-Inspired by @yuruofeifei at https://oj.leetcode.com/discuss/8886/my-simple-solution
+Inspired by @yuruofeifei at https://leetcode.com/discuss/8886/my-simple-solution
 
 */
 
