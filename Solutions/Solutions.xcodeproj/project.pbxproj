@@ -136,6 +136,9 @@
 		506F20DC1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */; };
 		506F20DD1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */; };
 		506F20DF1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */; };
+		506F338B1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */; };
+		506F338C1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */; };
+		506F338E1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F338D1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift */; };
 		5080834D1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */; };
 		5080834E1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */; };
 		508083501BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */; };
@@ -379,6 +382,8 @@
 		506F20D91B6A08870092E687 /* Medium_075_Sort_Colors_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_075_Sort_Colors_Test.swift; path = Medium/Medium_075_Sort_Colors_Test.swift; sourceTree = "<group>"; };
 		506F20DB1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_076_Minimum_Window_Substring.swift; path = Hard/Hard_076_Minimum_Window_Substring.swift; sourceTree = "<group>"; };
 		506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_076_Minimum_Window_Substring_Test.swift; path = Hard/Hard_076_Minimum_Window_Substring_Test.swift; sourceTree = "<group>"; };
+		506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_090_Subsets_II.swift; path = Medium/Medium_090_Subsets_II.swift; sourceTree = "<group>"; };
+		506F338D1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_090_Subsets_II_Test.swift; path = Medium/Medium_090_Subsets_II_Test.swift; sourceTree = "<group>"; };
 		5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_086_Partition_List.swift; path = Medium/Medium_086_Partition_List.swift; sourceTree = "<group>"; };
 		5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_086_Partition_List_Test.swift; path = Medium/Medium_086_Partition_List_Test.swift; sourceTree = "<group>"; };
 		508083511BCD067200EB1B57 /* Hard_087_Scramble_String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_087_Scramble_String.swift; path = Hard/Hard_087_Scramble_String.swift; sourceTree = "<group>"; };
@@ -638,6 +643,7 @@
 				50B4406F1B9F219100F6892D /* Medium_082_Remove_Duplicates_From_Sorted_List_II.swift */,
 				5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */,
 				505BE40F1BD78ED200720316 /* Medium_089_Gray_Code.swift */,
+				506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -748,6 +754,7 @@
 				50B440721B9F21AE00F6892D /* Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.swift */,
 				5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */,
 				505BE4121BD7906800720316 /* Medium_089_Gray_Code_Test.swift */,
+				506F338D1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -888,6 +895,7 @@
 				50D0C8F41AFE38340057BE0A /* Medium_029_Divide_Two_Integers.swift in Sources */,
 				501FB58D1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */,
 				5093659F1AE1BD3C00FD41FD /* Medium_017_Letter_Combinations_Of_A_Phone_Number.swift in Sources */,
+				506F338B1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */,
 				5263CF5C1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
 				5081E3EE1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift in Sources */,
 				506F20CD1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */,
@@ -1042,6 +1050,7 @@
 				509365AC1AE487BB00FD41FD /* Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift in Sources */,
 				5081E3EA1B1013D500D8FD22 /* Hard_044_Wildcard_Matching.swift in Sources */,
 				50AEFEAE1AFF0C8E0059CF1B /* Hard_030_Substring_With_Concatenation_Of_All_Words.swift in Sources */,
+				506F338C1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */,
 				50478BBB1B57F96F008F43D2 /* Easy_066_Plus_One_Test.swift in Sources */,
 				501FB5901B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
@@ -1051,6 +1060,7 @@
 				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				501674FF1B500DDE006B5FC6 /* Medium_064_Minimum_Path_Sum.swift in Sources */,
 				500373171B385FC300B96A2C /* Medium_061_Rotate_List_Test.swift in Sources */,
+				506F338E1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift in Sources */,
 				505619271BBB877800CF4979 /* Hard_084_Largest_Rectangle_In_Histogram.swift in Sources */,
 				508083501BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift in Sources */,
 				502529971B039CDD00A2AEDF /* Hard_037_Sudoku_Solver_Test.swift in Sources */,
