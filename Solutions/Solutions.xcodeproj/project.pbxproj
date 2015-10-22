@@ -103,6 +103,9 @@
 		505838981B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */; };
 		505838991B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */; };
 		5058389B1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058389A1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift */; };
+		505BE4101BD78ED200720316 /* Medium_089_Gray_Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BE40F1BD78ED200720316 /* Medium_089_Gray_Code.swift */; };
+		505BE4111BD78ED200720316 /* Medium_089_Gray_Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BE40F1BD78ED200720316 /* Medium_089_Gray_Code.swift */; };
+		505BE4131BD7906800720316 /* Medium_089_Gray_Code_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BE4121BD7906800720316 /* Medium_089_Gray_Code_Test.swift */; };
 		50604E221B7C727900081C1F /* Medium_078_Subsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50604E211B7C727900081C1F /* Medium_078_Subsets.swift */; };
 		50604E231B7C727900081C1F /* Medium_078_Subsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50604E211B7C727900081C1F /* Medium_078_Subsets.swift */; };
 		50604E251B7C72B300081C1F /* Medium_078_Subsets_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50604E241B7C72B300081C1F /* Medium_078_Subsets_Test.swift */; };
@@ -354,6 +357,8 @@
 		505825B61AF89D200081F4FA /* Medium_022_Generate_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_022_Generate_Parentheses_Test.swift; path = Medium/Medium_022_Generate_Parentheses_Test.swift; sourceTree = "<group>"; };
 		505838971B0CDE7200372A72 /* Hard_041_First_Missing_Positive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_041_First_Missing_Positive.swift; path = Hard/Hard_041_First_Missing_Positive.swift; sourceTree = "<group>"; };
 		5058389A1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_041_First_Missing_Positive_Test.swift; path = Hard/Hard_041_First_Missing_Positive_Test.swift; sourceTree = "<group>"; };
+		505BE40F1BD78ED200720316 /* Medium_089_Gray_Code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_089_Gray_Code.swift; path = Medium/Medium_089_Gray_Code.swift; sourceTree = "<group>"; };
+		505BE4121BD7906800720316 /* Medium_089_Gray_Code_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_089_Gray_Code_Test.swift; path = Medium/Medium_089_Gray_Code_Test.swift; sourceTree = "<group>"; };
 		50604E211B7C727900081C1F /* Medium_078_Subsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_078_Subsets.swift; path = Medium/Medium_078_Subsets.swift; sourceTree = "<group>"; };
 		50604E241B7C72B300081C1F /* Medium_078_Subsets_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_078_Subsets_Test.swift; path = Medium/Medium_078_Subsets_Test.swift; sourceTree = "<group>"; };
 		50604E261B7C93D200081C1F /* Medium_079_Word_Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_079_Word_Search.swift; path = Medium/Medium_079_Word_Search.swift; sourceTree = "<group>"; };
@@ -632,6 +637,7 @@
 				50B4406A1B9F131A00F6892D /* Medium_081_Search_In_Rotated_Sorted_Array_II.swift */,
 				50B4406F1B9F219100F6892D /* Medium_082_Remove_Duplicates_From_Sorted_List_II.swift */,
 				5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */,
+				505BE40F1BD78ED200720316 /* Medium_089_Gray_Code.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -741,6 +747,7 @@
 				50B4406D1B9F132E00F6892D /* Medium_081_Search_In_Rotated_Sorted_Array_II_Test.swift */,
 				50B440721B9F21AE00F6892D /* Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.swift */,
 				5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */,
+				505BE4121BD7906800720316 /* Medium_089_Gray_Code_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -958,6 +965,7 @@
 				5056192B1BBBBFBF00CF4979 /* Hard_085_Maximal_Rectangle.swift in Sources */,
 				501E66931B14C5FE00108A45 /* Hard_052_N_Queens_II.swift in Sources */,
 				506F20D21B6A01E80092E687 /* Medium_074_Search_A_2D_Matrix.swift in Sources */,
+				505BE4101BD78ED200720316 /* Medium_089_Gray_Code.swift in Sources */,
 				50254C981B0F604F0073B873 /* Hard_042_Trapping_Rain_Water.swift in Sources */,
 				50478BBD1B580156008F43D2 /* Easy_067_Add_Binary.swift in Sources */,
 				5081E3F31B10537E00D8FD22 /* Medium_046_Permutations.swift in Sources */,
@@ -981,6 +989,7 @@
 				91AE3A071AC55146007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays_Test.swift in Sources */,
 				91AE3A041AC550C5007EAEBA /* Hard_004_Median_Of_Two_Sorted_Arrays.swift in Sources */,
 				50EC15C41B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */,
+				505BE4131BD7906800720316 /* Medium_089_Gray_Code_Test.swift in Sources */,
 				91394F361AC3EE56003DFF08 /* Medium_002_Add_Two_Numbers.swift in Sources */,
 				503F0EBE1B288FC100B15633 /* Hard_056_Merge_Intervals.swift in Sources */,
 				50A7F8011AA99E5100F84E86 /* Easy_006_ZigZag_Conversion.swift in Sources */,
@@ -1114,6 +1123,7 @@
 				50C7880A1B0A4BF600786829 /* Medium_040_Combination_Sum_II_Test.swift in Sources */,
 				50C788081B0A4BDB00786829 /* Medium_040_Combination_Sum_II.swift in Sources */,
 				5263CF5D1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
+				505BE4111BD78ED200720316 /* Medium_089_Gray_Code.swift in Sources */,
 				50D2F1151B60F5A500F83637 /* Medium_069_Sqrt_X.swift in Sources */,
 				50478BC01B58016D008F43D2 /* Easy_067_Add_Binary_Test.swift in Sources */,
 				50254C9E1B0F73AE0073B873 /* Medium_043_Multiply_Strings.swift in Sources */,
