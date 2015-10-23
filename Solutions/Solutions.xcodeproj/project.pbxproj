@@ -139,6 +139,9 @@
 		506F338B1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */; };
 		506F338C1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */; };
 		506F338E1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F338D1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift */; };
+		507A5EE61BDA34190021F04F /* Medium_091_Decode_Ways.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507A5EE51BDA34190021F04F /* Medium_091_Decode_Ways.swift */; };
+		507A5EE71BDA34190021F04F /* Medium_091_Decode_Ways.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507A5EE51BDA34190021F04F /* Medium_091_Decode_Ways.swift */; };
+		507A5EE91BDA343A0021F04F /* Medium_091_Decode_Ways_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507A5EE81BDA343A0021F04F /* Medium_091_Decode_Ways_Test.swift */; };
 		5080834D1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */; };
 		5080834E1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */; };
 		508083501BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */; };
@@ -384,6 +387,8 @@
 		506F20DE1B6A0F6B0092E687 /* Hard_076_Minimum_Window_Substring_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_076_Minimum_Window_Substring_Test.swift; path = Hard/Hard_076_Minimum_Window_Substring_Test.swift; sourceTree = "<group>"; };
 		506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_090_Subsets_II.swift; path = Medium/Medium_090_Subsets_II.swift; sourceTree = "<group>"; };
 		506F338D1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_090_Subsets_II_Test.swift; path = Medium/Medium_090_Subsets_II_Test.swift; sourceTree = "<group>"; };
+		507A5EE51BDA34190021F04F /* Medium_091_Decode_Ways.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_091_Decode_Ways.swift; path = Medium/Medium_091_Decode_Ways.swift; sourceTree = "<group>"; };
+		507A5EE81BDA343A0021F04F /* Medium_091_Decode_Ways_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_091_Decode_Ways_Test.swift; path = Medium/Medium_091_Decode_Ways_Test.swift; sourceTree = "<group>"; };
 		5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_086_Partition_List.swift; path = Medium/Medium_086_Partition_List.swift; sourceTree = "<group>"; };
 		5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_086_Partition_List_Test.swift; path = Medium/Medium_086_Partition_List_Test.swift; sourceTree = "<group>"; };
 		508083511BCD067200EB1B57 /* Hard_087_Scramble_String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_087_Scramble_String.swift; path = Hard/Hard_087_Scramble_String.swift; sourceTree = "<group>"; };
@@ -644,6 +649,7 @@
 				5080834C1BCCEBAC00EB1B57 /* Medium_086_Partition_List.swift */,
 				505BE40F1BD78ED200720316 /* Medium_089_Gray_Code.swift */,
 				506F338A1BD924F700F5FB9C /* Medium_090_Subsets_II.swift */,
+				507A5EE51BDA34190021F04F /* Medium_091_Decode_Ways.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -755,6 +761,7 @@
 				5080834F1BCCED0200EB1B57 /* Medium_086_Partition_List_Test.swift */,
 				505BE4121BD7906800720316 /* Medium_089_Gray_Code_Test.swift */,
 				506F338D1BD9250800F5FB9C /* Medium_090_Subsets_II_Test.swift */,
+				507A5EE81BDA343A0021F04F /* Medium_091_Decode_Ways_Test.swift */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -938,6 +945,7 @@
 				50C788071B0A4BDB00786829 /* Medium_040_Combination_Sum_II.swift in Sources */,
 				91AE3A091AC559F6007EAEBA /* Medium_005_Longest_Palindromic_Substring.swift in Sources */,
 				50604E221B7C727900081C1F /* Medium_078_Subsets.swift in Sources */,
+				507A5EE61BDA34190021F04F /* Medium_091_Decode_Ways.swift in Sources */,
 				91492D5D1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				91492D581AC5851E00D3A514 /* Easy_007_Reverse_Integer.swift in Sources */,
 				504D4FA01ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
@@ -1027,6 +1035,7 @@
 				506F20DA1B6A08870092E687 /* Medium_075_Sort_Colors_Test.swift in Sources */,
 				50A7F8061AA9A3E700F84E86 /* Medium_001_Two_Sum_Test.swift in Sources */,
 				91EF6D701AC8EF4E00D8C285 /* Easy_013_Roman_To_Integer.swift in Sources */,
+				507A5EE91BDA343A0021F04F /* Medium_091_Decode_Ways_Test.swift in Sources */,
 				91492D6A1AC58F7A00D3A514 /* Hard_010_Regular_Expression_Matching_Test.swift in Sources */,
 				5098BC381AF8D9480009964D /* Hard_023_Merge_K_Sorted_Lists_Test.swift in Sources */,
 				91DCF2411AC9207900F9CB65 /* SolutionsTestsHelper.swift in Sources */,
@@ -1055,6 +1064,7 @@
 				501FB5901B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift in Sources */,
 				504D4FA11ADF7E2F002C7BFA /* Medium_016_3Sum_Closest.swift in Sources */,
 				504596E21BCFB2F1007D7CD3 /* Easy_088_Merge_Sorted_Array.swift in Sources */,
+				507A5EE71BDA34190021F04F /* Medium_091_Decode_Ways.swift in Sources */,
 				50001EF41AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
 				5081E3FE1B1054FF00D8FD22 /* Medium_048_Rotate_Image.swift in Sources */,
 				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
