@@ -37,6 +37,8 @@
 		501FB58D1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */; };
 		501FB58E1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */; };
 		501FB5901B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FB58F1B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift */; };
+		5021F6E91BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5021F6E81BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m */; };
+		5021F6EA1BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5021F6E81BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m */; };
 		5025298F1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */; };
 		502529901B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */; };
 		502529921B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */; };
@@ -319,6 +321,10 @@
 		501E66951B14C62300108A45 /* Hard_052_N_Queens_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_052_N_Queens_II_Test.swift; path = Hard/Hard_052_N_Queens_II_Test.swift; sourceTree = "<group>"; };
 		501FB58C1B6208E300E81B5C /* Easy_070_Climbing_Stairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_070_Climbing_Stairs.swift; path = Easy/Easy_070_Climbing_Stairs.swift; sourceTree = "<group>"; };
 		501FB58F1B620A7500E81B5C /* Easy_070_Climbing_Stairs_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_070_Climbing_Stairs_Test.swift; path = Easy/Easy_070_Climbing_Stairs_Test.swift; sourceTree = "<group>"; };
+		5021F6E51BDBAC4C0069C34B /* Solutions-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solutions-Bridging-Header.h"; sourceTree = "<group>"; };
+		5021F6E61BDBAC4C0069C34B /* SolutionsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SolutionsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5021F6E71BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC_Medium_001_Two_Sum.h; path = Solutions_ObjC/Medium/ObjC_Medium_001_Two_Sum.h; sourceTree = "<group>"; };
+		5021F6E81BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjC_Medium_001_Two_Sum.m; path = Solutions_ObjC/Medium/ObjC_Medium_001_Two_Sum.m; sourceTree = "<group>"; };
 		5025298E1B03929200A2AEDF /* Easy_036_Valid_Sudoku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku.swift; path = Easy/Easy_036_Valid_Sudoku.swift; sourceTree = "<group>"; };
 		502529911B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_036_Valid_Sudoku_Test.swift; path = Easy/Easy_036_Valid_Sudoku_Test.swift; sourceTree = "<group>"; };
 		502529931B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_037_Sudoku_Solver.swift; path = Hard/Hard_037_Sudoku_Solver.swift; sourceTree = "<group>"; };
@@ -511,10 +517,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5021F6E11BDBAB090069C34B /* Solutions_ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				5021F6E41BDBAB1E0069C34B /* Hard */,
+				5021F6E31BDBAB190069C34B /* Medium */,
+				5021F6E21BDBAB130069C34B /* Easy */,
+			);
+			name = Solutions_ObjC;
+			sourceTree = "<group>";
+		};
+		5021F6E21BDBAB130069C34B /* Easy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Easy;
+			sourceTree = "<group>";
+		};
+		5021F6E31BDBAB190069C34B /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				5021F6E71BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.h */,
+				5021F6E81BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m */,
+				5021F6E51BDBAC4C0069C34B /* Solutions-Bridging-Header.h */,
+				5021F6E61BDBAC4C0069C34B /* SolutionsTests-Bridging-Header.h */,
+			);
+			name = Medium;
+			sourceTree = "<group>";
+		};
+		5021F6E41BDBAB1E0069C34B /* Hard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Hard;
+			sourceTree = "<group>";
+		};
 		50A7F7C81AA9970700F84E86 = {
 			isa = PBXGroup;
 			children = (
-				50A7F7D31AA9970700F84E86 /* Solutions */,
+				5021F6E11BDBAB090069C34B /* Solutions_ObjC */,
+				50A7F7D31AA9970700F84E86 /* Solutions_Swift */,
 				50A7F7E91AA9970700F84E86 /* SolutionsTests */,
 				50A7F7D21AA9970700F84E86 /* Products */,
 			);
@@ -529,7 +571,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50A7F7D31AA9970700F84E86 /* Solutions */ = {
+		50A7F7D31AA9970700F84E86 /* Solutions_Swift */ = {
 			isa = PBXGroup;
 			children = (
 				50A7F7F81AA9992600F84E86 /* Hard */,
@@ -542,6 +584,7 @@
 				50A7F7DF1AA9970700F84E86 /* LaunchScreen.xib */,
 				50A7F7D41AA9970700F84E86 /* Supporting Files */,
 			);
+			name = Solutions_Swift;
 			path = Solutions;
 			sourceTree = "<group>";
 		};
@@ -841,7 +884,7 @@
 		50A7F7C91AA9970700F84E86 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = diwu;
 				TargetAttributes = {
@@ -905,6 +948,7 @@
 				506F338B1BD924F700F5FB9C /* Medium_090_Subsets_II.swift in Sources */,
 				5263CF5C1AC7D9990073631F /* Medium_012_Integer_To_Roman.swift in Sources */,
 				5081E3EE1B10509E00D8FD22 /* Hard_045_Jump_Game_II.swift in Sources */,
+				5021F6E91BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m in Sources */,
 				506F20CD1B69F5980092E687 /* Medium_073_Set_Matrix_Zeroes.swift in Sources */,
 				504EB73C1B4581B200A0657B /* Medium_062_Unique_Paths.swift in Sources */,
 				5030D3971AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */,
@@ -1085,6 +1129,7 @@
 				5081E3F11B1050C300D8FD22 /* Hard_045_Jump_Game_II_Test.swift in Sources */,
 				509D38661B00EF7C00E5E2A4 /* Hard_032_Longest_Valid_Parentheses.swift in Sources */,
 				50D0C8F01AFDF5DE0057BE0A /* Easy_028_Implement_StrStr.swift in Sources */,
+				5021F6EA1BDBAC4D0069C34B /* ObjC_Medium_001_Two_Sum.m in Sources */,
 				5081E3EC1B1014AB00D8FD22 /* Hard_044_Wildcard_Matching_Test.swift in Sources */,
 				502529921B0392B500A2AEDF /* Easy_036_Valid_Sudoku_Test.swift in Sources */,
 				5058389B1B0CDE8D00372A72 /* Hard_041_First_Missing_Positive_Test.swift in Sources */,
@@ -1298,6 +1343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Solutions/Info.plist;
@@ -1305,6 +1351,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "diwu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Solutions-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1312,6 +1360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Solutions/Info.plist;
@@ -1319,6 +1368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "diwu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Solutions-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1326,6 +1376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1338,6 +1389,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "diwu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SolutionsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Solutions.app/Solutions";
 			};
 			name = Debug;
@@ -1346,6 +1399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1354,6 +1408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "diwu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SolutionsTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Solutions.app/Solutions";
 			};
 			name = Release;

@@ -20,8 +20,8 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 */
 
 class Medium_001_Two_Sum {
-    // O(N)
-    class func twoSum(numbers: Array<Int>, target: Int) -> Array<Int> {
+    // t = O(N), s = O(N)
+    class func twoSum(numbers numbers: Array<Int>, target: Int) -> Array<Int> {
         var hashMap: Dictionary = Dictionary<Int, Int>()
         var result: Array = Array<Int>()
 
