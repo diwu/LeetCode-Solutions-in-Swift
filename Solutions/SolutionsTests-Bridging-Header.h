@@ -3,3 +3,4 @@
 //
 
 #import "ObjC_Medium_001_Two_Sum.h"
+#import "ObjC_Medium_002_Add_Two_Numbers.h"
