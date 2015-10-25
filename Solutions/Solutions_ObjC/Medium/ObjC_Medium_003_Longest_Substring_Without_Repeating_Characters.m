@@ -16,6 +16,7 @@
 
 @implementation ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters
 
+// t = O(N), s = O(1)
 + (NSInteger)longest: (nonnull NSString *)s {
     NSInteger len = s.length;
     if (len < 2) {
