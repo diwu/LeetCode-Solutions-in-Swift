@@ -30,8 +30,7 @@ class Medium_002_Add_Two_Numbers {
         }
     }
 
-    // Solution
-    // O (N)
+    // t = O(N), s = O(1)
     class func addNumbers(node1: ListNode?, node2: ListNode?) -> ListNode? {
         var tmp1: ListNode? = node1
         var tmp2: ListNode? = node2

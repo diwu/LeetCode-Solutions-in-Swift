@@ -35,6 +35,7 @@
 
 @implementation ObjC_Medium_002_Add_Two_Numbers
 
+// t = O(N), s = O(1)
 + (nullable ObjC_Medium_002_Add_Two_Numbers_Node *)addNumbers: (nullable ObjC_Medium_002_Add_Two_Numbers_Node *)node1 node2: (nullable ObjC_Medium_002_Add_Two_Numbers_Node *)node2 {
     ObjC_Medium_002_Add_Two_Numbers_Node *tmp1 = node1;
     ObjC_Medium_002_Add_Two_Numbers_Node *tmp2 = node2;
