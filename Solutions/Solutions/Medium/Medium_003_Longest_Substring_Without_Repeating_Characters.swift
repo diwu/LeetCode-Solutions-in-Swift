@@ -18,29 +18,30 @@ private extension String {
     }
 }
 
-class Medium_003_Longest_Substring_Without_Repeating_Characters {
-    // O (N)
-    class func longest(s: String) -> Int {
+struct Medium_003_Longest_Substring_Without_Repeating_Characters {
+    // t = O(N), s = O(1)
+    static func longest(s: String) -> Int {
         let len: Int = s.characters.count
         if len < 2 {
             return len
         } else {
-            var d: Int = 1, maxLen: Int = 1
-            var map: Dictionary = Dictionary<Character, Int>()
-            map[s[0]] = 0
+            var tmpMaxLen: Int = 1
+            var maxLen: Int = 1
+            var hashMap: Dictionary<Character, Int> = Dictionary<Character, Int>()
+            hashMap[s[0]] = 0
             for i in 1..<len {
-                if let v = map[s[i]] {
-                    if v < i - d {
-                        d++
+                if let lastPosition = hashMap[s[i]] {
+                    if lastPosition < i - tmpMaxLen {
+                        tmpMaxLen++
                     } else {
-                        d = i - v   //redundant?
+                        tmpMaxLen = i - lastPosition
                     }
                 } else {
-                    d++
+                    tmpMaxLen++
                 }
-                map[s[i]] = i
-                if d > maxLen {
-                    maxLen = d
+                hashMap[s[i]] = i
+                if tmpMaxLen > maxLen {
+                    maxLen = tmpMaxLen
                 }
             }
             return maxLen

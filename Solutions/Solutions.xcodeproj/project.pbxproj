@@ -194,6 +194,8 @@
 		509D38681B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D38671B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift */; };
 		509DD7671BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 509DD7661BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.m */; };
 		509DD7681BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 509DD7661BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.m */; };
+		509DD76B1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = 509DD76A1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m */; };
+		509DD76C1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = 509DD76A1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m */; };
 		50A765151B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */; };
 		50A765161B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */; };
 		50A765181B10C968004F823B /* Hard_051_N_Queens_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A765171B10C968004F823B /* Hard_051_N_Queens_Test.swift */; };
@@ -431,6 +433,8 @@
 		509D38671B00EF8D00E5E2A4 /* Hard_032_Longest_Valid_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_032_Longest_Valid_Parentheses_Test.swift; path = Hard/Hard_032_Longest_Valid_Parentheses_Test.swift; sourceTree = "<group>"; };
 		509DD7651BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC_Medium_002_Add_Two_Numbers.h; path = Solutions_ObjC/Medium/ObjC_Medium_002_Add_Two_Numbers.h; sourceTree = "<group>"; };
 		509DD7661BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjC_Medium_002_Add_Two_Numbers.m; path = Solutions_ObjC/Medium/ObjC_Medium_002_Add_Two_Numbers.m; sourceTree = "<group>"; };
+		509DD7691BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.h; path = Solutions_ObjC/Medium/ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.h; sourceTree = "<group>"; };
+		509DD76A1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m; path = Solutions_ObjC/Medium/ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m; sourceTree = "<group>"; };
 		50A765141B10C7CE004F823B /* Hard_051_N_Queens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_051_N_Queens.swift; path = Hard/Hard_051_N_Queens.swift; sourceTree = "<group>"; };
 		50A765171B10C968004F823B /* Hard_051_N_Queens_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_051_N_Queens_Test.swift; path = Hard/Hard_051_N_Queens_Test.swift; sourceTree = "<group>"; };
 		50A7F7D11AA9970700F84E86 /* Solutions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solutions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -547,6 +551,8 @@
 				5021F6E61BDBAC4C0069C34B /* SolutionsTests-Bridging-Header.h */,
 				509DD7651BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.h */,
 				509DD7661BDCBA4700D6BAD4 /* ObjC_Medium_002_Add_Two_Numbers.m */,
+				509DD7691BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.h */,
+				509DD76A1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -1023,6 +1029,7 @@
 				506F20DC1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */,
 				508083521BCD067200EB1B57 /* Hard_087_Scramble_String.swift in Sources */,
 				5005A8101B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
+				509DD76B1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m in Sources */,
 				50EC15C31B05790400A231BF /* Easy_038_Count_And_Say.swift in Sources */,
 				5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */,
 				502529941B039CCC00A2AEDF /* Hard_037_Sudoku_Solver.swift in Sources */,
@@ -1233,6 +1240,7 @@
 				50AEFEB71AFF6DC90059CF1B /* Medium_031_Next_Permutation_Test.swift in Sources */,
 				506F20C91B69BA6E0092E687 /* Hard_072_Edit_Distance.swift in Sources */,
 				505825B51AF89CA70081F4FA /* Medium_022_Generate_Parentheses.swift in Sources */,
+				509DD76C1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m in Sources */,
 				5064BB7B1B232D19001B24B8 /* Medium_053_Maximum_Subarray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
