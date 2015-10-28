@@ -1,6 +1,6 @@
 /*
 
-https://leetcode.com/discuss/25580/simple-java-solution-with-clear-explanation
+https://leetcode.com/problems/reverse-linked-list-ii/
 
 #92 Reverse Linked List II
 
