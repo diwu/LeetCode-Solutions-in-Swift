@@ -8,7 +8,7 @@ Before you start: [Why do interviewers care so much about algorithm and data str
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Currently at **92** / ( 298 - 44 Paid Subscription ) = 36.2%, with 548 test cases.
 
-#####Requires Xcode 7.1 (Build 7B91b). Requires 64-bit simulators or devices to run test cases.
+#####Requires Xcode 7.2 Beta (Build 7C46l). Requires 64-bit simulators or devices to run test cases.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [ObjC Solution](./Solutions/Solutions_ObjC/Medium/ObjC_Medium_001_Two_Sum.m) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) - Inspired by [@naveed.zafar](https://leetcode.com/discuss/10947/accepted-c-o-n-solution)
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [ObjC Solution](./Solutions/Solutions_ObjC/Medium/ObjC_Medium_002_Add_Two_Numbers.m) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1) - Inspired by [@potpie](https://leetcode.com/discuss/2308/is-this-algorithm-optimal-or-what)
