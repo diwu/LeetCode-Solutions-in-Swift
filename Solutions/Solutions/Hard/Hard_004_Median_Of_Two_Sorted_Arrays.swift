@@ -13,7 +13,7 @@ Inspired by @MissMary at https://leetcode.com/discuss/15790/share-my-o-log-min-m
 */
 
 struct Hard_004_Median_Of_Two_Sorted_Arrays {
-    // O (log(min(m, n)))
+    // t = O(log(min(M, N))), s = O(1)
     static func findMedianSortedArrays(a a: [Int], b: [Int]) -> Double {
         let m = a.count
         let n = b.count

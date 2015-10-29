@@ -16,6 +16,7 @@
 
 @implementation ObjC_Hard_004_Median_Of_Two_Sorted_Arrays
 
+// t = O(log(min(M, N))), s = O(1)
 + (double)findMedianSortedArrays: (NSArray<NSNumber *> *)a b: (NSArray<NSNumber *> *) b {
     NSInteger m = a.count;
     NSInteger n = b.count;
