@@ -102,14 +102,3 @@ class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase {
         }
     }
 }
-
-/*
-// test cases
-median2([1, 2, 10], [30, 40, 50])   //20
-median2([1], [1])   //1
-median2([1, 2], [1])   //1
-median2([1], [10, 20, 30])   //15
-median2([1], [10, 20, 30, 40])   //20
-median2([10, 20, 30], [10, 20, 30])   //20
-median2([], [10, 20, 30])   //20
-*/

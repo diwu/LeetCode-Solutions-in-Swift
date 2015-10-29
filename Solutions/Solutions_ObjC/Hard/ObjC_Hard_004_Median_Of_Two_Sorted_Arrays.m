@@ -1,10 +1,16 @@
-//
-//  ObjC_Hard_004_Median_Of_Two_Sorted_Arrays.m
-//  Solutions
-//
-//  Created by Di Wu on 10/29/15.
-//  Copyright © 2015 diwu. All rights reserved.
-//
+/*
+ 
+ https://leetcode.com/problems/median-of-two-sorted-arrays/
+ 
+ #4 Median of Two Sorted Arrays
+ 
+ Level: hard
+ 
+ There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ 
+ Inspired by @MissMary at https://leetcode.com/discuss/15790/share-my-o-log-min-m-n-solution-with-explanation
+ 
+ */
 
 #import "ObjC_Hard_004_Median_Of_Two_Sorted_Arrays.h"
 
