@@ -9,39 +9,97 @@
 import XCTest
 
 class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase {
+    private static let ProblemName: String = "Hard_004_Median_Of_Two_Sorted_Arrays"
+    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
+    private static let TimeOut = Default_Timeout_Value * 10
     func testCase001() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1, 2, 10], b: [30, 40, 50])
-        XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #1")
+        let input0: [Int] = [1, 2, 11]
+        let input1: [Int] = [30, 40, 50]
+        let expected: Double = 20.5
+        asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
     func testCase002() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [1])
-        XCTAssert(v == 1, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #2")
+        let input0: [Int] = [1]
+        let input1: [Int] = [1]
+        let expected: Double = 1
+        asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
     func testCase003() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1, 2], b: [1])
-        XCTAssert(v == 1, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #3")
+        let input0: [Int] = [1, 2]
+        let input1: [Int] = [1]
+        let expected: Double = 1
+        asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
     func testCase004() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [10, 20, 30])
-        XCTAssert(v == 15, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #4")
+        let input0: [Int] = [1]
+        let input1: [Int] = [10, 20, 30]
+        let expected: Double = 15
+        asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
     func testCase005() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([1], b: [10, 20, 30, 40])
-        XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #5")
+        let input0: [Int] = [1]
+        let input1: [Int] = [10, 20, 30, 40]
+        let expected: Double = 20
+        asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
     func testCase006() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([10, 20, 30], b: [10, 20, 30])
-        XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #6")
+        let input0: [Int] = [10, 20, 30]
+        let input1: [Int] = [10, 20, 30]
+        let expected: Double = 20
+        asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
     func testCase007() {
-        let v = Hard_004_Median_Of_Two_Sorted_Arrays.median2([], b: [10, 20, 30])
-        XCTAssert(v == 20, "Hard_004_Median_Of_Two_Sorted_Arrays_Test #7")
+        let input0: [Int] = []
+        let input1: [Int] = [10, 20, 30]
+        let expected: Double = 20
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    func testCase008() {
+        let input0: [Int] = [10, 20, 25, 30]
+        let input1: [Int] = [10, 20, 30]
+        let expected: Double = 20
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    func testCase009() {
+        let input0: [Int] = [10, 20, 25, 26, 30]
+        let input1: [Int] = [10, 20, 30]
+        let expected: Double = 22.5
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    func testCase010() {
+        let input0: [Int] = [10, 20, 25, 26, 30]
+        let input1: [Int] = [10]
+        let expected: Double = 22.5
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    func testCase011() {
+        let input0: [Int] = [10, 20, 25, 26, 30, 40]
+        let input1: [Int] = [10]
+        let expected: Double = 25
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    private func asyncHelper(input0 input0: [Int], input1: [Int], expected: Double) {
+        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            let result_swift: Double = Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(a: input0, b: input1)
+            let result_objc: Double = ObjC_Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(input0, b: input1)
+            assertHelper(result_swift == expected, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
+            assertHelper(result_objc == expected, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
+            if let unwrapped = expectation {
+                unwrapped.fulfill()
+            }
+        })
+        waitForExpectationsWithTimeout(Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOut) { (error: NSError?) -> Void in
+            if error != nil {
+                assertHelper(false, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName, expectedValue: expected)
+            }
+        }
     }
 }
 

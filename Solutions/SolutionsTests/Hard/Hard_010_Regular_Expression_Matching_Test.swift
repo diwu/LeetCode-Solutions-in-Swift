@@ -11,7 +11,7 @@ import XCTest
 class Hard_010_Regular_Expression_Matching_Test: XCTestCase {
     private static let ProblemName: String = "Hard_010_Regular_Expression_Matching"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
+    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [String] = ["aa", "a"]
         let expected: Bool = false
@@ -57,7 +57,7 @@ class Hard_010_Regular_Expression_Matching_Test: XCTestCase {
         let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input  input: [String], expected: Bool) {
+    private func asyncHelper(input input: [String], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_010_Regular_Expression_Matching_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
