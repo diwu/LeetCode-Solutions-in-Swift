@@ -11,7 +11,7 @@ import XCTest
 class Medium_091_Decode_Ways_Test: XCTestCase {
     private static let ProblemName: String = "Medium_091_Decode_Ways"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 100
+    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: String = "12"
         let expected: Int = 2
