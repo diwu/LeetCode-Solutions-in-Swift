@@ -25,6 +25,8 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 Note:
 Although the above answer is in lexicographical order, your answer could be in any order you want.
 
+Inspired by @wchuan91 at https://leetcode.com/discuss/1083/use-deep-first-search-dfs-idea-is-there-any-better-solutions
+
 */
 
 private extension String {
