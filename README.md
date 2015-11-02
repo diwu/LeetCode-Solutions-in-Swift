@@ -6,7 +6,7 @@ Before you start: [Why do interviewers care so much about algorithm and data str
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Currently at **92** / ( 298 - 44 Paid Subscription ) = 36.2%, with **553** test cases.
+* A work in progress. Currently at **92** / ( 299 - 44 Paid Subscription ) = 36.1%, with **553** test cases.
 
 #####Requires Xcode 7.2 Beta (Build 7C46l). Requires 64-bit simulators or devices to run test cases.
 
