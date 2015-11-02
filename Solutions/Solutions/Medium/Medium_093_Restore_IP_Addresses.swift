@@ -26,6 +26,7 @@ private extension String {
 }
 
 struct Medium_093_Restore_IP_Addresses {
+    // t = O(1), s = O(1)
     static func restoreIpAddresses(s: String) -> [String] {
         var res = Array<String>()
         let len: Int = s.characters.count

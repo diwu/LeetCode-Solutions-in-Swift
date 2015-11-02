@@ -2,6 +2,6 @@
 
 @interface ObjC_Medium_093_Restore_IP_Addresses : NSObject
 
-+ (NSArray<NSString *> *)restoreIpAddresses: (NSString *)s;
++ (nonnull NSArray<NSString *> *)restoreIpAddresses: (nonnull NSString *)s;
 
 @end
