@@ -22,6 +22,8 @@
 		5005E4DB1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */; };
 		5005E4DC1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */; };
 		5005E4DE1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005E4DD1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift */; };
+		50144AAF1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 50144AAE1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m */; };
+		50144AB01BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 50144AAE1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m */; };
 		50159BE71B94867D00EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159BE61B94867D00EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift */; };
 		50159BE81B94867D00EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159BE61B94867D00EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift */; };
 		50159BEA1B94869200EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159BE91B94869100EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift */; };
@@ -329,6 +331,8 @@
 		5005A8121B0101DB00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hard_033_Search_In_Rotated_Sorted_Array_Test.swift; path = Hard/Hard_033_Search_In_Rotated_Sorted_Array_Test.swift; sourceTree = "<group>"; };
 		5005E4DA1AE745AD000810D1 /* Easy_020_Valid_Parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_020_Valid_Parentheses.swift; path = Easy/Easy_020_Valid_Parentheses.swift; sourceTree = "<group>"; };
 		5005E4DD1AE745C9000810D1 /* Easy_020_Valid_Parentheses_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_020_Valid_Parentheses_Test.swift; path = Easy/Easy_020_Valid_Parentheses_Test.swift; sourceTree = "<group>"; };
+		50144AAD1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.h; path = Solutions_ObjC/Medium/ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.h; sourceTree = "<group>"; };
+		50144AAE1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m; path = Solutions_ObjC/Medium/ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m; sourceTree = "<group>"; };
 		50159BE61B94867D00EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift; path = Medium/Medium_080_Remove_Duplicates_From_Sorted_Array_II.swift; sourceTree = "<group>"; };
 		50159BE91B94869100EB82D9 /* Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift; path = Medium/Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.swift; sourceTree = "<group>"; };
 		501674F81B4FFAFE006B5FC6 /* Medium_063_Unique_Paths_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_063_Unique_Paths_II.swift; path = Medium/Medium_063_Unique_Paths_II.swift; sourceTree = "<group>"; };
@@ -585,6 +589,8 @@
 				50D328931BE3162500662450 /* ObjC_Medium_005_Longest_Palindromic_Substring.m */,
 				5098BB9A1BE7B73800441F3C /* ObjC_Medium_093_Restore_IP_Addresses.h */,
 				5098BB9B1BE7B73800441F3C /* ObjC_Medium_093_Restore_IP_Addresses.m */,
+				50144AAD1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.h */,
+				50144AAE1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
@@ -1036,6 +1042,7 @@
 				50F1DBAA1B5552D000B47809 /* Hard_065_Valid_Number.swift in Sources */,
 				504596E11BCFB2F1007D7CD3 /* Easy_088_Merge_Sorted_Array.swift in Sources */,
 				50A7F7D91AA9970700F84E86 /* ViewController.swift in Sources */,
+				50144AAF1BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m in Sources */,
 				50A765151B10C7CE004F823B /* Hard_051_N_Queens.swift in Sources */,
 				50001EF31AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
 				5064BB7A1B232D19001B24B8 /* Medium_053_Maximum_Subarray.swift in Sources */,
@@ -1232,6 +1239,7 @@
 				91DCF23F1AC9135500F9CB65 /* Easy_014_Longest_Common_Prefix_Test.swift in Sources */,
 				505825B71AF89D200081F4FA /* Medium_022_Generate_Parentheses_Test.swift in Sources */,
 				5081E3F61B10539100D8FD22 /* Medium_046_Permutations_Test.swift in Sources */,
+				50144AB01BE90A3E008C4AC8 /* ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m in Sources */,
 				50604E281B7C93D200081C1F /* Medium_079_Word_Search.swift in Sources */,
 				50E1EEE71B672A08001DD020 /* Medium_071_Simplify_Path.swift in Sources */,
 				91492D601AC58A9E00D3A514 /* Easy_008_String_to_Integer_atoi_Test.swift in Sources */,
