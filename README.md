@@ -6,7 +6,7 @@ Before you start: [Why do interviewers care so much about algorithm and data str
 * Best time/space complexity guaranteed.
 * Written with the latest Swift 2.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Currently at **93** / ( 299 - 44 Paid Subscription ) = 36.5%, with **557** test cases.
+* A work in progress. Currently at **93** / ( 300 - 44 Paid Subscription ) = 36.3%, with **559** test cases.
 
 #####Requires Xcode 7.2 Beta (Build 7C46l). Requires 64-bit simulators or devices to run test cases.
 
@@ -26,7 +26,7 @@ Before you start: [Why do interviewers care so much about algorithm and data str
 14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) - Easy - [Swift Solution](./Solutions/Solutions/Easy/Easy_014_Longest_Common_Prefix.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_014_Longest_Common_Prefix_Test.swift) - t=O(N\*M), s=O(1) - Inspired by [@garysui](https://leetcode.com/discuss/15755/optimal-solution)
 15. [3Sum](https://leetcode.com/problems/3sum/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_015_3Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_015_3Sum_Test.swift) - t=O(N^2), s=O(N) - Inspired by [@peerlessbloom](https://leetcode.com/discuss/10756/my-accepted-o-n-2-solution-without-hashmap)
 16. [3Sum Closest](https://leetcode.com/problems/3sum-closest/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_016_3Sum_Closest.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_016_3Sum_Closest_Test.swift) - t=O(N^2), s=O(N) - Inspired by [@vaibhavatul47](https://leetcode.com/discuss/6438/a-n-2-solution-can-we-do-better)
-17. [Letter Combinations of A Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift) - t=(3^N), s=O(3^N) - Inspired by [@lirensun](https://leetcode.com/discuss/24431/my-java-solution-with-fifo-queue)
+17. [Letter Combinations of A Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number.swift) - [ObjC Solution](./Solutions/Solutions_ObjC/Medium/ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.m) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.swift) - t=(3^N), s=O(3^N) - Inspired by [@lirensun](https://leetcode.com/discuss/24431/my-java-solution-with-fifo-queue)
 18. [4Sum](https://leetcode.com/problems/4sum/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_018_4Sum.swift) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_018_4Sum_Test.swift) - t=O(N^3), s=O(N)
 19. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - Easy - [Swift Solution](./Solutions/Solutions/Easy/Easy_019_Remove_Nth_Node_From_End_Of_List.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_019_Remove_Nth_Node_From_End_Of_List_Test.swift) - t=O(N), s=O(1)
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - Easy - [Swift Solution](./Solutions/Solutions/Easy/Easy_020_Valid_Parentheses.swift) - [Test Cases](./Solutions/SolutionsTests/Easy/Easy_020_Valid_Parentheses_Test.swift) - t=O(N), s=O(N)
