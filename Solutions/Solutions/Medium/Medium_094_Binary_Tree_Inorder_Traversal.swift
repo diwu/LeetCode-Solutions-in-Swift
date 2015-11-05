@@ -31,7 +31,23 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
         }
     }
     class func inorderTraversal(root: Node?) -> [Int] {
-        return inorderTraversal_recursion(root)
+        return inorderTraversal_iteration(root)
+    }
+    // Iteration, t = O(N), s = O(N)
+    class func inorderTraversal_iteration(root: Node?) -> [Int] {
+        var res: [Int] = []
+        var stack: [Node] = []
+        var curr: Node? = root
+        while curr != nil || stack.isEmpty == false {
+            while let unwrapped = curr {
+                stack.append(unwrapped)
+                curr = curr?.left
+            }
+            let last: Node = stack.removeLast()
+            res.append(last.value)
+            curr = last.right
+        }
+        return res
     }
     class func inorderTraversal_recursion_helper(root root: Node?, inout arr: [Int]) {
         if let unwrapped = root {
