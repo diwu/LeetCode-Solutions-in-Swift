@@ -15,6 +15,8 @@ return [1,3,2].
 
 Note: Recursive solution is trivial, could you do it iteratively?
 
+Inspired by @lvlolitte at https://leetcode.com/discuss/19765/iterative-solution-in-java-simple-and-readable and @blue_y at https://leetcode.com/discuss/11295/morris-traversal-no-recursion-no-stack
+
 */
 
 import Foundation
@@ -29,9 +31,38 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
             self.left = left
             self.right = right
         }
+        
     }
     class func inorderTraversal(root: Node?) -> [Int] {
-        return inorderTraversal_iteration(root)
+        return inorderTraversal_morris(root)
+    }
+    class func inorderTraversal_morris(var root: Node?) -> [Int] {
+        if root == nil {
+            return []
+        } else {
+            var res: [Int] = []
+            var pre: Node? = nil
+            while root != nil {
+                if root?.left == nil {
+                    res.append((root?.value)!)
+                    root = root?.right
+                } else {
+                    pre = root?.left
+                    while pre?.right != nil && pre?.right! !== root {
+                        pre = pre?.right
+                    }
+                    if pre?.right == nil {
+                        pre?.right = root
+                        root = root?.left
+                    } else {
+                        pre?.right = nil
+                        res.append((root?.value)!)
+                        root = root?.right
+                    }
+                }
+            }
+            return res
+        }
     }
     // Iteration, t = O(N), s = O(N)
     class func inorderTraversal_iteration(root: Node?) -> [Int] {
