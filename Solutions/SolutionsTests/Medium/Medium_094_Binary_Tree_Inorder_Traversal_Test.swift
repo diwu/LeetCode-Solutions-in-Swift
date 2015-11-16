@@ -9,7 +9,7 @@
 import XCTest
 
 class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase {
-    private static let ProblemName: String = "Medium_017_Letter_Combinations_Of_A_Phone_Number"
+    private static let ProblemName: String = "Medium_094_Binary_Tree_Inorder_Traversal"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Medium_094_Binary_Tree_Inorder_Traversal.Node
@@ -31,8 +31,9 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase {
         let input_swift_3: Node_Swift = Node_Swift.init(value: 3, left: nil, right: nil)
         let input_swift_2: Node_Swift = Node_Swift.init(value: 2, left: input_swift_3, right: nil)
         let input_swift: Node_Swift = Node_Swift.init(value: 1, left: nil, right: input_swift_2)
-        let input_objc: Node_ObjC = Node_ObjC.init(value: 2, left: nil, right: nil)
-        
+        let input_objc_3: Node_ObjC = Node_ObjC.init(value: 3, left: nil, right: nil)
+        let input_objc_2: Node_ObjC = Node_ObjC.init(value: 2, left: input_objc_3, right: nil)
+        let input_objc: Node_ObjC = Node_ObjC.init(value: 1, left: nil, right: input_objc_2)
         let expected: [Int] = [
             1, 3, 2
         ]
@@ -43,8 +44,10 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase {
         let input_swift_3: Node_Swift = Node_Swift.init(value: 3, left: nil, right: input_swift_4)
         let input_swift_2: Node_Swift = Node_Swift.init(value: 2, left: input_swift_3, right: nil)
         let input_swift: Node_Swift = Node_Swift.init(value: 1, left: nil, right: input_swift_2)
-        let input_objc: Node_ObjC = Node_ObjC.init(value: 2, left: nil, right: nil)
-        
+        let input_objc_4: Node_ObjC = Node_ObjC.init(value: 4, left: nil, right: nil)
+        let input_objc_3: Node_ObjC = Node_ObjC.init(value: 3, left: nil, right: input_objc_4)
+        let input_objc_2: Node_ObjC = Node_ObjC.init(value: 2, left: input_objc_3, right: nil)
+        let input_objc: Node_ObjC = Node_ObjC.init(value: 1, left: nil, right: input_objc_2)
         let expected: [Int] = [
             1, 3, 4, 2
         ]
@@ -56,7 +59,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase {
             let result_swift: [Int] = Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input0)
             let result_objc: [NSNumber] = ObjC_Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input1)
             assertHelper(expected == result_swift, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
-//            assertHelper(expected == result_objc, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_objc, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }

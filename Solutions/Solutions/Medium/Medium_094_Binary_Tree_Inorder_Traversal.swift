@@ -67,7 +67,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
             return res
         }
     }
-    // Iteration, t = O(N), s = O(N)
+    // Recursion, t = O(N), average s = O(log(N)), worst s = O(N)
     class func inorderTraversal_iteration(root: Node?) -> [Int] {
         var res: [Int] = []
         var stack: [Node] = []
@@ -92,7 +92,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
             return
         }
     }
-    // Recursion, t = O(N), s = O(N)
+    // Recursion, t = O(N), average s = O(log(N)), worst s = O(N)
     class func inorderTraversal_recursion(root: Node?) -> [Int] {
         var res: [Int] = []
         inorderTraversal_recursion_helper(root: root, arr: &res)
