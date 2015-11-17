@@ -38,7 +38,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
     class func inorderTraversal(root: Node?) -> [Int] {
         return inorderTraversal_morris(root)
     }
-    // Morris, t = O(N), s = O(1)
+    // Morris, t = O(N), both average & worst s = O(1)
     class func inorderTraversal_morris(var root: Node?) -> [Int] {
         if root == nil {
             return []

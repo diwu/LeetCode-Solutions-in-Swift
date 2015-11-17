@@ -27,6 +27,36 @@
 
 @implementation ObjC_Medium_094_Binary_Tree_Inorder_Traversal
 
+// Morris, t = O(N), both average & worst s = O(1)
++ (nonnull NSArray<NSNumber *> *)inorderTraversal_morris:(ObjC_Medium_094_Binary_Tree_Inorder_Traversal_Node *)root {
+    if (root == nil) {
+        return @[];
+    } else {
+        NSMutableArray<NSNumber *> *ret = [NSMutableArray array];
+        ObjC_Medium_094_Binary_Tree_Inorder_Traversal_Node *pre = nil;
+        while (root != nil) {
+            if (root.left == nil) {
+                [ret addObject:@(root.value)];
+                root = root.right;
+            } else {
+                pre = root.left;
+                while (pre.right != nil && pre.right != root) {
+                    pre = pre.right;
+                }
+                if (pre.right == nil) {
+                    pre.right = root;
+                    root = root.left;
+                } else {
+                    pre.right = nil;
+                    [ret addObject:@(root.value)];
+                    root = root.right;
+                }
+            }
+        }
+        return [ret copy];
+    }
+}
+
 // Recursion, t = O(N), average s = O(log(N)), worst s = O(N)
 + (nonnull NSArray<NSNumber *> *)inorderTraversal_iteration:(ObjC_Medium_094_Binary_Tree_Inorder_Traversal_Node *)root {
     NSMutableArray *ret = [NSMutableArray array];
@@ -61,7 +91,7 @@
 }
 
 + (nonnull NSArray<NSNumber *> *)inorderTraversal: (nullable ObjC_Medium_094_Binary_Tree_Inorder_Traversal_Node *)root {
-    return [self inorderTraversal_iteration:root];
+    return [self inorderTraversal_morris:root];
 //    return @[@(1)];
 }
 
