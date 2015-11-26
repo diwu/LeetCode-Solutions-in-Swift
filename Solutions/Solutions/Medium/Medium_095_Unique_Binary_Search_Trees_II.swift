@@ -1,10 +1,25 @@
-//
-//  Medium_095_Unique_Binary_Search_Trees_II.swift
-//  Solutions
-//
-//  Created by Di Wu on 11/20/15.
-//  Copyright © 2015 diwu. All rights reserved.
-//
+/*
+
+https://leetcode.com/problems/unique-binary-search-trees-ii/
+
+#95 Unique Binary Search Trees II
+
+Level: medium
+
+Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
+
+For example,
+Given n = 3, your program should return all 5 unique BST's shown below.
+
+1         3     3      2      1
+ \       /     /      / \      \
+  3     2     1      1   3      2
+ /     /       \                 \
+2     1         2                 3
+
+Inspired by @Jayanta at https://leetcode.com/discuss/10254/a-simple-recursive-solution
+
+*/
 
 import Foundation
 
@@ -42,6 +57,7 @@ class Medium_095_Unique_Binary_Search_Trees_II {
         }
         return ret
     }
+    // t = O(n^(n-1)) a.k.a Catalan Number, s = I've no idea
     class func generateTrees(n: Int) -> [Node?] {
         return genTrees(start: 1, end: n)
     }

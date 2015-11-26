@@ -13,6 +13,7 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Medium_095_Unique_Binary_Search_Trees_II.Node
+    private typealias Node_ObjC = ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node
     private func convertTreeToArray_swift(root: Node_Swift?) -> [Int] {
         var ret: [Int] = []
         if root == nil {
@@ -22,6 +23,26 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
             fifoQueue.append(root!)
             while fifoQueue.count > 0 {
                 let curr: Node_Swift? = fifoQueue.removeFirst()
+                if curr == nil {
+                    ret.append(Int.min)
+                } else {
+                    ret.append((curr?.value)!)
+                    fifoQueue.append(curr?.left)
+                    fifoQueue.append(curr?.right)
+                }
+            }
+            return ret
+        }
+    }
+    private func convertTreeToArray_objc(root: Node_ObjC?) -> [Int] {
+        var ret: [Int] = []
+        if root == nil || root!.isKindOfClass(Node_ObjC) == false{
+            return ret
+        } else {
+            var fifoQueue: [Node_ObjC?] = []
+            fifoQueue.append(root)
+            while fifoQueue.count > 0 {
+                let curr: Node_ObjC? = fifoQueue.removeFirst()
                 if curr == nil {
                     ret.append(Int.min)
                 } else {
@@ -63,11 +84,17 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result_swift: [Node_Swift?] = Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
+            let result_objc: [Node_ObjC] = ObjC_Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
             var int_arr_swift: [[Int]] = []
+            var int_arr_objc: [[Int]] = []
             for node in result_swift {
                 int_arr_swift.append(self.convertTreeToArray_swift(node))
             }
-            assertHelper(expected == NSSet(array: int_arr_swift), problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
+            for node in result_objc {
+                int_arr_objc.append(self.convertTreeToArray_objc(node))
+            }
+            assertHelper(expected == NSSet(array: int_arr_swift), problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: int_arr_swift, expectedValue: expected)
+            assertHelper(expected == NSSet(array: int_arr_objc), problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: int_arr_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
