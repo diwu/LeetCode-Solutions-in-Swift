@@ -1,13 +1,13 @@
-Before you start: [Why do interviewers care so much about algorithm and data structure?](https://www.quora.com/Why-do-interviewers-care-so-much-about-algorithm-and-data-structure)
+Where it all begins: [https://github.com/apple/swift](https://github.com/apple/swift).
 
 ####LeetCode Solutions in Swift 2.1
 * Designed for your next iOS job interview.
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed. 
-* Think about **O(1) space** in Binary Tree Inorder Traversal. Yup it's that good.
+* Think about **O(1) space** in Binary Tree Inorder Traversal. It's that good.
 * Written with the latest Swift 2.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Currently at **95** / ( 310 - 47 Paid Subscription ) = 36.1%, with **566** test cases.
+* A work in progress. Currently at **95** / ( 313 - 48 Paid Subscription ) = 35.8%, with **566** test cases.
 
 #####Requires Xcode 7.2 Beta 4 (Build 7C62b) or above.
 
