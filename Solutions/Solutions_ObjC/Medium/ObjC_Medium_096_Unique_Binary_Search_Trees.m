@@ -40,7 +40,7 @@
             arr[i] = @([arr[i] integerValue] + [arr[j] integerValue] * [arr[i-1-j] integerValue]);
         }
     }
-    return [arr[n] integerValue]+1;
+    return [arr[n] integerValue];
 }
 
 @end
