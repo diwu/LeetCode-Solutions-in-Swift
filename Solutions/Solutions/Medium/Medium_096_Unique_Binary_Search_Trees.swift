@@ -24,6 +24,7 @@ Inspired by @liaison at https://leetcode.com/discuss/24282/dp-solution-in-6-line
 import Foundation
 
 class Medium_096_Unique_Binary_Search_Trees {
+    // t=O(N^2), s=O(N)
     class func numTrees(n: Int) -> Int {
         var ret: [Int] = Array<Int>(count: n+1, repeatedValue: 0)
         ret[0] = 1

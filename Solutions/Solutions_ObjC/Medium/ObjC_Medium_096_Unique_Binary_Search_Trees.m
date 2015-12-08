@@ -25,6 +25,7 @@
 
 @implementation ObjC_Medium_096_Unique_Binary_Search_Trees
 
+// t=O(N^2), s=O(N)
 + (NSInteger)numTrees: (NSInteger)n {
     if (n == 0 || n == 1) {
         return 1;
