@@ -5,7 +5,7 @@ Where it all begins: [https://github.com/apple/swift](https://github.com/apple/s
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed. 
 * Think about **O(1) space** in Binary Tree Inorder Traversal. It's that good.
-* Written with the latest Swift 2.1 language features in mind.
+* Written with the latest Swift 2.1.1 language features in mind.
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Currently at **98** / ( 316 - 49 Paid Subscription ) = 36.7%, with **586** test cases.
 
