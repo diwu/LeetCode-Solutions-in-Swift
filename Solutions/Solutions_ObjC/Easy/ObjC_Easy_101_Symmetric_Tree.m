@@ -57,6 +57,7 @@
     }
 }
 
+// t = O(N), best s = O(logN), worst s = O(N)
 + (BOOL)isSymmetric:(nullable ObjC_Easy_101_Symmetric_Tree_Node *)root {
     if (root == nil) {
         return true;
