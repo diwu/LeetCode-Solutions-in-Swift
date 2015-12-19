@@ -62,6 +62,8 @@
 		502F2EBB1C258CB300EF2353 /* Easy_101_Symmetric_Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F2EBA1C258CB300EF2353 /* Easy_101_Symmetric_Tree.swift */; };
 		502F2EBC1C258CB300EF2353 /* Easy_101_Symmetric_Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F2EBA1C258CB300EF2353 /* Easy_101_Symmetric_Tree.swift */; };
 		502F2EBE1C258CCB00EF2353 /* Easy_101_Symmetric_Tree_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F2EBD1C258CCB00EF2353 /* Easy_101_Symmetric_Tree_Test.swift */; };
+		502F2EC11C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 502F2EC01C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m */; };
+		502F2EC21C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 502F2EC01C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m */; };
 		5030D3971AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030D3961AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift */; };
 		5030D3981AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030D3961AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift */; };
 		5030D39A1AE8F1A7005FADA6 /* Easy_021_Merge_Two_Sorted_Lists_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030D3991AE8F1A7005FADA6 /* Easy_021_Merge_Two_Sorted_Lists_Test.swift */; };
@@ -399,6 +401,8 @@
 		502A8F7E1B024E8100BE6CEB /* Medium_035_Search_Insert_Position_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medium_035_Search_Insert_Position_Test.swift; path = Medium/Medium_035_Search_Insert_Position_Test.swift; sourceTree = "<group>"; };
 		502F2EBA1C258CB300EF2353 /* Easy_101_Symmetric_Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_101_Symmetric_Tree.swift; path = Easy/Easy_101_Symmetric_Tree.swift; sourceTree = "<group>"; };
 		502F2EBD1C258CCB00EF2353 /* Easy_101_Symmetric_Tree_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_101_Symmetric_Tree_Test.swift; path = Easy/Easy_101_Symmetric_Tree_Test.swift; sourceTree = "<group>"; };
+		502F2EBF1C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC_Easy_101_Symmetric_Tree.h; path = Solutions_ObjC/Easy/ObjC_Easy_101_Symmetric_Tree.h; sourceTree = "<group>"; };
+		502F2EC01C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjC_Easy_101_Symmetric_Tree.m; path = Solutions_ObjC/Easy/ObjC_Easy_101_Symmetric_Tree.m; sourceTree = "<group>"; };
 		5030D3961AE8F17F005FADA6 /* Easy_021_Merge_Two_Sorted_Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_021_Merge_Two_Sorted_Lists.swift; path = Easy/Easy_021_Merge_Two_Sorted_Lists.swift; sourceTree = "<group>"; };
 		5030D3991AE8F1A7005FADA6 /* Easy_021_Merge_Two_Sorted_Lists_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_021_Merge_Two_Sorted_Lists_Test.swift; path = Easy/Easy_021_Merge_Two_Sorted_Lists_Test.swift; sourceTree = "<group>"; };
 		50320EEA1BB5828400796416 /* Easy_083_Remove_Duplicates_From_Sorted_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Easy_083_Remove_Duplicates_From_Sorted_List.swift; path = Easy/Easy_083_Remove_Duplicates_From_Sorted_List.swift; sourceTree = "<group>"; };
@@ -638,6 +642,8 @@
 			children = (
 				505BD88F1C1A70430050AF7A /* ObjC_Easy_100_Same_Tree.h */,
 				505BD8901C1A70430050AF7A /* ObjC_Easy_100_Same_Tree.m */,
+				502F2EBF1C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.h */,
+				502F2EC01C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -1188,6 +1194,7 @@
 				5098BC3A1AF90CE90009964D /* Medium_024_Swap_Nodes_In_Pairs.swift in Sources */,
 				50B4406B1B9F131A00F6892D /* Medium_081_Search_In_Rotated_Sorted_Array_II.swift in Sources */,
 				506F20DC1B6A0F470092E687 /* Hard_076_Minimum_Window_Substring.swift in Sources */,
+				502F2EC11C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m in Sources */,
 				508083521BCD067200EB1B57 /* Hard_087_Scramble_String.swift in Sources */,
 				5005A8101B0101BD00435B47 /* Hard_033_Search_In_Rotated_Sorted_Array.swift in Sources */,
 				509DD76B1BDCDDAD00D6BAD4 /* ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.m in Sources */,
@@ -1302,6 +1309,7 @@
 				504596E21BCFB2F1007D7CD3 /* Easy_088_Merge_Sorted_Array.swift in Sources */,
 				507A5EE71BDA34190021F04F /* Medium_091_Decode_Ways.swift in Sources */,
 				50001EF41AF9F90D0060075D /* Hard_025_Reverse_Nodes_In_K_Group.swift in Sources */,
+				502F2EC21C25974F00EF2353 /* ObjC_Easy_101_Symmetric_Tree.m in Sources */,
 				5081E3FE1B1054FF00D8FD22 /* Medium_048_Rotate_Image.swift in Sources */,
 				91492D5E1AC58A0800D3A514 /* Easy_008_String_to_Integer_atoi.swift in Sources */,
 				501674FF1B500DDE006B5FC6 /* Medium_064_Minimum_Path_Sum.swift in Sources */,
