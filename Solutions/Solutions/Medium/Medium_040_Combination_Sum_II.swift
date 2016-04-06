@@ -47,7 +47,8 @@ struct Medium_040_Combination_Sum_II {
             }
         }
     }
-    static func combinationSum(var candidates  candidates: [Int], target: Int) -> [[Int]] {
+    static func combinationSum(candidates c: [Int], target: Int) -> [[Int]] {
+        var candidates = c
         var result: [[Int]] = []
         candidates.sortInPlace {$0 < $1}
         recurse(list: [Int](), target: target, candidates: candidates, index: 0, result: &result)

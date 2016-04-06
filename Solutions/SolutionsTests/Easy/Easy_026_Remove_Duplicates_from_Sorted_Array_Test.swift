@@ -52,7 +52,8 @@ class Easy_026_Remove_Duplicates_from_Sorted_Array_Test: XCTestCase {
         let expected: [Int] = [1, 2, 3, 4, 5]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [Int], expected: [Int]) {
+    private func asyncHelper(input ipt: [Int], expected: [Int]) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result: Int = Easy_026_Remove_Duplicates_from_Sorted_Array.removeDuplicates(&input)

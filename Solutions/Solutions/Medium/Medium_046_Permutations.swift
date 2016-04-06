@@ -19,12 +19,13 @@ Inspired by @xiaohui7 at https://leetcode.com/discuss/18212/my-elegant-recursive
 import Foundation
 
 struct Medium_046_Permutations {
-    private static func permuteRecursive(var nums  nums: [Int], begin: Int, inout result: [[Int]]) {
+    private static func permuteRecursive(nums n: [Int], begin: Int, inout result: [[Int]]) {
+        var nums = n
         if begin >= nums.count {
             result.append(nums)
             return
         }
-        for var i = begin; i < nums.count; i++ {
+        for i in begin..<nums.count {
             
             //FIXME: "Swap in place" causes runtime error!
             

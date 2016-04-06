@@ -18,11 +18,12 @@ Inspired by @john6 at https://leetcode.com/discuss/1832/ive-idea-stucked-the-exc
 import Foundation
 
 struct Medium_053_Maximum_Subarray {
-    static func maxSubArray(var nums: [Int]) -> Int {
+    static func maxSubArray(n: [Int]) -> Int {
+        var nums = n
         var best = nums[0];
         var current = nums[0];
         
-        for var i = 1; i < nums.count; i++ {
+        for i in 1..<nums.count {
             current = max(current + nums[i], nums[i]);
             best = max(current, best);
         }
