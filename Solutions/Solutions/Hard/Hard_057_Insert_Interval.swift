@@ -25,9 +25,10 @@ Inspired by @stellari at https://leetcode.com/discuss/3971/in-place-solution-ask
 import Foundation
 
 struct Hard_057_Insert_Interval {
-    static func insert(intervals intervals: [[Int]], var newInterval: [Int]) -> [[Int]] {
+    static func insert(intervals intervals: [[Int]], newInterval newI: [Int]) -> [[Int]] {
+        var newInterval = newI
         var res: [[Int]] = []
-        for var i = 0; i < intervals.count; i++ {
+        for i in 0 ..< intervals.count {
             if newInterval[0] > intervals[i][1] {
                 res.append(intervals[i])
             } else if newInterval[1] < intervals[i][0] {

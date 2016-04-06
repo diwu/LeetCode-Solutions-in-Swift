@@ -33,7 +33,8 @@ private extension String {
 }
 
 struct Hard_065_Valid_Number {
-    static func isNumber(var s: String) -> Bool {
+    static func isNumber(arg: String) -> Bool {
+        var s = arg
         var state = 0
         var flag = 0
         while s[0] == " " {

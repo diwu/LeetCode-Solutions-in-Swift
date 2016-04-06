@@ -27,7 +27,9 @@ private extension String {
 }
 
 struct Hard_072_Edit_Distance {
-    static func minDistance(var word1 word1: String, var word2: String) -> Int {
+    static func minDistance(word1 w1: String, word2 w2: String) -> Int {
+        var word1 = w1
+        var word2 = w2
         var len1 = word1.characters.count
         var len2 = word2.characters.count
         if len1 < len2 {
@@ -35,22 +37,28 @@ struct Hard_072_Edit_Distance {
             swap(&len1, &len2)
         }
         var buf: [Int] = Array(count: len2 + 1, repeatedValue: 0)
-        for var j = 1; j <= len2; j++ {
-            buf[j] = j
-        }
-        for var i = 1; i <= len1; i++ {
-            var prev = i
-            for var j = 1; j <= len2; j++ {
-                var curr: Int
-                if word1[i-1] == word2[j-1] {
-                    curr = buf[j-1]
-                } else {
-                    curr = min(buf[j-1], prev, buf[j]) + 1
-                }
-                buf[j-1] = prev
-                prev = curr
+        if len2 > 0 {
+            for j in 1...len2{
+                buf[j] = j
             }
-            buf[len2] = prev
+        }
+        if len1 > 0 {
+            for i in 1...len1{
+                var prev = i
+                if len2 > 0 {
+                    for j in 1...len2 {
+                        var curr: Int
+                        if word1[i-1] == word2[j-1] {
+                            curr = buf[j-1]
+                        } else {
+                            curr = min(buf[j-1], prev, buf[j]) + 1
+                        }
+                        buf[j-1] = prev
+                        prev = curr
+                    }
+                }
+                buf[len2] = prev
+            }
         }
         return buf[len2]
     }
