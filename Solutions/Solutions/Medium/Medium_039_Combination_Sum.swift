@@ -31,7 +31,7 @@ struct Medium_039_Combination_Sum {
             result.append(list)
             return
         }
-        for var i = index; i < candidates.count; i++ {
+        for i in index ..< candidates.count {
             let newTarget: Int = target - candidates[i]
             if newTarget >= 0 {
                 var copy: [Int] = Array<Int>(list)
@@ -42,7 +42,8 @@ struct Medium_039_Combination_Sum {
             }
         }
     }
-    static func combinationSum(var candidates  candidates: [Int], target: Int) -> [[Int]] {
+    static func combinationSum(candidates cdts: [Int], target: Int) -> [[Int]] {
+        var candidates = cdts
         var result: [[Int]] = []
         candidates.sortInPlace {$0 < $1}
         recurse(list: [Int](), target: target, candidates: candidates, index: 0, result: &result)

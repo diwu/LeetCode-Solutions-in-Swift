@@ -31,15 +31,16 @@ Inspired by @vvelrath@buffalo.edu at https://leetcode.com/discuss/15756/java-sol
 import Foundation
 
 struct Medium_063_Unique_Paths_II {
-    static func uniquePathsWithObstacles(var obstacleGrid: [[Int]]) -> Int {
+    static func uniquePathsWithObstacles(og: [[Int]]) -> Int {
+        var obstacleGrid = og
         if obstacleGrid.count == 0 {
             return 0
         }
         let rows = obstacleGrid.count
         let cols = obstacleGrid[0].count
         
-        for var i = 0; i < rows; i++ {
-            for var j = 0; j < cols; j++ {
+        for i in 0 ..< rows {
+            for j in 0 ..< cols {
                 if obstacleGrid[i][j] == 1 {
                     obstacleGrid[i][j] = 0
                 } else if i == 0 && j == 0 {
