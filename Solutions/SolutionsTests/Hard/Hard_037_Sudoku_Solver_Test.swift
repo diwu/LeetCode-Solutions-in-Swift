@@ -128,12 +128,13 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [[Character]], expected: [[Character]]) {
+    private func asyncHelper(input ipt: [[Character]], expected: [[Character]]) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_037_Sudoku_Solver_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             Hard_037_Sudoku_Solver.solveSudoku(&input)
             var result: [[Character]] = input
-            for var i = 0; i < 9; i++ {
+            for i in 0..<9 {
                 assertHelper(expected[i] == result[i], problemName: Hard_037_Sudoku_Solver_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             }
             if let unwrapped = expectation {

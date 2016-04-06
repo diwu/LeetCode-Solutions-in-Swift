@@ -17,15 +17,16 @@ Inspired by @wdj0xda at https://leetcode.com/discuss/17111/my-java-solution-usin
 import Foundation
 
 struct Medium_064_Minimum_Path_Sum {
-    static func minPathSum(var grid: [[Int]]) -> Int {
+    static func minPathSum(g: [[Int]]) -> Int {
+        var grid = g
         if grid.count == 0 {
             return 0
         }
         let rows = grid.count
         let cols = grid[0].count
         
-        for var i = 0; i < rows; i++ {
-            for var j = 0; j < cols; j++ {
+        for i in 0..<rows {
+            for j in 0..<cols {
                 if i == 0 && j != 0 {
                     grid[i][j] = grid[i][j] + grid[i][j-1]
                 } else if i != 0 && j == 0 {
