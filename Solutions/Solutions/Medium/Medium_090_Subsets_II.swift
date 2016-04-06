@@ -28,18 +28,20 @@ Inspired by @mathsam at https://leetcode.com/discuss/14902/c-solution-and-explan
 import Foundation
 
 struct Medium_090_Subsets_II {
-    static func subsetsWithDup(var nums: [Int]) -> [[Int]] {
+    static func subsetsWithDup(n: [Int]) -> [[Int]] {
+        var nums = n
         var result: [[Int]] = [[]]
         nums.sortInPlace()
-        for var i = 0; i < nums.count; {
+        var i = 0
+        for _ in 0 ..< nums.count{
             var count: Int = 0
             while count + i < nums.count && nums[count+i] == nums[i] {
-                count++
+                count += 1
             }
             let prevSize: Int = result.count
-            for var k = 0; k < prevSize; k++ {
+            for k in 0 ..< prevSize {
                 var tmp: [Int] = result[k]
-                for var j = 0; j < count; j++ {
+                for _ in 0 ..< count {
                     tmp.append(nums[i])
                     result.append(tmp)
                 }
