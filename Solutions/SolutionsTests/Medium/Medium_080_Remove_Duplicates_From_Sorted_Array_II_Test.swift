@@ -42,12 +42,13 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase {
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input input: [Int], expected: [Int] ) {
+    private func asyncHelper(input ipt: [Int], expected: [Int] ) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             Medium_080_Remove_Duplicates_From_Sorted_Array_II.removeDuplicates(&input)
             let result = input
-            for var i = 0; i < expected.count; i++ {
+            for i in 0 ..< expected.count {
                 assertHelper(result[i] == expected[i], problemName: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             }
             if let unwrapped = expectation {

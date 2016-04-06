@@ -57,7 +57,8 @@ class Medium_034_Search_For_A_Range_Test: XCTestCase {
         let expected: [Int] = [0, 0]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [AnyObject], expected: [Int]) {
+    private func asyncHelper(input ipt: [AnyObject], expected: [Int]) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_034_Search_For_A_Range_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result: [Int] = Medium_034_Search_For_A_Range.searchRange(nums: input[0] as! [Int], target: input[1] as! Int)
