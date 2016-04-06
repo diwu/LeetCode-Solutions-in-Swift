@@ -33,17 +33,21 @@ struct Medium_040_Combination_Sum_II {
             result.append(list)
             return
         }
-        for var i = index; i < candidates.count; i++ {
-            let newTarget: Int = target - candidates[i]
-            if newTarget >= 0 {
-                var copy: [Int] = Array<Int>(list)
-                copy.append(candidates[i])
-                recurse(list: copy, target: newTarget, candidates: candidates, index: i+1, result: &result)
-                while i+1 < candidates.count && candidates[i+1] == candidates[i] {
-                    i++
+        var ii = index - 1
+        for i in index..<candidates.count {
+            if i > ii {
+                let newTarget: Int = target - candidates[i]
+                if newTarget >= 0 {
+                    var copy: [Int] = Array<Int>(list)
+                    copy.append(candidates[i])
+                    recurse(list: copy, target: newTarget, candidates: candidates, index: i+1, result: &result)
+                    ii = i
+                    while ii+1 < candidates.count && candidates[ii+1] == candidates[ii] {
+                        ii += 1
+                    }
+                } else {
+                    break
                 }
-            } else {
-                break
             }
         }
     }
