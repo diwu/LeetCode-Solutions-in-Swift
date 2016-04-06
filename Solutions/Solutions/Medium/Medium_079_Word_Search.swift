@@ -35,9 +35,10 @@ private extension String {
 }
 
 struct Medium_079_Word_Search {
-    static func exist(var board: [[Character]], word: String) -> Bool {
-        for var x = 0; x < board.count; x++ {
-            for var y = 0; y < board[x].count; y++ {
+    static func exist(b: [[Character]], word: String) -> Bool {
+        var board = b
+        for x in 0..<board.count {
+            for y in 0..<board[x].count {
                 if exist_recursion_helper(board: &board, x: x, y: y, word: word, i: 0) {
                     return true
                 }

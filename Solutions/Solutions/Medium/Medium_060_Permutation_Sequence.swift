@@ -30,19 +30,23 @@ import Foundation
 struct Medium_060_Permutation_Sequence {
     static func getPermutation(n n: Int, k arg: Int) -> String {
         var k = arg
-        var i: Int, j: Int, f: Int = 1
+        var j: Int
+        var f: Int = 1
         var s = [Character](count: n, repeatedValue: "0")
         let map: [Int: Character] = [1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"]
         for i in 1...n {
             f *= i
             s[i-1] = map[i]!
         }
-        for i = 0, k--; i < n; i++ {
+        k -= 1
+        for i in 0..<n {
             f /= n - i
             j = i + k / f
             let c = s[j]
-            for ; j > i; j-- {
-                s[j] = s[j-1]
+            if j > i {
+                for m in (i+1...j).reverse() {
+                    s[m] = s[m-1]
+                }
             }
             k %= f
             s[i] = c

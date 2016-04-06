@@ -29,7 +29,8 @@ class Medium_086_Partition_List {
             self.next = next
         }
     }
-    class func partition(var head head: Node?, x: Int) -> Node? {
+    class func partition(head h: Node?, x: Int) -> Node? {
+        var head = h
         let sentinelA: Node? = Node(value: 0, next: nil)
         let sentinelB: Node? = Node(value: 0, next: nil)
         var pA: Node? = sentinelA

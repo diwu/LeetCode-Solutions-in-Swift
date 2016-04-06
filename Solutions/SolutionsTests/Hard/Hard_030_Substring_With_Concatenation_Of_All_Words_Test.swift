@@ -87,7 +87,8 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase {
         let expected: Set<Int> = Set([6])
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [Any?], expected: Set<Int>) {
+    private func asyncHelper(input ipt: [Any?], expected: Set<Int>) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result: [Int] = Hard_030_Substring_With_Concatenation_Of_All_Words.findSubstring(s: input[0] as! String?, words: input[1] as! [String])

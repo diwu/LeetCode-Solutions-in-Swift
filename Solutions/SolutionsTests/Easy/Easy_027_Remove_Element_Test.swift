@@ -37,7 +37,8 @@ class Easy_027_Remove_Element_Test: XCTestCase {
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [Any], expected: [Int]) {
+    private func asyncHelper(input ipt: [Any], expected: [Int]) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_027_Remove_Element_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             var arr: [Int] = input[0] as! [Int]
