@@ -127,7 +127,8 @@ class Medium_029_Divide_Two_Integers_Test: XCTestCase {
         let expected: Int = 9876 / -54
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [Int], expected: Int) {
+    private func asyncHelper(input ipt: [Int], expected: Int) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_029_Divide_Two_Integers_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result: Int = Medium_029_Divide_Two_Integers.divide(dividend: input[0], divisor: input[1])
