@@ -33,7 +33,8 @@ struct Hard_084_Largest_Rectangle_In_Histogram {
         var i = 0
         while i < heights.count {
             if stack.isEmpty || heights[stack.last!] <= heights[i] {
-                stack.append(i++)
+                stack.append(i)
+                i += 1
             } else {
                 top_of_stack = stack.last!
                 stack.removeLast()

@@ -29,9 +29,10 @@ struct Medium_080_Remove_Duplicates_From_Sorted_Array_II {
         var iterator = 2
         while iterator < nums.count {
             if nums[iterator] != nums[len-2] {
-                nums[len++] = nums[iterator]
+                nums[len] = nums[iterator]
+                len += 1
             }
-            iterator++
+            iterator += 1
         }
     }
 }

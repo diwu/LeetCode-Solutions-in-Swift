@@ -30,8 +30,8 @@ import Foundation
 class Easy_036_Valid_Sudoku {
     class func isPartiallyValid(board  board: [[Character]], x1: Int, y1: Int, x2: Int, y2: Int) -> Bool {
         var singleSet: Set<Character> = Set()
-        for var i = x1; i <= x2; i++ {
-            for var j = y1; j <= y2; j++ {
+        for i in x1...x2 {
+            for j in y1...y2 {
                 if board[i][j] != "." {
                     if singleSet.contains(board[i][j]) == true {
                         return false
@@ -44,7 +44,7 @@ class Easy_036_Valid_Sudoku {
         return true
     }
     class func isValidSudoku(board: [[Character]]) -> Bool {
-        for var i = 0; i < 9; i++ {
+        for i in 0..<9 {
             if isPartiallyValid(board: board, x1: i, y1: 0, x2: i, y2: 8) == false {
                 return false
             }
@@ -52,8 +52,8 @@ class Easy_036_Valid_Sudoku {
                 return false
             }
         }
-        for var i = 0; i < 3; i++ {
-            for var j = 0; j < 3; j++ {
+        for i in 0..<3 {
+            for j in 0..<3 {
                 if isPartiallyValid(board: board, x1: i*3, y1: j*3, x2: i*3+2, y2: j*3+2) == false {
                     return false
                 }
