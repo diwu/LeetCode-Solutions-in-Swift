@@ -30,7 +30,7 @@ struct Medium_077_Combinations {
     static func combine(n n: Int, k: Int) -> [[Int]] {
         var queue: [[Int]] = []
         var summary: [[Int]] = []
-        for var i = 1; i <= n; i++ {
+        for i in 1...n {
             var list: [Int] = []
             list.append(i)
             queue.append(list)
@@ -40,10 +40,12 @@ struct Medium_077_Combinations {
             if list.count == k {
                 summary.append(list)
             } else {
-                for var i = list.last! + 1; i <= n; i++ {
-                    var nextList: [Int] = [Int](list)
-                    nextList.append(i)
-                    queue.append(nextList)
+                if list.last! + 1 <= n {
+                    for i in list.last! + 1...n {
+                        var nextList: [Int] = [Int](list)
+                        nextList.append(i)
+                        queue.append(nextList)
+                    }
                 }
             }
         }
@@ -54,7 +56,7 @@ struct Medium_077_Combinations {
             res.append(tmp)
             return
         }
-        for var i = start; i < n; i++ {
+        for i in start..<n {
             tmp.append(i + 1)
             combine_recursion_helper(res: &res, tmp: &tmp, start: i+1, num: num+1, n: n, k: k)
             tmp.popLast()
