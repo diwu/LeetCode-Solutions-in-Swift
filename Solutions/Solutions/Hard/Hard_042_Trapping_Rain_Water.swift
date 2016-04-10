@@ -35,9 +35,11 @@ struct Hard_042_Trapping_Rain_Water {
                 currLevel = min(nums[left], nums[right])
             }
             if nums[left] < nums[right] {
-                block += nums[left++]
+                block += nums[left]
+                left += 1
             } else {
-                block += nums[right--]
+                block += nums[right]
+                right -= 1
             }
         }
         return all - block

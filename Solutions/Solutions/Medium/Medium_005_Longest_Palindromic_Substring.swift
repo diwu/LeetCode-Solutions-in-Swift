@@ -32,19 +32,20 @@ struct Medium_005_Longest_Palindromic_Substring {
         } else {
             var min_start: Int = 0
             var max_len: Int = 1
-            for var i = 0; i < s.characters.count; {
+            var i = 0
+            while i < s.characters.count {
                 if s.characters.count - i <= max_len / 2 {
                     break
                 }
                 var j = i
                 var k = i
                 while k < s.characters.count - 1 && s[k+1] == s[k] {
-                    k++
+                    k += 1
                 }
                 i = k + 1
                 while k < s.characters.count - 1 && j > 0 && s[k+1] == s[j-1] {
-                    k++
-                    j--
+                    k += 1
+                    j -= 1
                 }
                 let new_len = k - j + 1
                 if new_len > max_len {
