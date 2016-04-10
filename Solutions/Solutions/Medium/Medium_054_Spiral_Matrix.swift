@@ -36,29 +36,37 @@ struct Medium_054_Spiral_Matrix {
         var colEnd = matrix[0].count - 1
         while rowBegin <= rowEnd && colBegin <= colEnd {
             //Traverse Right
-            for var i = colBegin; i <= colEnd; i++ {
-                res.append(matrix[rowBegin][i])
+            if colBegin <= colEnd {
+                for i in colBegin...colEnd {
+                    res.append(matrix[rowBegin][i])
+                }
             }
-            rowBegin++
+            rowBegin += 1
             //Traverse Down
-            for var i = rowBegin; i <= rowEnd; i++ {
-                res.append(matrix[i][colEnd])
+            if rowBegin <= rowEnd {
+                for i in rowBegin...rowEnd {
+                    res.append(matrix[i][colEnd])
+                }
             }
-            colEnd--
+            colEnd -= 1
             if rowBegin <= rowEnd {
                 //Traverse Left
-                for var i = colEnd; i >= colBegin; i-- {
-                    res.append(matrix[rowEnd][i])
+                if colBegin <= colEnd {
+                    for i in (colBegin...colEnd).reverse() {
+                        res.append(matrix[rowEnd][i])
+                    }
                 }
             }
-            rowEnd--
+            rowEnd -= 1
             if colBegin <= colEnd {
                 //Traverse Up
-                for var i = rowEnd; i >= rowBegin; i-- {
-                    res.append(matrix[i][colBegin])
+                if rowBegin <= rowEnd {
+                    for i in (rowBegin...rowEnd).reverse() {
+                        res.append(matrix[i][colBegin])
+                    }
                 }
             }
-            colBegin++
+            colBegin += 1
         }
         return res
     }
