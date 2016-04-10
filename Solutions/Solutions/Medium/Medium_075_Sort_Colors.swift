@@ -30,16 +30,22 @@ struct Medium_075_Sort_Colors {
         var red = -1
         var white = -1
         var blue = -1
-        for var i = 0; i < nums.count; i++ {
+        for i in 0 ..< nums.count {
             if nums[i] == 0 {
-                nums[++blue] = 2
-                nums[++white] = 1
-                nums[++red] = 0
+                blue += 1
+                white += 1
+                red += 1
+                nums[blue] = 2
+                nums[white] = 1
+                nums[red] = 0
             } else if nums[i] == 1 {
-                nums[++blue] = 2
-                nums[++white] = 1
+                blue += 1
+                white += 1
+                nums[blue] = 2
+                nums[white] = 1
             } else {
-                nums[++blue] = 2
+                blue += 1
+                nums[blue] = 2
             }
         }
     }

@@ -38,8 +38,9 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List {
         let dummyHead: Node = Node(value: 0, next: head)
         var fast: Node? = dummyHead, slow: Node? = dummyHead
         var localN = n
-        while localN-- > 0 {
+        while localN > 0 {
             fast = fast?.next
+            localN -= 1
         }
         while fast != nil && fast?.next != nil {
             fast = fast?.next

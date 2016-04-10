@@ -27,7 +27,7 @@ class Medium_016_3Sum_Closest {
             var sum: Int
             var sorted: [Int] = num.sort { $0 < $1 }
             ans = sorted[0] + sorted[1] + sorted[2]
-            for (var i = 0; i < n-2; i++) {
+            for i in 0 ..< n-2 {
                 var j: Int = i+1
                 var k: Int = n-1
                 while (j < k) {
@@ -38,7 +38,9 @@ class Medium_016_3Sum_Closest {
                             return ans
                         }
                     }
-                    (sum > target) ? k-- : j++
+                    (sum > target) ? k : j
+                    k -= 1
+                    j += 1
                 }
             }
             return ans

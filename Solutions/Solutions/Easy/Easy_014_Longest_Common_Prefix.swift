@@ -29,10 +29,10 @@ class Easy_014_Longest_Common_Prefix {
                 return ""
             } else {
                 let stringLength: Int = unwrapped[0].characters.count
-                for var i = 0; i < stringLength; i++ {
+                for i in 0 ..< stringLength {
                     let c: Character = unwrapped[0][i]
                     let arrCount: Int = unwrapped.count
-                    for var j = 1; j < arrCount; j++ {
+                    for j in 1 ..< arrCount {
                         if i == unwrapped[j].characters.count || unwrapped[j][i] != c {
                             return unwrapped[0][0..<i]
                         }
