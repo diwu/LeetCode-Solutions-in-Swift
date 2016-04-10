@@ -23,7 +23,7 @@ struct Medium_062_Unique_Paths {
         let N = n + m - 2
         let k = min(m - 1, n - 1)
         var res = 1
-        for var i = 1; i <= k; i++ {
+        for i in 1 ... k {
             res = res * (N - k + i) / i;
         }
         return res;

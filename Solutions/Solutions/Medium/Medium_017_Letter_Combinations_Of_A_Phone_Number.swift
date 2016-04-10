@@ -53,7 +53,7 @@ struct Medium_017_Letter_Combinations_Of_A_Phone_Number {
     static func letterCombinations(digits: String) -> [String] {
         var ans: [String] = []
         ans.append("")
-        for var i = 0; i < digits.characters.count; i++ {
+        for i in 0 ..< digits.characters.count {
             let intValue: Int = Int(String(digits[i]))!
             while ans.first?.characters.count == i {
                 let tmp: String = ans.removeFirst()
