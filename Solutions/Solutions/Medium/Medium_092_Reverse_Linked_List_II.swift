@@ -39,12 +39,12 @@ class Medium_092_Reverse_Linked_List_II {
         }
         let dummy: Node = Node(value: 0, next: head)
         var pre: Node? = dummy
-        for var i = 0; i < m - 1; i++ {
+        for _ in 0 ..< m-1 {
             pre = pre?.next
         }
         let start: Node? = pre?.next
         var then: Node? = start?.next
-        for var i = 0; i < n - m; i++ {
+        for _ in 0 ..< n-m {
             start?.next = then?.next
             then?.next = pre?.next
             pre?.next = then

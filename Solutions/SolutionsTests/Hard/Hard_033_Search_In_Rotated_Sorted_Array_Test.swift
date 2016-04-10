@@ -62,7 +62,8 @@ class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase {
         let expected: Int = 6
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [AnyObject], expected: Int) {
+    private func asyncHelper(input ipt: [AnyObject], expected: Int) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result: Int = Hard_033_Search_In_Rotated_Sorted_Array.search(nums: input[0] as! [Int], target: input[1] as! Int)

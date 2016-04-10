@@ -23,19 +23,19 @@ struct Medium_073_Set_Matrix_Zeroes {
         var col0 = 1
         let rows = matrix.count
         let cols = matrix[0].count
-        for var i = 0; i < rows; i++ {
+        for i in 0 ..< rows {
             if matrix[i][0] == 0 {
                 col0 = 0
             }
-            for var j = 1; j < cols; j++ {
+            for j in 1 ..< cols {
                 if matrix[i][j] == 0 {
                     matrix[i][0] = 0
                     matrix[0][j] = 0
                 }
             }
         }
-        for var i = rows - 1; i >= 0; i-- {
-            for var j = cols - 1; j >= 1; j-- {
+        for i in (0...rows-1).reverse() {
+            for j in (1...cols-1).reverse() {
                 if matrix[i][0] == 0 || matrix[0][j] == 0 {
                     matrix[i][j] = 0
                 }

@@ -55,7 +55,8 @@ class Medium_073_Set_Matrix_Zeroes_Test: XCTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input input: [[Int]], expected: [[Int]]) {
+    private func asyncHelper(input ipt: [[Int]], expected: [[Int]]) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_073_Set_Matrix_Zeroes_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             Medium_073_Set_Matrix_Zeroes.setZeros(&input)

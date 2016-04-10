@@ -62,7 +62,8 @@ class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase {
         return dummy.next!
     }
 
-    private func helper2(var node: Node?) -> [Int] {
+    private func helper2(n: Node?) -> [Int] {
+        var node = n
         var res: [Int] = []
         while node != nil {
             res.append(node!.value)

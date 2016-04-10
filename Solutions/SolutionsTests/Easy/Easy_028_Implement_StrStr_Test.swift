@@ -72,7 +72,8 @@ class Easy_028_Implement_StrStr_Test: XCTestCase {
         let expected: Int = -1
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(var input  input: [Any?], expected: Int) {
+    private func asyncHelper(input ipt: [Any?], expected: Int) {
+        var input = ipt
         weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_028_Implement_StrStr_Test.TimeOutName)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)

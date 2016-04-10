@@ -28,10 +28,10 @@ struct Hard_045_Jump_Game_II {
         var result = 0;
         var last = 0;
         var curr = 0;
-        for var i = 0; i < nums.count; i++ {
+        for i in 0 ..< nums.count{
             if (i > last) {
                 last = curr;
-                result++;
+                result += 1;
             }
             curr = max(curr, i+nums[i]);
         }

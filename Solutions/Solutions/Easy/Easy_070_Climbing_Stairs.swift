@@ -24,7 +24,7 @@ struct Easy_070_Climbing_Stairs {
         var stepOne = 1
         var stepTwo = 1
         var result = 0
-        for var i = 2; i <= n; i++ {
+        for _ in 2...n {
             result = stepOne + stepTwo
             stepTwo = stepOne
             stepOne = result
