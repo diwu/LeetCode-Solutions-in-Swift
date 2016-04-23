@@ -27,8 +27,10 @@ class Easy_028_Implement_StrStr {
         if hayStack == nil || needle == nil {
             return -1
         }
-        for var i = 0; ; i++ {
-            for var j = 0; ; j++ {
+        var i = 0
+        var j = 0
+        while true {
+            while true {
                 if j >= (needle!).characters.count {
                     return i
                 }
@@ -38,7 +40,9 @@ class Easy_028_Implement_StrStr {
                 if hayStack![i+j] != needle![j] {
                     break
                 }
+                j += 1
             }
+            i += 1
         }
     }
     class func strStr_KMP(hayStack  hayStack: String?, needle: String?) -> Int {
@@ -53,10 +57,13 @@ class Easy_028_Implement_StrStr {
         }
         var arr: [Character] = Array((needle!).characters)
         var next: [Int] = makeNext(arr)
-        for var i = 0, j = 0, end = (hayStack!).characters.count; i < end; {
+        var i = 0
+        var j = 0
+        let end = (hayStack!).characters.count
+        while i < end {
             if j == -1 || hayStack![i] == arr[j] {
-                j++;
-                i++;
+                j += 1
+                i += 1
                 if j == arr.count {
                     return i - arr.count
                 }
@@ -69,14 +76,17 @@ class Easy_028_Implement_StrStr {
     }
     class func makeNext(arr: [Character]) -> [Int] {
         var next: [Int] = [Int](count: arr.count, repeatedValue: -1)
-        for var i = 0, j = -1; i + 1 < arr.count; {
+        var i = 0
+        var j = -1
+        
+        while i + 1 < arr.count {
             if j == -1 || arr[i] == arr[j] {
                 next[i+1] = j+1
                 if arr[i+1] == arr[j+1] {
                     next[i+1] = next[j+1]
                 }
-                i++
-                j++
+                i += 1
+                j += 1
             }
             if arr[i] != arr[j] {
                 j = next[j]
