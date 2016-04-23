@@ -55,7 +55,7 @@ struct Hard_065_Valid_Number {
             "8": 8,
             "9": 9,
         ]
-        for var i = 0; i < s.characters.count; i++ {
+        for i in 0 ..< s.characters.count {
             if digits[s[i]] != nil {
                 flag = 1
                 if state <= 2 {
@@ -65,7 +65,7 @@ struct Hard_065_Valid_Number {
                 }
             } else if s[i] == "+" || s[i] == "-" {
                 if state == 0 || state == 3 {
-                    state++
+                    state += 1
                 } else {
                     return false
                 }

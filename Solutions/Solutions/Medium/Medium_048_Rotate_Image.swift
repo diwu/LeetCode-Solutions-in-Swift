@@ -21,14 +21,14 @@ import Foundation
 
 struct Medium_048_Rotate_Image {
     private static func reverseInPlace<T>(inout nums  nums: [T]) {
-        for var i = 0; i < nums.count/2; i++ {
+        for i in 0 ..< nums.count/2 {
             swap(&nums[i], &nums[nums.count-1-i])
         }
     }
     static func rotate(inout matrix: [[Int]]) {
         reverseInPlace(nums: &matrix)
-        for var i = 0; i < matrix.count; i++ {
-            for var j = i + 1; j < matrix[i].count; j++ {
+        for i in 0 ..< matrix.count {
+            for j in i + 1 ..< matrix[i].count {
                 swap(&matrix[i][j], &matrix[j][i]);
             }
         }

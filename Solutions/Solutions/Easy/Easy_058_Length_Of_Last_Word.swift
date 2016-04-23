@@ -33,11 +33,12 @@ struct Easy_058_Length_Of_Last_Word {
         var len = 0
         var i = 0
         while i < s.characters.count {
-            if s[i++] != " " {
-                len++
-            } else if i < s.characters.count && s[i] != " "  {
+            if s[i] != " " {
+                len += 1
+            } else if i + 1 < s.characters.count && s[i+1] != " "  {
                 len = 0
             }
+            i += 1
         }
         return len
     }
