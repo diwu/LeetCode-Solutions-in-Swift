@@ -45,7 +45,7 @@ class Medium_095_Unique_Binary_Search_Trees_II {
         }
         var left: [Node?] = []
         var right: [Node?] = []
-        for var i = start; i <= end; i++ {
+        for i in start ... end {
             left = genTrees(start: start, end: i - 1)
             right = genTrees(start: i + 1, end: end)
             for left_node in left {

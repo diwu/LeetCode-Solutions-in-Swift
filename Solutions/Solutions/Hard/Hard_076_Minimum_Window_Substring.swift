@@ -38,7 +38,7 @@ struct Hard_076_Minimum_Window_Substring {
         var count = t.characters.count
         var charCountDict: Dictionary<Character, Int> = Dictionary()
         var charFlagDict: Dictionary<Character, Bool> = Dictionary()
-        for var ii = 0; ii < count; ii++ {
+        for ii in 0 ..< count {
             if let charCount = charCountDict[t[ii]] {
                 charCountDict[t[ii]] = charCount + 1
             } else {
@@ -52,7 +52,7 @@ struct Hard_076_Minimum_Window_Substring {
         var minIdx = 0
         while i < s.characters.count && j < s.characters.count {
             if count > 0 {
-                i++
+                i += 1
                 if i == s.characters.count {
                     continue
                 }
@@ -62,7 +62,7 @@ struct Hard_076_Minimum_Window_Substring {
                     charCountDict[s[i]] = -1
                 }
                 if charFlagDict[s[i]] == true && charCountDict[s[i]] >= 0 {
-                    count--
+                    count -= 1
                 }
             } else {
                 if minLen > i - j + 1 {
@@ -75,15 +75,15 @@ struct Hard_076_Minimum_Window_Substring {
                     charCountDict[s[j]] = 1
                 }
                 if charFlagDict[s[j]] == true && charCountDict[s[j]] > 0 {
-                    count++
+                    count += 1
                 }
-                j++
+                j += 1
             }
         }
         if minLen == Int.max {
             return ""
         }
-        let range = Range<String.Index>(start: s.startIndex.advancedBy(minIdx), end: s.startIndex.advancedBy(minIdx + minLen))
+        let range = s.startIndex.advancedBy(minIdx) ..< s.startIndex.advancedBy(minIdx + minLen)
         return s.substringWithRange(range)
     }
 }

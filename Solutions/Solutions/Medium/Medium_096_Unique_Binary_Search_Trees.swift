@@ -29,9 +29,11 @@ class Medium_096_Unique_Binary_Search_Trees {
         var ret: [Int] = Array<Int>(count: n+1, repeatedValue: 0)
         ret[0] = 1
         ret[1] = 1
-        for var i = 2; i <= n; i++ {
-            for var j = 0; j < i; j++ {
-                ret[i] += ret[j] * ret[i-1-j]
+        if 2 <= n {
+            for i in 2 ... n {
+                for j in 0 ..< i {
+                    ret[i] += ret[j] * ret[i-1-j]
+                }
             }
         }
         return ret[n]

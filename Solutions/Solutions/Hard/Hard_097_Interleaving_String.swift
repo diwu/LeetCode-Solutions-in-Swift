@@ -35,8 +35,8 @@ struct Hard_097_Interleaving_String {
             return false
         }
         var dp: [[Bool]] = Array<Array<Bool>>(count: s1.characters.count+1, repeatedValue: Array<Bool>(count: s2.characters.count+1, repeatedValue: false))
-        for var i = 0; i < s1.characters.count + 1; i++ {
-            for var j = 0; j < s2.characters.count + 1; j++ {
+        for i in 0 ..< s1.characters.count + 1{
+            for j in 0 ..< s2.characters.count + 1{
                 if i == 0 && j == 0 {
                     dp[0][0] = true
                 } else if i == 0 {
