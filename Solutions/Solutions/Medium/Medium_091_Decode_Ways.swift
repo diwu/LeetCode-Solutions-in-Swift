@@ -43,7 +43,7 @@ struct Medium_091_Decode_Ways {
         var memo: [Int] = Array<Int>(count: n+1, repeatedValue: 0)
         memo[n] = 1
         memo[n-1] = s[n-1] != "0" ? 1 : 0
-        for var i = n-2; i >= 0; i-- {
+        for i in (0 ... n-2).reverse() {
             if s[i] == "0" {
                 continue
             } else {

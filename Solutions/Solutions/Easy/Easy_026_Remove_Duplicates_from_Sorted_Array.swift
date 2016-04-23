@@ -29,9 +29,10 @@ class Easy_026_Remove_Duplicates_from_Sorted_Array {
         }
         var index: Int = 1
         let n: Int = arr.count
-        for var i: Int = 1; i < n; i++ {
+        for i in 1 ..< n {
             if arr[i] != arr[i-1] {
-                arr[index++] = arr[i]
+                arr[index] = arr[i]
+                index += 1
             }
         }
         return index

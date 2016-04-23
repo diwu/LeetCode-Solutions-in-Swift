@@ -40,7 +40,7 @@ struct Medium_081_Search_In_Rotated_Sorted_Array_II {
                     r = m - 1
                 }
             } else {
-                l++
+                l += 1
             }
         }
         return false

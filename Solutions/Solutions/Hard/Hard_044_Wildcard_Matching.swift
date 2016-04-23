@@ -45,22 +45,22 @@ struct Hard_044_Wildcard_Matching {
         var startIndex = -1
         while sIndex < s.characters.count {
             if pIndex < p.characters.count && (p[pIndex] == "?" || s[sIndex] == p[pIndex]) {
-                sIndex++
-                pIndex++
+                sIndex += 1
+                pIndex += 1
             } else if pIndex < p.characters.count && p[pIndex] == "*" {
                 startIndex = pIndex
                 match = sIndex
-                pIndex++
+                pIndex += 1
             } else if startIndex != -1 {
                 pIndex = startIndex + 1
-                match++
+                match += 1
                 sIndex = match
             } else {
                 return false
             }
         }
         while pIndex < p.characters.count && p[pIndex] == "*" {
-            pIndex++
+            pIndex += 1
         }
         return pIndex == p.characters.count
     }

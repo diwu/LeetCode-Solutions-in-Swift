@@ -54,8 +54,10 @@ struct Easy_067_Add_Binary {
             9: "9",
         ]
         while i >= 0 || j >= 0 || c == 1 {
-            c += i >= 0 ? characterDict[a[i--]]! : 0
-            c += j >= 0 ? characterDict[b[j--]]! : 0
+            c += i >= 0 ? characterDict[a[i]]! : 0
+            i -= 1
+            c += j >= 0 ? characterDict[b[j]]! : 0
+            j -= 1
             s = intDict[c%2]! + s
             c /= 2
         }

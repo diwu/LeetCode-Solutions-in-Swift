@@ -31,13 +31,14 @@ class Medium_015_3Sum {
             var sorted: [Int] = num.sort {$0 < $1}
             var twoSum: Int
             let size: Int = sorted.count
-            for var i = 0; i <  size - 2; {
+            var i = 0
+            while i < size - 2 {
                 var l: Int = i + 1
                 var r: Int = size - 1
                 twoSum = 0 - sorted[i]
                 while l < r {
                     if sorted[l] + sorted[r] < twoSum {
-                        l++
+                        l += 1
                     } else if sorted[l] + sorted[r] == twoSum {
                         var three: [Int] = []
                         three.append(sorted[i])
@@ -45,17 +46,17 @@ class Medium_015_3Sum {
                         three.append(sorted[r])
                         res.append(three)
                         repeat {
-                            l++
+                            l += 1
                         } while l < r && sorted[l-1] == sorted[l]
                         repeat {
-                            r--
+                            r -= 1
                         } while l < r && sorted[r+1] == sorted[r]
                     } else {
-                        r--
+                        r -= 1
                     }
                 }
                 repeat {
-                    i++
+                    i += 1
                 } while i < size - 1 && sorted[i-1] == sorted[i]
             }
             return res

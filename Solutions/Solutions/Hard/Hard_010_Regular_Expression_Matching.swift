@@ -57,14 +57,14 @@ class Hard_010_Regular_Expression_Matching {
         let n: Int = p.characters.count
         var f: [[Bool]] = Array<Array<Bool>>(count: m + 1, repeatedValue: Array<Bool>(count: n + 1, repeatedValue: false))
         f[0][0] = true
-        for var i = 1; i <= m; i++ {
+        for i in 1 ... m {
             f[i][0] = false
         }
-        for var i = 1; i <= n; i++ {
+        for i in 1 ... n {
             f[0][i] = i > 1 && "*" == p[i-1] && f[0][i-2]
         }
-        for var i = 1; i <= m; i++ {
-            for var j = 1; j <= n; j++ {
+        for i in 1 ... m {
+            for j in 1 ... n {
                 if p[j-1] != "*" {
                     f[i][j] = f[i - 1][j - 1] && (s[i - 1] == p[j - 1] || "." == p[j - 1])
                 } else {

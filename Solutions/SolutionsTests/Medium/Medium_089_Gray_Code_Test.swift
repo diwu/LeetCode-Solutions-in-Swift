@@ -30,12 +30,12 @@ class Medium_089_Gray_Code_Test: XCTestCase {
     }
     func twoNumberSatisfyGrayCodeRule(a a: Int, b: Int, N: Int) -> Bool {
         var counter: Int = 0
-        for var i = 0; i < N; i++ {
+        for i in 0 ..< N {
             let tmp: Int = 1 << i
             let x: Int = a & tmp
             let y: Int = b & tmp
             if x != y {
-                counter++
+                counter += 1
             }
         }
         if counter == 1 {
@@ -57,7 +57,7 @@ class Medium_089_Gray_Code_Test: XCTestCase {
                     assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: result, expectedValue: [])
                 }
                 var prev: Int = result.last!
-                for var i = 0; i < result.count; i++ {
+                for i in 0 ..< result.count {
                     var next: Int = 0
                     if i == result.count - 1 {
                         next = result.first!

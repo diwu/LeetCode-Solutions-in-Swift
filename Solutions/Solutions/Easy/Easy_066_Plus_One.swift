@@ -19,11 +19,11 @@ import Foundation
 struct Easy_066_Plus_One {
     static func plusOne(inout digits: [Int]) {
         let n = digits.count
-        for var i = n - 1; i >= 0; i-- {
+        for i in (0 ... n-1).reverse() {
             if digits[i] == 9 {
                 digits[i] = 0
             } else {
-                digits[i]++
+                digits[i] += 1
                 return
             }
         }

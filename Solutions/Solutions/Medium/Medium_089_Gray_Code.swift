@@ -34,9 +34,9 @@ struct Medium_089_Gray_Code {
     static func grayCode(n: Int) -> [Int] {
         var arr: [Int] = []
         arr.append(0)
-        for var i = 0; i < n; i++ {
+        for i in 0 ..< n {
             let tmp = 1 << i
-            for var j = arr.count - 1; j >= 0; j-- {
+            for j in (0 ... arr.count - 1).reverse() {
                 arr.append(arr[j] + tmp)
             }
         }

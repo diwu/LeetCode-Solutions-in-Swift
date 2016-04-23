@@ -36,9 +36,9 @@ class Hard_051_N_Queens_Test: XCTestCase {
             if result.count != expected.count {
                 assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             } else {
-                for var i = 0; i < expected.count; i++ {
+                for i in 0 ..< expected.count {
                     var flag = false
-                    for var j = 0; j < result.count; j++ {
+                    for j in 0 ..< result.count {
                         if result[j] == expected[i] {
                             flag = true
                         }

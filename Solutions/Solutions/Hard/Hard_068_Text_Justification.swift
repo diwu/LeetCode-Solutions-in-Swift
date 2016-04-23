@@ -41,12 +41,18 @@ import Foundation
 struct Hard_068_Text_Justification {
     static func fullJustify(words: [String], maxWidth: Int) -> [String] {
         var res: [String] = []
-        for var i = 0, k: Int, l: Int; i < words.count; i += k {
-            for k = 0, l = 0; i + k < words.count && l + words[i+k].characters.count <= maxWidth - k; k++ {
+        var i = 0
+        var k: Int
+        var l: Int
+        while i < words.count {
+            k = 0
+            l = 0
+            while i + k < words.count && l + words[i+k].characters.count <= maxWidth - k {
                 l += words[i+k].characters.count
+                k += 1
             }
             var tmp = words[i]
-            for var j = 0; j < k - 1; j++ {
+            for j in 0 ..< k-1 {
                 if i + k >= words.count {
                     tmp += " "
                 } else {
@@ -60,6 +66,7 @@ struct Hard_068_Text_Justification {
             let charArr: [Character] = Array(count: charArrLen, repeatedValue: " ")
             tmp += String(charArr)
             res.append(tmp)
+            i += k
         }
         return res
     }
