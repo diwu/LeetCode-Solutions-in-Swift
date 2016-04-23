@@ -34,7 +34,7 @@ class Hard_032_Longest_Valid_Parentheses {
         }
         var currentMax: Int = 0
         var longest: [Int] = Array<Int>(count: (s!).characters.count, repeatedValue: 0)
-        for var i = 1; i < (s!).characters.count; i++ {
+        for i in 1 ..< (s!).characters.count {
             let tmp: Int = i - longest[i-1] - 1
             if s![i] == ")" && tmp >= 0 && s![tmp] == "(" {
                 longest[i] = longest[i-1] + 2 + ((tmp - 1 >= 0) ? longest[tmp-1] : 0)

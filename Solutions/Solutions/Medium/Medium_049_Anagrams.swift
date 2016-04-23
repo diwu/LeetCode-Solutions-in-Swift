@@ -21,7 +21,7 @@ struct Medium_049_Anagrams {
         var result: [String] = []
         var sortedStrings = strings;
         var map = [String: [Int]]()
-        for var i = 0; i < strings.count; i++ {
+        for i in 0 ..< strings.count {
             var arr: [Character] = Array(sortedStrings[i].characters)
             arr.sortInPlace {$0 < $1}
             sortedStrings[i] = String(arr)
@@ -33,7 +33,7 @@ struct Medium_049_Anagrams {
         }
         for (_, intArr) in map {
             if intArr.count > 1 {
-                for var i = 0; i < intArr.count; i++ {
+                for i in 0 ..< intArr.count {
                     result.append(strings[intArr[i]])
                 }
             }

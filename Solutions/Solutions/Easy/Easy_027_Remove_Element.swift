@@ -19,9 +19,10 @@ import Foundation
 class Easy_027_Remove_Element {
     class func removeElement(inout arr  arr: [Int], elem: Int) -> Int {
         var begin: Int = 0
-        for var i = 0; i < arr.count; i++ {
+        for i in 0 ..< arr.count {
             if arr[i] != elem {
-                arr[begin++] = arr[i]
+                arr[begin] = arr[i]
+                begin += 1
             }
         }
         return begin

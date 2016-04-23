@@ -28,7 +28,7 @@ class Medium_031_Next_Permutation {
         if start > end {
             return
         }
-        for var i = start; i < (start + end)/2; i++ {
+        for i in start ..< (start + end)/2 {
             swap(&nums[i], &nums[start + end - i])
         }
     }
@@ -42,7 +42,7 @@ class Medium_031_Next_Permutation {
             if nums[index - 1] < nums[index] {
                 break
             }
-            index--
+            index -= 1
         }
         if index == 0 {
             reverseInPlace(nums: &nums, start: 0, end: length - 1)
@@ -53,7 +53,7 @@ class Medium_031_Next_Permutation {
                 if nums[i] > value {
                     break
                 }
-                i--
+                i -= 1
             }
             swap(&nums[i], &nums[index-1])
             reverseInPlace(nums: &nums, start: index, end: length - 1)

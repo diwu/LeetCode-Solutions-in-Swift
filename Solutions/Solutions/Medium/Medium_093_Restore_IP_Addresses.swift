@@ -30,9 +30,9 @@ struct Medium_093_Restore_IP_Addresses {
     static func restoreIpAddresses(s: String) -> [String] {
         var res = Array<String>()
         let len: Int = s.characters.count
-        for var i = 1; i < 4 && i < len - 2; i++ {
-            for var j = i + 1; j < i + 4 && j < len - 1; j++ {
-                for var k = j + 1; k < j + 4 && k < len; k++ {
+        for i in 1 ..< min(4, len - 2) {
+            for j in i + 1 ..< min(i+4, len-1) {
+                for k in j + 1 ..< min(j + 4, len) {
                     let s0: String = s[0..<i]
                     let s1: String = s[i..<j]
                     let s2: String = s[j..<k]
