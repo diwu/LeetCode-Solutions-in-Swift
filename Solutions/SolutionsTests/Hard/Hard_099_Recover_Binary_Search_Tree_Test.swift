@@ -37,7 +37,8 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
     private func convertArrayToTree_swift(arr: [Int]) -> Node_Swift {
         let root: Node_Swift = Node_Swift.init(value: arr[0], left: nil, right: nil)
         var fifoQueue: [Node_Swift] = [root]
-        for var i = 1; i < arr.count; i += 2 {
+        var i = 1
+        while i < arr.count {
             let node: Node_Swift = fifoQueue.removeFirst()
             if arr[i] == Int.min {
                 node.left = nil
@@ -51,6 +52,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
                 node.right = Node_Swift.init(value: arr[i+1], left: nil, right: nil)
                 fifoQueue.append(node.right!)
             }
+            i += 2
         }
         return root
     }
@@ -77,7 +79,8 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
     private func convertArrayToTree_objc(arr: [Int]) -> Node_ObjC {
         let root: Node_ObjC = Node_ObjC.init(value: arr[0], left: nil, right: nil)
         var fifoQueue: [Node_ObjC] = [root]
-        for var i = 1; i < arr.count; i += 2 {
+        var i = 1
+        while i < arr.count {
             let node: Node_ObjC = fifoQueue.removeFirst()
             if arr[i] == Int.min {
                 node.left = nil
@@ -91,6 +94,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
                 node.right = Node_ObjC.init(value: arr[i+1], left: nil, right: nil)
                 fifoQueue.append(node.right!)
             }
+            i += 2 
         }
         return root
     }

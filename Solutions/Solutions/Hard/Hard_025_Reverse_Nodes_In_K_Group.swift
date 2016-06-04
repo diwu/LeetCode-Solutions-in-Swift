@@ -49,7 +49,7 @@ class Hard_025_Reverse_Nodes_In_K_Group {
             var pilot: Node? = prev?.next
             var remaining: Int = k
             while pilot != nil && remaining > 0 {
-                remaining--
+                remaining -= 1
                 pilot = pilot?.next
             }
             if remaining > 0 {
