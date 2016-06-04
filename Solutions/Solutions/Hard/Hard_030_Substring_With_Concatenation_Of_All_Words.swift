@@ -38,7 +38,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
         let stringLength: Int = (s!).characters.count
         let wordsListSize: Int = words.count
         let wordLength: Int = words[0].characters.count
-        for var i = 0; i < wordsListSize; i++ {
+        for i in 0 ..< wordsListSize {
             if dict1[words[i]] == nil {
                 dict1[words[i]] = 1
             } else {
@@ -49,10 +49,11 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
         var s2: String
         var counter1: Int
         var counter2: Int
-        for var i = 0; i < wordLength; i++ {
+        for i in 0 ..< wordLength {
             counter1 = 0
             counter2 = i
-            for var j = i; j < stringLength; j += wordLength {
+            var j = i;
+            while j < stringLength {
                 s1 = s![j..<j+wordLength]
                 if dict1[s1] == nil {
                     dict2.removeAll(keepCapacity: false)
@@ -64,12 +65,12 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
                     } else {
                         dict2[s1]! += 1
                     }
-                    counter1++
+                    counter1 += 1
                 } else {
                     s2 = s![counter2..<counter2+wordLength]
                     while s2 != s1 {
-                        dict2[s2]!--
-                        counter1--
+                        dict2[s2]! -= 1
+                        counter1 -= 1
                         counter2 += wordLength
                         s2 = s![counter2..<counter2+wordLength]
                     }
@@ -78,10 +79,11 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
                 if counter1 == wordsListSize {
                     result.append(counter2)
                     s2 = s![counter2..<counter2+wordLength]
-                    dict2[s2]!--
-                    counter1--
+                    dict2[s2]! -= 1
+                    counter1 -= 1
                     counter2 += wordLength
                 }
+                j += wordLength
             }
             dict2.removeAll(keepCapacity: false)
         }
