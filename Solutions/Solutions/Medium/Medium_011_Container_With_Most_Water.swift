@@ -25,9 +25,9 @@ class Medium_011_Container_With_Most_Water {
             mx = max(mx, (j-i) * min(heightsArray[i], heightsArray[j]))
 
             if heightsArray[i] < heightsArray[j] {
-                i++
+                i += 1
             } else {
-                j--
+                j -= 1
             }
         }
         return mx

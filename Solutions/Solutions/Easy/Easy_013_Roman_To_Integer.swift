@@ -26,7 +26,7 @@ class Easy_013_Roman_To_Integer {
     class func romanToInt(s  s: String) -> Int {
         var result: Int = 0
         let length: Int = s.characters.count
-        for var i = length-1; i >= 0; i-- {
+        for i in (0...length-1).reverse() {
             let c: Character = s[i]
             switch c {
             case "I":

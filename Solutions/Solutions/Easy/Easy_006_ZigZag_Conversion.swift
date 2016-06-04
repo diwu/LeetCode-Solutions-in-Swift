@@ -37,11 +37,17 @@ class Easy_006_ZigZag_Conversion {
         var arr = Array<String>(count: nRows, repeatedValue: String())
         var i = 0, len = s.characters.count
         while i < len {
-            for var index = 0; index < nRows && i < len; index++ {
-                arr[index].append(s[i++])
+            var index = 0
+            while index < nRows && i < len {
+                arr[index].append(s[i])
+                i += 1
+                index += 1
             }
-            for var index = nRows - 2; index > 0 && i < len; index-- {
-                arr[index].append(s[i++])
+            index = nRows - 2
+            while index > 0 && i < len {
+                arr[index].append(s[i])
+                i += 1
+                index -= 1
             }
         }
         var res = String()

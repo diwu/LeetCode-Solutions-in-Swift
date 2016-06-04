@@ -50,7 +50,7 @@ class Medium_002_Add_Two_Numbers_Test: XCTestCase {
             if let n = result {
                 numericalValue += n.value * Int(pow(Double(10), Double(base)))
                 result = result?.next
-                base++
+                base += 1
             }
         }
 
@@ -97,7 +97,7 @@ class Medium_002_Add_Two_Numbers_Test: XCTestCase {
             if let n = result {
                 numericalValue += n.value * Int(pow(Double(10), Double(base)))
                 result = result?.next
-                base++
+                base += 1
             }
         }
         

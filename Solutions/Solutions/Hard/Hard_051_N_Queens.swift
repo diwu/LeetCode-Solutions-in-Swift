@@ -45,12 +45,16 @@ struct Hard_051_N_Queens {
             return
         }
         let mask = l | m | r
-        for var i = 0, b = 1; i < n; i++, b <<= 1 {
+        var i = 0
+        var b = 1
+        while i < n {
             if mask & b == 0 {
                 answer.append(getNq(index: i, n: n))
                 nQueens(n: n, p: p+1, l: (l | b) >> 1, m: m | b, r: (r | b) << 1, answer: &answer, result: &result)
                 answer.removeLast()
             }
+            i += 1
+            b <<= 1
         }
     }
     static func solveNQueens(n: Int) -> [[String]] {

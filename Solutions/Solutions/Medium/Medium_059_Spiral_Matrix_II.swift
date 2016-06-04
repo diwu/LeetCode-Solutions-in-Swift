@@ -32,21 +32,29 @@ struct Medium_059_Spiral_Matrix_II {
         while k <= n * n {
             var j = i
             while j < n - i {
-                res[i][j++] = k++
+                res[i][j] = k
+                j += 1
+                k += 1
             }
             j = i + 1
             while j < n - i {
-                res[j++][n-i-1] = k++
+                res[j][n-i-1] = k
+                j += 1
+                k += 1
             }
             j = n - i - 2
             while j > i {
-                res[n-i-1][j--] = k++
+                res[n-i-1][j] = k
+                j -= 1
+                k += 1
             }
             j = n - i - 1
             while j > i {
-                res[j--][i] = k++
+                res[j][i] = k
+                j -= 1
+                k += 1
             }
-            i++
+            i += 1
         }
         return res
     }

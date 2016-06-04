@@ -17,7 +17,7 @@ import Foundation
 struct Hard_052_N_Queens_II {
     private static func dfs(h  h: Int, r: Int, l: Int, inout answer: Int, inout limit: Int) {
         if h == limit {
-            answer++
+            answer += 1
             return
         }
         var position = limit & (~(h|r|l))

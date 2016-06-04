@@ -25,17 +25,17 @@ struct Hard_085_Maximal_Rectangle {
         var right: [Int] = [Int](count: n, repeatedValue: n)
         var height: [Int] = [Int](count: n, repeatedValue: 0)
         var maxArea: Int = 0
-        for var i = 0; i < m; i++ {
+        for i in 0 ..< m {
             var curr_left = 0
             var curr_right = n
-            for var j = 0; j < n; j++ {
+            for j in 0 ..< n {
                 if matrix[i][j] == "1" {
                     height[j] = height[j] + 1
                 } else {
                     height[j] = 0
                 }
             }
-            for var j = 0; j < n; j++ {
+            for j in 0 ..< n {
                 if matrix[i][j] == "1" {
                     left[j] = max(left[j], curr_left)
                 } else {
@@ -43,15 +43,17 @@ struct Hard_085_Maximal_Rectangle {
                     curr_left = j + 1
                 }
             }
-            for var j = n - 1; j >= 0; j-- {
-                if matrix[i][j] == "1" {
-                    right[j] = min(right[j], curr_right)
-                } else {
-                    right[j] = n
-                    curr_right = j
+            if n >= 1 {
+                for j in (0...n-1).reverse() {
+                    if matrix[i][j] == "1" {
+                        right[j] = min(right[j], curr_right)
+                    } else {
+                        right[j] = n
+                        curr_right = j
+                    }
                 }
             }
-            for var j = 0; j < n; j++ {
+            for j in 0 ..< n {
                 maxArea = max(maxArea, (right[j] - left[j]) * height[j])
             }
         }

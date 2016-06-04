@@ -35,11 +35,13 @@ class Medium_061_Rotate_List {
         dummy.next = head
         var fast: Node? = dummy
         var slow: Node? = dummy
-        var i: Int
-        for i = 0; fast?.next != nil; i++ {
+        var i = 0
+        while fast?.next != nil {
             fast = fast?.next
+            i += 1
         }
-        for var j = i - k % i; j > 0; j-- {
+        let count = i - k % i
+        for _ in (1 ... count).reverse() {
             slow = slow?.next
         }
         fast?.next = dummy.next

@@ -72,7 +72,8 @@ struct Hard_087_Scramble_String {
         if (s1?.characters.sort())! != (s2?.characters.sort())! {
             return false
         }
-        for var i = 1; i < s1?.characters.count; i++ {
+        let count: Int = (s1?.characters.count)!
+        for i in 1 ..< count {
             if isScramble_recursion(s1: s1![0..<i], s2: s2![0..<i]) && isScramble_recursion(s1: s1![i..<Int.max], s2: s2![i..<Int.max]) {
                 return true
             }
@@ -88,14 +89,16 @@ struct Hard_087_Scramble_String {
         }
         let len = s1?.characters.count
         var dp: Array<Array<Array<Bool>>> = Array<Array<Array<Bool>>>(count: 100, repeatedValue: Array<Array<Bool>>(count: 100, repeatedValue: Array<Bool>(count: 100, repeatedValue: false)))
-        for var i = len! - 1; i >= 0; i-- {
-            for var j = len! - 1; j >= 0; j-- {
+        for i in (0...len! - 1).reverse() {
+            for j in (0...len!-1).reverse() {
                 dp[i][j][1] = (s1![i] == s2![j])
-                for var l = 2; i + l <= len && j + l <= len; l++ {
-                    for var n = 1; n < l; n++ {
+                var l = 2
+                while i + l <= len && j + l <= len {
+                    for n in 1 ..< l {
                         dp[i][j][l] = dp[i][j][l] || ( dp[i][j][n] && dp[i+n][j+n][l-n] )
                         dp[i][j][l] = dp[i][j][l] || ( dp[i][j+l-n][n] && dp[i+n][j][l-n] )
                     }
+                    l += 1
                 }
             }
         }

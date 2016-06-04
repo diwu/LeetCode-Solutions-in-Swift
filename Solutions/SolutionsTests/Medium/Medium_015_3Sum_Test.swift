@@ -57,9 +57,9 @@ class Medium_015_3Sum_Test: XCTestCase {
         if result.count != expected.count {
             assertHelper(false, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
         } else {
-            for var i = 0; i < expected.count; i++ {
+            for i in 0 ..< expected.count {
                 var flag: Bool = false
-                for var j = 0; j < result.count; j++ {
+                for j in 0 ..< result.count {
                     if result[j][0] == expected[i][0] && result[j][1] == expected[i][1] && result[j][2] == expected[i][2] {
                         flag = true
                         break

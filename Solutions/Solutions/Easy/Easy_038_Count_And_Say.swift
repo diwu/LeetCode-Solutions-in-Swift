@@ -31,18 +31,18 @@ private extension String {
 class Easy_038_Count_And_Say {
     class func countAndSay(n: Int) -> String {
         var result: String = "1"
-        for var i = 0; i < n; i++ {
+        for _ in 0 ..< n {
             let previous: String = result
             result = ""
             var counter = 1
             var say: Character = previous[0]
-            for var j = 1; j < previous.characters.count; j++ {
+            for j in 1 ..< previous.characters.count {
                 if previous[j] != say {
                     result = "\(result)\(counter)\(say)"
                     counter = 1
                     say = previous[j]
                 } else {
-                    counter++
+                    counter += 1
                 }
             }
             result = "\(result)\(counter)\(say)"

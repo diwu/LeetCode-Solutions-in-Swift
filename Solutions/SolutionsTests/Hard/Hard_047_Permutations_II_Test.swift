@@ -39,9 +39,9 @@ class Hard_047_Permutations_II_Test: XCTestCase {
             if result.count != expected.count {
                 assertHelper(false, problemName: Hard_047_Permutations_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             } else {
-                for var i = 0; i < expected.count; i++ {
+                for i in 0 ..< expected.count {
                     var flag = false
-                    for var j = 0; j < result.count; j++ {
+                    for j in 0 ..< result.count {
                         if expected[i] == result[j] {
                             flag = true
                             break

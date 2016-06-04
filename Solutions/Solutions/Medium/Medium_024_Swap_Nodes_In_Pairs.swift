@@ -36,8 +36,10 @@ class Medium_024_Swap_Nodes_In_Pairs {
     class func swapPairs(head: Node?) -> Node? {
         let dummy: Node = Node(value: 0, next: nil)
         dummy.next = head
-        for var curr: Node? = dummy; curr?.next != nil && curr?.next?.next != nil; curr = curr?.next?.next {
+        var curr: Node? = dummy
+        while curr?.next != nil && curr?.next?.next != nil {
             curr?.next = swap(next1: curr!.next!, next2: curr!.next!.next!)
+            curr = curr?.next?.next
         }
         return dummy.next
     }

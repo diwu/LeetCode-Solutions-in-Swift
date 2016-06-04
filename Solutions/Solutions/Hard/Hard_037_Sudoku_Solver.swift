@@ -21,7 +21,7 @@ import Foundation
 class Hard_037_Sudoku_Solver {
     class func validate(inout board  board: [[Character]], x: Int, y: Int) -> Bool {
         let c: Character = board[x][y]
-        for var i = 0; i < 9; i++ {
+        for i in 0 ..< 9 {
             if y != i && board[x][i] == c {
                 return false
             }
@@ -31,8 +31,8 @@ class Hard_037_Sudoku_Solver {
         }
         let xx: Int = x / 3 * 3
         let yy: Int = y / 3 * 3
-        for var i = xx; i < xx + 3; i++ {
-            for var j = yy; j < yy + 3; j++ {
+        for i in xx ..< xx + 3 {
+            for j in yy ..< yy + 3 {
                 if x != i && y != j && board[i][j] == c {
                     return false
                 }

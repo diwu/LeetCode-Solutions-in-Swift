@@ -32,12 +32,12 @@ struct Medium_003_Longest_Substring_Without_Repeating_Characters {
             for i in 1..<len {
                 if let lastPosition = hashMap[s[i]] {
                     if lastPosition < i - tmpMaxLen {
-                        tmpMaxLen++
+                        tmpMaxLen += 1
                     } else {
                         tmpMaxLen = i - lastPosition
                     }
                 } else {
-                    tmpMaxLen++
+                    tmpMaxLen += 1
                 }
                 hashMap[s[i]] = i
                 if tmpMaxLen > maxLen {
