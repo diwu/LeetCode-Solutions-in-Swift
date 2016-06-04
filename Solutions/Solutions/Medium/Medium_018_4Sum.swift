@@ -153,7 +153,7 @@ class Medium_018_4Sum {
         if arr.count <= 0 {
             return nil;
         } else {
-            for var i = arr.count - 1; i >= 0; i-- {
+            for i in (0...arr.count-1).reverse() {
                 if arr[i] < key {
                     return arr[i]
                 }
