@@ -16,11 +16,10 @@ private extension String {
     /*
      Ref: http://oleb.net/blog/2014/07/swift-strings/
      "Because of the way Swift strings are stored, the String type does not support random access to its Characters via an integer index — there is no direct equivalent to NSStringʼs characterAtIndex: method. Conceptually, a String can be seen as a doubly linked list of characters rather than an array."
+     
+     By creating and storing a seperate array of the same sequence of characters,
+     we could hopefully achieve amortized O(1) time for random access.
      */
-    // t = O(N)
-    subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
-    }
     func randomAccessCharactersArray() -> [Character] {
         return Array(self.characters)
     }
@@ -48,7 +47,7 @@ struct Medium_003_Longest_Substring_Without_Repeating_Characters {
                 } else {
                     tmpMaxLen += 1
                 }
-                hashMap[s[i]] = i
+                hashMap[charArr[i]] = i
                 if tmpMaxLen > maxLen {
                     maxLen = tmpMaxLen
                 }
