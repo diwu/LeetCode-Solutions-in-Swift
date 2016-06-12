@@ -22,41 +22,42 @@ struct Hard_004_Median_Of_Two_Sorted_Arrays {
             return findMedianSortedArrays(a: b, b: a)
         }
 
-        var i_min = 0
-        var i_max = m
-        while i_min <= i_max {
-            let i = (i_min + i_max) >> 1
-            let j = ((m + n + 1) >> 1) - i
+        var tmpMin = 0
+        var tmpMax = m
+        while tmpMin <= tmpMax {
+            let i = (tmpMin + tmpMax) / 2
+            let j = ((m + n + 1) / 2) - i
             if j > 0 && i < m && b[j-1] > a[i] {
-                i_min = i + 1
+                tmpMin = i + 1
             } else if i > 0 && j < n && a[i-1] > b[j] {
-                i_max = i - 1
+                tmpMax = i - 1
             } else {
-                var num1: Int
+                var firstNum: Int
                 if i == 0 {
-                    num1 = b[j-1]
+                    firstNum = b[j-1]
                 }
                 else if j == 0 {
-                    num1 = a[i-1]
+                    firstNum = a[i-1]
                 }
                 else {
-                    num1 = max(a[i-1], b[j-1])
+                    firstNum = max(a[i-1], b[j-1])
                 }
 
+                // if (m + n) is odd
                 if (m+n) & 1 != 0 {
-                    return Double(num1)
+                    return Double(firstNum)
                 }
 
-                var num2: Int
+                var secondNum: Int
                 if i == m {
-                    num2 = b[j]
+                    secondNum = b[j]
                 } else if j == n {
-                    num2 = a[i]
+                    secondNum = a[i]
                 } else {
-                    num2 = min(a[i], b[j])
+                    secondNum = min(a[i], b[j])
                 }
                 
-                return Double((num1 + num2))/2.0
+                return Double((firstNum + secondNum))/2.0
             }
         }
         return 0.0

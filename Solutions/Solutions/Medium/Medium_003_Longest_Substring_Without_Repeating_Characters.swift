@@ -13,24 +13,33 @@ Inspired by @heiyanbin at https://oj.leetcode.com/discuss/6168/my-o-n-solution
 */
 
 private extension String {
+    /*
+     Ref: http://oleb.net/blog/2014/07/swift-strings/
+     "Because of the way Swift strings are stored, the String type does not support random access to its Characters via an integer index — there is no direct equivalent to NSStringʼs characterAtIndex: method. Conceptually, a String can be seen as a doubly linked list of characters rather than an array."
+     */
+    // t = O(N)
     subscript (index: Int) -> Character {
         return self[self.startIndex.advancedBy(index)]
+    }
+    func randomAccessCharactersArray() -> [Character] {
+        return Array(self.characters)
     }
 }
 
 struct Medium_003_Longest_Substring_Without_Repeating_Characters {
     // t = O(N), s = O(1)
     static func longest(s: String) -> Int {
-        let len: Int = s.characters.count
-        if len < 2 {
+        let charArr = s.randomAccessCharactersArray()
+        let len = charArr.count
+        if len <= 1 {
             return len
         } else {
-            var tmpMaxLen: Int = 1
-            var maxLen: Int = 1
-            var hashMap: Dictionary<Character, Int> = Dictionary<Character, Int>()
-            hashMap[s[0]] = 0
+            var tmpMaxLen = 1
+            var maxLen = 1
+            var hashMap = Dictionary<Character, Int>()
+            hashMap[charArr[0]] = 0
             for i in 1..<len {
-                if let lastPosition = hashMap[s[i]] {
+                if let lastPosition = hashMap[charArr[i]] {
                     if lastPosition < i - tmpMaxLen {
                         tmpMaxLen += 1
                     } else {
