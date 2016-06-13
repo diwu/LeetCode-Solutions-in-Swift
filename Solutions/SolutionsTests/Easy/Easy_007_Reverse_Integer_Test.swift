@@ -42,12 +42,16 @@ class Easy_007_Reverse_Integer_Test: XCTestCase {
         let result = Easy_007_Reverse_Integer.reverse(input)
         assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
     }
+    func test_006() {
+        let input: Int = -9223372036854775807
+        let expected: Int = -7085774586302733229
+        let result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+    }
+    func test_007() {
+        let input: Int = -9223372036854775808
+        let expected: Int = -8085774586302733229
+        let result = Easy_007_Reverse_Integer.reverse(input)
+        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+    }
 }
-
-/*
-reverse(123)                    //321
-reverse(-1)                     //-1
-reverse(0)                      //0
-reverse(7995774586302733229)    //overflow
-reverse(-7995774586302733229)   //overflow
-*/

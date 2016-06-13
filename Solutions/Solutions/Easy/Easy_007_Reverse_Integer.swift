@@ -32,29 +32,36 @@ Inspired by @wshaoxuan at https://leetcode.com/discuss/120/how-do-we-handle-the-
 //Int.max   9,223,372,036,854,775,807
 //Int.min   -9,223,372,036,854,775,808
 
-class Easy_007_Reverse_Integer {
-    // O (N)
-    class func reverse(x: Int) -> Int {
-        var neg = false
-        var i: Int = x
+struct Easy_007_Reverse_Integer {
+    // t = O(N), s = O(1)
+    static func reverse(x: Int) -> Int {
+        var negtive: Bool
+        var i: UInt
         if x < 0 {
-            neg = true
-            i = -x
+            negtive = true
+            if x == Int.min {
+                // The "minus 1 then add 1" trick is used to negate Int.min without overflow
+                i = UInt(-(x+1))
+                i += 1
+            } else {
+                i = UInt(-x)
+            }
+        } else {
+            negtive = false
+            i = UInt(x)
         }
         var res:UInt = 0
-        while i/10 > 0 {
+        while i > 0 {
             res = res * 10 + UInt(i % 10)
             i = i / 10
         }
-        res = res * 10 + UInt(i % 10)
-
-        if neg == false && res > 9223372036854775807 {
+        if negtive == false && res > UInt(Int.max) {
             return 0
-        } else if neg == true && res > 9223372036854775808 {
+        } else if negtive == true && res > UInt(Int.max) + 1 {
             return 0
         }
 
-        if neg {
+        if negtive {
             return (-1) * Int(res)
         } else {
             return Int(res)
