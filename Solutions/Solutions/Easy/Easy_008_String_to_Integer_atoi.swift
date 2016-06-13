@@ -28,40 +28,37 @@ Inspired by @yuruofeifei at https://leetcode.com/discuss/8886/my-simple-solution
 
 */
 
-// Helper
-private extension String {
-    subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
-    }
-}
-
-class Easy_008_String_to_Integer_atoi {
-    // O (N)
-    class func atoi(str: String) -> Int {
-        var sign: Bool = true, len: Int = str.characters.count, base: Int = 0
-        for j in 0..<len {
-            let zeroString: String = String("0")
-            let zeroValue: Int = Int(zeroString.utf8[zeroString.utf8.startIndex])
-            if base == 0 && str[j] == " " || str[j] == "+" {
+struct Easy_008_String_to_Integer_atoi {
+    // t = O(N), s = O(1)
+    static func atoi(s: String) -> Int {
+        var positive = true
+        var base = 0
+        for char in s.characters {
+            guard char != "+" else {
                 continue
-            } else if base == 0 && str[j] == "-" {
-                sign = false
+            }
+            guard char != " " else {
                 continue
-            } else {
-                let integerValue: Int = Int(str.utf8[str.utf8.startIndex.advancedBy(j)]) - zeroValue
-                if integerValue >= 0 && integerValue <= 9 {
-                    if base > Int.max/10 || (base == Int.max/10 && integerValue > 7) {
-                        if sign {
-                            return Int.max
-                        } else {
-                            return Int.min
-                        }
-                    }
-                    base = integerValue + 10 * base
+            }
+            guard char != "-" else {
+                if base == 0 {
+                    positive = false
+                }
+                continue
+            }
+            guard let intValue = Int(String(char)) else {
+                continue
+            }
+            guard base < Int.max / 10 || (base == Int.max / 10 && intValue <= Int.max % 10) else {
+                if positive {
+                    return Int.max
+                } else {
+                    return Int.min
                 }
             }
+            base = intValue + 10 * base
         }
-        if sign {
+        if positive {
             return base
         } else {
             return 0 - base
