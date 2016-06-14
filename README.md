@@ -1,17 +1,17 @@
 Where it all begins: [https://github.com/apple/swift](https://github.com/apple/swift).
 
-####LeetCode Solutions in Swift 2.2
+####LeetCode Solutions in Swift 3
 * Designed for your next job interview in Swift.
 * Optimal solutions handpicked from the LeetCode community.
 * Best time/space complexity guaranteed. (Think about **O(1) space** in Binary Tree Inorder Traversal. It's that good.)
-* Written with Swift-specific language features in mind. (**guard**/**defer**, **optionality**, **functions as first class citizen**, etc)
+* Written with Swift-specific language features in mind. (**guard**/**defer**, **map**/**filter**/**reduce**, **optionality**, **characters as extended grapheme clusters**, etc)
 * Comprehensive test cases guarding against wrong answers and timeouts.
 * A work in progress. Currently at **101** / ( 356 - 62 Paid Subscription ) = 34.4%, with **601** test cases.
 
 Please note: Subscript-based O(1) time random access to characters inside a string is not supported by Swift, due to [the way Swift strings are stored](http://oleb.net/blog/2014/07/swift-strings/). Amortized O(1) time random access could be achieved if we manually slice the string and convert it into an array.
 
 
-#####Requires Xcode 7.3.1 (Build 7D1014) or above.
+#####Requires Xcode 8.0 beta (Build 8S128d) or above.
 
 1. [Two Sum](https://oj.leetcode.com/problems/two-sum/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_001_Two_Sum.swift) - [ObjC Solution](./Solutions/Solutions_ObjC/Medium/ObjC_Medium_001_Two_Sum.m) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_001_Two_Sum_Test.swift) - t=O(N), s=O(N) - Inspired by [@naveed.zafar](https://leetcode.com/discuss/10947/accepted-c-o-n-solution)
 2. [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) - Medium - [Swift Solution](./Solutions/Solutions/Medium/Medium_002_Add_Two_Numbers.swift) - [ObjC Solution](./Solutions/Solutions_ObjC/Medium/ObjC_Medium_002_Add_Two_Numbers.m) - [Test Cases](./Solutions/SolutionsTests/Medium/Medium_002_Add_Two_Numbers_Test.swift) - t=O(N), s=O(1) - Inspired by [@potpie](https://leetcode.com/discuss/2308/is-this-algorithm-optimal-or-what)
