@@ -49,7 +49,11 @@ class Medium_018_4Sum_Test: XCTestCase {
                 for i in 0 ..< expected.count {
                     var flag: Bool = false
                     for j in 0 ..< result.count {
-                        if result[j][0] == expected[i][0] && result[j][1] == expected[i][1] && result[j][2] == expected[i][2] && result[j][3] == expected[i][3] {
+                        let b0 = result[j][0] == expected[i][0]
+                        let b1 = result[j][1] == expected[i][1]
+                        let b2 = result[j][2] == expected[i][2]
+                        let b3 = result[j][3] == expected[i][3]
+                        if b0 && b1 && b2 && b3 {
                             flag = true
                             break
                         }

@@ -30,7 +30,10 @@ class Medium_015_3Sum_Test: XCTestCase {
             for i in 0 ..< expected.count {
                 var flag: Bool = false
                 for j in 0 ..< result.count {
-                    if result[j][0] == expected[i][0] && result[j][1] == expected[i][1] && result[j][2] == expected[i][2] {
+                    let b0 = result[j][0] == expected[i][0]
+                    let b1 = result[j][1] == expected[i][1]
+                    let b2 = result[j][2] == expected[i][2]
+                    if b0 && b1 && b2 {
                         flag = true
                         break
                     }
@@ -60,7 +63,10 @@ class Medium_015_3Sum_Test: XCTestCase {
             for i in 0 ..< expected.count {
                 var flag: Bool = false
                 for j in 0 ..< result.count {
-                    if result[j][0] == expected[i][0] && result[j][1] == expected[i][1] && result[j][2] == expected[i][2] {
+                    let b0 = result[j][0] == expected[i][0]
+                    let b1 = result[j][1] == expected[i][1]
+                    let b2 = result[j][2] == expected[i][2]
+                    if b0 && b1 && b2 {
                         flag = true
                         break
                     }

@@ -23,7 +23,10 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
+        guard let localEndIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex) else {
+            return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.endIndex]
+        }
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<localEndIndex]
     }
 }
 
