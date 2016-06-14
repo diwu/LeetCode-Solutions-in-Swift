@@ -64,6 +64,6 @@ class Hard_037_Sudoku_Solver {
         return false
     }
     class func solveSudoku(_ board: inout [[Character]]) {
-        dfs(board: &board, position: 0)
+        let _ = dfs(board: &board, position: 0)
     }
 }

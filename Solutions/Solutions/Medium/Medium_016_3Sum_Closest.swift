@@ -38,7 +38,6 @@ class Medium_016_3Sum_Closest {
                             return ans
                         }
                     }
-                    (sum > target) ? k : j
                     k -= 1
                     j += 1
                 }

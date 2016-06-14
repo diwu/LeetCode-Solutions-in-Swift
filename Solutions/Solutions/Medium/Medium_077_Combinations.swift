@@ -59,7 +59,7 @@ struct Medium_077_Combinations {
         for i in start..<n {
             tmp.append(i + 1)
             combine_recursion_helper(res: &res, tmp: &tmp, start: i+1, num: num+1, n: n, k: k)
-            tmp.popLast()
+            let _ = tmp.popLast()
         }
     }
     static func combine_recursion(n: Int, k: Int) -> [[Int]] {

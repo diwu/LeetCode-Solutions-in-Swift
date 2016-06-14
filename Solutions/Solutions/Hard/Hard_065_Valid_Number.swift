@@ -38,10 +38,10 @@ struct Hard_065_Valid_Number {
         var state = 0
         var flag = 0
         while s[0] == " " {
-            s.removeAtIndex(0)
+            let _ = s.removeAtIndex(0)
         }
         while s[s.characters.count-1] == " " {
-            s.removeAtIndex(s.characters.count-1)
+            let _ = s.removeAtIndex(s.characters.count-1)
         }
         let digits: [Character: Int] = [
             "0": 0,
