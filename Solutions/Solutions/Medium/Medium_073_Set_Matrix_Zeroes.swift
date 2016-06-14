@@ -19,7 +19,7 @@ Inspired by @mzchen at https://leetcode.com/discuss/15997/any-shortest-o-1-space
 import Foundation
 
 struct Medium_073_Set_Matrix_Zeroes {
-    static func setZeros(inout matrix: [[Int]]) {
+    static func setZeros(_ matrix: inout [[Int]]) {
         var col0 = 1
         let rows = matrix.count
         let cols = matrix[0].count
@@ -34,8 +34,8 @@ struct Medium_073_Set_Matrix_Zeroes {
                 }
             }
         }
-        for i in (0...rows-1).reverse() {
-            for j in (1...cols-1).reverse() {
+        for i in (0...rows-1).reversed() {
+            for j in (1...cols-1).reversed() {
                 if matrix[i][0] == 0 || matrix[0][j] == 0 {
                     matrix[i][j] = 0
                 }

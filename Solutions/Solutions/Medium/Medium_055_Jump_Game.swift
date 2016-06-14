@@ -24,7 +24,7 @@ Inspired by @alexander7 at https://leetcode.com/discuss/15567/linear-and-simple-
 import Foundation
 
 struct Medium_055_Jump_Game {
-    static func canJump(nums: [Int]) -> Bool {
+    static func canJump(_ nums: [Int]) -> Bool {
         var i = 0
         var reach = 0
         while i < nums.count && i <= reach {

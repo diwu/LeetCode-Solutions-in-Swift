@@ -24,12 +24,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Easy_058_Length_Of_Last_Word {
-    static func lengthOfLastWord(s: String) -> Int {
+    static func lengthOfLastWord(_ s: String) -> Int {
         var len = 0
         var i = 0
         while i < s.characters.count {

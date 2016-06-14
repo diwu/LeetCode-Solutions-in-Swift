@@ -18,14 +18,14 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Medium_043_Multiply_Strings {
-    static func multiply(num1  num1: String, num2: String) -> String {
-        var sum = Array<Character>(count: num1.characters.count+num2.characters.count, repeatedValue: "0")
-        for i in (0 ... num1.characters.count - 1).reverse() {
+    static func multiply(num1: String, num2: String) -> String {
+        var sum = Array<Character>(repeating: "0", count: num1.characters.count+num2.characters.count)
+        for i in (0 ... num1.characters.count - 1).reversed() {
             var carry = 0
             var dict: [Character: Int] = [
                 "0": 0,
@@ -39,14 +39,14 @@ struct Medium_043_Multiply_Strings {
                 "8": 8,
                 "9": 9,
             ]
-            for j in (0 ... num2.characters.count - 1).reverse() {
+            for j in (0 ... num2.characters.count - 1).reversed() {
                 let tmp: Int = dict[sum[i + j + 1]]! + dict[num1[i]]! * dict[num2[j]]! + carry;
                 sum[i + j + 1] = Character("\(tmp % 10)")
                 carry = tmp / 10;
             }
             sum[i] = Character("\(dict[sum[i]]! + carry)")
         }
-        for i in (0 ... sum.count - 1).reverse() {
+        for i in (0 ... sum.count - 1).reversed() {
             if sum[i] != "0" {
                 return String(sum[0...i])
             }

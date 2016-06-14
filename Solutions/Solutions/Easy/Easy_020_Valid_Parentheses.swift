@@ -18,12 +18,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 class Easy_020_Valid_Parentheses {
-    class func isValid(s: String) -> Bool {
+    class func isValid(_ s: String) -> Bool {
         var stack: [Character] = []
         var temp: Character
         var dict: Dictionary<Character, Character> = Dictionary()

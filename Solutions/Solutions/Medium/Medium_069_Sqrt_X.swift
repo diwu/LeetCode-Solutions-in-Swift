@@ -17,7 +17,7 @@ Inspired by @tyuan73 at https://leetcode.com/discuss/8897/share-my-o-log-n-solut
 import Foundation
 
 struct Medium_069_Sqrt_X {
-    static func mySqrt(x: Int) -> Int {
+    static func mySqrt(_ x: Int) -> Int {
         var ans: Int64 = 0
         var bit: Int64 = 1 << 16
         while bit > 0 {

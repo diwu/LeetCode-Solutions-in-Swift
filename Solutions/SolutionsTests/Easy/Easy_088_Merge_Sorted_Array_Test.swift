@@ -36,16 +36,16 @@ class Easy_088_Merge_Sorted_Array_Test: XCTestCase {
         let expected: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         asyncHelper(input0: &input0, input1: input1, m: m, n: n, expected: expected)
     }
-    private func asyncHelper(inout input0 input0: [Int], input1: [Int], m: Int, n: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_088_Merge_Sorted_Array_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input0: inout [Int], input1: [Int], m: Int, n: Int, expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_088_Merge_Sorted_Array_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             Easy_088_Merge_Sorted_Array.merge(nums1: &input0, m: m, nums2: input1, n: n)
             assertHelper(input0 == expected, problemName: Easy_088_Merge_Sorted_Array_Test.ProblemName, input: input0, resultValue: input0, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_088_Merge_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_088_Merge_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_088_Merge_Sorted_Array_Test.ProblemName, input: input0, resultValue: Easy_088_Merge_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

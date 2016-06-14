@@ -14,7 +14,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Hard_099_Recover_Binary_Search_Tree.Node
     private typealias Node_ObjC = ObjC_Hard_099_Recover_Binary_Search_Tree_Node
-    private func convertTreeToArray_swift(root: Node_Swift?) -> [Int] {
+    private func convertTreeToArray_swift(_ root: Node_Swift?) -> [Int] {
         var ret: [Int] = []
         if root == nil {
             return ret
@@ -34,7 +34,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
             return ret
         }
     }
-    private func convertArrayToTree_swift(arr: [Int]) -> Node_Swift {
+    private func convertArrayToTree_swift(_ arr: [Int]) -> Node_Swift {
         let root: Node_Swift = Node_Swift.init(value: arr[0], left: nil, right: nil)
         var fifoQueue: [Node_Swift] = [root]
         var i = 1
@@ -56,7 +56,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
         }
         return root
     }
-    private func convertTreeToArray_objc(root: Node_ObjC?) -> [Int] {
+    private func convertTreeToArray_objc(_ root: Node_ObjC?) -> [Int] {
         var ret: [Int] = []
         if root == nil {
             return ret
@@ -76,7 +76,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
             return ret
         }
     }
-    private func convertArrayToTree_objc(arr: [Int]) -> Node_ObjC {
+    private func convertArrayToTree_objc(_ arr: [Int]) -> Node_ObjC {
         let root: Node_ObjC = Node_ObjC.init(value: arr[0], left: nil, right: nil)
         var fifoQueue: [Node_ObjC] = [root]
         var i = 1
@@ -118,22 +118,22 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
         let expected: [Int] = [40, 20, 60, 10, 30, 50, 70, Int.min, 11, 29, Int.min, 49, 51, 69, 71]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [Int], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let node_swift: Node_Swift = self.convertArrayToTree_swift(input)
             let node_objc: Node_ObjC = self.convertArrayToTree_objc(input)
             let result_swift: Node_Swift? = Hard_099_Recover_Binary_Search_Tree.recoverTree(node_swift)
-            let result_objc: Node_ObjC? = ObjC_Hard_099_Recover_Binary_Search_Tree.recoverTree(node_objc)
+            let result_objc: Node_ObjC? = ObjC_Hard_099_Recover_Binary_Search_Tree.recover(node_objc)
             let result_array_swift: [Int] = self.convertTreeToArray_swift(result_swift)
             let result_array_objc: [Int] = self.convertTreeToArray_objc(result_objc)
-            assertHelper(expected == Array<Int>(result_array_swift.prefixUpTo(expected.count)), problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_array_swift, expectedValue: expected)
-            assertHelper(expected == Array<Int>(result_array_objc.prefixUpTo(expected.count)), problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_array_objc, expectedValue: expected)
+            assertHelper(expected == Array<Int>(result_array_swift.prefix(upTo: expected.count)), problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_array_swift, expectedValue: expected)
+            assertHelper(expected == Array<Int>(result_array_objc.prefix(upTo: expected.count)), problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_array_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_099_Recover_Binary_Search_Tree_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_099_Recover_Binary_Search_Tree_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
             }

@@ -28,7 +28,7 @@ class Easy_100_Same_Tree {
         }
     }
     // t = O(N), average s = O(logN), worst s = O(N)
-    private class func isSameTree_recursion(p p: Node?, q: Node?) -> Bool {
+    private class func isSameTree_recursion(p: Node?, q: Node?) -> Bool {
         if p == nil || q == nil {
             return (p == nil && q == nil)
         } else {
@@ -36,7 +36,7 @@ class Easy_100_Same_Tree {
         }
     }
     // t = O(N), average s = O(logN), worst s = O(N)
-    private class func isSameTree_iteration(p p: Node?, q: Node?) -> Bool {
+    private class func isSameTree_iteration(p: Node?, q: Node?) -> Bool {
         if p == nil || q == nil {
             return (p == nil && q == nil)
         }
@@ -71,7 +71,7 @@ class Easy_100_Same_Tree {
         }
         return stack_q.count == stack_q.count
     }
-    class func isSameTree(p p: Node?, q: Node?) -> Bool {
+    class func isSameTree(p: Node?, q: Node?) -> Bool {
         return isSameTree_iteration(p: p, q: q)
     }
 }

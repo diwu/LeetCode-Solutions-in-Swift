@@ -14,7 +14,7 @@ Inspired by @hh1985 at https://leetcode.com/discuss/32204/simple-c-solution-8ms-
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex, limit: self.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
     }
     /*
      Ref: http://oleb.net/blog/2014/07/swift-strings/
@@ -30,7 +30,7 @@ private extension String {
 
 struct Medium_005_Longest_Palindromic_Substring {
     // t = O(N^2), s = O(1)
-    static func longestPalindrome(s: String) -> String {
+    static func longestPalindrome(_ s: String) -> String {
         guard s.characters.count > 1 else {
             return s
         }

@@ -21,13 +21,13 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex, limit: self.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
     }
 }
 
 struct Medium_093_Restore_IP_Addresses {
     // t = O(1), s = O(1)
-    static func restoreIpAddresses(s: String) -> [String] {
+    static func restoreIpAddresses(_ s: String) -> [String] {
         var res = Array<String>()
         let len: Int = s.characters.count
         for i in 1 ..< min(4, len - 2) {
@@ -45,7 +45,7 @@ struct Medium_093_Restore_IP_Addresses {
         }
         return res
     }
-    private static func isValid(s: String) -> Bool {
+    private static func isValid(_ s: String) -> Bool {
         if s.characters.count > 3 {
             return false
         }

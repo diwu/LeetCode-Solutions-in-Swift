@@ -38,7 +38,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
         let expected: [Int] = [1, 2, 3, 4]
         asyncHelper(input: input, expected: expected)
     }
-    private func helper1(intArray: [Int]) -> Node? {
+    private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
             let node: Node = Node(value: i, next: nil)
@@ -52,7 +52,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
         }
         return nodeArray[0]
     }
-    private func helper2(head: Node?) -> [Int] {
+    private func helper2(_ head: Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
@@ -61,9 +61,9 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(input  input: [AnyObject?], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [AnyObject?], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             var result: [Int]
             if input[0] != nil {
                 let head: Node = input[0] as! Node
@@ -76,7 +76,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName, expectedValue: expected)
             }

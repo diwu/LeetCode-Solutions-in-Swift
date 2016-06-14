@@ -142,16 +142,16 @@ class Hard_065_Valid_Number_Test: XCTestCase {
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: String, expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_065_Valid_Number_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: String, expected: Bool) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_065_Valid_Number_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_065_Valid_Number.isNumber(input)
             assertHelper(result == expected, problemName: Hard_065_Valid_Number_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_065_Valid_Number_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_065_Valid_Number_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_065_Valid_Number_Test.ProblemName, input: input, resultValue: Hard_065_Valid_Number_Test.TimeOutName, expectedValue: expected)
             }

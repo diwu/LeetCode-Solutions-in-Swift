@@ -25,7 +25,7 @@ Inspired by @qwl5004 at https://leetcode.com/discuss/12228/super-simple-and-easy
 import Foundation
 
 struct Medium_054_Spiral_Matrix {
-    static func spiralOrder(matrix: [[Int]]) -> [Int] {
+    static func spiralOrder(_ matrix: [[Int]]) -> [Int] {
         var res = [Int]()
         if matrix.count == 0 {
             return res
@@ -52,7 +52,7 @@ struct Medium_054_Spiral_Matrix {
             if rowBegin <= rowEnd {
                 //Traverse Left
                 if colBegin <= colEnd {
-                    for i in (colBegin...colEnd).reverse() {
+                    for i in (colBegin...colEnd).reversed() {
                         res.append(matrix[rowEnd][i])
                     }
                 }
@@ -61,7 +61,7 @@ struct Medium_054_Spiral_Matrix {
             if colBegin <= colEnd {
                 //Traverse Up
                 if rowBegin <= rowEnd {
-                    for i in (rowBegin...rowEnd).reverse() {
+                    for i in (rowBegin...rowEnd).reversed() {
                         res.append(matrix[i][colBegin])
                     }
                 }

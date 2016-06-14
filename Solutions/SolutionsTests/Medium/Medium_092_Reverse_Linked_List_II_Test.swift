@@ -63,9 +63,9 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
         let expected: [Int] = [2, 1, 3, 4, 5]
         asyncHelper(input0: input0, input1: input1, input2: input2, expected: expected)
     }
-    func asyncHelper(input0 input0: [Int], input1: Int, input2: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_092_Reverse_Linked_List_II_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    func asyncHelper(input0: [Int], input1: Int, input2: Int, expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_092_Reverse_Linked_List_II_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: [Int] = self.helper2(Medium_092_Reverse_Linked_List_II.reverseBetween(self.helper1(input0), m: input1, n: input2))
             assertHelper(expected == result_swift, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
             let result_objc: [Int] = self.objc_helper2(ObjC_Medium_092_Reverse_Linked_List_II.reverseBetween(self.objc_helper1(input0), m: input1, n: input2))
@@ -74,13 +74,13 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_092_Reverse_Linked_List_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_092_Reverse_Linked_List_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: Medium_092_Reverse_Linked_List_II_Test.TimeOutName, expectedValue: expected)
             }
         }
     }
-    private func helper1(intArray: [Int]) -> Node? {
+    private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
             let node: Node = Node(value: i, next: nil)
@@ -94,7 +94,7 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
         }
         return nodeArray[0]
     }
-    private func helper2(head: Node?) -> [Int] {
+    private func helper2(_ head: Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
@@ -103,7 +103,7 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
         }
         return res
     }
-    private func objc_helper1(intArray: [Int]) -> ObjC_Node? {
+    private func objc_helper1(_ intArray: [Int]) -> ObjC_Node? {
         var nodeArray: [ObjC_Node] = []
         for i in intArray {
             let node: ObjC_Node = ObjC_Node(i, next: nil)
@@ -117,7 +117,7 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
         }
         return nodeArray[0]
     }
-    private func objc_helper2(head: ObjC_Node?) -> [Int] {
+    private func objc_helper2(_ head: ObjC_Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {

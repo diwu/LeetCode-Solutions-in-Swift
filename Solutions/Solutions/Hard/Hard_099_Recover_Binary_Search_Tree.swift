@@ -28,7 +28,7 @@ class Hard_099_Recover_Binary_Search_Tree {
         }
     }
     // Morris, t = O(N), both average & worst s = O(1)
-    class func recoverTree(rt: Node?) -> Node? {
+    class func recoverTree(_ rt: Node?) -> Node? {
         var root = rt
         let origRoot: Node? = root
         var pre: Node? = nil

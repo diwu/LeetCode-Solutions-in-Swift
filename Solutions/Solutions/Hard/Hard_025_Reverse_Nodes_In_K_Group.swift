@@ -38,7 +38,7 @@ class Hard_025_Reverse_Nodes_In_K_Group {
     }
     // iteration
     // O (1) space, O(N) time
-    class func reverseKGroup( head  head: Node?, k: Int) -> Node? {
+    class func reverseKGroup( head: Node?, k: Int) -> Node? {
         if head == nil {
             return nil
         }

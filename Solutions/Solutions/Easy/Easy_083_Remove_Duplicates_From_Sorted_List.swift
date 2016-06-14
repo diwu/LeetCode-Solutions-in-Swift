@@ -27,7 +27,7 @@ class Easy_083_Remove_Duplicates_From_Sorted_List {
             self.next = next
         }
     }
-    class func deleteDuplicates(head: Node?) -> Node? {
+    class func deleteDuplicates(_ head: Node?) -> Node? {
         if head == nil {
             return nil
         }

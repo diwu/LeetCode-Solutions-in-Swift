@@ -104,15 +104,15 @@ class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase {
     }
     private func asyncHelper(input ipt: [AnyObject], expected: Bool) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Bool = Medium_081_Search_In_Rotated_Sorted_Array_II.search(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.ProblemName, input: input, resultValue: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
             }

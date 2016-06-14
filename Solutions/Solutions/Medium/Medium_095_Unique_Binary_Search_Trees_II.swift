@@ -34,7 +34,7 @@ class Medium_095_Unique_Binary_Search_Trees_II {
             self.right = right
         }
     }
-    private class func genTrees (start start: Int, end: Int) -> [Node?] {
+    private class func genTrees (start: Int, end: Int) -> [Node?] {
         var ret: [Node?] = []
         if start > end {
             ret.append(nil)
@@ -58,7 +58,7 @@ class Medium_095_Unique_Binary_Search_Trees_II {
         return ret
     }
     // t = O(n^(n-1)) a.k.a Catalan Number, s = I've no idea
-    class func generateTrees(n: Int) -> [Node?] {
+    class func generateTrees(_ n: Int) -> [Node?] {
         return genTrees(start: 1, end: n)
     }
 }

@@ -25,15 +25,15 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
-    mutating func removeAtIndex(index: Int) -> Character {
-        return self.removeAtIndex(self.startIndex.advancedBy(index))
+    mutating func removeAtIndex(_ index: Int) -> Character {
+        return self.remove(at: self.index(self.startIndex, offsetBy: index))
     }
 }
 
 struct Hard_065_Valid_Number {
-    static func isNumber(arg: String) -> Bool {
+    static func isNumber(_ arg: String) -> Bool {
         var s = arg
         var state = 0
         var flag = 0

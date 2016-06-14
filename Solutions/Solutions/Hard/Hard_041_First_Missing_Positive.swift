@@ -21,7 +21,7 @@ Inspired by @makuiyu at https://leetcode.com/discuss/24013/my-short-c-solution-o
 import Foundation
 
 struct Hard_041_First_Missing_Positive {
-    static func firstMissingPositive(n: [Int]) -> Int {
+    static func firstMissingPositive(_ n: [Int]) -> Int {
         var nums = n
         for i in 0 ..< nums.count {
             while nums[i] > 0 && nums[i] <= nums.count && nums[nums[i]-1] != nums[i] {

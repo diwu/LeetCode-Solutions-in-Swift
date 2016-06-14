@@ -17,9 +17,9 @@ Inspired by @zezedi at https://leetcode.com/discuss/14616/is-it-a-simple-code-c
 import Foundation
 
 struct Easy_066_Plus_One {
-    static func plusOne(inout digits: [Int]) {
+    static func plusOne(_ digits: inout [Int]) {
         let n = digits.count
-        for i in (0 ... n-1).reverse() {
+        for i in (0 ... n-1).reversed() {
             if digits[i] == 9 {
                 digits[i] = 0
             } else {

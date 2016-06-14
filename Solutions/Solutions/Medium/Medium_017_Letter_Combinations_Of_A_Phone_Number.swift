@@ -31,7 +31,7 @@ Inspired by @lirensun at https://leetcode.com/discuss/24431/my-java-solution-wit
 
 private extension String {
     subscript(index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -50,7 +50,7 @@ private let mapping: [String] = [
 
 struct Medium_017_Letter_Combinations_Of_A_Phone_Number {
     // t = O(3^N), s = O(3^N)
-    static func letterCombinations(digits: String) -> [String] {
+    static func letterCombinations(_ digits: String) -> [String] {
         var ans: [String] = []
         ans.append("")
         for i in 0 ..< digits.characters.count {

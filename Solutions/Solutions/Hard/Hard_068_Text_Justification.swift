@@ -39,7 +39,7 @@ Inspired by @qddpx at https://leetcode.com/discuss/13610/share-my-concise-c-solu
 import Foundation
 
 struct Hard_068_Text_Justification {
-    static func fullJustify(words: [String], maxWidth: Int) -> [String] {
+    static func fullJustify(_ words: [String], maxWidth: Int) -> [String] {
         var res: [String] = []
         var i = 0
         var k: Int
@@ -57,13 +57,13 @@ struct Hard_068_Text_Justification {
                     tmp += " "
                 } else {
                     let tmpLen = (maxWidth - l) / (k - 1) + Int((j < (maxWidth - l) % (k - 1)))
-                    let tmpArr: [Character] = Array(count: tmpLen, repeatedValue: " ")
+                    let tmpArr: [Character] = Array(repeating: " ", count: tmpLen)
                     tmp += String(tmpArr)
                 }
                 tmp += words[i+j+1]
             }
             let charArrLen = maxWidth - tmp.characters.count
-            let charArr: [Character] = Array(count: charArrLen, repeatedValue: " ")
+            let charArr: [Character] = Array(repeating: " ", count: charArrLen)
             tmp += String(charArr)
             res.append(tmp)
             i += k

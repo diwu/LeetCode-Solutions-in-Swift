@@ -43,7 +43,7 @@ class Easy_083_Remove_Duplicates_From_Sorted_List_Test: XCTestCase {
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
-    private func helper1(intArray: [Int]) -> Node? {
+    private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
             let node: Node = Node(value: i, next: nil)
@@ -57,7 +57,7 @@ class Easy_083_Remove_Duplicates_From_Sorted_List_Test: XCTestCase {
         }
         return nodeArray[0]
     }
-    private func helper2(head: Node?) -> [Int] {
+    private func helper2(_ head: Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
@@ -66,16 +66,16 @@ class Easy_083_Remove_Duplicates_From_Sorted_List_Test: XCTestCase {
         }
         return res
     }
-    func asyncHelper(input  input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    func asyncHelper(input: [Int], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_083_Remove_Duplicates_From_Sorted_List.deleteDuplicates(self.helper1(input)))
             assertHelper(expected == result, problemName: Easy_083_Remove_Duplicates_From_Sorted_List_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_083_Remove_Duplicates_From_Sorted_List_Test.ProblemName, input: input, resultValue: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName, expectedValue: expected)
             }

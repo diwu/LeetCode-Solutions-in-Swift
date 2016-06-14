@@ -16,7 +16,7 @@ Inspired by @franticguy at https://leetcode.com/discuss/14610/very-simple-o-n-so
 
 class Medium_011_Container_With_Most_Water {
     // O (N)
-    class func maxArea(heightsArray  heightsArray: [Int]) -> Int {
+    class func maxArea(heightsArray: [Int]) -> Int {
         var j: Int = heightsArray.count - 1
         var i: Int = 0
         var mx: Int = 0

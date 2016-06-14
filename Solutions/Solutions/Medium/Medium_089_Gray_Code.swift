@@ -31,12 +31,12 @@ Inspired by @mike3 at https://leetcode.com/discuss/2978/what-solution-gray-code-
 import Foundation
 
 struct Medium_089_Gray_Code {
-    static func grayCode(n: Int) -> [Int] {
+    static func grayCode(_ n: Int) -> [Int] {
         var arr: [Int] = []
         arr.append(0)
         for i in 0 ..< n {
             let tmp = 1 << i
-            for j in (0 ... arr.count - 1).reverse() {
+            for j in (0 ... arr.count - 1).reversed() {
                 arr.append(arr[j] + tmp)
             }
         }

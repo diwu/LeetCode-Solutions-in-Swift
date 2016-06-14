@@ -19,12 +19,12 @@ Inspired by @brubru777 at https://leetcode.com/discuss/13953/a-simple-java-solut
 import Foundation
 
 struct Hard_056_Merge_Intervals {
-    static func merge(itv: [[Int]]) -> [[Int]] {
+    static func merge(_ itv: [[Int]]) -> [[Int]] {
         var intervals = itv
         if intervals.count <= 1 {
             return intervals
         }
-        intervals.sortInPlace { (elm1, elm2) -> Bool in
+        intervals.sort { (elm1, elm2) -> Bool in
             var e1 = elm1
             var e2 = elm2
             return e1[0] <= e2[0]

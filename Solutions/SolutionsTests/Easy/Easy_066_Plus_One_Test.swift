@@ -32,9 +32,9 @@ class Easy_066_Plus_One_Test: XCTestCase {
         let expected: [Int] = [1, 0, 0]
         asyncHelper(input: &input, expected: expected)
     }
-    private func asyncHelper(inout input input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_066_Plus_One_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: inout [Int], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_066_Plus_One_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             Easy_066_Plus_One.plusOne(&input)
             let result = input
             assertHelper(result == expected, problemName: Easy_066_Plus_One_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -42,7 +42,7 @@ class Easy_066_Plus_One_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_066_Plus_One_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_066_Plus_One_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_066_Plus_One_Test.ProblemName, input: input, resultValue: Easy_066_Plus_One_Test.TimeOutName, expectedValue: expected)
             }

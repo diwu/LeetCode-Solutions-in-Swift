@@ -28,10 +28,10 @@ Inspired by @mathsam at https://leetcode.com/discuss/14902/c-solution-and-explan
 import Foundation
 
 struct Medium_090_Subsets_II {
-    static func subsetsWithDup(n: [Int]) -> [[Int]] {
+    static func subsetsWithDup(_ n: [Int]) -> [[Int]] {
         var nums = n
         var result: [[Int]] = [[]]
-        nums.sortInPlace()
+        nums.sort()
         var i = 0
         for _ in 0 ..< nums.count{
             var count: Int = 0

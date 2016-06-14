@@ -35,9 +35,9 @@ class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase
         let expected: Int = 0
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: String, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: String, expected: Int) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: Int = Medium_003_Longest_Substring_Without_Repeating_Characters.longest(input)
             let result_objc: Int = ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.longest(input)
             assertHelper(expected == result_swift, problemName: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -46,7 +46,7 @@ class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.ProblemName, input: input, resultValue: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName, expectedValue: expected)
             }

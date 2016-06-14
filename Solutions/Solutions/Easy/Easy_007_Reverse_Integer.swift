@@ -34,7 +34,7 @@ Inspired by @wshaoxuan at https://leetcode.com/discuss/120/how-do-we-handle-the-
 
 struct Easy_007_Reverse_Integer {
     // t = O(N), s = O(1)
-    static func reverse(x: Int) -> Int {
+    static func reverse(_ x: Int) -> Int {
         var negtive: Bool
         var i: UInt
         if x < 0 {

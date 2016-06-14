@@ -18,14 +18,14 @@ Inspired by @vaibhavatul47 at https://leetcode.com/discuss/6438/a-n-2-solution-c
 
 class Medium_016_3Sum_Closest {
     // O( N^2 )
-    class func threeSumClosest(num  num: [Int], target: Int) -> Int {
+    class func threeSumClosest(num: [Int], target: Int) -> Int {
         let n: Int = num.count
         if n <= 3 {
             return num.reduce(0, combine: +)
         } else {
             var ans: Int = 0
             var sum: Int
-            var sorted: [Int] = num.sort { $0 < $1 }
+            var sorted: [Int] = num.sorted { $0 < $1 }
             ans = sorted[0] + sorted[1] + sorted[2]
             for i in 0 ..< n-2 {
                 var j: Int = i+1

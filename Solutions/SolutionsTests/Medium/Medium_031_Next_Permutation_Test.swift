@@ -37,9 +37,9 @@ class Medium_031_Next_Permutation_Test: XCTestCase {
         let expected: [Int] = [1]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input  input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_031_Next_Permutation_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [Int], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_031_Next_Permutation_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             var result: [Int] = input
             Medium_031_Next_Permutation.nextPermutation(&result)
             assertHelper(expected == result, problemName: Medium_031_Next_Permutation_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -47,7 +47,7 @@ class Medium_031_Next_Permutation_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_031_Next_Permutation_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_031_Next_Permutation_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_031_Next_Permutation_Test.ProblemName, input: input, resultValue: Medium_031_Next_Permutation_Test.TimeOutName, expectedValue: expected)
             }

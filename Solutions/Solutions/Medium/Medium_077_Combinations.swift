@@ -27,7 +27,7 @@ Inspired by @reeclapple at https://leetcode.com/discuss/5913/whats-the-best-solu
 import Foundation
 
 struct Medium_077_Combinations {
-    static func combine(n n: Int, k: Int) -> [[Int]] {
+    static func combine(n: Int, k: Int) -> [[Int]] {
         var queue: [[Int]] = []
         var summary: [[Int]] = []
         for i in 1...n {
@@ -51,7 +51,7 @@ struct Medium_077_Combinations {
         }
         return summary
     }
-    static func combine_recursion_helper(inout res res: [[Int]], inout tmp: [Int], start: Int, num: Int, n: Int, k: Int) {
+    static func combine_recursion_helper(res: inout [[Int]], tmp: inout [Int], start: Int, num: Int, n: Int, k: Int) {
         if num == k {
             res.append(tmp)
             return
@@ -62,7 +62,7 @@ struct Medium_077_Combinations {
             tmp.popLast()
         }
     }
-    static func combine_recursion(n n: Int, k: Int) -> [[Int]] {
+    static func combine_recursion(n: Int, k: Int) -> [[Int]] {
         var res: [[Int]] = []
         if n < k {
             return res

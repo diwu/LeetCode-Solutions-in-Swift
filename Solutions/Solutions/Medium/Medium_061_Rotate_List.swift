@@ -27,7 +27,7 @@ class Medium_061_Rotate_List {
             self.next = next
         }
     }
-    class func rotateRight(head head: Node?, k: Int) -> Node? {
+    class func rotateRight(head: Node?, k: Int) -> Node? {
         if head == nil || head?.next == nil {
             return head;
         }
@@ -41,7 +41,7 @@ class Medium_061_Rotate_List {
             i += 1
         }
         let count = i - k % i
-        for _ in (1 ... count).reverse() {
+        for _ in (1 ... count).reversed() {
             slow = slow?.next
         }
         fast?.next = dummy.next

@@ -32,16 +32,16 @@ class Easy_067_Add_Binary_Test: XCTestCase {
         let expected: String = "1"
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: [String], expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_067_Add_Binary_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [String], expected: String) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_067_Add_Binary_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Easy_067_Add_Binary.addBinary(a: input[0], b: input[1]);
             assertHelper(result == expected, problemName: Easy_067_Add_Binary_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_067_Add_Binary_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_067_Add_Binary_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_067_Add_Binary_Test.ProblemName, input: input, resultValue: Easy_067_Add_Binary_Test.TimeOutName, expectedValue: expected)
             }

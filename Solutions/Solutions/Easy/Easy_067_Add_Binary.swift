@@ -19,12 +19,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Easy_067_Add_Binary {
-    static func addBinary(a a: String, b: String) -> String {
+    static func addBinary(a: String, b: String) -> String {
         var s = ""
         var c: Int = 0
         var i = a.characters.count - 1

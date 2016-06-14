@@ -14,16 +14,16 @@ Inspired by @garysui at https://leetcode.com/discuss/15755/optimal-solution
 
 private extension String {
     subscript (i: Int) -> Character {
-        let index: Index = self.startIndex.advancedBy(i)
+        let index: Index = self.characters.index(self.startIndex, offsetBy: i)
         return self[index]
     }
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)]
     }
 }
 
 class Easy_014_Longest_Common_Prefix {
-    class func longestCommonPrefix( arr: [String]?) -> String {
+    class func longestCommonPrefix( _ arr: [String]?) -> String {
         if let unwrapped = arr {
             if unwrapped.count == 0 {
                 return ""

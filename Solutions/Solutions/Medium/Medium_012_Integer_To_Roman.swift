@@ -29,7 +29,7 @@ class Medium_012_Integer_To_Roman {
     private static var I: [String] = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
 
     // O (1)
-    class func integerToRoman(num  num: Int) -> String {
+    class func integerToRoman(num: Int) -> String {
         let m = M[num/1000]
         let c = C[(num%1000)/100]
         let x = X[(num%100)/10]

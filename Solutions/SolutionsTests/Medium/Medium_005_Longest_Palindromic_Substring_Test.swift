@@ -68,9 +68,9 @@ class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase {
         let expected: String = "aaaaaaa"
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: String, expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_005_Longest_Palindromic_Substring_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: String, expected: String) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_005_Longest_Palindromic_Substring_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: String = Medium_005_Longest_Palindromic_Substring.longestPalindrome(input)
             let result_objc: String = ObjC_Medium_005_Longest_Palindromic_Substring.longestPalindrome(input)
             assertHelper(expected == result_swift, problemName: Medium_005_Longest_Palindromic_Substring_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -79,7 +79,7 @@ class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_005_Longest_Palindromic_Substring_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_005_Longest_Palindromic_Substring_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_005_Longest_Palindromic_Substring_Test.ProblemName, input: input, resultValue: Medium_005_Longest_Palindromic_Substring_Test.TimeOutName, expectedValue: expected)
             }

@@ -16,17 +16,17 @@ Inspired by @makeittrue at https://leetcode.com/discuss/2369/solution-for-this-q
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 class Easy_013_Roman_To_Integer {
     // O (N)
     // One pass
-    class func romanToInt(s  s: String) -> Int {
+    class func romanToInt(s: String) -> Int {
         var result: Int = 0
         let length: Int = s.characters.count
-        for i in (0...length-1).reverse() {
+        for i in (0...length-1).reversed() {
             let c: Character = s[i]
             switch c {
             case "I":

@@ -31,7 +31,7 @@ Inspired by @vvelrath@buffalo.edu at https://leetcode.com/discuss/15756/java-sol
 import Foundation
 
 struct Medium_063_Unique_Paths_II {
-    static func uniquePathsWithObstacles(og: [[Int]]) -> Int {
+    static func uniquePathsWithObstacles(_ og: [[Int]]) -> Int {
         var obstacleGrid = og
         if obstacleGrid.count == 0 {
             return 0

@@ -21,7 +21,7 @@ Inspired by @dragonmigo at https://leetcode.com/discuss/2754/is-it-possible-to-s
 import Foundation
 
 struct Medium_080_Remove_Duplicates_From_Sorted_Array_II {
-    static func removeDuplicates(inout nums: [Int]) {
+    static func removeDuplicates(_ nums: inout [Int]) {
         if nums.count <= 2 {
             return
         }

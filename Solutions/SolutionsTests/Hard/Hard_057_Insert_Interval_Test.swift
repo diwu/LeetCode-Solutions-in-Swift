@@ -161,16 +161,16 @@ class Hard_057_Insert_Interval_Test: XCTestCase {
         ]
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
-    private func asyncHelper(input0  input0: [[Int]], input1: [Int], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_057_Insert_Interval_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input0: [[Int]], input1: [Int], expected: [[Int]]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_057_Insert_Interval_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_057_Insert_Interval.insert(intervals: input0, newInterval: input1)
             assertHelper(result == expected, problemName: Hard_057_Insert_Interval_Test.ProblemName, input: [input0, input1], resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_057_Insert_Interval_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_057_Insert_Interval_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_057_Insert_Interval_Test.ProblemName, input: [input0, input1], resultValue: Hard_057_Insert_Interval_Test.TimeOutName, expectedValue: expected)
             }

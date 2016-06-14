@@ -17,7 +17,7 @@ Inspired by @facetothefate at https://leetcode.com/discuss/2809/easy-solutions-f
 import Foundation
 
 struct Easy_070_Climbing_Stairs {
-    static func climbStairs(n: Int) -> Int {
+    static func climbStairs(_ n: Int) -> Int {
         if n == 0 || n == 1  {
             return 1
         }

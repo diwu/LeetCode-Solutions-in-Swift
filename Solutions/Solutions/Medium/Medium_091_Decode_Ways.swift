@@ -27,23 +27,23 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex, limit: self.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
     }
 }
 
 struct Medium_091_Decode_Ways {
-    static func numDecodings(s: String) -> Int {
+    static func numDecodings(_ s: String) -> Int {
         let n: Int = s.characters.count
         if n == 0 {
             return 0
         }
-        var memo: [Int] = Array<Int>(count: n+1, repeatedValue: 0)
+        var memo: [Int] = Array<Int>(repeating: 0, count: n+1)
         memo[n] = 1
         memo[n-1] = s[n-1] != "0" ? 1 : 0
-        for i in (0 ... n-2).reverse() {
+        for i in (0 ... n-2).reversed() {
             if s[i] == "0" {
                 continue
             } else {

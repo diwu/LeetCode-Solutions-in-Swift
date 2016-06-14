@@ -30,9 +30,9 @@ class Medium_001_Two_Sum_Test: XCTestCase {
         let expected: [Int] = [2, 4]
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
-    private func asyncHelper(input0 input0: [Int], input1: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_001_Two_Sum_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input0: [Int], input1: Int, expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_001_Two_Sum_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: [Int] = Medium_001_Two_Sum.twoSum(numbers: input0, target: input1)
             let result_objc: [NSNumber] = ObjC_Medium_001_Two_Sum.twoSum(input0, target: input1)
             assertHelper(expected == result_swift, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
@@ -41,7 +41,7 @@ class Medium_001_Two_Sum_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_001_Two_Sum_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_001_Two_Sum_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: Medium_001_Two_Sum_Test.TimeOutName, expectedValue: expected)
             }

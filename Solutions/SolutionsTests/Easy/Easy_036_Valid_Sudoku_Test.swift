@@ -97,16 +97,16 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase {
         let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input  input: [[Character]], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_036_Valid_Sudoku_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [[Character]], expected: Bool) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_036_Valid_Sudoku_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Bool = Easy_036_Valid_Sudoku.isValidSudoku(input)
             assertHelper(expected == result, problemName: Easy_036_Valid_Sudoku_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_036_Valid_Sudoku_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_036_Valid_Sudoku_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_036_Valid_Sudoku_Test.ProblemName, input: input, resultValue: Easy_036_Valid_Sudoku_Test.TimeOutName, expectedValue: expected)
             }

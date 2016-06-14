@@ -33,12 +33,12 @@ import Foundation
 
 private extension String {
     subscript(index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Hard_044_Wildcard_Matching {
-    static func isMatch(s  s: String, p: String) -> Bool {
+    static func isMatch(s: String, p: String) -> Bool {
         var sIndex = 0
         var pIndex = 0
         var match = 0

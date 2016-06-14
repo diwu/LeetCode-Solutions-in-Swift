@@ -30,12 +30,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Medium_079_Word_Search {
-    static func exist(b: [[Character]], word: String) -> Bool {
+    static func exist(_ b: [[Character]], word: String) -> Bool {
         var board = b
         for x in 0..<board.count {
             for y in 0..<board[x].count {
@@ -46,7 +46,7 @@ struct Medium_079_Word_Search {
         }
         return false
     }
-    static private func exist_recursion_helper(inout board board: [[Character]], x: Int, y: Int, word: String, i: Int) -> Bool {
+    static private func exist_recursion_helper(board: inout [[Character]], x: Int, y: Int, word: String, i: Int) -> Bool {
         if i == word.characters.count {
             return true
         }

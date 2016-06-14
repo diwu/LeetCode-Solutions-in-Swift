@@ -26,7 +26,7 @@ Inspired by @xianlei at https://leetcode.com/discuss/1827/anyone-with-one-pass-a
 import Foundation
 
 struct Medium_075_Sort_Colors {
-    static func sortColors(inout nums: [Int]) {
+    static func sortColors(_ nums: inout [Int]) {
         var red = -1
         var white = -1
         var blue = -1

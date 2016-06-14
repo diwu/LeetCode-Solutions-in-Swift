@@ -43,7 +43,7 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase {
         let expected: [Int] = [2, 1, 4, 3, 5]
         asyncHelper(input: input, expected: expected)
     }
-    private func helper1(intArray: [Int]) -> Node? {
+    private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
             let node: Node = Node(value: i, next: nil)
@@ -57,7 +57,7 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase {
         }
         return nodeArray[0]
     }
-    private func helper2(head: Node?) -> [Int] {
+    private func helper2(_ head: Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
@@ -66,16 +66,16 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(input  input: Node?, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: Node?, expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_024_Swap_Nodes_In_Pairs.swapPairs(input))
             assertHelper(expected == result, problemName: Medium_024_Swap_Nodes_In_Pairs_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_024_Swap_Nodes_In_Pairs_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_024_Swap_Nodes_In_Pairs_Test.ProblemName, input: input, resultValue: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName, expectedValue: expected)
             }

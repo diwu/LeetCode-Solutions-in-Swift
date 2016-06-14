@@ -14,7 +14,7 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Medium_095_Unique_Binary_Search_Trees_II.Node
     private typealias Node_ObjC = ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node
-    private func convertTreeToArray_swift(root: Node_Swift?) -> [Int] {
+    private func convertTreeToArray_swift(_ root: Node_Swift?) -> [Int] {
         var ret: [Int] = []
         if root == nil {
             return ret
@@ -34,9 +34,9 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
             return ret
         }
     }
-    private func convertTreeToArray_objc(root: Node_ObjC?) -> [Int] {
+    private func convertTreeToArray_objc(_ root: Node_ObjC?) -> [Int] {
         var ret: [Int] = []
-        if root == nil || root!.isKindOfClass(Node_ObjC) == false{
+        if root == nil || root!.isKind(of: Node_ObjC.self) == false {
             return ret
         } else {
             var fifoQueue: [Node_ObjC?] = []
@@ -80,9 +80,9 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
             ])
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: Int, expected: NSSet) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: Int, expected: NSSet) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: [Node_Swift?] = Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
             let result_objc: [Node_ObjC] = ObjC_Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
             var int_arr_swift: [[Int]] = []
@@ -99,7 +99,7 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName, expectedValue: expected)
             }

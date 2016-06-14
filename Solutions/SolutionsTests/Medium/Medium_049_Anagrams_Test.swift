@@ -27,16 +27,16 @@ class Medium_049_Anagrams_Test: XCTestCase {
         let expected: [String] = []
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input  input: [String], expected: [String]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_049_Anagrams_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [String], expected: [String]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_049_Anagrams_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_049_Anagrams.anagrams(input)
             assertHelper(Set(result) == Set(expected), problemName: Medium_049_Anagrams_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_049_Anagrams_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_049_Anagrams_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_049_Anagrams_Test.ProblemName, input: input, resultValue: Medium_049_Anagrams_Test.TimeOutName, expectedValue: expected)
             }

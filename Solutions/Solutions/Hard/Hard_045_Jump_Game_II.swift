@@ -24,7 +24,7 @@ Inspired by @chentao169 at https://leetcode.com/discuss/422/is-there-better-solu
 import Foundation
 
 struct Hard_045_Jump_Game_II {
-    static func jump(nums: [Int]) -> Int {
+    static func jump(_ nums: [Int]) -> Int {
         var result = 0;
         var last = 0;
         var curr = 0;

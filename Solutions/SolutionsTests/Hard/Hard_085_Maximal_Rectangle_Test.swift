@@ -84,16 +84,16 @@ class Hard_085_Maximal_Rectangle_Test: XCTestCase {
         let expected: Int = 6
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: [[Character]], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_085_Maximal_Rectangle_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [[Character]], expected: Int) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_085_Maximal_Rectangle_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_085_Maximal_Rectangle.maximalRectangle(input)
             assertHelper(result == expected, problemName: Hard_085_Maximal_Rectangle_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_085_Maximal_Rectangle_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_085_Maximal_Rectangle_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_085_Maximal_Rectangle_Test.ProblemName, input: input, resultValue: Hard_085_Maximal_Rectangle_Test.TimeOutName, expectedValue: expected)
             }

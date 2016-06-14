@@ -67,18 +67,18 @@ class Hard_097_Interleaving_String_Test: XCTestCase {
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: [String], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_097_Interleaving_String_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [String], expected: Bool) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_097_Interleaving_String_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift = Hard_097_Interleaving_String.isInterleave(s1: input[0], s2: input[1], s3: input[2])
-            let result_objc = ObjC_Hard_097_Interleaving_String.isInterleaveWithS1(input[0], s2: input[1], s3: input[2])
+            let result_objc = ObjC_Hard_097_Interleaving_String.isInterleave(withS1: input[0], s2: input[1], s3: input[2])
             assertHelper(result_swift == expected, problemName: Hard_097_Interleaving_String_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
             assertHelper(result_objc == expected, problemName: Hard_097_Interleaving_String_Test.ProblemName, input: input, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_097_Interleaving_String_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_097_Interleaving_String_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_097_Interleaving_String_Test.ProblemName, input: input, resultValue: Hard_097_Interleaving_String_Test.TimeOutName, expectedValue: expected)
             }

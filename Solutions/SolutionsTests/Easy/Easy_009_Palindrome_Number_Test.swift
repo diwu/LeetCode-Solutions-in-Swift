@@ -49,16 +49,16 @@ class Easy_009_Palindrome_Number_Test: XCTestCase {
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
-    func asyncHelper(input  input: Int, expected: Bool ) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_009_Palindrome_Number_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    func asyncHelper(input: Int, expected: Bool ) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_009_Palindrome_Number_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Bool = Easy_009_Palindrome_Number.isPalindrome(input)
             assertHelper(result == expected, problemName: Easy_009_Palindrome_Number_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_009_Palindrome_Number_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_009_Palindrome_Number_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_009_Palindrome_Number_Test.ProblemName, input: input, resultValue: Easy_009_Palindrome_Number_Test.TimeOutName, expectedValue: expected)
             }

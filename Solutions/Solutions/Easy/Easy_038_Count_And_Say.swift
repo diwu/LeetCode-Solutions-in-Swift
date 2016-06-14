@@ -24,12 +24,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 class Easy_038_Count_And_Say {
-    class func countAndSay(n: Int) -> String {
+    class func countAndSay(_ n: Int) -> String {
         var result: String = "1"
         for _ in 0 ..< n {
             let previous: String = result

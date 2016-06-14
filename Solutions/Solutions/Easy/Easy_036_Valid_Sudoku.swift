@@ -28,7 +28,7 @@ Inspired by @bigwolfandtiger at https://leetcode.com/discuss/17990/sharing-my-ea
 import Foundation
 
 class Easy_036_Valid_Sudoku {
-    class func isPartiallyValid(board  board: [[Character]], x1: Int, y1: Int, x2: Int, y2: Int) -> Bool {
+    class func isPartiallyValid(board: [[Character]], x1: Int, y1: Int, x2: Int, y2: Int) -> Bool {
         var singleSet: Set<Character> = Set()
         for i in x1...x2 {
             for j in y1...y2 {
@@ -43,7 +43,7 @@ class Easy_036_Valid_Sudoku {
         }
         return true
     }
-    class func isValidSudoku(board: [[Character]]) -> Bool {
+    class func isValidSudoku(_ board: [[Character]]) -> Bool {
         for i in 0..<9 {
             if isPartiallyValid(board: board, x1: i, y1: 0, x2: i, y2: 8) == false {
                 return false

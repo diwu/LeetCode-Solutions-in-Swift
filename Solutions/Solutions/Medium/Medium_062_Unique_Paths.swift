@@ -19,7 +19,7 @@ Inspired by @d40a at https://leetcode.com/discuss/9110/my-ac-solution-using-form
 import Foundation
 
 struct Medium_062_Unique_Paths {
-    static func uniquePaths(m m: Int, n: Int) -> Int {
+    static func uniquePaths(m: Int, n: Int) -> Int {
         let N = n + m - 2
         let k = min(m - 1, n - 1)
         var res = 1

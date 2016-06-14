@@ -51,25 +51,25 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex, limit: self.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
     }
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Hard_087_Scramble_String {
-    static func isScramble(s1 s1: String?, s2: String?) -> Bool {
+    static func isScramble(s1: String?, s2: String?) -> Bool {
         return isScramble_recursion(s1: s1, s2: s2)
     }
-    static func isScramble_recursion(s1 s1: String?, s2: String?) -> Bool {
+    static func isScramble_recursion(s1: String?, s2: String?) -> Bool {
         if s1 == nil || s2 == nil || s1?.characters.count != s2?.characters.count {
             return false
         }
         if s1 == s2 {
             return true
         }
-        if (s1?.characters.sort())! != (s2?.characters.sort())! {
+        if (s1?.characters.sorted())! != (s2?.characters.sorted())! {
             return false
         }
         let count: Int = (s1?.characters.count)!
@@ -83,14 +83,14 @@ struct Hard_087_Scramble_String {
         }
         return false
     }
-    static func isScramble_iteration(s1 s1: String?, s2: String?) -> Bool {
+    static func isScramble_iteration(s1: String?, s2: String?) -> Bool {
         if s1 == nil || s2 == nil || s1?.characters.count != s2?.characters.count {
             return false
         }
         let len = s1?.characters.count
-        var dp: Array<Array<Array<Bool>>> = Array<Array<Array<Bool>>>(count: 100, repeatedValue: Array<Array<Bool>>(count: 100, repeatedValue: Array<Bool>(count: 100, repeatedValue: false)))
-        for i in (0...len! - 1).reverse() {
-            for j in (0...len!-1).reverse() {
+        var dp: Array<Array<Array<Bool>>> = Array<Array<Array<Bool>>>(repeating: Array<Array<Bool>>(repeating: Array<Bool>(repeating: false, count: 100), count: 100), count: 100)
+        for i in (0...len! - 1).reversed() {
+            for j in (0...len!-1).reversed() {
                 dp[i][j][1] = (s1![i] == s2![j])
                 var l = 2
                 while i + l <= len && j + l <= len {

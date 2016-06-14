@@ -24,7 +24,7 @@ Inspired by @hln9319 https://leetcode.com/discuss/12693/neat-ac-java-code-o-n-ti
 
 class Easy_009_Palindrome_Number {
     // O (N)
-    class func isPalindrome(x: Int) -> Bool {
+    class func isPalindrome(_ x: Int) -> Bool {
         var palindromeX: Int = 0
         var tmp: Int = x
         while tmp > 0 {

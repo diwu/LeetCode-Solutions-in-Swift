@@ -25,7 +25,7 @@ Inspired by http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
 import Foundation
 
 struct Hard_084_Largest_Rectangle_In_Histogram {
-    static func largestRectangleArea(heights: [Int]) -> Int {
+    static func largestRectangleArea(_ heights: [Int]) -> Int {
         var stack:[Int] = []
         var max_area = 0
         var top_of_stack: Int

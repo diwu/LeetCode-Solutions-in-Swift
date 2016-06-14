@@ -57,16 +57,16 @@ class Medium_063_Unique_Paths_II_Test: XCTestCase {
         let expected: Int = 10
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input  input: [[Int]], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_063_Unique_Paths_II_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [[Int]], expected: Int) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_063_Unique_Paths_II_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_063_Unique_Paths_II.uniquePathsWithObstacles(input)
             assertHelper(result == expected, problemName: Medium_063_Unique_Paths_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_063_Unique_Paths_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_063_Unique_Paths_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_063_Unique_Paths_II_Test.ProblemName, input: input, resultValue: Medium_063_Unique_Paths_II_Test.TimeOutName, expectedValue: expected)
             }

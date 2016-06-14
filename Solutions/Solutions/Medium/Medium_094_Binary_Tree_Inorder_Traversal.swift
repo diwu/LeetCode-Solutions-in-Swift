@@ -35,11 +35,11 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
         }
         
     }
-    class func inorderTraversal(root: Node?) -> [Int] {
+    class func inorderTraversal(_ root: Node?) -> [Int] {
         return inorderTraversal_morris(root)
     }
     // Morris, t = O(N), both average & worst s = O(1)
-    class func inorderTraversal_morris(r: Node?) -> [Int] {
+    class func inorderTraversal_morris(_ r: Node?) -> [Int] {
         var root = r
         if root == nil {
             return []
@@ -69,7 +69,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
         }
     }
     // Recursion, t = O(N), average s = O(log(N)), worst s = O(N)
-    class func inorderTraversal_iteration(root: Node?) -> [Int] {
+    class func inorderTraversal_iteration(_ root: Node?) -> [Int] {
         var res: [Int] = []
         var stack: [Node] = []
         var curr: Node? = root
@@ -84,7 +84,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
         }
         return res
     }
-    class func inorderTraversal_recursion_helper(root root: Node?, inout arr: [Int]) {
+    class func inorderTraversal_recursion_helper(root: Node?, arr: inout [Int]) {
         if let unwrapped = root {
             inorderTraversal_recursion_helper(root: unwrapped.left, arr: &arr)
             arr.append(unwrapped.value)
@@ -94,7 +94,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
         }
     }
     // Recursion, t = O(N), average s = O(log(N)), worst s = O(N)
-    class func inorderTraversal_recursion(root: Node?) -> [Int] {
+    class func inorderTraversal_recursion(_ root: Node?) -> [Int] {
         var res: [Int] = []
         inorderTraversal_recursion_helper(root: root, arr: &res)
         return res

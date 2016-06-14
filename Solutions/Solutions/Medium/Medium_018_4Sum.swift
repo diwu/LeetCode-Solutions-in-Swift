@@ -47,12 +47,12 @@ class Medium_018_4Sum {
     }
 
     // O (N^3)
-    class func fourSum(num  num: [Int], target: Int) -> [[Int]] {
+    class func fourSum(num: [Int], target: Int) -> [[Int]] {
         var res: [[Int]] = []
         if num.count < 4 {
             return res
         }
-        var sortedNum: [Int] = num.sort { $0 < $1 }
+        var sortedNum: [Int] = num.sorted { $0 < $1 }
         var map: Dictionary<Int, [Pair]> = Dictionary<Int, [Pair]>()
         var array: [Int] = []
         for i in 0..<sortedNum.count {
@@ -149,11 +149,11 @@ class Medium_018_4Sum {
         }
         return res
     }
-    class func lowerKey(key  key: Int, arr: [Int]) -> Int? {
+    class func lowerKey(key: Int, arr: [Int]) -> Int? {
         if arr.count <= 0 {
             return nil;
         } else {
-            for i in (0...arr.count-1).reverse() {
+            for i in (0...arr.count-1).reversed() {
                 if arr[i] < key {
                     return arr[i]
                 }
@@ -161,7 +161,7 @@ class Medium_018_4Sum {
             return nil
         }
     }
-    class func higherKey(key  key: Int, arr: [Int]) -> Int? {
+    class func higherKey(key: Int, arr: [Int]) -> Int? {
         if arr.count <= 0 {
             return nil;
         } else {

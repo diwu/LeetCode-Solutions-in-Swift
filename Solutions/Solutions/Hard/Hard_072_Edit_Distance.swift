@@ -22,7 +22,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -36,7 +36,7 @@ struct Hard_072_Edit_Distance {
             swap(&word1, &word2)
             swap(&len1, &len2)
         }
-        var buf: [Int] = Array(count: len2 + 1, repeatedValue: 0)
+        var buf: [Int] = Array(repeating: 0, count: len2 + 1)
         if len2 > 0 {
             for j in 1...len2{
                 buf[j] = j

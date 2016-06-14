@@ -18,12 +18,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 class Easy_028_Implement_StrStr {
-    class func strStr_brute_force(hayStack  hayStack: String?, needle: String?) -> Int {
+    class func strStr_brute_force(hayStack: String?, needle: String?) -> Int {
         if hayStack == nil || needle == nil {
             return -1
         }
@@ -45,7 +45,7 @@ class Easy_028_Implement_StrStr {
             i += 1
         }
     }
-    class func strStr_KMP(hayStack  hayStack: String?, needle: String?) -> Int {
+    class func strStr_KMP(hayStack: String?, needle: String?) -> Int {
         if hayStack == nil || needle == nil {
             return -1
         }
@@ -74,8 +74,8 @@ class Easy_028_Implement_StrStr {
         }
         return -1
     }
-    class func makeNext(arr: [Character]) -> [Int] {
-        var next: [Int] = [Int](count: arr.count, repeatedValue: -1)
+    class func makeNext(_ arr: [Character]) -> [Int] {
+        var next: [Int] = [Int](repeating: -1, count: arr.count)
         var i = 0
         var j = -1
         

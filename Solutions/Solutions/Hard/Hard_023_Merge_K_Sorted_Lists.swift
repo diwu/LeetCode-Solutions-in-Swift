@@ -68,7 +68,7 @@ class Hard_023_Merge_K_Sorted_Lists {
         prev!.next = l1
         return curr
     }
-    class func mergeKLists(lists: [Node?]) -> Node? {
+    class func mergeKLists(_ lists: [Node?]) -> Node? {
         if lists.count == 0 {
             return nil
         } else if lists.count == 1 {

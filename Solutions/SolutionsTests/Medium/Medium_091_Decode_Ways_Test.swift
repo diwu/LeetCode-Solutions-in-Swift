@@ -37,16 +37,16 @@ class Medium_091_Decode_Ways_Test: XCTestCase {
         let expected: Int = 3
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: String, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_091_Decode_Ways_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: String, expected: Int) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_091_Decode_Ways_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_091_Decode_Ways.numDecodings(input)
             assertHelper(result == expected, problemName: Medium_091_Decode_Ways_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_091_Decode_Ways_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_091_Decode_Ways_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_091_Decode_Ways_Test.ProblemName, input: input, resultValue: Medium_091_Decode_Ways_Test.TimeOutName, expectedValue: expected)
             }

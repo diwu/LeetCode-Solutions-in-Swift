@@ -20,7 +20,7 @@ Inspired by @1337c0d3r at https://leetcode.com/discuss/223/when-there-are-duplic
 import Foundation
 
 struct Medium_081_Search_In_Rotated_Sorted_Array_II {
-    static func search(nums nums: [Int], target: Int) -> Bool {
+    static func search(nums: [Int], target: Int) -> Bool {
         var l = 0, r = nums.count - 1
         while l <= r {
             let m = l + (r - l)/2

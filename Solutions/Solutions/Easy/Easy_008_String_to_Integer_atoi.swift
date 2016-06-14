@@ -30,7 +30,7 @@ Inspired by @yuruofeifei at https://leetcode.com/discuss/8886/my-simple-solution
 
 struct Easy_008_String_to_Integer_atoi {
     // t = O(N), s = O(1)
-    static func atoi(s: String) -> Int {
+    static func atoi(_ s: String) -> Int {
         var positive = true
         var base = 0
         for char in s.characters {

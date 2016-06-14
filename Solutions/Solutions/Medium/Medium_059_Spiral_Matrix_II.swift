@@ -25,8 +25,8 @@ Inspired by @yike at https://leetcode.com/discuss/21677/simple-c-solution-with-e
 import Foundation
 
 struct Medium_059_Spiral_Matrix_II {
-    static func generateMatrix(n: Int) -> [[Int]] {
-        var res = Array<[Int]>(count: n, repeatedValue: Array<Int>(count: n, repeatedValue: 0))
+    static func generateMatrix(_ n: Int) -> [[Int]] {
+        var res = Array<[Int]>(repeating: Array<Int>(repeating: 0, count: n), count: n)
         var k = 1
         var i = 0
         while k <= n * n {

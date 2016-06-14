@@ -51,7 +51,7 @@ class Medium_061_Rotate_List_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     
-    private func helper1(intArray: [Int]) -> Node? {
+    private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
             let node: Node = Node(value: i, next: nil)
@@ -66,7 +66,7 @@ class Medium_061_Rotate_List_Test: XCTestCase {
         return nodeArray[0]
     }
     
-    private func helper2(head: Node?) -> [Int] {
+    private func helper2(_ head: Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
@@ -76,16 +76,16 @@ class Medium_061_Rotate_List_Test: XCTestCase {
         return res
     }
     
-    func asyncHelper(input  input: [AnyObject], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_061_Rotate_List_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    func asyncHelper(input: [AnyObject], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_061_Rotate_List_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_061_Rotate_List.rotateRight(head: self.helper1(input[0] as! [Int]), k: input[1] as! Int))
             assertHelper(expected == result, problemName: Medium_061_Rotate_List_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_061_Rotate_List_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_061_Rotate_List_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_061_Rotate_List_Test.ProblemName, input: input, resultValue: Medium_061_Rotate_List_Test.TimeOutName, expectedValue: expected)
             }

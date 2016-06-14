@@ -88,7 +88,7 @@ class Medium_002_Add_Two_Numbers_Test: XCTestCase {
             n.next = ListNode.init(4, next: nil)
             tmp = n.next
         }
-        var result: ListNode? = ObjC_Medium_002_Add_Two_Numbers.addNumbers(dummy1.next, node2: dummy2.next)
+        var result: ListNode? = ObjC_Medium_002_Add_Two_Numbers.add(dummy1.next, node2: dummy2.next)
         
         var numericalValue: Int = 0
         var base: Int = 0

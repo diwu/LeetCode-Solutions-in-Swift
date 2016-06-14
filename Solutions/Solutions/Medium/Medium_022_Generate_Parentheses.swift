@@ -19,7 +19,7 @@ Inspired by @klyc0k at https://leetcode.com/discuss/14436/concise-recursive-c-so
 import Foundation
 
 class Medium_022_Generate_Parentheses {
-    class func helper(inout arr  arr: [String], str: String, n: Int, m: Int) {
+    class func helper(arr: inout [String], str: String, n: Int, m: Int) {
         if m == 0 && n == 0 {
             arr.append(str)
             return
@@ -31,7 +31,7 @@ class Medium_022_Generate_Parentheses {
             helper(arr: &arr, str: str + "(", n: n-1, m: m+1)
         }
     }
-    class func generateParenthesis(n: Int) -> [String] {
+    class func generateParenthesis(_ n: Int) -> [String] {
         var arr: [String] = []
         helper(arr: &arr, str: "", n: n, m: 0)
         return arr

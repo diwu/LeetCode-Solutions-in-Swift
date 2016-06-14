@@ -33,7 +33,7 @@ class Medium_092_Reverse_Linked_List_II {
         }
     }
     // t = O(N), s = O(1), one pass
-    class func reverseBetween(head: Node?, m: Int, n: Int) -> Node? {
+    class func reverseBetween(_ head: Node?, m: Int, n: Int) -> Node? {
         if head == nil {
             return nil
         }

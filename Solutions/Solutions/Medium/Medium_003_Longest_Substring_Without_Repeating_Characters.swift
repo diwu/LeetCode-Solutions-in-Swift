@@ -27,7 +27,7 @@ private extension String {
 
 struct Medium_003_Longest_Substring_Without_Repeating_Characters {
     // t = O(N), s = O(1)
-    static func longest(s: String) -> Int {
+    static func longest(_ s: String) -> Int {
         let charArr = s.randomAccessCharactersArray()
         let len = charArr.count
         if len <= 1 {

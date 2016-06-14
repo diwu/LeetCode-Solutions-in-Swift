@@ -26,12 +26,12 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Hard_076_Minimum_Window_Substring {
-    static func minWindow(s s: String, t: String) -> String {
+    static func minWindow(s: String, t: String) -> String {
         if s.isEmpty || t.isEmpty {
             return ""
         }
@@ -83,7 +83,7 @@ struct Hard_076_Minimum_Window_Substring {
         if minLen == Int.max {
             return ""
         }
-        let range = s.startIndex.advancedBy(minIdx) ..< s.startIndex.advancedBy(minIdx + minLen)
-        return s.substringWithRange(range)
+        let range = s.characters.index(s.startIndex, offsetBy: minIdx) ..< s.characters.index(s.startIndex, offsetBy: minIdx + minLen)
+        return s.substring(with: range)
     }
 }

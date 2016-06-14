@@ -32,12 +32,12 @@ Inspired by @thumike at https://leetcode.com/discuss/9213/my-solution-using-bit-
 import Foundation
 
 struct Medium_078_Subsets {
-    static func subsets(n: [Int]) -> [[Int]] {
+    static func subsets(_ n: [Int]) -> [[Int]] {
         var nums = n
-        nums.sortInPlace {$0 < $1}
+        nums.sort {$0 < $1}
         let elemNum = nums.count
         let subsetNum = Int(pow(2.0, Double(elemNum)))
-        var subsets: [[Int]] = [[Int]](count: subsetNum, repeatedValue: [])
+        var subsets: [[Int]] = [[Int]](repeating: [], count: subsetNum)
         for i in 0..<elemNum {
             for j in 0..<subsetNum {
                 if ((j >> i) & 1) != 0 {

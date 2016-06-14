@@ -27,9 +27,9 @@ class Medium_039_Combination_Sum_Test: XCTestCase {
         let expected: [[Int]] = [[1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 2], [1, 1, 1, 3], [1, 1, 2, 2], [1, 2, 3], [2, 2, 2], [3, 3]]
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input  input: [Any], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_039_Combination_Sum_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [Any], expected: [[Int]]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_039_Combination_Sum_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             var result: [[Int]] = Medium_039_Combination_Sum.combinationSum(candidates: input[0] as! [Int], target: input[1] as! Int)
             if result.count != expected.count {
                 assertHelper(false, problemName: Medium_039_Combination_Sum_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -51,7 +51,7 @@ class Medium_039_Combination_Sum_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_039_Combination_Sum_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_039_Combination_Sum_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_039_Combination_Sum_Test.ProblemName, input: input, resultValue: Medium_039_Combination_Sum_Test.TimeOutName, expectedValue: expected)
             }

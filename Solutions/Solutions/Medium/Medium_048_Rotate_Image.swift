@@ -20,12 +20,12 @@ Inspired by @shichaotan at https://leetcode.com/discuss/20589/a-common-method-to
 import Foundation
 
 struct Medium_048_Rotate_Image {
-    private static func reverseInPlace<T>(inout nums  nums: [T]) {
+    private static func reverseInPlace<T>(nums: inout [T]) {
         for i in 0 ..< nums.count/2 {
             swap(&nums[i], &nums[nums.count-1-i])
         }
     }
-    static func rotate(inout matrix: [[Int]]) {
+    static func rotate(_ matrix: inout [[Int]]) {
         reverseInPlace(nums: &matrix)
         for i in 0 ..< matrix.count {
             for j in i + 1 ..< matrix[i].count {

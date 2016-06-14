@@ -34,7 +34,7 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List {
         }
     }
 
-    class func removeNthFromEnd(head: Node?, n: Int) -> Node? {
+    class func removeNthFromEnd(_ head: Node?, n: Int) -> Node? {
         let dummyHead: Node = Node(value: 0, next: head)
         var fast: Node? = dummyHead, slow: Node? = dummyHead
         var localN = n

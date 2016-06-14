@@ -130,8 +130,8 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
     }
     private func asyncHelper(input ipt: [[Character]], expected: [[Character]]) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_037_Sudoku_Solver_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_037_Sudoku_Solver_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             Hard_037_Sudoku_Solver.solveSudoku(&input)
             var result: [[Character]] = input
             for i in 0..<9 {
@@ -141,7 +141,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_037_Sudoku_Solver_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_037_Sudoku_Solver_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_037_Sudoku_Solver_Test.ProblemName, input: input, resultValue: Hard_037_Sudoku_Solver_Test.TimeOutName, expectedValue: expected)
             }

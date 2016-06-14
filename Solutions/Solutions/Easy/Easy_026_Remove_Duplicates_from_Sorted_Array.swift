@@ -23,7 +23,7 @@ import Foundation
 
 class Easy_026_Remove_Duplicates_from_Sorted_Array {
     // O (1) space, O(N) time
-    class func removeDuplicates(inout arr: [Int]) -> Int {
+    class func removeDuplicates(_ arr: inout [Int]) -> Int {
         if arr.count < 2 {
             return arr.count
         }

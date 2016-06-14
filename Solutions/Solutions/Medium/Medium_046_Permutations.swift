@@ -19,7 +19,7 @@ Inspired by @xiaohui7 at https://leetcode.com/discuss/18212/my-elegant-recursive
 import Foundation
 
 struct Medium_046_Permutations {
-    private static func permuteRecursive(nums n: [Int], begin: Int, inout result: [[Int]]) {
+    private static func permuteRecursive(nums n: [Int], begin: Int, result: inout [[Int]]) {
         var nums = n
         if begin >= nums.count {
             result.append(nums)
@@ -46,7 +46,7 @@ struct Medium_046_Permutations {
             nums[i] = tmp
         }
     }
-    static func permute(nums: [Int]) -> [[Int]] {
+    static func permute(_ nums: [Int]) -> [[Int]] {
         var result = [[Int]]()
         permuteRecursive(nums: nums, begin: 0, result: &result)
         return result

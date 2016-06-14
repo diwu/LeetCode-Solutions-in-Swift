@@ -23,10 +23,10 @@ Inspired by @stellari at https://leetcode.com/discuss/18242/clean-iterative-solu
 import Foundation
 
 class Medium_034_Search_For_A_Range {
-    class func searchRange(nums  nums: [Int], target: Int) -> [Int] {
+    class func searchRange(nums: [Int], target: Int) -> [Int] {
         var i: Int = 0
         var j: Int = nums.count - 1
-        var result: [Int] = Array<Int>(count: 2, repeatedValue: -1)
+        var result: [Int] = Array<Int>(repeating: -1, count: 2)
         while i < j {
             let mid: Int = (i+j)/2
             if nums[mid] < target {

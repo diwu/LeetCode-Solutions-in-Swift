@@ -25,10 +25,10 @@ Inspired by @monaziyi at https://leetcode.com/discuss/24939/c-10-lines-solution
 import Foundation
 
 struct Medium_071_Simplify_Path {
-    static func simplifyPath(path: String) -> String {
+    static func simplifyPath(_ path: String) -> String {
         var stack: [String] = []
         let arr = path.characters.split {$0 == "/"}.map(String.init)
-                for (_, s) in arr.enumerate() {
+                for (_, s) in arr.enumerated() {
             if s == "" || s == "." {
                 continue
             } else if s == ".." && stack.isEmpty == false {
@@ -38,7 +38,7 @@ struct Medium_071_Simplify_Path {
             }
         }
         var res = ""
-        for (_, s) in stack.enumerate() {
+        for (_, s) in stack.enumerated() {
             res += "/" + s
         }
         return res.isEmpty ? "/" : res

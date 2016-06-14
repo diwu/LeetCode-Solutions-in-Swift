@@ -17,7 +17,7 @@ Inspired by @wdj0xda at https://leetcode.com/discuss/17111/my-java-solution-usin
 import Foundation
 
 struct Medium_064_Minimum_Path_Sum {
-    static func minPathSum(g: [[Int]]) -> Int {
+    static func minPathSum(_ g: [[Int]]) -> Int {
         var grid = g
         if grid.count == 0 {
             return 0

@@ -25,8 +25,8 @@ import Foundation
 
 class Medium_096_Unique_Binary_Search_Trees {
     // t=O(N^2), s=O(N)
-    class func numTrees(n: Int) -> Int {
-        var ret: [Int] = Array<Int>(count: n+1, repeatedValue: 0)
+    class func numTrees(_ n: Int) -> Int {
+        var ret: [Int] = Array<Int>(repeating: 0, count: n+1)
         ret[0] = 1
         ret[1] = 1
         if 2 <= n {

@@ -23,12 +23,12 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex, limit: self.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
     }
 }
 
 class Hard_030_Substring_With_Concatenation_Of_All_Words {
-    class func findSubstring(s  s: String?, words: [String]) -> [Int] {
+    class func findSubstring(s: String?, words: [String]) -> [Int] {
         if s == nil || words.count == 0 {
             return []
         }
@@ -56,7 +56,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
             while j < stringLength {
                 s1 = s![j..<j+wordLength]
                 if dict1[s1] == nil {
-                    dict2.removeAll(keepCapacity: false)
+                    dict2.removeAll(keepingCapacity: false)
                     counter1 = 0
                     counter2 = j + wordLength
                 } else if dict2[s1] == nil || dict2[s1]! < dict1[s1]! {
@@ -85,7 +85,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
                 }
                 j += wordLength
             }
-            dict2.removeAll(keepCapacity: false)
+            dict2.removeAll(keepingCapacity: false)
         }
         return result
     }

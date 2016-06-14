@@ -14,7 +14,7 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase {
     private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Easy_101_Symmetric_Tree.Node
     private typealias Node_ObjC = ObjC_Easy_101_Symmetric_Tree_Node
-    private func convertArrayToTree_swift(arr: [Int]) -> Node_Swift {
+    private func convertArrayToTree_swift(_ arr: [Int]) -> Node_Swift {
         let root: Node_Swift = Node_Swift.init(value: arr[0], left: nil, right: nil)
         var fifoQueue: [Node_Swift] = [root]
         var i = 1
@@ -36,7 +36,7 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase {
         }
         return root
     }
-    private func convertArrayToTree_objc(arr: [Int]) -> Node_ObjC {
+    private func convertArrayToTree_objc(_ arr: [Int]) -> Node_ObjC {
         let root: Node_ObjC = Node_ObjC.init(value: arr[0], left: nil, right: nil)
         var fifoQueue: [Node_ObjC] = [root]
         var i = 1
@@ -68,9 +68,9 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase {
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input input: [Int], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Easy_101_Symmetric_Tree_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [Int], expected: Bool) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_101_Symmetric_Tree_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: Bool = Easy_101_Symmetric_Tree.isSymmetric(self.convertArrayToTree_swift(input))
             let result_objc: Bool = ObjC_Easy_101_Symmetric_Tree.isSymmetric(self.convertArrayToTree_objc(input))
             assertHelper(expected == result_swift, problemName: Easy_101_Symmetric_Tree_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -79,7 +79,7 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Easy_101_Symmetric_Tree_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Easy_101_Symmetric_Tree_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_101_Symmetric_Tree_Test.ProblemName, input: input, resultValue: Easy_101_Symmetric_Tree_Test.TimeOutName, expectedValue: expected)
             }

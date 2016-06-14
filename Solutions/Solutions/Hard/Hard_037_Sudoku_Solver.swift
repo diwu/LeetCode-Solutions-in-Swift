@@ -19,7 +19,7 @@ Inspired by @power721 at https://leetcode.com/discuss/5958/afraid-cant-solve-pro
 import Foundation
 
 class Hard_037_Sudoku_Solver {
-    class func validate(inout board  board: [[Character]], x: Int, y: Int) -> Bool {
+    class func validate(board: inout [[Character]], x: Int, y: Int) -> Bool {
         let c: Character = board[x][y]
         for i in 0 ..< 9 {
             if y != i && board[x][i] == c {
@@ -40,7 +40,7 @@ class Hard_037_Sudoku_Solver {
         }
         return true
     }
-    class func dfs(inout board  board: [[Character]], position: Int) -> Bool {
+    class func dfs(board: inout [[Character]], position: Int) -> Bool {
         let n = board.count
         if position == n * n {
             return true
@@ -63,7 +63,7 @@ class Hard_037_Sudoku_Solver {
         }
         return false
     }
-    class func solveSudoku(inout board: [[Character]]) {
+    class func solveSudoku(_ board: inout [[Character]]) {
         dfs(board: &board, position: 0)
     }
 }

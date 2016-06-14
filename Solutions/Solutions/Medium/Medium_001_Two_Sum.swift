@@ -21,7 +21,7 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 
 struct Medium_001_Two_Sum {
     // t = O(N), s = O(N)
-    static func twoSum(numbers numbers: [Int], target: Int) -> [Int] {
+    static func twoSum(numbers: [Int], target: Int) -> [Int] {
         var hashMap = [Int: Int]()
         var result = [Int]()
 

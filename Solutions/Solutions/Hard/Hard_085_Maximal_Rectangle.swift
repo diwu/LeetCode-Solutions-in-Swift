@@ -15,15 +15,15 @@ Inspired by @morrischen2008 at https://leetcode.com/discuss/20240/share-my-dp-so
 import Foundation
 
 struct Hard_085_Maximal_Rectangle {
-    static func maximalRectangle(matrix: [[Character]]) -> Int {
+    static func maximalRectangle(_ matrix: [[Character]]) -> Int {
         if matrix.isEmpty {
             return 0
         }
         let m: Int = matrix.count
         let n: Int = matrix[0].count
-        var left: [Int] = [Int](count: n, repeatedValue: 0)
-        var right: [Int] = [Int](count: n, repeatedValue: n)
-        var height: [Int] = [Int](count: n, repeatedValue: 0)
+        var left: [Int] = [Int](repeating: 0, count: n)
+        var right: [Int] = [Int](repeating: n, count: n)
+        var height: [Int] = [Int](repeating: 0, count: n)
         var maxArea: Int = 0
         for i in 0 ..< m {
             var curr_left = 0
@@ -44,7 +44,7 @@ struct Hard_085_Maximal_Rectangle {
                 }
             }
             if n >= 1 {
-                for j in (0...n-1).reverse() {
+                for j in (0...n-1).reversed() {
                     if matrix[i][j] == "1" {
                         right[j] = min(right[j], curr_right)
                     } else {

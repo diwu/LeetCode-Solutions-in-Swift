@@ -34,12 +34,12 @@ Inspired by @qqz003 at https://leetcode.com/discuss/22526/c-6ms-solution-use-bit
 import Foundation
 
 struct Hard_051_N_Queens {
-    private static func getNq(index  index: Int, n: Int) -> String {
-        var charArr = [Character](count: n, repeatedValue: ".")
+    private static func getNq(index: Int, n: Int) -> String {
+        var charArr = [Character](repeating: ".", count: n)
         charArr[index] = "Q"
         return String(charArr)
     }
-    private static func nQueens(n  n: Int, p: Int, l: Int, m: Int, r: Int, inout answer: [String], inout result: [[String]]) {
+    private static func nQueens(n: Int, p: Int, l: Int, m: Int, r: Int, answer: inout [String], result: inout [[String]]) {
         if p >= n {
             result.append(answer)
             return
@@ -57,7 +57,7 @@ struct Hard_051_N_Queens {
             b <<= 1
         }
     }
-    static func solveNQueens(n: Int) -> [[String]] {
+    static func solveNQueens(_ n: Int) -> [[String]] {
         var result = [[String]]()
         var answer = [String]()
         nQueens(n: n, p: 0, l: 0, m: 0, r: 0, answer: &answer, result: &result)

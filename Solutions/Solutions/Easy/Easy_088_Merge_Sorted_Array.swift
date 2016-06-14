@@ -18,7 +18,7 @@ Inspired by @leetchunhui at https://leetcode.com/discuss/8233/this-is-my-ac-code
 import Foundation
 
 struct Easy_088_Merge_Sorted_Array {
-    static func merge(inout nums1 nums1: [Int], m: Int, nums2: [Int], n: Int) {
+    static func merge(nums1: inout [Int], m: Int, nums2: [Int], n: Int) {
         var i = m - 1
         var j = n - 1
         var k = m + n - 1

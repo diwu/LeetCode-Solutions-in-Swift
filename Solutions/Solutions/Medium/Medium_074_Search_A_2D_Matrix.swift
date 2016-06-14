@@ -28,7 +28,7 @@ Inspired by @vaputa at https://leetcode.com/discuss/10735/dont-treat-it-as-a-2d-
 import Foundation
 
 struct Medium_074_Search_A_2D_Matrix {
-    static func searchMatrix(matrix matrix: [[Int]], target: Int) -> Bool {
+    static func searchMatrix(matrix: [[Int]], target: Int) -> Bool {
         let n = matrix.count
         let m = matrix[0].count
         var l = 0

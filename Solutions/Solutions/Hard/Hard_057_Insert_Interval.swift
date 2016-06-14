@@ -25,7 +25,7 @@ Inspired by @stellari at https://leetcode.com/discuss/3971/in-place-solution-ask
 import Foundation
 
 struct Hard_057_Insert_Interval {
-    static func insert(intervals intervals: [[Int]], newInterval newI: [Int]) -> [[Int]] {
+    static func insert(intervals: [[Int]], newInterval newI: [Int]) -> [[Int]] {
         var newInterval = newI
         var res: [[Int]] = []
         for i in 0 ..< intervals.count {

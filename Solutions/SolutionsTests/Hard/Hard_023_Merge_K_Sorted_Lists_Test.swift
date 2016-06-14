@@ -50,7 +50,7 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
-    private func helper1(intArray: [Int]) -> Node? {
+    private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
             let node: Node = Node(value: i, next: nil)
@@ -64,7 +64,7 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
         }
         return nodeArray[0]
     }
-    private func helper2(head: Node?) -> [Int] {
+    private func helper2(_ head: Node?) -> [Int] {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
@@ -73,16 +73,16 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
         }
         return res
     }
-    private func asyncHelper(input  input: [Node?], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: [Node?], expected: [Int]) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Hard_023_Merge_K_Sorted_Lists.mergeKLists(input))
             assertHelper(expected == result, problemName: Hard_023_Merge_K_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Hard_023_Merge_K_Sorted_Lists_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Hard_023_Merge_K_Sorted_Lists_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_023_Merge_K_Sorted_Lists_Test.ProblemName, input: input, resultValue: Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName, expectedValue: expected)
             }

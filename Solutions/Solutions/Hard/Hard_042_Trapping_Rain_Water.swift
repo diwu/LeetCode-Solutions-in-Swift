@@ -20,7 +20,7 @@ Inspired by @12344 at https://leetcode.com/discuss/3546/any-one-pass-solutions
 import Foundation
 
 struct Hard_042_Trapping_Rain_Water {
-    static func trap(nums: [Int]) -> Int {
+    static func trap(_ nums: [Int]) -> Int {
         if nums.count == 0 {
             return 0
         }

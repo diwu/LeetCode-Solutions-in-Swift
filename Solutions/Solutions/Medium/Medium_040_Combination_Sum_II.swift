@@ -28,7 +28,7 @@ Inspired by @dylan_yu at https://leetcode.com/discuss/10141/a-solution-avoid-usi
 import Foundation
 
 struct Medium_040_Combination_Sum_II {
-    private static func recurse(list  list: [Int], target: Int, candidates: [Int], index: Int, inout result: [[Int]]) {
+    private static func recurse(list: [Int], target: Int, candidates: [Int], index: Int, result: inout [[Int]]) {
         if target == 0 {
             result.append(list)
             return
@@ -54,7 +54,7 @@ struct Medium_040_Combination_Sum_II {
     static func combinationSum(candidates c: [Int], target: Int) -> [[Int]] {
         var candidates = c
         var result: [[Int]] = []
-        candidates.sortInPlace {$0 < $1}
+        candidates.sort {$0 < $1}
         recurse(list: [Int](), target: target, candidates: candidates, index: 0, result: &result)
         return result
     }

@@ -18,7 +18,7 @@ Inspired by @john6 at https://leetcode.com/discuss/1832/ive-idea-stucked-the-exc
 import Foundation
 
 struct Medium_053_Maximum_Subarray {
-    static func maxSubArray(n: [Int]) -> Int {
+    static func maxSubArray(_ n: [Int]) -> Int {
         var nums = n
         var best = nums[0];
         var current = nums[0];

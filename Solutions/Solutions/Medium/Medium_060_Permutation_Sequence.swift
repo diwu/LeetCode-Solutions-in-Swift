@@ -28,11 +28,11 @@ Inspired by @lucastan at https://leetcode.com/discuss/11023/most-concise-c-solut
 import Foundation
 
 struct Medium_060_Permutation_Sequence {
-    static func getPermutation(n n: Int, k arg: Int) -> String {
+    static func getPermutation(n: Int, k arg: Int) -> String {
         var k = arg
         var j: Int
         var f: Int = 1
-        var s = [Character](count: n, repeatedValue: "0")
+        var s = [Character](repeating: "0", count: n)
         let map: [Int: Character] = [1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"]
         for i in 1...n {
             f *= i
@@ -44,7 +44,7 @@ struct Medium_060_Permutation_Sequence {
             j = i + k / f
             let c = s[j]
             if j > i {
-                for m in (i+1...j).reverse() {
+                for m in (i+1...j).reversed() {
                     s[m] = s[m-1]
                 }
             }

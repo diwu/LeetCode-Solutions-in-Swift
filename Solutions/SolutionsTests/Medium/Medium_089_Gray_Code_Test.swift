@@ -28,7 +28,7 @@ class Medium_089_Gray_Code_Test: XCTestCase {
         let input: Int = 4
         asyncHelper(input: input)
     }
-    func twoNumberSatisfyGrayCodeRule(a a: Int, b: Int, N: Int) -> Bool {
+    func twoNumberSatisfyGrayCodeRule(a: Int, b: Int, N: Int) -> Bool {
         var counter: Int = 0
         for i in 0 ..< N {
             let tmp: Int = 1 << i
@@ -44,9 +44,9 @@ class Medium_089_Gray_Code_Test: XCTestCase {
             return false
         }
     }
-    private func asyncHelper(input input: Int) {
-        weak var expectation: XCTestExpectation? = self.expectationWithDescription(Medium_089_Gray_Code_Test.TimeOutName)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+    private func asyncHelper(input: Int) {
+        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_089_Gray_Code_Test.TimeOutName)
+        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = Medium_089_Gray_Code.grayCode(input)
             if input == 0 {
                 if result.count != 0 {
@@ -74,7 +74,7 @@ class Medium_089_Gray_Code_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectationsWithTimeout(Medium_089_Gray_Code_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(withTimeout: Medium_089_Gray_Code_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: Medium_089_Gray_Code_Test.TimeOutName, expectedValue: [])
             }

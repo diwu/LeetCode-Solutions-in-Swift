@@ -27,7 +27,7 @@ class Medium_098_Validate_Binary_Search_Tree {
             self.right = right
         }
     }
-    private class func isValidBSTRecursionHelper(curr curr: Node?, inout prev: Node?) -> Bool {
+    private class func isValidBSTRecursionHelper(curr: Node?, prev: inout Node?) -> Bool {
         if curr == nil {
             return true
         } else {
@@ -42,7 +42,7 @@ class Medium_098_Validate_Binary_Search_Tree {
         }
     }
     // t = O(N), average s = O(logN), worst s = O(N)
-    class func isValidBST(root: Node?) -> Bool {
+    class func isValidBST(_ root: Node?) -> Bool {
         var prev: Node? = nil
         return isValidBSTRecursionHelper(curr: root, prev: &prev)
     }

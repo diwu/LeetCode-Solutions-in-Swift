@@ -15,7 +15,7 @@ Inspired by @qiqjiao at https://leetcode.com/discuss/743/whats-your-solution
 import Foundation
 
 struct Hard_052_N_Queens_II {
-    private static func dfs(h  h: Int, r: Int, l: Int, inout answer: Int, inout limit: Int) {
+    private static func dfs(h: Int, r: Int, l: Int, answer: inout Int, limit: inout Int) {
         if h == limit {
             answer += 1
             return
@@ -27,7 +27,7 @@ struct Hard_052_N_Queens_II {
             dfs(h: h+p, r: (r+p)<<1, l: (l+p)>>1, answer: &answer, limit: &limit)
         }
     }
-    static func totalNQueens(n: Int) -> Int {
+    static func totalNQueens(_ n: Int) -> Int {
         if n == 0 {
             return 0
         }

@@ -42,7 +42,7 @@ class Easy_101_Symmetric_Tree {
         }
     }
     // t = O(N), best s = O(logN), worst s = O(N)
-    class func isSymmetric(root: Node?) -> Bool {
+    class func isSymmetric(_ root: Node?) -> Bool {
         if root == nil {
             return true
         }

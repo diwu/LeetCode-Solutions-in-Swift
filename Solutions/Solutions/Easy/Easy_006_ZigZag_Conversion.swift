@@ -39,8 +39,8 @@ private extension String {
 
 struct Easy_006_ZigZag_Conversion {
     // t = O(N), s = O(N)
-    static func convert(s  s: String, nRows: Int) -> String {
-        var arr = Array<String>(count: nRows, repeatedValue: String())
+    static func convert(s: String, nRows: Int) -> String {
+        var arr = Array<String>(repeating: String(), count: nRows)
         var i = 0
         let charArr = s.randomAccessCharactersArray()
         let len = charArr.count

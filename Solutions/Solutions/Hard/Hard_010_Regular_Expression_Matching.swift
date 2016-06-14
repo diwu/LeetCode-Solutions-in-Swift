@@ -32,16 +32,16 @@ Inspired by @xiaohui7 at https://leetcode.com/discuss/18970/concise-recursive-an
 // Helper
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
     subscript (range: Range<Int>) -> String {
-        return self[self.startIndex.advancedBy(range.startIndex)..<self.startIndex.advancedBy(range.endIndex)]
+        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)]
     }
 }
 
 class Hard_010_Regular_Expression_Matching {
     // recursion
-    class func isMatch_recursion(s  s: String, p: String) -> Bool {
+    class func isMatch_recursion(s: String, p: String) -> Bool {
         if p.characters.count == 0 {
             return s.characters.count == 0
         }
@@ -52,10 +52,10 @@ class Hard_010_Regular_Expression_Matching {
         }
     }
     // dp
-    class func isMatch(s  s: String, p: String) -> Bool {
+    class func isMatch(s: String, p: String) -> Bool {
         let m: Int = s.characters.count
         let n: Int = p.characters.count
-        var f: [[Bool]] = Array<Array<Bool>>(count: m + 1, repeatedValue: Array<Bool>(count: n + 1, repeatedValue: false))
+        var f: [[Bool]] = Array<Array<Bool>>(repeating: Array<Bool>(repeating: false, count: n + 1), count: m + 1)
         f[0][0] = true
         for i in 1 ... m {
             f[i][0] = false
