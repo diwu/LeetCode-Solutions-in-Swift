@@ -13,7 +13,7 @@ class Medium_078_Subsets_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
     func test_001() {
-        var input: [Int] = [1, 2, 3]
+        let input: [Int] = [1, 2, 3]
         let expected: [[Int]] = [
             [3],
             [1],
@@ -24,34 +24,34 @@ class Medium_078_Subsets_Test: XCTestCase {
             [1,2],
             []
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Int] = []
+        let input: [Int] = []
         let expected: [[Int]] = [
             []
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Int] = [1]
+        let input: [Int] = [1]
         let expected: [[Int]] = [
             [],
             [1]
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        var input: [Int] = [1, 2]
+        let input: [Int] = [1, 2]
         let expected: [[Int]] = [
             [],
             [1],
             [2],
             [1,2]
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input: inout [Int], expected: [[Int]]) {
+    private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_078_Subsets_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_078_Subsets.subsets(input)

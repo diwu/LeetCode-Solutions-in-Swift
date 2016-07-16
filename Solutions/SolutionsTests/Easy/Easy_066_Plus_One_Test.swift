@@ -34,17 +34,18 @@ class Easy_066_Plus_One_Test: XCTestCase {
     }
     private func asyncHelper(input: inout [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_066_Plus_One_Test.TimeOutName)
+        var localInput = input
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
-            Easy_066_Plus_One.plusOne(&input)
-            let result = input
-            assertHelper(result == expected, problemName: Easy_066_Plus_One_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            Easy_066_Plus_One.plusOne(&localInput)
+            let result = localInput
+            assertHelper(result == expected, problemName: Easy_066_Plus_One_Test.ProblemName, input: localInput, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(withTimeout: Easy_066_Plus_One_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_066_Plus_One_Test.ProblemName, input: input, resultValue: Easy_066_Plus_One_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName: Easy_066_Plus_One_Test.ProblemName, input: localInput, resultValue: Easy_066_Plus_One_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

@@ -13,7 +13,7 @@ class Medium_077_Combinations_Test: XCTestCase {
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value * 10
     func test_001() {
-        var input: [Int] = [4, 2]
+        let input: [Int] = [4, 2]
         let expected: [[Int]] = [
             [2,4],
             [3,4],
@@ -22,24 +22,24 @@ class Medium_077_Combinations_Test: XCTestCase {
             [1,3],
             [1,4],
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_002() {
-        var input: [Int] = [1, 1]
+        let input: [Int] = [1, 1]
         let expected: [[Int]] = [
             [1]
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
     func test_003() {
-        var input: [Int] = [2, 1]
+        let input: [Int] = [2, 1]
         let expected: [[Int]] = [
             [1],
             [2]
         ]
-        asyncHelper(input: &input, expected: expected)
+        asyncHelper(input: input, expected: expected)
     }
-    private func asyncHelper(input: inout [Int], expected: [[Int]]) {
+    private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_077_Combinations_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_077_Combinations.combine(n: input[0], k: input[1])
