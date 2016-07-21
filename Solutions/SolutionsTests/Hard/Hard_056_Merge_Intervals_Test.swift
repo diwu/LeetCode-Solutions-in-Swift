@@ -56,7 +56,7 @@ class Hard_056_Merge_Intervals_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [[Int]], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_056_Merge_Intervals_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_056_Merge_Intervals_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_056_Merge_Intervals.merge(input)
             assertHelper(result == expected, problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -64,7 +64,7 @@ class Hard_056_Merge_Intervals_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_056_Merge_Intervals_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_056_Merge_Intervals_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: Hard_056_Merge_Intervals_Test.TimeOutName, expectedValue: expected)
             }

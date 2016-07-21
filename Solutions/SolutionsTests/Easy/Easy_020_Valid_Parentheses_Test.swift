@@ -45,7 +45,7 @@ class Easy_020_Valid_Parentheses_Test: XCTestCase {
     }
 
     func asyncHelper(input: String, expected: Bool ) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_020_Valid_Parentheses_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_020_Valid_Parentheses_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Bool = Easy_020_Valid_Parentheses.isValid(input)
             assertHelper(expected == result, problemName: Easy_020_Valid_Parentheses_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -53,7 +53,7 @@ class Easy_020_Valid_Parentheses_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Easy_020_Valid_Parentheses_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_020_Valid_Parentheses_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_020_Valid_Parentheses_Test.ProblemName, input: input, resultValue: Easy_020_Valid_Parentheses_Test.TimeOutName, expectedValue: expected)
             }

@@ -39,7 +39,7 @@ class Easy_027_Remove_Element_Test: XCTestCase {
     }
     private func asyncHelper(input ipt: [Any], expected: [Int]) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_027_Remove_Element_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_027_Remove_Element_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             var arr: [Int] = input[0] as! [Int]
             let elem: Int = input[1] as! Int
@@ -49,7 +49,7 @@ class Easy_027_Remove_Element_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Easy_027_Remove_Element_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_027_Remove_Element_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_027_Remove_Element_Test.ProblemName, input: input, resultValue: Easy_027_Remove_Element_Test.TimeOutName, expectedValue: expected)
             }

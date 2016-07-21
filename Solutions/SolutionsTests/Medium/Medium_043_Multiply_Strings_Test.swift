@@ -33,7 +33,7 @@ class Medium_043_Multiply_Strings_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_043_Multiply_Strings_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_043_Multiply_Strings_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: String = Medium_043_Multiply_Strings.multiply(num1: input[0], num2: input[1])
             assertHelper(expected == result, problemName: Medium_043_Multiply_Strings_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -41,7 +41,7 @@ class Medium_043_Multiply_Strings_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_043_Multiply_Strings_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_043_Multiply_Strings_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_043_Multiply_Strings_Test.ProblemName, input: input, resultValue: Medium_043_Multiply_Strings_Test.TimeOutName, expectedValue: expected)
             }

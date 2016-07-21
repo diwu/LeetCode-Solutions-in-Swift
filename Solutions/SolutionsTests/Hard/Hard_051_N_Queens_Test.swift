@@ -30,7 +30,7 @@ class Hard_051_N_Queens_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: [[String]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_051_N_Queens_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_051_N_Queens_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             var result = Hard_051_N_Queens.solveNQueens(input)
             if result.count != expected.count {
@@ -52,7 +52,7 @@ class Hard_051_N_Queens_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_051_N_Queens_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_051_N_Queens_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: Hard_051_N_Queens_Test.TimeOutName, expectedValue: expected)
             }

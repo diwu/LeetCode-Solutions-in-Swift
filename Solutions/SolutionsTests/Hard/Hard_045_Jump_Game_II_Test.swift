@@ -38,7 +38,7 @@ class Hard_045_Jump_Game_II_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_045_Jump_Game_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_045_Jump_Game_II_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_045_Jump_Game_II.jump(input)
             assertHelper(result == expected, problemName: Hard_045_Jump_Game_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -46,7 +46,7 @@ class Hard_045_Jump_Game_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_045_Jump_Game_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_045_Jump_Game_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_045_Jump_Game_II_Test.ProblemName, input: input, resultValue: Hard_045_Jump_Game_II_Test.TimeOutName, expectedValue: expected)
             }

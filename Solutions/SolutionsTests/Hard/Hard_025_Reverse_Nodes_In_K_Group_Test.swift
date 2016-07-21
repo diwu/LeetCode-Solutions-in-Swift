@@ -62,7 +62,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
         return res
     }
     private func asyncHelper(input: [AnyObject?], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             var result: [Int]
             if input[0] != nil {
@@ -76,7 +76,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName, expectedValue: expected)
             }

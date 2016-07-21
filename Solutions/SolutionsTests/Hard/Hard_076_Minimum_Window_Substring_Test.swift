@@ -48,7 +48,7 @@ class Hard_076_Minimum_Window_Substring_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_076_Minimum_Window_Substring_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_076_Minimum_Window_Substring_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_076_Minimum_Window_Substring.minWindow(s: input[0], t: input[1])
             assertHelper(result == expected, problemName: Hard_076_Minimum_Window_Substring_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -56,7 +56,7 @@ class Hard_076_Minimum_Window_Substring_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_076_Minimum_Window_Substring_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_076_Minimum_Window_Substring_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_076_Minimum_Window_Substring_Test.ProblemName, input: input, resultValue: Hard_076_Minimum_Window_Substring_Test.TimeOutName, expectedValue: expected)
             }

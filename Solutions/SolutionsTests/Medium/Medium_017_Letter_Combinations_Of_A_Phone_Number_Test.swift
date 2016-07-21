@@ -40,7 +40,7 @@ class Medium_017_Letter_Combinations_Of_A_Phone_Number_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: String, expected: [String]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: Set<String> = Set(Medium_017_Letter_Combinations_Of_A_Phone_Number.letterCombinations(input))
             let result_objc: Set<String> = Set(ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.letterCombinations(input))
@@ -51,7 +51,7 @@ class Medium_017_Letter_Combinations_Of_A_Phone_Number_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.ProblemName, input: input, resultValue: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName, expectedValue: expected)
             }

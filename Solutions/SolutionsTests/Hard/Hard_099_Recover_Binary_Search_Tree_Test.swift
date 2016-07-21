@@ -119,7 +119,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let node_swift: Node_Swift = self.convertArrayToTree_swift(input)
             let node_objc: Node_ObjC = self.convertArrayToTree_objc(input)
@@ -133,7 +133,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_099_Recover_Binary_Search_Tree_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_099_Recover_Binary_Search_Tree_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
             }

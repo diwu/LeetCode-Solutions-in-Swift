@@ -64,7 +64,7 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
         asyncHelper(input0: input0, input1: input1, input2: input2, expected: expected)
     }
     func asyncHelper(input0: [Int], input1: Int, input2: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_092_Reverse_Linked_List_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_092_Reverse_Linked_List_II_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: [Int] = self.helper2(Medium_092_Reverse_Linked_List_II.reverseBetween(self.helper1(input0), m: input1, n: input2))
             assertHelper(expected == result_swift, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
@@ -74,7 +74,7 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_092_Reverse_Linked_List_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_092_Reverse_Linked_List_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: Medium_092_Reverse_Linked_List_II_Test.TimeOutName, expectedValue: expected)
             }

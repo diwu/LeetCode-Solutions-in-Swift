@@ -53,7 +53,7 @@ class Medium_053_Maximum_Subarray_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_053_Maximum_Subarray_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_053_Maximum_Subarray_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_053_Maximum_Subarray.maxSubArray(input)
             assertHelper(result == expected, problemName: Medium_053_Maximum_Subarray_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -61,7 +61,7 @@ class Medium_053_Maximum_Subarray_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_053_Maximum_Subarray_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_053_Maximum_Subarray_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_053_Maximum_Subarray_Test.ProblemName, input: input, resultValue: Medium_053_Maximum_Subarray_Test.TimeOutName, expectedValue: expected)
             }

@@ -64,7 +64,7 @@ class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase {
     }
     private func asyncHelper(input ipt: [AnyObject], expected: Int) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Int = Hard_033_Search_In_Rotated_Sorted_Array.search(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Hard_033_Search_In_Rotated_Sorted_Array_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -72,7 +72,7 @@ class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_033_Search_In_Rotated_Sorted_Array_Test.ProblemName, input: input, resultValue: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

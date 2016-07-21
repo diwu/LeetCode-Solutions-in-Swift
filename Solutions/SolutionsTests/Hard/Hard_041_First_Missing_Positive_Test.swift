@@ -78,7 +78,7 @@ class Hard_041_First_Missing_Positive_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_041_First_Missing_Positive_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_041_First_Missing_Positive_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Int = Hard_041_First_Missing_Positive.firstMissingPositive(input)
             assertHelper(expected == result, problemName: Hard_041_First_Missing_Positive_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -86,7 +86,7 @@ class Hard_041_First_Missing_Positive_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_041_First_Missing_Positive_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_041_First_Missing_Positive_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_041_First_Missing_Positive_Test.ProblemName, input: input, resultValue: Hard_041_First_Missing_Positive_Test.TimeOutName, expectedValue: expected)
             }

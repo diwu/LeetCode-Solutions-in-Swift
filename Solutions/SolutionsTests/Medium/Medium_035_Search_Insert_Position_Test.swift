@@ -64,7 +64,7 @@ class Medium_035_Search_Insert_Position_Test: XCTestCase {
     }
     private func asyncHelper(input ipt: [AnyObject], expected: Int) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_035_Search_Insert_Position_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_035_Search_Insert_Position_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Int = Medium_035_Search_Insert_Position.searchInsert(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Medium_035_Search_Insert_Position_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -72,7 +72,7 @@ class Medium_035_Search_Insert_Position_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_035_Search_Insert_Position_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_035_Search_Insert_Position_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_035_Search_Insert_Position_Test.ProblemName, input: input, resultValue: Medium_035_Search_Insert_Position_Test.TimeOutName, expectedValue: expected)
             }

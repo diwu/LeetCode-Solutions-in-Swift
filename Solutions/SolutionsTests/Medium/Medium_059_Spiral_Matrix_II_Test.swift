@@ -38,7 +38,7 @@ class Medium_059_Spiral_Matrix_II_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_059_Spiral_Matrix_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_059_Spiral_Matrix_II_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_059_Spiral_Matrix_II.generateMatrix(input)
             assertHelper(result == expected, problemName: Medium_059_Spiral_Matrix_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -46,7 +46,7 @@ class Medium_059_Spiral_Matrix_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_059_Spiral_Matrix_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_059_Spiral_Matrix_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_059_Spiral_Matrix_II_Test.ProblemName, input: input, resultValue: Medium_059_Spiral_Matrix_II_Test.TimeOutName, expectedValue: expected)
             }

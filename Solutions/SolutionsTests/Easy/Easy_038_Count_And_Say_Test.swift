@@ -29,7 +29,7 @@ class Easy_038_Count_And_Say_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_038_Count_And_Say_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_038_Count_And_Say_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: String = Easy_038_Count_And_Say.countAndSay(input)
             assertHelper(expected == result, problemName: Easy_038_Count_And_Say_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -37,7 +37,7 @@ class Easy_038_Count_And_Say_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Easy_038_Count_And_Say_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_038_Count_And_Say_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_038_Count_And_Say_Test.ProblemName, input: input, resultValue: Easy_038_Count_And_Say_Test.TimeOutName, expectedValue: expected)
             }

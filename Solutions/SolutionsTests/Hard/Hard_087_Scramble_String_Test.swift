@@ -58,7 +58,7 @@ class Hard_087_Scramble_String_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String?], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_087_Scramble_String_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_087_Scramble_String_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_recursion = Hard_087_Scramble_String.isScramble_recursion(s1: input[0], s2: input[1])
             let result_iteration = Hard_087_Scramble_String.isScramble_iteration(s1: input[0], s2: input[1])
@@ -67,7 +67,7 @@ class Hard_087_Scramble_String_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_087_Scramble_String_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_087_Scramble_String_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_087_Scramble_String_Test.ProblemName, input: input, resultValue: Hard_087_Scramble_String_Test.TimeOutName, expectedValue: expected)
             }

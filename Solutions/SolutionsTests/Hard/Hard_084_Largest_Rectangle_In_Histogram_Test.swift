@@ -48,7 +48,7 @@ class Hard_084_Largest_Rectangle_In_Histogram_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_084_Largest_Rectangle_In_Histogram.largestRectangleArea(input)
             assertHelper(result == expected, problemName: Hard_084_Largest_Rectangle_In_Histogram_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -56,7 +56,7 @@ class Hard_084_Largest_Rectangle_In_Histogram_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_084_Largest_Rectangle_In_Histogram_Test.ProblemName, input: input, resultValue: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOutName, expectedValue: expected)
             }

@@ -85,7 +85,7 @@ class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func asyncHelper(input: String, expected: Int ) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_008_String_to_Integer_atoi_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_008_String_to_Integer_atoi_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: Int = Easy_008_String_to_Integer_atoi.atoi(input)
             assertHelper(result == expected, problemName: Easy_008_String_to_Integer_atoi_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -93,7 +93,7 @@ class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Easy_008_String_to_Integer_atoi_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_008_String_to_Integer_atoi_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_008_String_to_Integer_atoi_Test.ProblemName, input: input, resultValue: Easy_008_String_to_Integer_atoi_Test.TimeOutName, expectedValue: expected)
             }

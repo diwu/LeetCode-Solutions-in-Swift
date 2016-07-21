@@ -43,7 +43,7 @@ class Medium_074_Search_A_2D_Matrix_Test: XCTestCase {
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
     private func asyncHelper(input0: [[Int]], input1: Int, expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_074_Search_A_2D_Matrix_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_074_Search_A_2D_Matrix_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_074_Search_A_2D_Matrix.searchMatrix(matrix: input0, target: input1)
             assertHelper(result == expected, problemName: Medium_074_Search_A_2D_Matrix_Test.ProblemName, input: input0, resultValue: result, expectedValue: expected)
@@ -51,7 +51,7 @@ class Medium_074_Search_A_2D_Matrix_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_074_Search_A_2D_Matrix_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_074_Search_A_2D_Matrix_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_074_Search_A_2D_Matrix_Test.ProblemName, input: input0, resultValue: Medium_074_Search_A_2D_Matrix_Test.TimeOutName, expectedValue: expected)
             }

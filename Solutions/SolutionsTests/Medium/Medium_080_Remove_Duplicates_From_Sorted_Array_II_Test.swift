@@ -44,7 +44,7 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase {
     }
     private func asyncHelper(input ipt: [Int], expected: [Int] ) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             Medium_080_Remove_Duplicates_From_Sorted_Array_II.removeDuplicates(&input)
             let result = input
@@ -55,7 +55,7 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.ProblemName, input: input, resultValue: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
             }

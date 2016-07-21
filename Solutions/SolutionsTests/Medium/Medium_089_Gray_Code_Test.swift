@@ -45,7 +45,7 @@ class Medium_089_Gray_Code_Test: XCTestCase {
         }
     }
     private func asyncHelper(input: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_089_Gray_Code_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_089_Gray_Code_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = Medium_089_Gray_Code.grayCode(input)
             if input == 0 {
@@ -74,7 +74,7 @@ class Medium_089_Gray_Code_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_089_Gray_Code_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_089_Gray_Code_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: Medium_089_Gray_Code_Test.TimeOutName, expectedValue: [])
             }

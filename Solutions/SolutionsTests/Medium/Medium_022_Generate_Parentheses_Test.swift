@@ -29,7 +29,7 @@ class Medium_022_Generate_Parentheses_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: [String]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_022_Generate_Parentheses_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_022_Generate_Parentheses_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [String] = Medium_022_Generate_Parentheses.generateParenthesis(input)
             assertHelper(Set(expected) == Set(result), problemName: Medium_022_Generate_Parentheses_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -37,7 +37,7 @@ class Medium_022_Generate_Parentheses_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_022_Generate_Parentheses_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_022_Generate_Parentheses_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_022_Generate_Parentheses_Test.ProblemName, input: input, resultValue: Medium_022_Generate_Parentheses_Test.TimeOutName, expectedValue: expected)
             }

@@ -40,7 +40,7 @@ class Medium_077_Combinations_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_077_Combinations_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_077_Combinations_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_077_Combinations.combine(n: input[0], k: input[1])
             let result2 = Medium_077_Combinations.combine_recursion(n: input[0], k: input[1])
@@ -52,7 +52,7 @@ class Medium_077_Combinations_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_077_Combinations_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_077_Combinations_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_077_Combinations_Test.ProblemName, input: input, resultValue: Medium_077_Combinations_Test.TimeOutName, expectedValue: expected)
             }

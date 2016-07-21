@@ -54,7 +54,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase {
         asyncHelper(input0: input_swift, input1: input_objc, expected: expected)
     }
     private func asyncHelper(input0: Node_Swift?, input1: Node_ObjC?, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result_swift: [Int] = Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input0)
             let result_objc: [NSNumber] = ObjC_Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input1)
@@ -64,7 +64,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0, resultValue: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName, expectedValue: expected)
             }

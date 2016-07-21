@@ -28,7 +28,7 @@ class Medium_060_Permutation_Sequence_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_060_Permutation_Sequence_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_060_Permutation_Sequence_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_060_Permutation_Sequence.getPermutation(n: input[0], k: input[1])
             assertHelper(result == expected, problemName: Medium_060_Permutation_Sequence_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -36,7 +36,7 @@ class Medium_060_Permutation_Sequence_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_060_Permutation_Sequence_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_060_Permutation_Sequence_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_060_Permutation_Sequence_Test.ProblemName, input: input, resultValue: Medium_060_Permutation_Sequence_Test.TimeOutName, expectedValue: expected)
             }

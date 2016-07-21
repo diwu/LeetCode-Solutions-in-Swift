@@ -58,7 +58,7 @@ class Hard_010_Regular_Expression_Matching_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_010_Regular_Expression_Matching_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_010_Regular_Expression_Matching_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
             assertHelper(result == expected, problemName: Hard_010_Regular_Expression_Matching_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -66,7 +66,7 @@ class Hard_010_Regular_Expression_Matching_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_010_Regular_Expression_Matching_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_010_Regular_Expression_Matching_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_010_Regular_Expression_Matching_Test.ProblemName, input: input, resultValue: Hard_010_Regular_Expression_Matching_Test.TimeOutName, expectedValue: expected)
             }

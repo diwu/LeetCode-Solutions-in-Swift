@@ -52,7 +52,7 @@ class Medium_078_Subsets_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_078_Subsets_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_078_Subsets_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_078_Subsets.subsets(input)
             let resultSet: NSSet = NSSet(array: result)
@@ -62,7 +62,7 @@ class Medium_078_Subsets_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_078_Subsets_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_078_Subsets_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_078_Subsets_Test.ProblemName, input: input, resultValue: Medium_078_Subsets_Test.TimeOutName, expectedValue: expected)
             }

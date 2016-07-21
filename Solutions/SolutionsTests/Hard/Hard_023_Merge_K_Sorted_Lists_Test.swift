@@ -74,7 +74,7 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
         return res
     }
     private func asyncHelper(input: [Node?], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Hard_023_Merge_K_Sorted_Lists.mergeKLists(input))
             assertHelper(expected == result, problemName: Hard_023_Merge_K_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -82,7 +82,7 @@ class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Hard_023_Merge_K_Sorted_Lists_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_023_Merge_K_Sorted_Lists_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_023_Merge_K_Sorted_Lists_Test.ProblemName, input: input, resultValue: Hard_023_Merge_K_Sorted_Lists_Test.TimeOutName, expectedValue: expected)
             }

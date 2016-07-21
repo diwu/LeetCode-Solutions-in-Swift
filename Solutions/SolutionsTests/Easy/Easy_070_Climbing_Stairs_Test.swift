@@ -48,7 +48,7 @@ class Easy_070_Climbing_Stairs_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Easy_070_Climbing_Stairs_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_070_Climbing_Stairs_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Easy_070_Climbing_Stairs.climbStairs(input)
             assertHelper(result == expected, problemName: Easy_070_Climbing_Stairs_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -56,7 +56,7 @@ class Easy_070_Climbing_Stairs_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Easy_070_Climbing_Stairs_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_070_Climbing_Stairs_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_070_Climbing_Stairs_Test.ProblemName, input: input, resultValue: Easy_070_Climbing_Stairs_Test.TimeOutName, expectedValue: expected)
             }

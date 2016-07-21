@@ -33,7 +33,7 @@ class Medium_069_Sqrt_X_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(withDescription: Medium_069_Sqrt_X_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_069_Sqrt_X_Test.TimeOutName)
         DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
             let result = Medium_069_Sqrt_X.mySqrt(input)
             assertHelper(result == expected, problemName: Medium_069_Sqrt_X_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -41,7 +41,7 @@ class Medium_069_Sqrt_X_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(withTimeout: Medium_069_Sqrt_X_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_069_Sqrt_X_Test.TimeOut) { (error: NSError?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_069_Sqrt_X_Test.ProblemName, input: input, resultValue: Medium_069_Sqrt_X_Test.TimeOutName, expectedValue: expected)
             }
