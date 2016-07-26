@@ -38,8 +38,13 @@ class Medium_016_3Sum_Closest {
                             return ans
                         }
                     }
-                    k -= 1
-                    j += 1
+
+                    if sum > target {
+                        k -= 1
+                    } else {
+                        j += 1
+                    }
+
                 }
             }
             return ans
