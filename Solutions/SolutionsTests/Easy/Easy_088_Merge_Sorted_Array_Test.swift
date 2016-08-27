@@ -39,14 +39,14 @@ class Easy_088_Merge_Sorted_Array_Test: XCTestCase {
     private func asyncHelper(input0: inout [Int], input1: [Int], m: Int, n: Int, expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_088_Merge_Sorted_Array_Test.TimeOutName)
         var localInput0 = input0
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             Easy_088_Merge_Sorted_Array.merge(nums1: &localInput0, m: m, nums2: input1, n: n)
             assertHelper(localInput0 == expected, problemName: Easy_088_Merge_Sorted_Array_Test.ProblemName, input: localInput0, resultValue: localInput0, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_088_Merge_Sorted_Array_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_088_Merge_Sorted_Array_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_088_Merge_Sorted_Array_Test.ProblemName, input: localInput0, resultValue: Easy_088_Merge_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

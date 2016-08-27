@@ -29,7 +29,7 @@ class Medium_046_Permutations_Test: XCTestCase {
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_046_Permutations_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             var result = Medium_046_Permutations.permute(input)
             if result.count != expected.count {
                 assertHelper(false, problemName: Medium_046_Permutations_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -51,7 +51,7 @@ class Medium_046_Permutations_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_046_Permutations_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_046_Permutations_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_046_Permutations_Test.ProblemName, input: input, resultValue: Medium_046_Permutations_Test.TimeOutName, expectedValue: expected)
             }

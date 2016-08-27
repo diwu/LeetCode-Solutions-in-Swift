@@ -57,14 +57,14 @@ class Hard_056_Merge_Intervals_Test: XCTestCase {
     }
     private func asyncHelper(input: [[Int]], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_056_Merge_Intervals_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Hard_056_Merge_Intervals.merge(input)
             assertHelper(result == expected, problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_056_Merge_Intervals_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_056_Merge_Intervals_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: Hard_056_Merge_Intervals_Test.TimeOutName, expectedValue: expected)
             }

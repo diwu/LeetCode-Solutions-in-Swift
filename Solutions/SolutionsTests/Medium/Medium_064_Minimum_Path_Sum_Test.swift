@@ -58,14 +58,14 @@ class Medium_064_Minimum_Path_Sum_Test: XCTestCase {
     }
     private func asyncHelper(input: [[Int]], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_064_Minimum_Path_Sum_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Medium_064_Minimum_Path_Sum.minPathSum(input)
             assertHelper(result == expected, problemName: Medium_064_Minimum_Path_Sum_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_064_Minimum_Path_Sum_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_064_Minimum_Path_Sum_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_064_Minimum_Path_Sum_Test.ProblemName, input: input, resultValue: Medium_064_Minimum_Path_Sum_Test.TimeOutName, expectedValue: expected)
             }

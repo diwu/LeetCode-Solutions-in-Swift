@@ -29,14 +29,14 @@ class Medium_050_Pow_X_N_Test: XCTestCase {
     }
     private func asyncHelper(input: [Any], expected: Double) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_050_Pow_X_N_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Medium_050_Pow_X_N.myPow(x: input[0] as! Double, n: input[1] as! Int)
             assertHelper(abs(expected - result) < 0.001, problemName: Medium_050_Pow_X_N_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_050_Pow_X_N_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_050_Pow_X_N_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_050_Pow_X_N_Test.ProblemName, input: input, resultValue: Medium_050_Pow_X_N_Test.TimeOutName, expectedValue: expected)
             }

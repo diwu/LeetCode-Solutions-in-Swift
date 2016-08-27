@@ -24,14 +24,14 @@ class Medium_062_Unique_Paths_Test: XCTestCase {
     }
     private func asyncHelper(input: [Int], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_062_Unique_Paths_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Medium_062_Unique_Paths.uniquePaths(m: input[0], n: input[1])
             assertHelper(result == expected, problemName: Medium_062_Unique_Paths_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_062_Unique_Paths_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_062_Unique_Paths_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_062_Unique_Paths_Test.ProblemName, input: input, resultValue: Medium_062_Unique_Paths_Test.TimeOutName, expectedValue: expected)
             }

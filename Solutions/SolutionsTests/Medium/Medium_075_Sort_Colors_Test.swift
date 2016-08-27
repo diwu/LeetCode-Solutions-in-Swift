@@ -20,7 +20,7 @@ class Medium_075_Sort_Colors_Test: XCTestCase {
     private func asyncHelper(input: inout [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_075_Sort_Colors_Test.TimeOutName)
         var localInput = input
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             Medium_075_Sort_Colors.sortColors(&localInput)
             let result = localInput
             assertHelper(result == expected, problemName: Medium_075_Sort_Colors_Test.ProblemName, input: localInput, resultValue: result, expectedValue: expected)
@@ -28,7 +28,7 @@ class Medium_075_Sort_Colors_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_075_Sort_Colors_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_075_Sort_Colors_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_075_Sort_Colors_Test.ProblemName, input: localInput, resultValue: Medium_075_Sort_Colors_Test.TimeOutName, expectedValue: expected)
             }

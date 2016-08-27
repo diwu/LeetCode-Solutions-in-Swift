@@ -29,7 +29,7 @@ class Medium_096_Unique_Binary_Search_Trees_Test: XCTestCase {
     }
     private func asyncHelper(input: Int, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_096_Unique_Binary_Search_Trees_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result_swift: Int = Medium_096_Unique_Binary_Search_Trees.numTrees(input)
             let result_objc: Int = ObjC_Medium_096_Unique_Binary_Search_Trees.numTrees(input)
             assertHelper(expected == result_swift, problemName: Medium_096_Unique_Binary_Search_Trees_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -38,7 +38,7 @@ class Medium_096_Unique_Binary_Search_Trees_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_096_Unique_Binary_Search_Trees_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_096_Unique_Binary_Search_Trees_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_096_Unique_Binary_Search_Trees_Test.ProblemName, input: input, resultValue: Medium_096_Unique_Binary_Search_Trees_Test.TimeOutName, expectedValue: expected)
             }

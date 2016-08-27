@@ -34,14 +34,14 @@ class Easy_067_Add_Binary_Test: XCTestCase {
     }
     private func asyncHelper(input: [String], expected: String) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_067_Add_Binary_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Easy_067_Add_Binary.addBinary(a: input[0], b: input[1]);
             assertHelper(result == expected, problemName: Easy_067_Add_Binary_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_067_Add_Binary_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_067_Add_Binary_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_067_Add_Binary_Test.ProblemName, input: input, resultValue: Easy_067_Add_Binary_Test.TimeOutName, expectedValue: expected)
             }

@@ -49,14 +49,14 @@ class Easy_058_Length_Of_Last_Word_Test: XCTestCase {
     }
     private func asyncHelper(input: String, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_058_Length_Of_Last_Word_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result: Int = Easy_058_Length_Of_Last_Word.lengthOfLastWord(input)
             assertHelper(expected == result, problemName: Easy_058_Length_Of_Last_Word_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_058_Length_Of_Last_Word_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_058_Length_Of_Last_Word_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_058_Length_Of_Last_Word_Test.ProblemName, input: input, resultValue: Easy_058_Length_Of_Last_Word_Test.TimeOutName, expectedValue: expected)
             }

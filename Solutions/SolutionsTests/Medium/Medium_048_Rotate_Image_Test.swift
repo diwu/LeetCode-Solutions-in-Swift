@@ -27,7 +27,7 @@ class Medium_048_Rotate_Image_Test: XCTestCase {
     }
     private func asyncHelper(input: [[Int]], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_048_Rotate_Image_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             var result = input
             Medium_048_Rotate_Image.rotate(&result)
             assertHelper(result == expected, problemName: Medium_048_Rotate_Image_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
@@ -35,7 +35,7 @@ class Medium_048_Rotate_Image_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_048_Rotate_Image_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_048_Rotate_Image_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_048_Rotate_Image_Test.ProblemName, input: input, resultValue: Medium_048_Rotate_Image_Test.TimeOutName, expectedValue: expected)
             }

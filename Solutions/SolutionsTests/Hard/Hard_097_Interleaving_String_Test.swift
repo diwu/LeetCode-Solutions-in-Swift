@@ -69,7 +69,7 @@ class Hard_097_Interleaving_String_Test: XCTestCase {
     }
     private func asyncHelper(input: [String], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_097_Interleaving_String_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result_swift = Hard_097_Interleaving_String.isInterleave(s1: input[0], s2: input[1], s3: input[2])
             let result_objc = ObjC_Hard_097_Interleaving_String.isInterleave(withS1: input[0], s2: input[1], s3: input[2])
             assertHelper(result_swift == expected, problemName: Hard_097_Interleaving_String_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -78,7 +78,7 @@ class Hard_097_Interleaving_String_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_097_Interleaving_String_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_097_Interleaving_String_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_097_Interleaving_String_Test.ProblemName, input: input, resultValue: Hard_097_Interleaving_String_Test.TimeOutName, expectedValue: expected)
             }

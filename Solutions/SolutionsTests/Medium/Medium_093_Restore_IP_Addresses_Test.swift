@@ -47,7 +47,7 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase {
     }
     private func asyncHelper(input: String, expected: [String]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_093_Restore_IP_Addresses_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result_swift: [String] = Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
             let result_objc: [String] = ObjC_Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
             assertHelper(NSSet.init(array: result_swift) == NSSet.init(array: expected), problemName: Medium_093_Restore_IP_Addresses_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -56,7 +56,7 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_093_Restore_IP_Addresses_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Medium_093_Restore_IP_Addresses_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Medium_093_Restore_IP_Addresses_Test.ProblemName, input: input, resultValue: Medium_093_Restore_IP_Addresses_Test.TimeOutName, expectedValue: expected)
             }

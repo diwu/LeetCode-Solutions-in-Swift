@@ -90,14 +90,14 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase {
     private func asyncHelper(input ipt: [Any?], expected: Set<Int>) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result: [Int] = Hard_030_Substring_With_Concatenation_Of_All_Words.findSubstring(s: input[0] as! String?, words: input[1] as! [String])
             assertHelper(expected == Set(result), problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName, expectedValue: expected)
             }

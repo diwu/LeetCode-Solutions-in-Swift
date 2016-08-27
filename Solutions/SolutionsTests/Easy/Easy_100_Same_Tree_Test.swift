@@ -100,7 +100,7 @@ class Easy_100_Same_Tree_Test: XCTestCase {
     }
     private func asyncHelper(input: [[Int]], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_100_Same_Tree_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result_swift: Bool = Easy_100_Same_Tree.isSameTree(p: self.convertArrayToTree_swift(input[0]), q: self.convertArrayToTree_swift(input[1]))
             let result_objc: Bool = ObjC_Easy_100_Same_Tree.isSameTree( withP: self.convertArrayToTree_objc(input[0]), q: self.convertArrayToTree_objc(input[1]))
             assertHelper(expected == result_swift, problemName: Easy_100_Same_Tree_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
@@ -109,7 +109,7 @@ class Easy_100_Same_Tree_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_100_Same_Tree_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Easy_100_Same_Tree_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Easy_100_Same_Tree_Test.ProblemName, input: input, resultValue: Easy_100_Same_Tree_Test.TimeOutName, expectedValue: expected)
             }

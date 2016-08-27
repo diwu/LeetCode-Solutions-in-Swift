@@ -86,7 +86,7 @@ class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase {
     }
     private func asyncHelper(input0: [Int], input1: [Int], expected: Double) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName)
-        DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result_swift: Double = Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(a: input0, b: input1)
             let result_objc: Double = ObjC_Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(input0, b: input1)
             assertHelper(result_swift == expected, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
@@ -95,7 +95,7 @@ class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOut) { (error: NSError?) -> Void in
+        waitForExpectations(timeout: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName, expectedValue: expected)
             }
