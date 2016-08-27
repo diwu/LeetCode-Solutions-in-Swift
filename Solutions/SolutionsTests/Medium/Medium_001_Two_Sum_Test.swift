@@ -34,9 +34,13 @@ class Medium_001_Two_Sum_Test: XCTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_001_Two_Sum_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result_swift: [Int] = Medium_001_Two_Sum.twoSum(numbers: input0, target: input1)
-            let result_objc: [NSNumber] = ObjC_Medium_001_Two_Sum.twoSum(input0, target: input1)
+            let result_objc: [NSNumber] = ObjC_Medium_001_Two_Sum.twoSum(input0 as [NSNumber], target: input1)
             assertHelper(expected == result_swift, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
-            assertHelper(expected == result_objc, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
+            var result_objc_Int = [Int]()
+            for n in result_objc {
+                result_objc_Int.append(n.intValue)
+            }
+            assertHelper(result_objc_Int == expected, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }

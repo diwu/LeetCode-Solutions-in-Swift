@@ -36,7 +36,7 @@ class Medium_086_Partition_List {
         var pA: Node? = sentinelA
         var pB: Node? = sentinelB
         while head != nil {
-            if head?.value < x {
+            if (head?.value)! < x {
                 pA?.next = head
                 pA = pA?.next
             } else {

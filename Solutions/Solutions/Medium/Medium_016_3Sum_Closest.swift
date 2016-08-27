@@ -21,7 +21,7 @@ class Medium_016_3Sum_Closest {
     class func threeSumClosest(num: [Int], target: Int) -> Int {
         let n: Int = num.count
         if n <= 3 {
-            return num.reduce(0, combine: +)
+            return num.reduce(0, +)
         } else {
             var ans: Int = 0
             var sum: Int

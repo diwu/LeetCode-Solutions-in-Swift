@@ -16,37 +16,37 @@ class Medium_061_Rotate_List_Test: XCTestCase {
     private typealias Node = Medium_061_Rotate_List.Node
     
     func test_001() {
-        let input: [AnyObject] = [[1, 2, 3, 4, 5], 2]
+        let input: [Any] = [[1, 2, 3, 4, 5], 2]
         let expected: [Int] = [4, 5, 1, 2, 3]
         asyncHelper(input: input, expected: expected)
     }
     
     func test_002() {
-        let input: [AnyObject] = [[1, 2, 3, 4, 5], 7]
+        let input: [Any] = [[1, 2, 3, 4, 5], 7]
         let expected: [Int] = [4, 5, 1, 2, 3]
         asyncHelper(input: input, expected: expected)
     }
     
     func test_003() {
-        let input: [AnyObject] = [[1, 2, 3, 4, 5], 1]
+        let input: [Any] = [[1, 2, 3, 4, 5], 1]
         let expected: [Int] = [5, 1, 2, 3, 4]
         asyncHelper(input: input, expected: expected)
     }
     
     func test_004() {
-        let input: [AnyObject] = [[0, 1, 2], 4]
+        let input: [Any] = [[0, 1, 2], 4]
         let expected: [Int] = [2, 0, 1]
         asyncHelper(input: input, expected: expected)
     }
     
     func test_005() {
-        let input: [AnyObject] = [[0, 1, 2], 0]
+        let input: [Any] = [[0, 1, 2], 0]
         let expected: [Int] = [0, 1, 2]
         asyncHelper(input: input, expected: expected)
     }
     
     func test_006() {
-        let input: [AnyObject] = [[], 99]
+        let input: [Any] = [[], 99]
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
@@ -76,7 +76,7 @@ class Medium_061_Rotate_List_Test: XCTestCase {
         return res
     }
     
-    func asyncHelper(input: [AnyObject], expected: [Int]) {
+    func asyncHelper(input: [Any], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_061_Rotate_List_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_061_Rotate_List.rotateRight(head: self.helper1(input[0] as! [Int]), k: input[1] as! Int))

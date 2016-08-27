@@ -61,7 +61,7 @@ class Medium_073_Set_Matrix_Zeroes_Test: XCTestCase {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             Medium_073_Set_Matrix_Zeroes.setZeros(&input)
             let result = input
-            assertHelper(result == expected, problemName: Medium_073_Set_Matrix_Zeroes_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Medium_073_Set_Matrix_Zeroes_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }

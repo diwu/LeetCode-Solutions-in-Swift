@@ -17,31 +17,31 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase {
     private typealias Node = Easy_019_Remove_Nth_Node_From_End_Of_List.Node
 
     func test_001() {
-        let input: [AnyObject] = [[1, 2, 3, 4, 5], 2]
+        let input: [Any] = [[1, 2, 3, 4, 5], 2]
         let expected: [Int] = [1, 2, 3, 5]
         asyncHelper(input: input, expected: expected)
     }
 
     func test_002() {
-        let input: [AnyObject] = [[], 2]
+        let input: [Any] = [[], 2]
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
 
     func test_003() {
-        let input: [AnyObject] = [[1, 2], 2]
+        let input: [Any] = [[1, 2], 2]
         let expected: [Int] = [2]
         asyncHelper(input: input, expected: expected)
     }
 
     func test_004() {
-        let input: [AnyObject] = [[1, 2, 3], 3]
+        let input: [Any] = [[1, 2, 3], 3]
         let expected: [Int] = [2, 3]
         asyncHelper(input: input, expected: expected)
     }
 
     func test_005() {
-        let input: [AnyObject] = [[1], 1]
+        let input: [Any] = [[1], 1]
         let expected: [Int] = []
         asyncHelper(input: input, expected: expected)
     }
@@ -71,7 +71,7 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase {
         return res
     }
 
-    func asyncHelper(input: [AnyObject], expected: [Int]) {
+    func asyncHelper(input: [Any], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_019_Remove_Nth_Node_From_End_Of_List.removeNthFromEnd(self.helper1(input[0] as! [Int]), n: input[1] as! Int))

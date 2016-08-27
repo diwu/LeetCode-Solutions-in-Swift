@@ -47,7 +47,7 @@ struct Medium_091_Decode_Ways {
             if s[i] == "0" {
                 continue
             } else {
-                memo[i] = Int(s[i..<i+2]) <= 26 ? memo[i+1]+memo[i+2] : memo[i+1]
+                memo[i] = Int(s[i..<i+2])! <= 26 ? memo[i+1]+memo[i+2] : memo[i+1]
             }
         }
         return memo[0]

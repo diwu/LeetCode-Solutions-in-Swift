@@ -56,7 +56,11 @@ struct Hard_068_Text_Justification {
                 if i + k >= words.count {
                     tmp += " "
                 } else {
-                    let tmpLen = (maxWidth - l) / (k - 1) + Int((j < (maxWidth - l) % (k - 1)))
+                    var tmpLen = (maxWidth - l) / (k - 1)
+                    let tmpBool = j < (maxWidth - l) % (k - 1)
+                    if tmpBool {
+                        tmpLen += 1
+                    }
                     let tmpArr: [Character] = Array(repeating: " ", count: tmpLen)
                     tmp += String(tmpArr)
                 }

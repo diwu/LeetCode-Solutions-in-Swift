@@ -165,7 +165,7 @@ class Hard_057_Insert_Interval_Test: XCTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_057_Insert_Interval_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Hard_057_Insert_Interval.insert(intervals: input0, newInterval: input1)
-            assertHelper(result == expected, problemName: Hard_057_Insert_Interval_Test.ProblemName, input: [input0, input1], resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Hard_057_Insert_Interval_Test.ProblemName, input: [input0, input1], resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }

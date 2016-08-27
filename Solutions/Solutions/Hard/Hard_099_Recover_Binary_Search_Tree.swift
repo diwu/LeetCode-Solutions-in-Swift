@@ -42,7 +42,7 @@ class Hard_099_Recover_Binary_Search_Tree {
                     tmp = tmp?.right
                 }
                 if tmp?.right != nil {
-                    if pre != nil && pre?.value > root?.value {
+                    if pre != nil && (pre?.value)! > (root?.value)! {
                         if first == nil {
                             first = pre
                             second = root
@@ -58,7 +58,7 @@ class Hard_099_Recover_Binary_Search_Tree {
                     root = root?.left
                 }
             } else {
-                if pre != nil && pre?.value > root?.value {
+                if pre != nil && (pre?.value)! > (root?.value)! {
                     if first == nil {
                         first = pre
                         second = root

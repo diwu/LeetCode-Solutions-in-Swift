@@ -15,14 +15,14 @@ class Medium_018_4Sum_Test: XCTestCase {
     static let TimeOut = Default_Timeout_Value
 
     func test_001() {
-        let input: [AnyObject] = [[1, 0, -1], 0]
+        let input: [Any] = [[1, 0, -1], 0]
         let expected: [[Int]] = [
         ]
         asyncHelper(input: input, expected: expected)
     }
 
     func test_002() {
-        let input: [AnyObject] = [[1, 0, -1, 0], 0]
+        let input: [Any] = [[1, 0, -1, 0], 0]
         let expected: [[Int]] = [
             [-1, 0, 0, 1]
         ]
@@ -30,7 +30,7 @@ class Medium_018_4Sum_Test: XCTestCase {
     }
 
     func test_003() {
-        let input: [AnyObject] = [[1, 0, -1, 0, -2, 2], 0]
+        let input: [Any] = [[1, 0, -1, 0, -2, 2], 0]
         let expected: [[Int]] = [
             [-1,  0, 0, 1],
             [-2, -1, 1, 2],
@@ -39,7 +39,7 @@ class Medium_018_4Sum_Test: XCTestCase {
         asyncHelper(input: input, expected: expected)
     }
 
-    func asyncHelper(input: [AnyObject], expected: [[Int]]) {
+    func asyncHelper(input: [Any], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_018_4Sum_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             var result: [[Int]] = Medium_018_4Sum.fourSum(num: input[0] as! [Int], target: input[1] as! Int)

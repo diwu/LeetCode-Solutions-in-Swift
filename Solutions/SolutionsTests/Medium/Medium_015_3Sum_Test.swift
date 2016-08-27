@@ -16,7 +16,7 @@ class Medium_015_3Sum_Test: XCTestCase {
         let input: [Int] = []
         let result: [[Int]] = Medium_015_3Sum.threeSum(input)
         let expected: [[Int]] = []
-        assertHelper(result == expected, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_002() {
@@ -49,7 +49,7 @@ class Medium_015_3Sum_Test: XCTestCase {
         let input: [Int] = [-1, -2, -3]
         let result: [[Int]] = Medium_015_3Sum.threeSum(input)
         let expected: [[Int]] = []
-        assertHelper(result == expected, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_004() {

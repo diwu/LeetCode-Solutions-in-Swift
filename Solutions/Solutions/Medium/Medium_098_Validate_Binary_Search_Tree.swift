@@ -34,7 +34,7 @@ class Medium_098_Validate_Binary_Search_Tree {
             if isValidBSTRecursionHelper(curr: curr?.left, prev: &prev) == false {
                 return false
             }
-            if prev != nil && prev?.value > curr?.value {
+            if prev != nil && (prev?.value)! > (curr?.value)! {
                 return false
             }
             prev = curr

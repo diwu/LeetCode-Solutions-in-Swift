@@ -61,8 +61,10 @@ struct Hard_076_Minimum_Window_Substring {
                 } else {
                     charCountDict[s[i]] = -1
                 }
-                if charFlagDict[s[i]] == true && charCountDict[s[i]] >= 0 {
-                    count -= 1
+                if let tmpBool = charFlagDict[s[i]] {
+                    if tmpBool == true && charCountDict[s[i]]! >= 0 {
+                        count -= 1
+                    }
                 }
             } else {
                 if minLen > i - j + 1 {
@@ -74,8 +76,10 @@ struct Hard_076_Minimum_Window_Substring {
                 } else {
                     charCountDict[s[j]] = 1
                 }
-                if charFlagDict[s[j]] == true && charCountDict[s[j]] > 0 {
-                    count += 1
+                if let tmpBool = charFlagDict[s[j]] {
+                    if tmpBool == true && charCountDict[s[j]]! > 0 {
+                        count += 1
+                    }
                 }
                 j += 1
             }

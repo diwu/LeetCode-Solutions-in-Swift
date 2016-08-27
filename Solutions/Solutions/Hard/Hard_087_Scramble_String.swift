@@ -96,7 +96,7 @@ struct Hard_087_Scramble_String {
             for j in (0...len!-1).reversed() {
                 dp[i][j][1] = (s1![i] == s2![j])
                 var l = 2
-                while i + l <= len && j + l <= len {
+                while i + l <= len! && j + l <= len! {
                     for n in 1 ..< l {
                         dp[i][j][l] = dp[i][j][l] || ( dp[i][j][n] && dp[i+n][j+n][l-n] )
                         dp[i][j][l] = dp[i][j][l] || ( dp[i][j+l-n][n] && dp[i+n][j][l-n] )

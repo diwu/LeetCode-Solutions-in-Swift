@@ -55,7 +55,7 @@ struct Medium_093_Restore_IP_Addresses {
         if s.characters.count > 1 && s.characters.first == "0" {
             return false
         }
-        if Int(s) > 255 {
+        if Int(s)! > 255 {
             return false
         }
         return true

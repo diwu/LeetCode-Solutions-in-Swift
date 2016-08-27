@@ -41,7 +41,7 @@ class Medium_059_Spiral_Matrix_II_Test: XCTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_059_Spiral_Matrix_II_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result = Medium_059_Spiral_Matrix_II.generateMatrix(input)
-            assertHelper(result == expected, problemName: Medium_059_Spiral_Matrix_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Medium_059_Spiral_Matrix_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
