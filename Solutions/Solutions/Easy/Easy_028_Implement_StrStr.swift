@@ -28,8 +28,8 @@ class Easy_028_Implement_StrStr {
             return -1
         }
         var i = 0
-        var j = 0
         while true {
+            var j = 0
             while true {
                 if j >= (needle!).characters.count {
                     return i

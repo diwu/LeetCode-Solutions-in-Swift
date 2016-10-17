@@ -72,6 +72,11 @@ class Easy_028_Implement_StrStr_Test: XCTestCase {
         let expected: Int = -1
         asyncHelper(input: input, expected: expected)
     }
+    func test_013() {
+        let input: [Any?] = ["mississippi", "issispi"]
+        let expected: Int = -1
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input ipt: [Any?], expected: Int) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_028_Implement_StrStr_Test.TimeOutName)
