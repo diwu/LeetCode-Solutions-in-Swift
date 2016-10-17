@@ -38,6 +38,7 @@ class Easy_102_Binary_Tree_Level_Order_Traversal {
             self.right = r
         }
     }
+    // t = O(N), best s = O(logN), worst s = O(N)
     class func levelOrder(_ root: Node?) -> [[Int]] {
         guard let unwrappedRoot = root else {
             return []
