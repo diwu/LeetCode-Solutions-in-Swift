@@ -56,14 +56,14 @@ class Hard_032_Longest_Valid_Parentheses_Test: XCTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_032_Longest_Valid_Parentheses_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             let result: Int = Hard_032_Longest_Valid_Parentheses.longestValidParentheses(input)
-            assertHelper(expected == result, problemName: Hard_032_Longest_Valid_Parentheses_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName: Hard_032_Longest_Valid_Parentheses_Test.ProblemName, input: input as Any, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_032_Longest_Valid_Parentheses_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_032_Longest_Valid_Parentheses_Test.ProblemName, input: input, resultValue: Hard_032_Longest_Valid_Parentheses_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName: Hard_032_Longest_Valid_Parentheses_Test.ProblemName, input: input as Any, resultValue: Hard_032_Longest_Valid_Parentheses_Test.TimeOutName, expectedValue: expected)
             }
         }
     }
