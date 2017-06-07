@@ -22,7 +22,7 @@ import Foundation
 struct Medium_048_Rotate_Image {
     private static func reverseInPlace<T>(nums: inout [T]) {
         for i in 0 ..< nums.count/2 {
-            swap(&nums[i], &nums[nums.count-1-i])
+            nums.swapAt(i, nums.count-1-i)
         }
     }
     static func rotate(_ matrix: inout [[Int]]) {

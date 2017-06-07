@@ -23,7 +23,7 @@ struct Hard_047_Permutations_II {
         var begin = bgn
         var end = ed
         while begin < end {
-            swap(&nums[begin], &nums[end]);
+            nums.swapAt(begin, end);
             begin += 1
             end -= 1
         }
@@ -51,7 +51,7 @@ struct Hard_047_Permutations_II {
                 }
                 j -= 1
             }
-            swap(&nums[i-1], &nums[j])
+            nums.swapAt(i-1, j)
             reverseInPlace(nums: &nums, begin: i, end: nums.count-1)
             result.append(nums)
         }

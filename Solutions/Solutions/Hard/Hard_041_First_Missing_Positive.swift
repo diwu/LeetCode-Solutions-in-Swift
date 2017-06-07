@@ -25,7 +25,7 @@ struct Hard_041_First_Missing_Positive {
         var nums = n
         for i in 0 ..< nums.count {
             while nums[i] > 0 && nums[i] <= nums.count && nums[nums[i]-1] != nums[i] {
-                swap(&nums[i], &nums[nums[i]-1])
+                nums.swapAt(i, nums[i]-1)
             }
         }
         for i in 0 ..< nums.count {

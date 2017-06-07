@@ -29,7 +29,7 @@ class Medium_031_Next_Permutation {
             return
         }
         for i in start ..< (start + end)/2 {
-            swap(&nums[i], &nums[start + end - i])
+            nums.swapAt(i, start + end - i)
         }
     }
     class func nextPermutation(_ nums: inout [Int]) {
@@ -55,7 +55,7 @@ class Medium_031_Next_Permutation {
                 }
                 i -= 1
             }
-            swap(&nums[i], &nums[index-1])
+            nums.swapAt(i, index-1)
             reverseInPlace(nums: &nums, start: index, end: length - 1)
         }
     }
