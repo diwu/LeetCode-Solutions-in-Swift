@@ -33,7 +33,6 @@ struct Medium_048_Rotate_Image {
                 let tmp1 = matrix[j][i]
                 matrix[i][j] = tmp1
                 matrix[j][i] = tmp0
-//                swap(&matrix[i][j], &matrix[j][i]);
             }
         }
     }
