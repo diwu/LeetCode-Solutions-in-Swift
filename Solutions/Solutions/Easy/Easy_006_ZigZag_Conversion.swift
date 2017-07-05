@@ -59,8 +59,8 @@ struct Easy_006_ZigZag_Conversion {
             }
         }
         var res = String()
-        for i in 0..<nRows {
-            res += (arr[i])
+        for i in 0 ..< nRows {
+            res += arr[i]
         }
         return res
     }
