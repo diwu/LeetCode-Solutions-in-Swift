@@ -30,7 +30,7 @@ private extension String {
         return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
     subscript (range: Range<Int>) -> String {
-        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
+        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!])
     }
 }
 

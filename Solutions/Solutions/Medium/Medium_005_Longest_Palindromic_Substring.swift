@@ -14,7 +14,7 @@ Inspired by @hh1985 at https://leetcode.com/discuss/32204/simple-c-solution-8ms-
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!]
+        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!])
     }
     /*
      Ref: http://oleb.net/blog/2014/07/swift-strings/

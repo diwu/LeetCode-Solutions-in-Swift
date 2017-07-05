@@ -18,7 +18,7 @@ private extension String {
         return self[index]
     }
     subscript (range: Range<Int>) -> String {
-        return self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)]
+        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)])
     }
 }
 

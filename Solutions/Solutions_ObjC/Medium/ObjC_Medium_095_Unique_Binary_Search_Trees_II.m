@@ -42,7 +42,7 @@
 
 @implementation ObjC_Medium_095_Unique_Binary_Search_Trees_II
 
-+ (nonnull NSArray<ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node *> *)genTreesWithStart: (NSInteger)start end: (NSInteger)end {
++ (nonnull NSArray *)genTreesWithStart: (NSInteger)start end: (NSInteger)end {
     if (start > end) {
         return @[[NSNull null]];
     } else if (start == end) {

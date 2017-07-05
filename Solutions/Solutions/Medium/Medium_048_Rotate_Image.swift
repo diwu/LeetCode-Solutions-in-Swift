@@ -29,7 +29,11 @@ struct Medium_048_Rotate_Image {
         reverseInPlace(nums: &matrix)
         for i in 0 ..< matrix.count {
             for j in i + 1 ..< matrix[i].count {
-                swap(&matrix[i][j], &matrix[j][i]);
+                let tmp0 = matrix[i][j]
+                let tmp1 = matrix[j][i]
+                matrix[i][j] = tmp1
+                matrix[j][i] = tmp0
+//                swap(&matrix[i][j], &matrix[j][i]);
             }
         }
     }

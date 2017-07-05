@@ -32,7 +32,8 @@ struct Medium_064_Minimum_Path_Sum {
                 } else if i != 0 && j == 0 {
                     grid[i][j] = grid[i-1][j] + grid[i][j]
                 } else if i != 0 && j != 0 {
-                    grid[i][j] = min(grid[i-1][j], grid[i][j-1]) + grid[i][j]
+                    let tmp = min(grid[i-1][j], grid[i][j-1])
+                    grid[i][j] = tmp + grid[i][j]
                 }
             }
         }
