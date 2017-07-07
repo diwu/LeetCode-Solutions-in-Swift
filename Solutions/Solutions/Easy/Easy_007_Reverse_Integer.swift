@@ -57,6 +57,9 @@ struct Easy_007_Reverse_Integer {
         }
         if negtive == false && res > UInt(Int.max) {
             return 0
+        } else if negtive == true && res == UInt(Int.max) + 1 {
+            // When input is the reverse of Int.min
+            return (-1) * Int(res-1) - 1
         } else if negtive == true && res > UInt(Int.max) + 1 {
             return 0
         }
