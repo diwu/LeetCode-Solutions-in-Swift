@@ -47,7 +47,7 @@ struct Easy_008_String_to_Integer_atoi {
                 continue
             }
             guard let intValue = Int(String(char)) else {
-                continue
+                return base
             }
             guard base < Int.max / 10 || (base == Int.max / 10 && intValue <= Int.max % 10) else {
                 if positive {

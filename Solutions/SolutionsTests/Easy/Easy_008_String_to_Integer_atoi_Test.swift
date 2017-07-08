@@ -84,6 +84,26 @@ class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
         let expected: Int = -9223372036854775807
         asyncHelper(input: input, expected: expected)
     }
+    func test_015() {
+        let input: String = "  ?123"
+        let expected: Int = 0
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_016() {
+        let input: String = "  ??123"
+        let expected: Int = 0
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_017() {
+        let input: String = "  123?"
+        let expected: Int = 123
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_018() {
+        let input: String = "  123??"
+        let expected: Int = 123
+        asyncHelper(input: input, expected: expected)
+    }
     func asyncHelper(input: String, expected: Int ) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_008_String_to_Integer_atoi_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
