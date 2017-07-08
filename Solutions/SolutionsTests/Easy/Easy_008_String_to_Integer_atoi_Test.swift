@@ -104,6 +104,26 @@ class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
         let expected: Int = 123
         asyncHelper(input: input, expected: expected)
     }
+    func test_019() {
+        let input: String = "  ++123"
+        let expected: Int = 0
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_020() {
+        let input: String = "  +-123"
+        let expected: Int = 0
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_021() {
+        let input: String = "  +123+"
+        let expected: Int = 123
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_022() {
+        let input: String = "  -123+"
+        let expected: Int = -123
+        asyncHelper(input: input, expected: expected)
+    }
     func asyncHelper(input: String, expected: Int ) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_008_String_to_Integer_atoi_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
@@ -120,17 +140,3 @@ class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
         }
     }
 }
-
-/*
-atoi("123")                     //123
-atoi("     123")                //123
-atoi("    +123")                //123
-atoi("-123")                    //-123
-atoi("    -123")                //-123
-atoi(String(Int.max))           //9223372036854775807
-atoi("  9223372036854775808")   //9223372036854775807, overflow
-atoi("  9223372036854775806")   //9223372036854775806
-atoi(String(Int.min))           //-9223372036854775808
-atoi(" -9223372036854775809")   //9223372036854775808, overflow
-atoi(" -9223372036854775806")   //-9223372036854775806
-*/

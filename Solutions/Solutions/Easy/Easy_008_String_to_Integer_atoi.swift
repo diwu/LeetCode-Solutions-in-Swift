@@ -31,26 +31,36 @@ Inspired by @yuruofeifei at https://leetcode.com/discuss/8886/my-simple-solution
 struct Easy_008_String_to_Integer_atoi {
     // t = O(N), s = O(1)
     static func atoi(_ s: String) -> Int {
-        var positive = true
+        var sign: Int?
         var base = 0
         for char in s.characters {
             guard char != "+" else {
-                continue
+                if let signUnwrapped = sign {
+                    return base * signUnwrapped
+                } else {
+                    sign = 1
+                    continue
+                }
             }
             guard char != " " else {
                 continue
             }
             guard char != "-" else {
-                if base == 0 {
-                    positive = false
+                if let signUnwrapped = sign {
+                    return base * signUnwrapped
+                } else {
+                    sign = -1
+                    continue
                 }
-                continue
             }
             guard let intValue = Int(String(char)) else {
                 return base
             }
+            if sign == nil {
+                sign = 1
+            }
             guard base < Int.max / 10 || (base == Int.max / 10 && intValue <= Int.max % 10) else {
-                if positive {
+                if sign == nil || sign! == 1 {
                     return Int.max
                 } else {
                     return Int.min
@@ -58,10 +68,9 @@ struct Easy_008_String_to_Integer_atoi {
             }
             base = intValue + 10 * base
         }
-        if positive {
-            return base
-        } else {
-            return 0 - base
+        if sign == nil {
+            sign = 1
         }
+        return base * sign!
     }
 }
