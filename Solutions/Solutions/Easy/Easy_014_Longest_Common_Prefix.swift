@@ -13,35 +13,38 @@ Inspired by @garysui at https://leetcode.com/discuss/15755/optimal-solution
 */
 
 private extension String {
-    subscript (i: Int) -> Character {
-        let index: Index = self.characters.index(self.startIndex, offsetBy: i)
+    subscript(intIndex: Int) -> Character {
+        let index = self.characters.index(self.startIndex, offsetBy: intIndex)
         return self[index]
     }
-    subscript (range: Range<Int>) -> String {
-        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)])
+    subscript(range: Range<Int>) -> String {
+        let lowerBoundIndex = self.characters.index(self.startIndex, offsetBy: range.lowerBound)
+        let upperBoundIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound)
+        let rangeInStringIndex = lowerBoundIndex ..< upperBoundIndex
+        let stringSlice = self[rangeInStringIndex]
+        return String(stringSlice)
     }
 }
 
-class Easy_014_Longest_Common_Prefix {
-    class func longestCommonPrefix( _ arr: [String]?) -> String {
-        if let unwrapped = arr {
-            if unwrapped.count == 0 {
-                return ""
-            } else {
-                let stringLength: Int = unwrapped[0].characters.count
-                for i in 0 ..< stringLength {
-                    let c: Character = unwrapped[0][i]
-                    let arrCount: Int = unwrapped.count
-                    for j in 1 ..< arrCount {
-                        if i == unwrapped[j].characters.count || unwrapped[j][i] != c {
-                            return unwrapped[0][0..<i]
-                        }
-                    }
-                }
-                return unwrapped[0]
-            }
-        } else {
+struct Easy_014_Longest_Common_Prefix {
+    // t = O(N*M), s = O(1)
+    static func longestCommonPrefix(_ input: [String]?) -> String {
+        guard let arr = input else {
             return ""
         }
+        guard arr.count > 0 else {
+            return ""
+        }
+        let len = arr[0].count
+        let arrLen = arr.count
+        for i in 0 ..< len {
+            let char = arr[0][i]
+            for j in 1 ..< arrLen {
+                if i == arr[j].count || char != arr[j][i] {
+                    return arr[0][0 ..< i]
+                }
+            }
+        }
+        return arr[0]
     }
 }
