@@ -22,18 +22,18 @@ Inspired by @hln9319 https://leetcode.com/discuss/12693/neat-ac-java-code-o-n-ti
 
 */
 
-class Easy_009_Palindrome_Number {
+struct Easy_009_Palindrome_Number {
     // O (N)
-    class func isPalindrome(_ x: Int) -> Bool {
-        var palindromeX: Int = 0
-        var tmp: Int = x
+    static func isPalindrome(_ x: Int) -> Bool {
+        var tmp = x
+        var candidate = 0
         while tmp > 0 {
-            if palindromeX >= Int.max / 10 {
+            if candidate > Int.max / 10 {
                 return false
             }
-            palindromeX = palindromeX * 10 + tmp % 10
+            candidate = candidate * 10 + tmp % 10
             tmp = tmp / 10
         }
-        return palindromeX == x
+        return (candidate == x)
     }
 }
