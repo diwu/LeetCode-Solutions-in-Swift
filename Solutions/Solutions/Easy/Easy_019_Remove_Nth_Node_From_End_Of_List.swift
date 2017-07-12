@@ -42,7 +42,7 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List {
             fast = fast?.next
             localN -= 1
         }
-        while fast != nil && fast?.next != nil {
+        while fast?.next != nil {
             fast = fast?.next
             slow = slow?.next
         }
