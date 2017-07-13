@@ -17,35 +17,36 @@ Inspired by @exodia at https://leetcode.com/discuss/21440/sharing-my-simple-cpp-
 import Foundation
 
 private extension String {
-    subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+    func randomAccessCharacterArray() -> Array<Character> {
+        return Array(self.characters)
     }
 }
 
-class Easy_020_Valid_Parentheses {
-    class func isValid(_ s: String) -> Bool {
-        var stack: [Character] = []
-        var temp: Character
-        var dict: Dictionary<Character, Character> = Dictionary()
-        dict["]"] = "["
-        dict[")"] = "("
-        dict["}"] = "{"
-        for i in 0..<s.characters.count {
-            temp = s[i]
-            if temp == ")" || temp == "}" || temp == "]" {
-                if stack.count == 0 || stack.last != dict[temp] {
+struct Easy_020_Valid_Parentheses {
+    // t=O(N), s=O(N)
+    static func isValid(_ s: String) -> Bool {
+        let charArr = s.randomAccessCharacterArray()
+        let dict: Dictionary<Character, Character> = [
+            "}":"{",
+            "]":"[",
+            ")":"("
+        ]
+        var stack: Array<Character> = []
+        for char in charArr {
+            if char == "}" || char == ")" || char == "]" {
+                if stack.isEmpty || stack.last != dict[char] {
                     return false
                 } else {
                     stack.removeLast()
                 }
             } else {
-                stack.append(temp)
+                stack.append(char)
             }
         }
-        if stack.count == 0 {
-            return true
+        if stack.isEmpty {
+            return true;
         } else {
-            return false
+            return false;
         }
     }
 }
