@@ -43,6 +43,36 @@ class Easy_020_Valid_Parentheses_Test: XCTestCase {
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
+    func test_006() {
+        let input: String = "([{}])"
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_007() {
+        let input: String = "[{}])"
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_008() {
+        let input: String = "([{})"
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_009() {
+        let input: String = "([}])"
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_010() {
+        let input: String = "([}{])"
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_011() {
+        let input: String = "([{}[{({()()}[[[]]])}]])"
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
 
     func asyncHelper(input: String, expected: Bool ) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_020_Valid_Parentheses_Test.TimeOutName)
