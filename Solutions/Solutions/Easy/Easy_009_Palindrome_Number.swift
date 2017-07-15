@@ -29,7 +29,7 @@ struct Easy_009_Palindrome_Number {
             return false;
         }
         var tmp = abs(x)
-        var reference = abs(x)
+        let reference = abs(x)
         var candidate = 0
         while tmp > 0 {
             if candidate > Int.max / 10 {
