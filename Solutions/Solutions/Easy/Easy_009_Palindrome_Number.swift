@@ -25,7 +25,11 @@ Inspired by @hln9319 https://leetcode.com/discuss/12693/neat-ac-java-code-o-n-ti
 struct Easy_009_Palindrome_Number {
     // O (N)
     static func isPalindrome(_ x: Int) -> Bool {
-        var tmp = x
+        guard x != Int.min else {
+            return false;
+        }
+        var tmp = abs(x)
+        var reference = abs(x)
         var candidate = 0
         while tmp > 0 {
             if candidate > Int.max / 10 {
@@ -34,6 +38,6 @@ struct Easy_009_Palindrome_Number {
             candidate = candidate * 10 + tmp % 10
             tmp = tmp / 10
         }
-        return (candidate == x)
+        return (candidate == reference)
     }
 }

@@ -16,7 +16,7 @@ class Easy_009_Palindrome_Number_Test: XCTestCase {
 
     func test_001() {
         let input: Int = -121
-        let expected: Bool = false
+        let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
@@ -49,6 +49,16 @@ class Easy_009_Palindrome_Number_Test: XCTestCase {
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
+    func test_008() {
+        let input: Int = Int.min
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_009() {
+        let input: Int = Int.max
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
     func asyncHelper(input: Int, expected: Bool ) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_009_Palindrome_Number_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
@@ -65,13 +75,3 @@ class Easy_009_Palindrome_Number_Test: XCTestCase {
         }
     }
 }
-
-/*
-isPalindrome(-121)                  //false
-isPalindrome(121)                   //true
-isPalindrome(0)                     //true
-isPalindrome(Int.max)               //false
-isPalindrome(Int.min)               //false
-isPalindrome(1999999999999999999)   //false, overflow handling
-isPalindrome(-1999999999999999999)  //false, overflow handling
-*/
