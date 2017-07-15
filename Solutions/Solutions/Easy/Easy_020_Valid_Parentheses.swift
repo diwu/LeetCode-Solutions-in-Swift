@@ -43,10 +43,6 @@ struct Easy_020_Valid_Parentheses {
                 stack.append(char)
             }
         }
-        if stack.isEmpty {
-            return true;
-        } else {
-            return false;
-        }
+        return stack.isEmpty
     }
 }
