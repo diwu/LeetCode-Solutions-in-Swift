@@ -52,7 +52,7 @@ struct Easy_007_Reverse_Integer {
         }
         var res:UInt = 0
         while i > 0 {
-            res = res * 10 + UInt(i % 10)
+            res = res * 10 + i % 10
             i = i / 10
         }
         if negtive == false && res > UInt(Int.max) {
