@@ -28,18 +28,18 @@ class Easy_021_Merge_Two_Sorted_Lists {
         var l1 = list1
         var l2 = list2
         let dummy: Node = Node()
-        var tail: Node? = dummy
+        var cursor: Node? = dummy
         while l1 != nil && l2 != nil {
             if l1!.value < l2!.value {
-                tail?.next = l1
+                cursor?.next = l1
                 l1 = l1?.next
             } else {
-                tail?.next = l2
+                cursor?.next = l2
                 l2 = l2?.next
             }
-            tail = tail?.next
+            cursor = cursor?.next
         }
-        tail?.next = l1 != nil ? l1 : l2
+        cursor?.next = l1 != nil ? l1 : l2
         return dummy.next
     }
 }
