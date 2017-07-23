@@ -31,14 +31,14 @@ class Medium_098_Validate_Binary_Search_Tree {
         if curr == nil {
             return true
         } else {
-            if isValidBSTRecursionHelper(curr: curr?.left, prev: &prev) == false {
+            if isValidBSTRecursionHelper(curr: curr!.left, prev: &prev) == false {
                 return false
             }
-            if prev != nil && (prev?.value)! > (curr?.value)! {
+            if prev != nil && prev!.value > curr!.value {
                 return false
             }
             prev = curr
-            return isValidBSTRecursionHelper(curr: curr?.right, prev: &prev)
+            return isValidBSTRecursionHelper(curr: curr!.right, prev: &prev)
         }
     }
     // t = O(N), average s = O(logN), worst s = O(N)
