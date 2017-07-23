@@ -35,7 +35,7 @@
 
 @implementation ObjC_Medium_098_Validate_Binary_Search_Tree
 
-+ (BOOL)isValidBSTRecursionHelper: (ObjC_Medium_098_Validate_Binary_Search_Tree_Node *)curr prev: (ObjC_Medium_098_Validate_Binary_Search_Tree_Node * __autoreleasing *)prev {
++ (BOOL)isValidBSTRecursionHelper: (ObjC_Medium_098_Validate_Binary_Search_Tree_Node *)curr prev: (ObjC_Medium_098_Validate_Binary_Search_Tree_Node **)prev {
     if (curr == nil) {
         return true;
     } else {
