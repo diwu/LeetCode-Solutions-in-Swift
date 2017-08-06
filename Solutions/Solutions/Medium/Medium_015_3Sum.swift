@@ -21,9 +21,9 @@ Inspired by @peerlessbloom at https://leetcode.com/discuss/10756/my-accepted-o-n
 
 */
 
-class Medium_015_3Sum {
+struct Medium_015_3Sum {
     // O (N^2)
-    class func threeSum(_ num: [Int]) -> [[Int]] {
+    static func threeSum(_ num: [Int]) -> [[Int]] {
         var res: [[Int]] = []
         if num.count < 3 {
             return res
