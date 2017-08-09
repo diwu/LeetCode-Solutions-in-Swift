@@ -88,6 +88,6 @@ struct Hard_076_Minimum_Window_Substring {
             return ""
         }
         let range = s.characters.index(s.startIndex, offsetBy: minIdx) ..< s.characters.index(s.startIndex, offsetBy: minIdx + minLen)
-        return s.substring(with: range)
+        return String(s[range])
     }
 }
