@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_036_Valid_Sudoku_Test: XCTestCase {
+class Easy_036_Valid_Sudoku_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Easy_036_Valid_Sudoku"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

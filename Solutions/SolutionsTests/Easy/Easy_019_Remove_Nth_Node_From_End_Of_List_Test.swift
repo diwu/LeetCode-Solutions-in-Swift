@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase {
+class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase, SolutionsTestCase {
 
     private static let ProblemName: String = "Easy_019_Remove_Nth_Node_From_End_Of_List"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_093_Restore_IP_Addresses_Test: XCTestCase {
+class Medium_093_Restore_IP_Addresses_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_093_Restore_IP_Addresses"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

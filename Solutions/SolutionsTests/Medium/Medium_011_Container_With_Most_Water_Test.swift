@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_011_Container_With_Most_Water_Test: XCTestCase {
+class Medium_011_Container_With_Most_Water_Test: XCTestCase, SolutionsTestCase {
 
     let ProbleName: String = "Medium_011_Container_With_Most_Water"
 

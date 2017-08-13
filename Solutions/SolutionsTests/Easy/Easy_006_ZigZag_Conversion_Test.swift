@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_006_ZigZag_Conversion_Test: XCTestCase {
+class Easy_006_ZigZag_Conversion_Test: XCTestCase, SolutionsTestCase {
 
     let ProbleName: String = "Easy_006_ZigZag_Conversion"
 

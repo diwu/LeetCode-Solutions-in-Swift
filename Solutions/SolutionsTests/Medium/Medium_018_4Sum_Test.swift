@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_018_4Sum_Test: XCTestCase {
+class Medium_018_4Sum_Test: XCTestCase, SolutionsTestCase {
 
     static let ProblemName: String = "Medium_018_4Sum"
     static let TimeOutName = ProblemName + Default_Timeout_Suffix

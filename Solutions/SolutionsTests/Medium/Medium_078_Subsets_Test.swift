@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_078_Subsets_Test: XCTestCase {
+class Medium_078_Subsets_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_078_Subsets"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_065_Valid_Number_Test: XCTestCase {
+class Hard_065_Valid_Number_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_065_Valid_Number"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

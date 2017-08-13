@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_008_String_to_Integer_atoi_Test: XCTestCase {
+class Easy_008_String_to_Integer_atoi_Test: XCTestCase, SolutionsTestCase {
 
     private static let ProblemName: String = "Easy_008_String_to_Integer_atoi"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix

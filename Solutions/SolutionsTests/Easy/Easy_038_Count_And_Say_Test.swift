@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_038_Count_And_Say_Test: XCTestCase {
+class Easy_038_Count_And_Say_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Easy_038_Count_And_Say"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

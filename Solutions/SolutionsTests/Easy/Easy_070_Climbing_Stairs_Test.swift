@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_070_Climbing_Stairs_Test: XCTestCase {
+class Easy_070_Climbing_Stairs_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Easy_070_Climbing_Stairs"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

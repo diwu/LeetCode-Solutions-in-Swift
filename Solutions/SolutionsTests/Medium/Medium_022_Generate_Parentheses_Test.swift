@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_022_Generate_Parentheses_Test: XCTestCase {
+class Medium_022_Generate_Parentheses_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_022_Generate_Parentheses"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

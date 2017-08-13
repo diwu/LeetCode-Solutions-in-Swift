@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_012_Integer_To_Roman_Test: XCTestCase {
+class Medium_012_Integer_To_Roman_Test: XCTestCase, SolutionsTestCase {
 
     let ProbleName: String = "Medium_012_Integer_To_Roman"
 

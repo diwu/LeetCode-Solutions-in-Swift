@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_062_Unique_Paths_Test: XCTestCase {
+class Medium_062_Unique_Paths_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_062_Unique_Paths"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

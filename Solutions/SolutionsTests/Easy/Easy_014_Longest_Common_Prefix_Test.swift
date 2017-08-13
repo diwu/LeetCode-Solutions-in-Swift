@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_014_Longest_Common_Prefix_Test: XCTestCase {
+class Easy_014_Longest_Common_Prefix_Test: XCTestCase, SolutionsTestCase {
 
     let ProblemName: String = "Easy_014_Longest_Common_Prefix"
 

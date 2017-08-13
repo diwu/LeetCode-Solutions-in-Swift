@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_035_Search_Insert_Position_Test: XCTestCase {
+class Medium_035_Search_Insert_Position_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_035_Search_Insert_Position"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

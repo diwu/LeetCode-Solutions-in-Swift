@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_002_Add_Two_Numbers_Test: XCTestCase {
+class Medium_002_Add_Two_Numbers_Test: XCTestCase, SolutionsTestCase {
     func test_001() {
 
         typealias ListNode = Medium_002_Add_Two_Numbers.ListNode

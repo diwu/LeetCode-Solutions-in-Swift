@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase {
+class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_004_Median_Of_Two_Sorted_Arrays"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value * 10

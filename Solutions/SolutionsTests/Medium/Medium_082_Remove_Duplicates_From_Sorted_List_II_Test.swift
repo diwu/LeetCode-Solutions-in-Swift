@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_082_Remove_Duplicates_From_Sorted_List_II_Test: XCTestCase {
+class Medium_082_Remove_Duplicates_From_Sorted_List_II_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_082_Remove_Duplicates_From_Sorted_List_II"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_055_Jump_Game_Test: XCTestCase {
+class Medium_055_Jump_Game_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_055_Jump_Game"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_020_Valid_Parentheses_Test: XCTestCase {
+class Easy_020_Valid_Parentheses_Test: XCTestCase, SolutionsTestCase {
 
     private static let ProblemName: String = "Easy_020_Valid_Parentheses"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase {
+class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_099_Recover_Binary_Search_Tree"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

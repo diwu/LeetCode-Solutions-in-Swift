@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_009_Palindrome_Number_Test: XCTestCase {
+class Easy_009_Palindrome_Number_Test: XCTestCase, SolutionsTestCase {
 
     private static let ProblemName: String = "Easy_009_Palindrome_Number"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix

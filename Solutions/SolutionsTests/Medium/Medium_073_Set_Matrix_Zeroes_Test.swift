@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_073_Set_Matrix_Zeroes_Test: XCTestCase {
+class Medium_073_Set_Matrix_Zeroes_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_073_Set_Matrix_Zeroes"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

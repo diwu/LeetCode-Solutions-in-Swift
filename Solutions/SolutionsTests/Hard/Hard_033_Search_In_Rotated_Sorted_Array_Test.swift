@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase {
+class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_033_Search_In_Rotated_Sorted_Array"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

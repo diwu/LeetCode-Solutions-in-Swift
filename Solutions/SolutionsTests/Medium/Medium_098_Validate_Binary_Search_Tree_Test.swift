@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_098_Validate_Binary_Search_Tree_Test: XCTestCase {
+class Medium_098_Validate_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_098_Validate_Binary_Search_Tree"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

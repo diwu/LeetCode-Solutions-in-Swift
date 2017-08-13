@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase {
+class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_030_Substring_With_Concatenation_Of_All_Words"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

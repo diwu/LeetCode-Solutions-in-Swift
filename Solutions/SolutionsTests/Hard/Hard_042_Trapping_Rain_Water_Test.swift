@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_042_Trapping_Rain_Water_Test: XCTestCase {
+class Hard_042_Trapping_Rain_Water_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_042_Trapping_Rain_Water"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

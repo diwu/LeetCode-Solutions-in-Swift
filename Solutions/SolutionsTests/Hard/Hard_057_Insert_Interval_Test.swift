@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_057_Insert_Interval_Test: XCTestCase {
+class Hard_057_Insert_Interval_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_057_Insert_Interval"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

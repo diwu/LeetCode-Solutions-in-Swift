@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_101_Symmetric_Tree_Test: XCTestCase {
+class Easy_101_Symmetric_Tree_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Easy_101_Symmetric_Tree"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

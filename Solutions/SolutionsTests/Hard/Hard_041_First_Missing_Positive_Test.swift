@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_041_First_Missing_Positive_Test: XCTestCase {
+class Hard_041_First_Missing_Positive_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_041_First_Missing_Positive"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_015_3Sum_Test: XCTestCase {
+class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
 
     let ProblemName: String = "Medium_015_3Sum"
 

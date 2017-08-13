@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hard_047_Permutations_II_Test: XCTestCase {
+class Hard_047_Permutations_II_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Hard_047_Permutations_II"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value * 10

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_061_Rotate_List_Test: XCTestCase {
+class Medium_061_Rotate_List_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_061_Rotate_List"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value

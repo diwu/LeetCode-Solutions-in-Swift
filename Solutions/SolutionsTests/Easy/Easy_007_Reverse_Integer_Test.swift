@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Easy_007_Reverse_Integer_Test: XCTestCase {
+class Easy_007_Reverse_Integer_Test: XCTestCase, SolutionsTestCase {
 
     let ProbleName: String = "Easy_007_Reverse_Integer"
 

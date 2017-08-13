@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase {
+class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase, SolutionsTestCase {
     private static let ProblemName: String = "Medium_081_Search_In_Rotated_Sorted_Array_II"
     private static let TimeOutName = ProblemName + Default_Timeout_Suffix
     private static let TimeOut = Default_Timeout_Value
