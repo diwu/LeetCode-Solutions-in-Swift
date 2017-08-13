@@ -9,25 +9,25 @@
 import XCTest
 
 class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase, SolutionsTestCase {
-    func testCase001() {
+    func test_001() {
         let input: String = "abcabcdzaba"
         let expected: Int = 5
         asyncHelper(input: input, expected: expected)
     }
 
-    func testCase002() {
+    func test_002() {
         let input: String = "aaaa"
         let expected: Int = 1
         asyncHelper(input: input, expected: expected)
     }
 
-    func testCase003() {
+    func test_003() {
         let input: String = "aaabbbc"
         let expected: Int = 2
         asyncHelper(input: input, expected: expected)
     }
 
-    func testCase004() {
+    func test_004() {
         let input: String = ""
         let expected: Int = 0
         asyncHelper(input: input, expected: expected)

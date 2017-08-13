@@ -9,73 +9,73 @@
 import XCTest
 
 class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase, SolutionsTestCase {
-    func testCase001() {
+    func test_001() {
         let input0: [Int] = [1, 2, 11]
         let input1: [Int] = [30, 40, 50]
         let expected: Double = 20.5
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
-    func testCase002() {
+    func test_002() {
         let input0: [Int] = [1]
         let input1: [Int] = [1]
         let expected: Double = 1
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
-    func testCase003() {
+    func test_003() {
         let input0: [Int] = [1, 2]
         let input1: [Int] = [1]
         let expected: Double = 1
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
-    func testCase004() {
+    func test_004() {
         let input0: [Int] = [1]
         let input1: [Int] = [10, 20, 30]
         let expected: Double = 15
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
-    func testCase005() {
+    func test_005() {
         let input0: [Int] = [1]
         let input1: [Int] = [10, 20, 30, 40]
         let expected: Double = 20
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
-    func testCase006() {
+    func test_006() {
         let input0: [Int] = [10, 20, 30]
         let input1: [Int] = [10, 20, 30]
         let expected: Double = 20
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
 
-    func testCase007() {
+    func test_007() {
         let input0: [Int] = []
         let input1: [Int] = [10, 20, 30]
         let expected: Double = 20
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
-    func testCase008() {
+    func test_008() {
         let input0: [Int] = [10, 20, 25, 30]
         let input1: [Int] = [10, 20, 30]
         let expected: Double = 20
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
-    func testCase009() {
+    func test_009() {
         let input0: [Int] = [10, 20, 25, 26, 30]
         let input1: [Int] = [10, 20, 30]
         let expected: Double = 22.5
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
-    func testCase010() {
+    func test_010() {
         let input0: [Int] = [10, 20, 25, 26, 30]
         let input1: [Int] = [10]
         let expected: Double = 22.5
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
-    func testCase011() {
+    func test_011() {
         let input0: [Int] = [10, 20, 25, 26, 30, 40]
         let input1: [Int] = [10]
         let expected: Double = 25

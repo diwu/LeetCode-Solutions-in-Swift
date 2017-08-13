@@ -10,28 +10,28 @@ import XCTest
 
 class Easy_006_ZigZag_Conversion_Test: XCTestCase, SolutionsTestCase {
 
-    func testCase001() {
+    func test_001() {
         var input: [Any] = ["PAYPALISHIRING", 3]
         let expected: String = "PAHNAPLSIIGYIR"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
-    func testCase002() {
+    func test_002() {
         var input: [Any] = ["PAYPALISHIRING", 1]
         let expected: String = "PAYPALISHIRING"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
-    func testCase003() {
+    func test_003() {
         var input: [Any] = ["", 3]
         let expected: String = ""
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
-    func testCase004() {
+    func test_004() {
         /*
          P   I   N
          A L S I G
