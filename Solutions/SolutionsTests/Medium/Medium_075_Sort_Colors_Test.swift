@@ -28,7 +28,7 @@ class Medium_075_Sort_Colors_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_075_Sort_Colors_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: localInput, resultValue: Medium_075_Sort_Colors_Test.TimeOutName, expectedValue: expected)
             }

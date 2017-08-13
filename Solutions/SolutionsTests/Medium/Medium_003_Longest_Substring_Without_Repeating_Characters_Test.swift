@@ -46,7 +46,7 @@ class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName, expectedValue: expected)
             }

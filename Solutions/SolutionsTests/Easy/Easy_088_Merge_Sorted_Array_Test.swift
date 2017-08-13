@@ -46,7 +46,7 @@ class Easy_088_Merge_Sorted_Array_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_088_Merge_Sorted_Array_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: localInput0, resultValue: Easy_088_Merge_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

@@ -49,7 +49,7 @@ class Easy_027_Remove_Element_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_027_Remove_Element_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_027_Remove_Element_Test.TimeOutName, expectedValue: expected)
             }

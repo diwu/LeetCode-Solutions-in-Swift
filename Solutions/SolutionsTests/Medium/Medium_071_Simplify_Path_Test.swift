@@ -51,7 +51,7 @@ class Medium_071_Simplify_Path_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_071_Simplify_Path_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_071_Simplify_Path_Test.TimeOutName, expectedValue: expected)
             }

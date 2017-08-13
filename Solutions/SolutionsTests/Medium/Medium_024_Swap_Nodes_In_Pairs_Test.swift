@@ -75,7 +75,7 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input as Any, resultValue: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName, expectedValue: expected)
             }

@@ -62,7 +62,7 @@ class Easy_026_Remove_Duplicates_from_Sorted_Array_Test: XCTestCase, SolutionsTe
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

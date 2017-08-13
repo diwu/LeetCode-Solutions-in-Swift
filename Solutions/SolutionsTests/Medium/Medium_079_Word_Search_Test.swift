@@ -51,7 +51,7 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_079_Word_Search_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input1, resultValue: Medium_079_Word_Search_Test.TimeOutName, expectedValue: expected)
             }

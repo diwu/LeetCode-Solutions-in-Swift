@@ -96,7 +96,7 @@ class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input0, resultValue: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName, expectedValue: expected)
             }

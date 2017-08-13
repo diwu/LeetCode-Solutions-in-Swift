@@ -46,7 +46,7 @@ class Hard_045_Jump_Game_II_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_045_Jump_Game_II_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_045_Jump_Game_II_Test.TimeOutName, expectedValue: expected)
             }

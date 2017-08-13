@@ -37,7 +37,7 @@ class Easy_038_Count_And_Say_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_038_Count_And_Say_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_038_Count_And_Say_Test.TimeOutName, expectedValue: expected)
             }

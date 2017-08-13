@@ -51,7 +51,7 @@ class Medium_017_Letter_Combinations_Of_A_Phone_Number_Test: XCTestCase, Solutio
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName, expectedValue: expected)
             }

@@ -31,7 +31,7 @@ class Medium_062_Unique_Paths_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_062_Unique_Paths_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_062_Unique_Paths_Test.TimeOutName, expectedValue: expected)
             }

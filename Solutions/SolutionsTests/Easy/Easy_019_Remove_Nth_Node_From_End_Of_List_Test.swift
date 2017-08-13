@@ -80,7 +80,7 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase, SolutionsTestC
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName, expectedValue: expected)
             }

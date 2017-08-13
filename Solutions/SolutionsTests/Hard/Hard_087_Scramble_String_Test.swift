@@ -67,7 +67,7 @@ class Hard_087_Scramble_String_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_087_Scramble_String_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_087_Scramble_String_Test.TimeOutName, expectedValue: expected)
             }

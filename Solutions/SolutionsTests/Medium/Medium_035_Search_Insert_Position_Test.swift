@@ -72,7 +72,7 @@ class Medium_035_Search_Insert_Position_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_035_Search_Insert_Position_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_035_Search_Insert_Position_Test.TimeOutName, expectedValue: expected)
             }

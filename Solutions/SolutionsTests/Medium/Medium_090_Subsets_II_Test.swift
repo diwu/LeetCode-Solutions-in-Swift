@@ -74,7 +74,7 @@ class Medium_090_Subsets_II_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_090_Subsets_II_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_090_Subsets_II_Test.TimeOutName, expectedValue: expected)
             }

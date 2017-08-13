@@ -38,7 +38,7 @@ class Medium_096_Unique_Binary_Search_Trees_Test: XCTestCase, SolutionsTestCase 
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_096_Unique_Binary_Search_Trees_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_096_Unique_Binary_Search_Trees_Test.TimeOutName, expectedValue: expected)
             }

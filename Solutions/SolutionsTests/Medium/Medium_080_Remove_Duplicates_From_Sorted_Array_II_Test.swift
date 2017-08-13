@@ -55,7 +55,7 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase, Soluti
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
             }

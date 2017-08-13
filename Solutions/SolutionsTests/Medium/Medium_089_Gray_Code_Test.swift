@@ -74,7 +74,7 @@ class Medium_089_Gray_Code_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_089_Gray_Code_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_089_Gray_Code_Test.TimeOutName, expectedValue: [])
             }

@@ -41,7 +41,7 @@ class Easy_067_Add_Binary_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_067_Add_Binary_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_067_Add_Binary_Test.TimeOutName, expectedValue: expected)
             }

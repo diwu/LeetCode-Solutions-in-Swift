@@ -56,7 +56,7 @@ class Easy_070_Climbing_Stairs_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_070_Climbing_Stairs_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_070_Climbing_Stairs_Test.TimeOutName, expectedValue: expected)
             }

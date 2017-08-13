@@ -97,7 +97,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase, Solut
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName, expectedValue: expected)
             }

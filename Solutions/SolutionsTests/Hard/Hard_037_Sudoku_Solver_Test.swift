@@ -141,7 +141,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_037_Sudoku_Solver_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_037_Sudoku_Solver_Test.TimeOutName, expectedValue: expected)
             }

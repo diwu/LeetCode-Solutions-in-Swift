@@ -106,7 +106,7 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_036_Valid_Sudoku_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_036_Valid_Sudoku_Test.TimeOutName, expectedValue: expected)
             }

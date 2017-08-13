@@ -57,7 +57,7 @@ class Medium_031_Next_Permutation_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_031_Next_Permutation_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_031_Next_Permutation_Test.TimeOutName, expectedValue: expected)
             }

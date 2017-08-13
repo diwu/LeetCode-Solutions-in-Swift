@@ -72,7 +72,7 @@ class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase, SolutionsTestCas
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName, expectedValue: expected)
             }

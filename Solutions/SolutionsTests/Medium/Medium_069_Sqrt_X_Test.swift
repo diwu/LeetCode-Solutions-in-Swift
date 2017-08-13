@@ -41,7 +41,7 @@ class Medium_069_Sqrt_X_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_069_Sqrt_X_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_069_Sqrt_X_Test.TimeOutName, expectedValue: expected)
             }

@@ -170,7 +170,7 @@ class Hard_057_Insert_Interval_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_057_Insert_Interval_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: [input0, input1], resultValue: Hard_057_Insert_Interval_Test.TimeOutName, expectedValue: expected)
             }

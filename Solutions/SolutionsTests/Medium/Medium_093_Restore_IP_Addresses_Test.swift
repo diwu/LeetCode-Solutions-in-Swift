@@ -56,7 +56,7 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_093_Restore_IP_Addresses_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_093_Restore_IP_Addresses_Test.TimeOutName, expectedValue: expected)
             }

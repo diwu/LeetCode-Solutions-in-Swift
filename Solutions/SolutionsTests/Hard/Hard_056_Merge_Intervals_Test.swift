@@ -64,7 +64,7 @@ class Hard_056_Merge_Intervals_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_056_Merge_Intervals_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_056_Merge_Intervals_Test.TimeOutName, expectedValue: expected)
             }

@@ -56,7 +56,7 @@ class Hard_084_Largest_Rectangle_In_Histogram_Test: XCTestCase, SolutionsTestCas
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOutName, expectedValue: expected)
             }

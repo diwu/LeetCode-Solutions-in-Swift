@@ -79,7 +79,7 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_101_Symmetric_Tree_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_101_Symmetric_Tree_Test.TimeOutName, expectedValue: expected)
             }

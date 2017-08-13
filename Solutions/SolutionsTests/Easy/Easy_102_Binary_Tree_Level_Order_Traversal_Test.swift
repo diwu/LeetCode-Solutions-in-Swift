@@ -147,7 +147,7 @@ class Easy_102_Binary_Tree_Level_Order_Traversal_Test: XCTestCase, SolutionsTest
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOutName, expectedValue: expected)
             }

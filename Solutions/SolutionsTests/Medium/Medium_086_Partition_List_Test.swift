@@ -63,7 +63,7 @@ class Medium_086_Partition_List_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_086_Partition_List_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input0, resultValue: Medium_086_Partition_List_Test.TimeOutName, expectedValue: expected)
             }

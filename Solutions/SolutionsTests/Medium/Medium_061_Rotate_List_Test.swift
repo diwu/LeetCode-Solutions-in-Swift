@@ -85,7 +85,7 @@ class Medium_061_Rotate_List_Test: XCTestCase, SolutionsTestCase {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_061_Rotate_List_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
                 assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_061_Rotate_List_Test.TimeOutName, expectedValue: expected)
             }
