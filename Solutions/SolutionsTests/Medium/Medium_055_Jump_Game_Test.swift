@@ -53,7 +53,7 @@ class Medium_055_Jump_Game_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_055_Jump_Game_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }

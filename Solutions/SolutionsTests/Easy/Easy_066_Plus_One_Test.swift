@@ -45,7 +45,7 @@ class Easy_066_Plus_One_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: localInput, resultValue: Easy_066_Plus_One_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: localInput, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }

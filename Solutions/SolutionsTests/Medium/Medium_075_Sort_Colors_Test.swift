@@ -30,7 +30,7 @@ class Medium_075_Sort_Colors_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: localInput, resultValue: Medium_075_Sort_Colors_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: localInput, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }

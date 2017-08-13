@@ -81,7 +81,7 @@ class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase, SolutionsTestCa
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_005_Longest_Palindromic_Substring_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }

@@ -101,7 +101,7 @@ class Medium_098_Validate_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_098_Validate_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }

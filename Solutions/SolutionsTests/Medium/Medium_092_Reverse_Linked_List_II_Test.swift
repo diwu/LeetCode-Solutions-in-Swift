@@ -76,7 +76,7 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: input0, resultValue: Medium_092_Reverse_Linked_List_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input0, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }

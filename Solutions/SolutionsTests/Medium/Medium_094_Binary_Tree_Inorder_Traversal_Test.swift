@@ -70,7 +70,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase, SolutionsTestCa
         })
         waitForExpectations(timeout:timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName:self.problemName(), input: input0 as Any, resultValue: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input0 as Any, resultValue:self.timeOutName(), expectedValue: expected)
             }
         }
     }
