@@ -38,14 +38,14 @@ class Easy_066_Plus_One_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             Easy_066_Plus_One.plusOne(&localInput)
             let result = localInput
-            assertHelper(result == expected, problemName: Easy_066_Plus_One_Test.ProblemName, input: localInput, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: localInput, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_066_Plus_One_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_066_Plus_One_Test.ProblemName, input: localInput, resultValue: Easy_066_Plus_One_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: localInput, resultValue: Easy_066_Plus_One_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

@@ -81,14 +81,14 @@ class Hard_041_First_Missing_Positive_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_041_First_Missing_Positive_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: Int = Hard_041_First_Missing_Positive.firstMissingPositive(input)
-            assertHelper(expected == result, problemName: Hard_041_First_Missing_Positive_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_041_First_Missing_Positive_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_041_First_Missing_Positive_Test.ProblemName, input: input, resultValue: Hard_041_First_Missing_Positive_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_041_First_Missing_Positive_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

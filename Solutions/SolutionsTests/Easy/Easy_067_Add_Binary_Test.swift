@@ -36,14 +36,14 @@ class Easy_067_Add_Binary_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_067_Add_Binary_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Easy_067_Add_Binary.addBinary(a: input[0], b: input[1]);
-            assertHelper(result == expected, problemName: Easy_067_Add_Binary_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_067_Add_Binary_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_067_Add_Binary_Test.ProblemName, input: input, resultValue: Easy_067_Add_Binary_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_067_Add_Binary_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

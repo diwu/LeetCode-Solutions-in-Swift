@@ -61,14 +61,14 @@ class Hard_010_Regular_Expression_Matching_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_010_Regular_Expression_Matching_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
-            assertHelper(result == expected, problemName: Hard_010_Regular_Expression_Matching_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_010_Regular_Expression_Matching_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_010_Regular_Expression_Matching_Test.ProblemName, input: input, resultValue: Hard_010_Regular_Expression_Matching_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_010_Regular_Expression_Matching_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

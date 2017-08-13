@@ -50,15 +50,15 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             let result_swift: [String] = Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
             let result_objc: [String] = ObjC_Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
-            assertHelper(NSSet.init(array: result_swift) == NSSet.init(array: expected), problemName: Medium_093_Restore_IP_Addresses_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
-            assertHelper(NSSet.init(array: result_objc) == NSSet.init(array: expected), problemName: Medium_093_Restore_IP_Addresses_Test.ProblemName, input: input, resultValue: result_objc, expectedValue: expected)
+            assertHelper(NSSet.init(array: result_swift) == NSSet.init(array: expected), problemName:self.problemName(), input: input, resultValue: result_swift, expectedValue: expected)
+            assertHelper(NSSet.init(array: result_objc) == NSSet.init(array: expected), problemName:self.problemName(), input: input, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_093_Restore_IP_Addresses_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_093_Restore_IP_Addresses_Test.ProblemName, input: input, resultValue: Medium_093_Restore_IP_Addresses_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_093_Restore_IP_Addresses_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

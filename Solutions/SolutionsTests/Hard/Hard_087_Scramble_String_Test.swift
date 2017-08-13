@@ -62,14 +62,14 @@ class Hard_087_Scramble_String_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             let result_recursion = Hard_087_Scramble_String.isScramble_recursion(s1: input[0], s2: input[1])
             let result_iteration = Hard_087_Scramble_String.isScramble_iteration(s1: input[0], s2: input[1])
-            assertHelper(result_recursion == expected && result_iteration == expected, problemName: Hard_087_Scramble_String_Test.ProblemName, input: input, resultValue: result_recursion, expectedValue: expected)
+            assertHelper(result_recursion == expected && result_iteration == expected, problemName:self.problemName(), input: input, resultValue: result_recursion, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_087_Scramble_String_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_087_Scramble_String_Test.ProblemName, input: input, resultValue: Hard_087_Scramble_String_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_087_Scramble_String_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

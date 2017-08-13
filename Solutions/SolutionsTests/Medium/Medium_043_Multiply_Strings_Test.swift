@@ -36,14 +36,14 @@ class Medium_043_Multiply_Strings_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_043_Multiply_Strings_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: String = Medium_043_Multiply_Strings.multiply(num1: input[0], num2: input[1])
-            assertHelper(expected == result, problemName: Medium_043_Multiply_Strings_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_043_Multiply_Strings_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_043_Multiply_Strings_Test.ProblemName, input: input, resultValue: Medium_043_Multiply_Strings_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_043_Multiply_Strings_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

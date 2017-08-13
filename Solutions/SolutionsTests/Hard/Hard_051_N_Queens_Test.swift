@@ -34,7 +34,7 @@ class Hard_051_N_Queens_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             var result = Hard_051_N_Queens.solveNQueens(input)
             if result.count != expected.count {
-                assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             } else {
                 for i in 0 ..< expected.count {
                     var flag = false
@@ -44,7 +44,7 @@ class Hard_051_N_Queens_Test: XCTestCase, SolutionsTestCase {
                         }
                     }
                     if flag == false {
-                        assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                        assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
                     }
                 }
             }
@@ -54,7 +54,7 @@ class Hard_051_N_Queens_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout: Hard_051_N_Queens_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_051_N_Queens_Test.ProblemName, input: input, resultValue: Hard_051_N_Queens_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_051_N_Queens_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

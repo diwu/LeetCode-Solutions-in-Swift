@@ -78,14 +78,14 @@ class Easy_020_Valid_Parentheses_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_020_Valid_Parentheses_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: Bool = Easy_020_Valid_Parentheses.isValid(input)
-            assertHelper(expected == result, problemName: Easy_020_Valid_Parentheses_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_020_Valid_Parentheses_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_020_Valid_Parentheses_Test.ProblemName, input: input, resultValue: Easy_020_Valid_Parentheses_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_020_Valid_Parentheses_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

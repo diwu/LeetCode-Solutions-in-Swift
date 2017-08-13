@@ -41,14 +41,14 @@ class Hard_045_Jump_Game_II_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_045_Jump_Game_II_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Hard_045_Jump_Game_II.jump(input)
-            assertHelper(result == expected, problemName: Hard_045_Jump_Game_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_045_Jump_Game_II_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_045_Jump_Game_II_Test.ProblemName, input: input, resultValue: Hard_045_Jump_Game_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_045_Jump_Game_II_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

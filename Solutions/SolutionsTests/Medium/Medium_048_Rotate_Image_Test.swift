@@ -30,14 +30,14 @@ class Medium_048_Rotate_Image_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             var result = input
             Medium_048_Rotate_Image.rotate(&result)
-            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Medium_048_Rotate_Image_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_048_Rotate_Image_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_048_Rotate_Image_Test.ProblemName, input: input, resultValue: Medium_048_Rotate_Image_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_048_Rotate_Image_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

@@ -60,14 +60,14 @@ class Medium_064_Minimum_Path_Sum_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_064_Minimum_Path_Sum_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Medium_064_Minimum_Path_Sum.minPathSum(input)
-            assertHelper(result == expected, problemName: Medium_064_Minimum_Path_Sum_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_064_Minimum_Path_Sum_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_064_Minimum_Path_Sum_Test.ProblemName, input: input, resultValue: Medium_064_Minimum_Path_Sum_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_064_Minimum_Path_Sum_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

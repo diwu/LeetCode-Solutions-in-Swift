@@ -70,14 +70,14 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_024_Swap_Nodes_In_Pairs.swapPairs(input))
-            assertHelper(expected == result, problemName: Medium_024_Swap_Nodes_In_Pairs_Test.ProblemName, input: input as Any, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input as Any, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_024_Swap_Nodes_In_Pairs_Test.ProblemName, input: input as Any, resultValue: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input as Any, resultValue: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

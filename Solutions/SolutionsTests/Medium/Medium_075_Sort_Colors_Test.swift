@@ -23,14 +23,14 @@ class Medium_075_Sort_Colors_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             Medium_075_Sort_Colors.sortColors(&localInput)
             let result = localInput
-            assertHelper(result == expected, problemName: Medium_075_Sort_Colors_Test.ProblemName, input: localInput, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: localInput, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_075_Sort_Colors_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_075_Sort_Colors_Test.ProblemName, input: localInput, resultValue: Medium_075_Sort_Colors_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: localInput, resultValue: Medium_075_Sort_Colors_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

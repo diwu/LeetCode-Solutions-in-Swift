@@ -51,14 +51,14 @@ class Hard_042_Trapping_Rain_Water_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_042_Trapping_Rain_Water_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: Int = Hard_042_Trapping_Rain_Water.trap(input)
-            assertHelper(expected == result, problemName: Hard_042_Trapping_Rain_Water_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_042_Trapping_Rain_Water_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_042_Trapping_Rain_Water_Test.ProblemName, input: input, resultValue: Hard_042_Trapping_Rain_Water_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_042_Trapping_Rain_Water_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

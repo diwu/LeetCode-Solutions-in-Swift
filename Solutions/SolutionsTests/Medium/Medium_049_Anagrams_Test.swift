@@ -31,14 +31,14 @@ class Medium_049_Anagrams_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_049_Anagrams_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Medium_049_Anagrams.anagrams(input)
-            assertHelper(Set(result) == Set(expected), problemName: Medium_049_Anagrams_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(Set(result) == Set(expected), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_049_Anagrams_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_049_Anagrams_Test.ProblemName, input: input, resultValue: Medium_049_Anagrams_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_049_Anagrams_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

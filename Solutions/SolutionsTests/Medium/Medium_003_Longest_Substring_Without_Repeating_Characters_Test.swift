@@ -40,15 +40,15 @@ class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase
         serialQueue().async(execute: { () -> Void in
             let result_swift: Int = Medium_003_Longest_Substring_Without_Repeating_Characters.longest(input)
             let result_objc: Int = ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.longest(input)
-            assertHelper(expected == result_swift, problemName: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
-            assertHelper(expected == result_objc, problemName: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.ProblemName, input: input, resultValue: result_objc, expectedValue: expected)
+            assertHelper(expected == result_swift, problemName:self.problemName(), input: input, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_objc, problemName:self.problemName(), input: input, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.ProblemName, input: input, resultValue: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

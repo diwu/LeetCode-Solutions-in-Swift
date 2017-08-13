@@ -127,15 +127,15 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase {
             let result_objc: Node_ObjC? = ObjC_Hard_099_Recover_Binary_Search_Tree.recover(node_objc)
             let result_array_swift: [Int] = self.convertTreeToArray_swift(result_swift)
             let result_array_objc: [Int] = self.convertTreeToArray_objc(result_objc)
-            assertHelper(expected == Array<Int>(result_array_swift.prefix(upTo: expected.count)), problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_array_swift, expectedValue: expected)
-            assertHelper(expected == Array<Int>(result_array_objc.prefix(upTo: expected.count)), problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_array_objc, expectedValue: expected)
+            assertHelper(expected == Array<Int>(result_array_swift.prefix(upTo: expected.count)), problemName:self.problemName(), input: input, resultValue: result_array_swift, expectedValue: expected)
+            assertHelper(expected == Array<Int>(result_array_objc.prefix(upTo: expected.count)), problemName:self.problemName(), input: input, resultValue: result_array_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_099_Recover_Binary_Search_Tree_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_099_Recover_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

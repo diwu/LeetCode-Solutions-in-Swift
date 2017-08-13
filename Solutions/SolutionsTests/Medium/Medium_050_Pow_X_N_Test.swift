@@ -31,14 +31,14 @@ class Medium_050_Pow_X_N_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_050_Pow_X_N_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Medium_050_Pow_X_N.myPow(x: input[0] as! Double, n: input[1] as! Int)
-            assertHelper(abs(expected - result) < 0.001, problemName: Medium_050_Pow_X_N_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(abs(expected - result) < 0.001, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_050_Pow_X_N_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_050_Pow_X_N_Test.ProblemName, input: input, resultValue: Medium_050_Pow_X_N_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_050_Pow_X_N_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

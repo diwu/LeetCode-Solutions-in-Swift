@@ -67,16 +67,16 @@ class Medium_092_Reverse_Linked_List_II_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_092_Reverse_Linked_List_II_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result_swift: [Int] = self.helper2(Medium_092_Reverse_Linked_List_II.reverseBetween(self.helper1(input0), m: input1, n: input2))
-            assertHelper(expected == result_swift, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_swift, problemName:self.problemName(), input: input0, resultValue: result_swift, expectedValue: expected)
             let result_objc: [Int] = self.objc_helper2(ObjC_Medium_092_Reverse_Linked_List_II.reverseBetween(self.objc_helper1(input0), m: input1, n: input2))
-            assertHelper(expected == result_objc, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
+            assertHelper(expected == result_objc, problemName:self.problemName(), input: input0, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_092_Reverse_Linked_List_II_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_092_Reverse_Linked_List_II_Test.ProblemName, input: input0, resultValue: Medium_092_Reverse_Linked_List_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input0, resultValue: Medium_092_Reverse_Linked_List_II_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

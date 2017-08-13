@@ -20,28 +20,28 @@ class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase, SolutionsTestCase {
         var input: [Node] = [helper1([1]), helper1([2])]
         let expected: [Int] = [1, 2]
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: input[1]))
-        assertHelper(expected == result, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_002() {
         var input: [Node] = [helper1([0]), helper1([2])]
         let expected: [Int] = [2]
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: nil, l2: input[1]))
-        assertHelper(expected == result, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_003() {
         var input: [Node] = [helper1([1]), helper1([0])]
         let expected: [Int] = [1]
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: nil))
-        assertHelper(expected == result, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_004() {
         let input: [Node] = [helper1([0]), helper1([0])]
         let expected: [Int] = []
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: nil, l2: nil))
-        assertHelper(expected == result, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_005() {
@@ -76,14 +76,14 @@ class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_021_Merge_Two_Sorted_Lists_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: input[1]))
-            assertHelper(expected == result, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_021_Merge_Two_Sorted_Lists_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_021_Merge_Two_Sorted_Lists_Test.ProblemName, input: input, resultValue: Easy_021_Merge_Two_Sorted_Lists_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_021_Merge_Two_Sorted_Lists_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

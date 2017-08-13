@@ -50,11 +50,11 @@ class Medium_089_Gray_Code_Test: XCTestCase, SolutionsTestCase {
             let result: [Int] = Medium_089_Gray_Code.grayCode(input)
             if input == 0 {
                 if result.count != 0 {
-                    assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: result, expectedValue: [])
+                    assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: [])
                 }
             } else {
                 if result.count != Int(pow(Double(2), Double(input))) {
-                    assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: result, expectedValue: [])
+                    assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: [])
                 }
                 var prev: Int = result.last!
                 for i in 0 ..< result.count {
@@ -65,7 +65,7 @@ class Medium_089_Gray_Code_Test: XCTestCase, SolutionsTestCase {
                         next = result[i+1]
                     }
                     if self.twoNumberSatisfyGrayCodeRule(a: result[i], b: prev, N: input) == false || self.twoNumberSatisfyGrayCodeRule(a: result[i], b: next, N: input) == false {
-                        assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: result, expectedValue: [])
+                        assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: [])
                     }
                     prev = result[i]
                 }
@@ -76,7 +76,7 @@ class Medium_089_Gray_Code_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout: Medium_089_Gray_Code_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_089_Gray_Code_Test.ProblemName, input: input, resultValue: Medium_089_Gray_Code_Test.TimeOutName, expectedValue: [])
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_089_Gray_Code_Test.TimeOutName, expectedValue: [])
             }
         }
     }

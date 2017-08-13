@@ -92,14 +92,14 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase, Solut
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = Hard_030_Substring_With_Concatenation_Of_All_Words.findSubstring(s: input[0] as! String?, words: input[1] as! [String])
-            assertHelper(expected == Set(result), problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == Set(result), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

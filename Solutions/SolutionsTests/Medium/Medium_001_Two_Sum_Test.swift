@@ -35,19 +35,19 @@ class Medium_001_Two_Sum_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             let result_swift: [Int] = Medium_001_Two_Sum.twoSum(numbers: input0, target: input1)
             let result_objc: [NSNumber] = ObjC_Medium_001_Two_Sum.twoSum(input0 as [NSNumber], target: input1)
-            assertHelper(expected == result_swift, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_swift, problemName:self.problemName(), input: input0, resultValue: result_swift, expectedValue: expected)
             var result_objc_Int = [Int]()
             for n in result_objc {
                 result_objc_Int.append(n.intValue)
             }
-            assertHelper(result_objc_Int == expected, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
+            assertHelper(result_objc_Int == expected, problemName:self.problemName(), input: input0, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_001_Two_Sum_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_001_Two_Sum_Test.ProblemName, input: input0, resultValue: Medium_001_Two_Sum_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input0, resultValue: Medium_001_Two_Sum_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

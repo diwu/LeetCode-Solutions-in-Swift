@@ -93,15 +93,15 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase, SolutionsTestCa
             for node in result_objc {
                 int_arr_objc.append(self.convertTreeToArray_objc(node))
             }
-            assertHelper(expected == NSSet(array: int_arr_swift), problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: int_arr_swift, expectedValue: expected)
-            assertHelper(expected == NSSet(array: int_arr_objc), problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: int_arr_objc, expectedValue: expected)
+            assertHelper(expected == NSSet(array: int_arr_swift), problemName:self.problemName(), input: input, resultValue: int_arr_swift, expectedValue: expected)
+            assertHelper(expected == NSSet(array: int_arr_objc), problemName:self.problemName(), input: input, resultValue: int_arr_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_095_Unique_Binary_Search_Trees_II_Test.ProblemName, input: input, resultValue: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

@@ -45,15 +45,15 @@ class Medium_017_Letter_Combinations_Of_A_Phone_Number_Test: XCTestCase, Solutio
             let result_swift: Set<String> = Set(Medium_017_Letter_Combinations_Of_A_Phone_Number.letterCombinations(input))
             let result_objc: Set<String> = Set(ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.letterCombinations(input))
             let expectedSet: Set<String> = Set(expected)
-            assertHelper(result_swift == expectedSet, problemName: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
-            assertHelper(result_objc == expectedSet, problemName: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.ProblemName, input: input, resultValue: result_objc, expectedValue: expected)
+            assertHelper(result_swift == expectedSet, problemName:self.problemName(), input: input, resultValue: result_swift, expectedValue: expected)
+            assertHelper(result_objc == expectedSet, problemName:self.problemName(), input: input, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.ProblemName, input: input, resultValue: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

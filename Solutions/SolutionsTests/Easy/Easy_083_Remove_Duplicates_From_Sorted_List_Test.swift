@@ -70,14 +70,14 @@ class Easy_083_Remove_Duplicates_From_Sorted_List_Test: XCTestCase, SolutionsTes
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_083_Remove_Duplicates_From_Sorted_List.deleteDuplicates(self.helper1(input)))
-            assertHelper(expected == result, problemName: Easy_083_Remove_Duplicates_From_Sorted_List_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_083_Remove_Duplicates_From_Sorted_List_Test.ProblemName, input: input, resultValue: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_083_Remove_Duplicates_From_Sorted_List_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

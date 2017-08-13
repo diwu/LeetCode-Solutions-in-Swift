@@ -72,14 +72,14 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase, SolutionsTestCase {
             } else {
                 result = self.helper2(Hard_025_Reverse_Nodes_In_K_Group.reverseKGroup(head: nil, k: input[1] as! Int))
             }
-            assertHelper(expected == result, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_025_Reverse_Nodes_In_K_Group_Test.ProblemName, input: input, resultValue: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

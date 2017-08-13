@@ -107,14 +107,14 @@ class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase, SolutionsTe
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: Bool = Medium_081_Search_In_Rotated_Sorted_Array_II.search(nums: input[0] as! [Int], target: input[1] as! Int)
-            assertHelper(expected == result, problemName: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.ProblemName, input: input, resultValue: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

@@ -142,14 +142,14 @@ class Easy_102_Binary_Tree_Level_Order_Traversal_Test: XCTestCase, SolutionsTest
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: [[Int]] = Easy_102_Binary_Tree_Level_Order_Traversal.levelOrder(self.convertArrayToTree_swift(input))
-            assertHelper(compareTwoDimensionIntArray(arr0: expected, arr1: result), problemName: Easy_102_Binary_Tree_Level_Order_Traversal_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: expected, arr1: result), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_102_Binary_Tree_Level_Order_Traversal_Test.ProblemName, input: input, resultValue: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

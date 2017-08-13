@@ -51,14 +51,14 @@ class Easy_070_Climbing_Stairs_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_070_Climbing_Stairs_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Easy_070_Climbing_Stairs.climbStairs(input)
-            assertHelper(result == expected, problemName: Easy_070_Climbing_Stairs_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_070_Climbing_Stairs_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_070_Climbing_Stairs_Test.ProblemName, input: input, resultValue: Easy_070_Climbing_Stairs_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_070_Climbing_Stairs_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

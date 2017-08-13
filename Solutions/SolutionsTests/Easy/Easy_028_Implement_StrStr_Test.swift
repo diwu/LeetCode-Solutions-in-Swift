@@ -83,14 +83,14 @@ class Easy_028_Implement_StrStr_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             let result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)
             let result_KMP: Int = Easy_028_Implement_StrStr.strStr_KMP(hayStack: input[0] as! String?, needle: input[1] as! String?)
-            assertHelper(expected == result_brute_force && result_brute_force == result_KMP, problemName: Easy_028_Implement_StrStr_Test.ProblemName, input: input, resultValue: ["brute force: \(result_brute_force)", "KMP: \(result_KMP)"], expectedValue: expected)
+            assertHelper(expected == result_brute_force && result_brute_force == result_KMP, problemName:self.problemName(), input: input, resultValue: ["brute force: \(result_brute_force)", "KMP: \(result_KMP)"], expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_028_Implement_StrStr_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_028_Implement_StrStr_Test.ProblemName, input: input, resultValue: Easy_028_Implement_StrStr_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_028_Implement_StrStr_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

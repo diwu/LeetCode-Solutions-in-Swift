@@ -32,7 +32,7 @@ class Medium_046_Permutations_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             var result = Medium_046_Permutations.permute(input)
             if result.count != expected.count {
-                assertHelper(false, problemName: Medium_046_Permutations_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             } else {
                 for i in 0 ..< expected.count{
                     var flag = false
@@ -43,7 +43,7 @@ class Medium_046_Permutations_Test: XCTestCase, SolutionsTestCase {
                         }
                     }
                     if flag == false {
-                        assertHelper(false, problemName: Medium_046_Permutations_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                        assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
                     }
                 }
             }
@@ -53,7 +53,7 @@ class Medium_046_Permutations_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout: Medium_046_Permutations_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_046_Permutations_Test.ProblemName, input: input, resultValue: Medium_046_Permutations_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_046_Permutations_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

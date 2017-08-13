@@ -58,19 +58,19 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase, SolutionsTestCa
         serialQueue().async(execute: { () -> Void in
             let result_swift: [Int] = Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input0)
             let result_objc: [NSNumber] = ObjC_Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input1)
-            assertHelper(expected == result_swift, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0 as Any, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_swift, problemName:self.problemName(), input: input0 as Any, resultValue: result_swift, expectedValue: expected)
             var result_objc_Int = [Int]()
             for n in result_objc {
                 result_objc_Int.append(n.intValue)
             }
-            assertHelper(expected == result_objc_Int, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0 as Any, resultValue: result_objc, expectedValue: expected)
+            assertHelper(expected == result_objc_Int, problemName:self.problemName(), input: input0 as Any, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_094_Binary_Tree_Inorder_Traversal_Test.ProblemName, input: input0 as Any, resultValue: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input0 as Any, resultValue: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

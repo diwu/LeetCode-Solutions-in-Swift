@@ -46,14 +46,14 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_079_Word_Search_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Medium_079_Word_Search.exist(input0, word: input1)
-            assertHelper(result == expected, problemName: Medium_079_Word_Search_Test.ProblemName, input: input1, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input1, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_079_Word_Search_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_079_Word_Search_Test.ProblemName, input: input1, resultValue: Medium_079_Word_Search_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input1, resultValue: Medium_079_Word_Search_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

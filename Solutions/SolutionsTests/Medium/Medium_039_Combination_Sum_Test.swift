@@ -32,7 +32,7 @@ class Medium_039_Combination_Sum_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             var result: [[Int]] = Medium_039_Combination_Sum.combinationSum(candidates: input[0] as! [Int], target: input[1] as! Int)
             if result.count != expected.count {
-                assertHelper(false, problemName: Medium_039_Combination_Sum_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             } else {
                 for i in 0 ..< expected.count {
                     var flag: Bool = false
@@ -42,7 +42,7 @@ class Medium_039_Combination_Sum_Test: XCTestCase, SolutionsTestCase {
                         }
                     }
                     if flag == false {
-                        assertHelper(false, problemName: Medium_039_Combination_Sum_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                        assertHelper(false, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
                         return
                     }
                 }
@@ -53,7 +53,7 @@ class Medium_039_Combination_Sum_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout: Medium_039_Combination_Sum_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_039_Combination_Sum_Test.ProblemName, input: input, resultValue: Medium_039_Combination_Sum_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_039_Combination_Sum_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

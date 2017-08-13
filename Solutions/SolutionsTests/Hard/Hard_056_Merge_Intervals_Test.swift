@@ -59,14 +59,14 @@ class Hard_056_Merge_Intervals_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_056_Merge_Intervals_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Hard_056_Merge_Intervals.merge(input)
-            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_056_Merge_Intervals_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: Hard_056_Merge_Intervals_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_056_Merge_Intervals_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

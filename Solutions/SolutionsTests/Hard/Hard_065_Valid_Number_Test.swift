@@ -146,14 +146,14 @@ class Hard_065_Valid_Number_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_065_Valid_Number_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Hard_065_Valid_Number.isNumber(input)
-            assertHelper(result == expected, problemName: Hard_065_Valid_Number_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_065_Valid_Number_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_065_Valid_Number_Test.ProblemName, input: input, resultValue: Hard_065_Valid_Number_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_065_Valid_Number_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

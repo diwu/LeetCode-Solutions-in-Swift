@@ -52,14 +52,14 @@ class Medium_031_Next_Permutation_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             var result: [Int] = input
             Medium_031_Next_Permutation.nextPermutation(&result)
-            assertHelper(expected == result, problemName: Medium_031_Next_Permutation_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_031_Next_Permutation_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_031_Next_Permutation_Test.ProblemName, input: input, resultValue: Medium_031_Next_Permutation_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_031_Next_Permutation_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

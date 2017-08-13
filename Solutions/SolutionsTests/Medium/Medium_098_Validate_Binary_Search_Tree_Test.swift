@@ -93,15 +93,15 @@ class Medium_098_Validate_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase
         serialQueue().async(execute: { () -> Void in
             let result_swift: Bool = Medium_098_Validate_Binary_Search_Tree.isValidBST(self.convertArrayToTree_swift(input))
             let result_objc: Bool = ObjC_Medium_098_Validate_Binary_Search_Tree.isValidBST(self.convertArrayToTree_objc(input))
-            assertHelper(expected == result_swift, problemName: Medium_098_Validate_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
-            assertHelper(expected == result_objc, problemName: Medium_098_Validate_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: result_objc, expectedValue: expected)
+            assertHelper(expected == result_swift, problemName:self.problemName(), input: input, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_objc, problemName:self.problemName(), input: input, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Medium_098_Validate_Binary_Search_Tree_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_098_Validate_Binary_Search_Tree_Test.ProblemName, input: input, resultValue: Medium_098_Validate_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_098_Validate_Binary_Search_Tree_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

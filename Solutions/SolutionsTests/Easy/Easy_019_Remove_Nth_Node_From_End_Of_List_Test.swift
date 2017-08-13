@@ -75,14 +75,14 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase, SolutionsTestC
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_019_Remove_Nth_Node_From_End_Of_List.removeNthFromEnd(self.helper1(input[0] as! [Int]), n: input[1] as! Int))
-            assertHelper(expected == result, problemName: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.ProblemName, input: input, resultValue: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

@@ -135,7 +135,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase, SolutionsTestCase {
             Hard_037_Sudoku_Solver.solveSudoku(&input)
             var result: [[Character]] = input
             for i in 0..<9 {
-                assertHelper(expected[i] == result[i], problemName: Hard_037_Sudoku_Solver_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                assertHelper(expected[i] == result[i], problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             }
             if let unwrapped = expectation {
                 unwrapped.fulfill()
@@ -143,7 +143,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase, SolutionsTestCase {
         })
         waitForExpectations(timeout: Hard_037_Sudoku_Solver_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_037_Sudoku_Solver_Test.ProblemName, input: input, resultValue: Hard_037_Sudoku_Solver_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Hard_037_Sudoku_Solver_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

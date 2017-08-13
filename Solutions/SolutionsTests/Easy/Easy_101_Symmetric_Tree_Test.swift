@@ -73,15 +73,15 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase, SolutionsTestCase {
         serialQueue().async(execute: { () -> Void in
             let result_swift: Bool = Easy_101_Symmetric_Tree.isSymmetric(self.convertArrayToTree_swift(input))
             let result_objc: Bool = ObjC_Easy_101_Symmetric_Tree.isSymmetric(self.convertArrayToTree_objc(input))
-            assertHelper(expected == result_swift, problemName: Easy_101_Symmetric_Tree_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)
-            assertHelper(expected == result_objc, problemName: Easy_101_Symmetric_Tree_Test.ProblemName, input: input, resultValue: result_objc, expectedValue: expected)
+            assertHelper(expected == result_swift, problemName:self.problemName(), input: input, resultValue: result_swift, expectedValue: expected)
+            assertHelper(expected == result_objc, problemName:self.problemName(), input: input, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Easy_101_Symmetric_Tree_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Easy_101_Symmetric_Tree_Test.ProblemName, input: input, resultValue: Easy_101_Symmetric_Tree_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Easy_101_Symmetric_Tree_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

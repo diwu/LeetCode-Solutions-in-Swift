@@ -90,15 +90,15 @@ class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase, SolutionsTestCase {
             let result_swift: Double = Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(a: input0, b: input1)
 
             let result_objc: Double = ObjC_Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(convertIntArrayToNumberArr(intArr: input0), b: convertIntArrayToNumberArr(intArr: input1))
-            assertHelper(result_swift == expected, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: result_swift, expectedValue: expected)
-            assertHelper(result_objc == expected, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: result_objc, expectedValue: expected)
+            assertHelper(result_swift == expected, problemName:self.problemName(), input: input0, resultValue: result_swift, expectedValue: expected)
+            assertHelper(result_objc == expected, problemName:self.problemName(), input: input0, resultValue: result_objc, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_004_Median_Of_Two_Sorted_Arrays_Test.ProblemName, input: input0, resultValue: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input0, resultValue: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

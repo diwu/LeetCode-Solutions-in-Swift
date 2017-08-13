@@ -49,7 +49,7 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase, Soluti
             Medium_080_Remove_Duplicates_From_Sorted_Array_II.removeDuplicates(&input)
             let result = input
             for i in 0 ..< expected.count {
-                assertHelper(result[i] == expected[i], problemName: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+                assertHelper(result[i] == expected[i], problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             }
             if let unwrapped = expectation {
                 unwrapped.fulfill()
@@ -57,7 +57,7 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase, Soluti
         })
         waitForExpectations(timeout: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.ProblemName, input: input, resultValue: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: input, resultValue: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName, expectedValue: expected)
             }
         }
     }

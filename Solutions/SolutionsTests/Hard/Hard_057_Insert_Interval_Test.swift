@@ -165,14 +165,14 @@ class Hard_057_Insert_Interval_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_057_Insert_Interval_Test.TimeOutName)
         serialQueue().async(execute: { () -> Void in
             let result = Hard_057_Insert_Interval.insert(intervals: input0, newInterval: input1)
-            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Hard_057_Insert_Interval_Test.ProblemName, input: [input0, input1], resultValue: result, expectedValue: expected)
+            assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName:self.problemName(), input: [input0, input1], resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
         waitForExpectations(timeout: Hard_057_Insert_Interval_Test.TimeOut) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Hard_057_Insert_Interval_Test.ProblemName, input: [input0, input1], resultValue: Hard_057_Insert_Interval_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName:self.problemName(), input: [input0, input1], resultValue: Hard_057_Insert_Interval_Test.TimeOutName, expectedValue: expected)
             }
         }
     }
