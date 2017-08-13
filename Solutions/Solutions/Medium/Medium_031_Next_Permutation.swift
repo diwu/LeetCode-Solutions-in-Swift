@@ -28,7 +28,7 @@ class Medium_031_Next_Permutation {
         if start > end {
             return
         }
-        for i in start ..< (start + end)/2 {
+        for i in start ... (start + end)/2 {
             nums.swapAt(i, start + end - i)
         }
     }
