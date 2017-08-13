@@ -10,27 +10,25 @@ import XCTest
 
 class Easy_006_ZigZag_Conversion_Test: XCTestCase, SolutionsTestCase {
 
-    let ProbleName: String = "Easy_006_ZigZag_Conversion"
-
     func testCase001() {
         var input: [Any] = ["PAYPALISHIRING", 3]
         let expected: String = "PAHNAPLSIIGYIR"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
     func testCase002() {
         var input: [Any] = ["PAYPALISHIRING", 1]
         let expected: String = "PAYPALISHIRING"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
     func testCase003() {
         var input: [Any] = ["", 3]
         let expected: String = ""
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
     func testCase004() {
@@ -43,7 +41,7 @@ class Easy_006_ZigZag_Conversion_Test: XCTestCase, SolutionsTestCase {
         var input: [Any] = ["PAYPALISHIRING", 4]
         let expected: String = "PINALSIGYAHRPI"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
-        assertHelper(result == expected, problemName: ProbleName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 }
 
