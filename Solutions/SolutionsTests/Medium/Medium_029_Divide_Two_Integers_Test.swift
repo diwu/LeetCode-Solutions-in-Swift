@@ -10,10 +10,6 @@ import XCTest
 
 class Medium_029_Divide_Two_Integers_Test: XCTestCase, SolutionsTestCase {
     
-    func problemName() -> String {
-        return "Medium_029_Divide_Two_Integers"
-    }
-    
     func test_001() {
         let input: [Int] = [3, 1]
         let expected: Int = 3
