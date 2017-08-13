@@ -37,6 +37,16 @@ class Medium_031_Next_Permutation_Test: XCTestCase {
         let expected: [Int] = [1]
         asyncHelper(input: input, expected: expected)
     }
+    func test_006() {
+        let input: [Int] = [4, 2, 0, 2, 3, 2, 0]
+        let expected: [Int] = [4, 2, 0, 3, 0, 2, 2]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_007() {
+        let input: [Int] = [6, 3, 4, 9, 8, 7, 1]
+        let expected: [Int] = [6, 3, 7, 1, 4, 8, 9]
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_031_Next_Permutation_Test.TimeOutName)
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
