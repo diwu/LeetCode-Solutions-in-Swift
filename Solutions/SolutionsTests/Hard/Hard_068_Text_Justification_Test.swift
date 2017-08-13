@@ -60,7 +60,7 @@ class Hard_068_Text_Justification_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Any], expected: [String]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_068_Text_Justification_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Hard_068_Text_Justification.fullJustify(input[0] as! [String], maxWidth: input[1] as! Int)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

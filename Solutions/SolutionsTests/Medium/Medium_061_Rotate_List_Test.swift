@@ -77,7 +77,7 @@ class Medium_061_Rotate_List_Test: XCTestCase, SolutionsTestCase {
     }
     
     func asyncHelper(input: [Any], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_061_Rotate_List_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_061_Rotate_List.rotateRight(head: self.helper1(input[0] as! [Int]), k: input[1] as! Int))
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

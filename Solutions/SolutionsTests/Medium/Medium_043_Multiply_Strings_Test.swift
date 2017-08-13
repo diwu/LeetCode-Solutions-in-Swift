@@ -33,7 +33,7 @@ class Medium_043_Multiply_Strings_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_043_Multiply_Strings_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: String = Medium_043_Multiply_Strings.multiply(num1: input[0], num2: input[1])
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

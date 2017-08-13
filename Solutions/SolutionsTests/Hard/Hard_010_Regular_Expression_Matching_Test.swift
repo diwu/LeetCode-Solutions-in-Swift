@@ -58,7 +58,7 @@ class Hard_010_Regular_Expression_Matching_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_010_Regular_Expression_Matching_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Hard_010_Regular_Expression_Matching.isMatch(s: input[0], p: input[1])
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

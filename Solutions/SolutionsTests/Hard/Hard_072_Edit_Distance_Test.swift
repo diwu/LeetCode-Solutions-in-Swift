@@ -63,7 +63,7 @@ class Hard_072_Edit_Distance_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_072_Edit_Distance_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Hard_072_Edit_Distance.minDistance(word1: input[0], word2: input[1])
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

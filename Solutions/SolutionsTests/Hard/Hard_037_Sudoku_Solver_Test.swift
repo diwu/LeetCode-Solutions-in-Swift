@@ -130,7 +130,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input ipt: [[Character]], expected: [[Character]]) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_037_Sudoku_Solver_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             Hard_037_Sudoku_Solver.solveSudoku(&input)
             var result: [[Character]] = input

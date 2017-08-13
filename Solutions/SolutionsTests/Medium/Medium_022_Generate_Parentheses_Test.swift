@@ -29,7 +29,7 @@ class Medium_022_Generate_Parentheses_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: [String]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_022_Generate_Parentheses_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [String] = Medium_022_Generate_Parentheses.generateParenthesis(input)
             assertHelper(Set(expected) == Set(result), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

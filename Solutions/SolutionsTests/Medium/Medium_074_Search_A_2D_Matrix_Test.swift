@@ -43,7 +43,7 @@ class Medium_074_Search_A_2D_Matrix_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
     private func asyncHelper(input0: [[Int]], input1: Int, expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_074_Search_A_2D_Matrix_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Medium_074_Search_A_2D_Matrix.searchMatrix(matrix: input0, target: input1)
             assertHelper(result == expected, problemName:self.problemName(), input: input0, resultValue: result, expectedValue: expected)

@@ -45,7 +45,7 @@ class Medium_089_Gray_Code_Test: XCTestCase, SolutionsTestCase {
         }
     }
     private func asyncHelper(input: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_089_Gray_Code_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = Medium_089_Gray_Code.grayCode(input)
             if input == 0 {

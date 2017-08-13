@@ -43,7 +43,7 @@ class Medium_071_Simplify_Path_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: String, expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_071_Simplify_Path_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Medium_071_Simplify_Path.simplifyPath(input)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

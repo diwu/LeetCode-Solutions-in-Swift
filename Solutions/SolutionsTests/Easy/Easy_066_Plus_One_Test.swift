@@ -33,7 +33,7 @@ class Easy_066_Plus_One_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: &input, expected: expected)
     }
     private func asyncHelper(input: inout [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_066_Plus_One_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         var localInput = input
         serialQueue().async(execute: { () -> Void in
             Easy_066_Plus_One.plusOne(&localInput)

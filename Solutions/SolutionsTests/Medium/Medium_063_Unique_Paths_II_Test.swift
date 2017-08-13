@@ -58,7 +58,7 @@ class Medium_063_Unique_Paths_II_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [[Int]], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_063_Unique_Paths_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Medium_063_Unique_Paths_II.uniquePathsWithObstacles(input)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

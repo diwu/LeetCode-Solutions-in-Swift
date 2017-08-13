@@ -72,7 +72,7 @@ class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase, SolutionsTestC
     }
 
     func asyncHelper(input: [Any], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_019_Remove_Nth_Node_From_End_Of_List_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_019_Remove_Nth_Node_From_End_Of_List.removeNthFromEnd(self.helper1(input[0] as! [Int]), n: input[1] as! Int))
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

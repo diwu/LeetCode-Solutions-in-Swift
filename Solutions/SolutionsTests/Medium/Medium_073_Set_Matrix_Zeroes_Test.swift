@@ -57,7 +57,7 @@ class Medium_073_Set_Matrix_Zeroes_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input ipt: [[Int]], expected: [[Int]]) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_073_Set_Matrix_Zeroes_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             Medium_073_Set_Matrix_Zeroes.setZeros(&input)
             let result = input

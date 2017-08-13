@@ -36,7 +36,7 @@ class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: String, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_003_Longest_Substring_Without_Repeating_Characters_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: Int = Medium_003_Longest_Substring_Without_Repeating_Characters.longest(input)
             let result_objc: Int = ObjC_Medium_003_Longest_Substring_Without_Repeating_Characters.longest(input)

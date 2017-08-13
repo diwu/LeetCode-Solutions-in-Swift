@@ -48,7 +48,7 @@ class Easy_058_Length_Of_Last_Word_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: String, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_058_Length_Of_Last_Word_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Int = Easy_058_Length_Of_Last_Word.lengthOfLastWord(input)
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

@@ -68,7 +68,7 @@ class Hard_097_Interleaving_String_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_097_Interleaving_String_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift = Hard_097_Interleaving_String.isInterleave(s1: input[0], s2: input[1], s3: input[2])
             let result_objc = ObjC_Hard_097_Interleaving_String.isInterleave(withS1: input[0], s2: input[1], s3: input[2])

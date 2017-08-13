@@ -119,7 +119,7 @@ class Hard_099_Recover_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_099_Recover_Binary_Search_Tree_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let node_swift: Node_Swift = self.convertArrayToTree_swift(input)
             let node_objc: Node_ObjC = self.convertArrayToTree_objc(input)

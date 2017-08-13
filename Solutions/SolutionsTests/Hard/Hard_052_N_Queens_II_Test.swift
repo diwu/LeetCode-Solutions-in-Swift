@@ -19,7 +19,7 @@ class Hard_052_N_Queens_II_Test: XCTestCase, SolutionsTestCase {
         }
     }
     private func asyncHelper(input: Int, expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_052_N_Queens_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Hard_052_N_Queens_II.totalNQueens(input)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

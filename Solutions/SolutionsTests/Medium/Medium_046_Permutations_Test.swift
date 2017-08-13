@@ -28,7 +28,7 @@ class Medium_046_Permutations_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_046_Permutations_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             var result = Medium_046_Permutations.permute(input)
             if result.count != expected.count {

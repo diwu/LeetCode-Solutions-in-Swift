@@ -48,7 +48,7 @@ class Hard_084_Largest_Rectangle_In_Histogram_Test: XCTestCase, SolutionsTestCas
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: Int) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_084_Largest_Rectangle_In_Histogram_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Hard_084_Largest_Rectangle_In_Histogram.largestRectangleArea(input)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

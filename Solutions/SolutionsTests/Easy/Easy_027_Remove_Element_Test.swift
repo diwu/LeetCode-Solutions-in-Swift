@@ -39,7 +39,7 @@ class Easy_027_Remove_Element_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input ipt: [Any], expected: [Int]) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_027_Remove_Element_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             var arr: [Int] = input[0] as! [Int]
             let elem: Int = input[1] as! Int

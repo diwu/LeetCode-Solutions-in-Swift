@@ -98,7 +98,7 @@ class Easy_036_Valid_Sudoku_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [[Character]], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_036_Valid_Sudoku_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Bool = Easy_036_Valid_Sudoku.isValidSudoku(input)
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

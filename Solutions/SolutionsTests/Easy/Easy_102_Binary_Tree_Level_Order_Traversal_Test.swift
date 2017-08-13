@@ -139,7 +139,7 @@ class Easy_102_Binary_Tree_Level_Order_Traversal_Test: XCTestCase, SolutionsTest
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_102_Binary_Tree_Level_Order_Traversal_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [[Int]] = Easy_102_Binary_Tree_Level_Order_Traversal.levelOrder(self.convertArrayToTree_swift(input))
             assertHelper(compareTwoDimensionIntArray(arr0: expected, arr1: result), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

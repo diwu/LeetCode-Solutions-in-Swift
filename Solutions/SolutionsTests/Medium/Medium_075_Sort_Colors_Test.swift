@@ -18,7 +18,7 @@ class Medium_075_Sort_Colors_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: &input, expected: expected)
     }
     private func asyncHelper(input: inout [Int], expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_075_Sort_Colors_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         var localInput = input
         serialQueue().async(execute: { () -> Void in
             Medium_075_Sort_Colors.sortColors(&localInput)

@@ -28,7 +28,7 @@ class Medium_039_Combination_Sum_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Any], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_039_Combination_Sum_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             var result: [[Int]] = Medium_039_Combination_Sum.combinationSum(candidates: input[0] as! [Int], target: input[1] as! Int)
             if result.count != expected.count {

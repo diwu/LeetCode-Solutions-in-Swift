@@ -54,7 +54,7 @@ class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase, SolutionsTestCa
         asyncHelper(input0: input_swift, input1: input_objc, expected: expected)
     }
     private func asyncHelper(input0: Node_Swift?, input1: Node_ObjC?, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_094_Binary_Tree_Inorder_Traversal_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: [Int] = Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input0)
             let result_objc: [NSNumber] = ObjC_Medium_094_Binary_Tree_Inorder_Traversal.inorderTraversal(input1)

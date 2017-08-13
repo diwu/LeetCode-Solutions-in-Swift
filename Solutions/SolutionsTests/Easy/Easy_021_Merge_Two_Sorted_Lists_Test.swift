@@ -73,7 +73,7 @@ class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase, SolutionsTestCase {
     }
 
     private func asyncHelper(input: [Node], expected: [Int] ) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_021_Merge_Two_Sorted_Lists_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: input[1]))
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

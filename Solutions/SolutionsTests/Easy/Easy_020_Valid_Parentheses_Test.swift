@@ -75,7 +75,7 @@ class Easy_020_Valid_Parentheses_Test: XCTestCase, SolutionsTestCase {
     }
 
     func asyncHelper(input: String, expected: Bool ) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_020_Valid_Parentheses_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Bool = Easy_020_Valid_Parentheses.isValid(input)
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

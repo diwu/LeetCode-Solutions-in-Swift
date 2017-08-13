@@ -99,7 +99,7 @@ class Easy_100_Same_Tree_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [[Int]], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_100_Same_Tree_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: Bool = Easy_100_Same_Tree.isSameTree(p: self.convertArrayToTree_swift(input[0]), q: self.convertArrayToTree_swift(input[1]))
             let result_objc: Bool = ObjC_Easy_100_Same_Tree.isSameTree( withP: self.convertArrayToTree_objc(input[0]), q: self.convertArrayToTree_objc(input[1]))

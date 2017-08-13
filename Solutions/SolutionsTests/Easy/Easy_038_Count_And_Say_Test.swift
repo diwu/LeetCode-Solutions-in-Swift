@@ -29,7 +29,7 @@ class Easy_038_Count_And_Say_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_038_Count_And_Say_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: String = Easy_038_Count_And_Say.countAndSay(input)
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

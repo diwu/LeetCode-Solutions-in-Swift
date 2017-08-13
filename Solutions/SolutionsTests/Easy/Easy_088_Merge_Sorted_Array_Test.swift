@@ -37,7 +37,7 @@ class Easy_088_Merge_Sorted_Array_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input0: &input0, input1: input1, m: m, n: n, expected: expected)
     }
     private func asyncHelper(input0: inout [Int], input1: [Int], m: Int, n: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_088_Merge_Sorted_Array_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         var localInput0 = input0
         serialQueue().async(execute: { () -> Void in
             Easy_088_Merge_Sorted_Array.merge(nums1: &localInput0, m: m, nums2: input1, n: n)

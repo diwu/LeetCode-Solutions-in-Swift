@@ -55,7 +55,7 @@ class Medium_086_Partition_List_Test: XCTestCase, SolutionsTestCase {
         return res
     }
     func asyncHelper(input0: [Int], input1: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_086_Partition_List_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_086_Partition_List.partition(head: self.helper1(input0), x: input1))
             assertHelper(expected == result, problemName:self.problemName(), input: input0, resultValue: result, expectedValue: expected)

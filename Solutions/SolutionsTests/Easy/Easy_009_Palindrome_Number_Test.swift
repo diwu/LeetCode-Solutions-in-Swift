@@ -60,7 +60,7 @@ class Easy_009_Palindrome_Number_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func asyncHelper(input: Int, expected: Bool ) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_009_Palindrome_Number_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Bool = Easy_009_Palindrome_Number.isPalindrome(input)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

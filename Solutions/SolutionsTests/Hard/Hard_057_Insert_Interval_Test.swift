@@ -162,7 +162,7 @@ class Hard_057_Insert_Interval_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
     private func asyncHelper(input0: [[Int]], input1: [Int], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_057_Insert_Interval_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Hard_057_Insert_Interval.insert(intervals: input0, newInterval: input1)
             assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName:self.problemName(), input: [input0, input1], resultValue: result, expectedValue: expected)

@@ -40,7 +40,7 @@ class Medium_018_4Sum_Test: XCTestCase, SolutionsTestCase {
     }
 
     func asyncHelper(input: [Any], expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_018_4Sum_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             var result: [[Int]] = Medium_018_4Sum.fourSum(num: input[0] as! [Int], target: input[1] as! Int)
             if result.count != expected.count {

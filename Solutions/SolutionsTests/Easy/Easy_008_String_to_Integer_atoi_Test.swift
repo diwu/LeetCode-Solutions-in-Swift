@@ -125,7 +125,7 @@ class Easy_008_String_to_Integer_atoi_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func asyncHelper(input: String, expected: Int ) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_008_String_to_Integer_atoi_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Int = Easy_008_String_to_Integer_atoi.atoi(input)
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

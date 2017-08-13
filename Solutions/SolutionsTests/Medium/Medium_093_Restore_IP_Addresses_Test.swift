@@ -46,7 +46,7 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: String, expected: [String]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_093_Restore_IP_Addresses_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: [String] = Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
             let result_objc: [String] = ObjC_Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)

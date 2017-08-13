@@ -43,7 +43,7 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
     private func asyncHelper(input0: [[Character]], input1: String, expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_079_Word_Search_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Medium_079_Word_Search.exist(input0, word: input1)
             assertHelper(result == expected, problemName:self.problemName(), input: input1, resultValue: result, expectedValue: expected)

@@ -33,7 +33,7 @@ class Easy_067_Add_Binary_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [String], expected: String) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Easy_067_Add_Binary_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Easy_067_Add_Binary.addBinary(a: input[0], b: input[1]);
             assertHelper(result == expected, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

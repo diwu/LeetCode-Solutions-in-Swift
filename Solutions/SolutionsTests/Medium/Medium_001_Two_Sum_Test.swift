@@ -31,7 +31,7 @@ class Medium_001_Two_Sum_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
     private func asyncHelper(input0: [Int], input1: Int, expected: [Int]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_001_Two_Sum_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: [Int] = Medium_001_Two_Sum.twoSum(numbers: input0, target: input1)
             let result_objc: [NSNumber] = ObjC_Medium_001_Two_Sum.twoSum(input0 as [NSNumber], target: input1)

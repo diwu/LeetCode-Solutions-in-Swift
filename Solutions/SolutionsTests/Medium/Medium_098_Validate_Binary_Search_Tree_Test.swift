@@ -89,7 +89,7 @@ class Medium_098_Validate_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: [Int], expected: Bool) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_098_Validate_Binary_Search_Tree_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: Bool = Medium_098_Validate_Binary_Search_Tree.isValidBST(self.convertArrayToTree_swift(input))
             let result_objc: Bool = ObjC_Medium_098_Validate_Binary_Search_Tree.isValidBST(self.convertArrayToTree_objc(input))

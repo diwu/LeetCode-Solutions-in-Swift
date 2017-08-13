@@ -64,7 +64,7 @@ class Hard_033_Search_In_Rotated_Sorted_Array_Test: XCTestCase, SolutionsTestCas
     }
     private func asyncHelper(input ipt: [Any], expected: Int) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(description: Hard_033_Search_In_Rotated_Sorted_Array_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Int = Hard_033_Search_In_Rotated_Sorted_Array.search(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

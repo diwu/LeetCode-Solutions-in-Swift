@@ -38,7 +38,7 @@ class Medium_059_Spiral_Matrix_II_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: Int, expected: [[Int]]) {
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_059_Spiral_Matrix_II_Test.TimeOutName)
+        weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result = Medium_059_Spiral_Matrix_II.generateMatrix(input)
             assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
