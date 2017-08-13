@@ -49,7 +49,7 @@ class Hard_042_Trapping_Rain_Water_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_042_Trapping_Rain_Water_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: Int = Hard_042_Trapping_Rain_Water.trap(input)
             assertHelper(expected == result, problemName: Hard_042_Trapping_Rain_Water_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

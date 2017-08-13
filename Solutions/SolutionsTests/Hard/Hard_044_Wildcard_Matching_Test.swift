@@ -64,7 +64,7 @@ class Hard_044_Wildcard_Matching_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [String], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_044_Wildcard_Matching_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Hard_044_Wildcard_Matching.isMatch(s: input[0], p: input[1])
             assertHelper(result == expected, problemName: Hard_044_Wildcard_Matching_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

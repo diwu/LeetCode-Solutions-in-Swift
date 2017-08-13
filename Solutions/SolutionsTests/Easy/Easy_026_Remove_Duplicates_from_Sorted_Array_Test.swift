@@ -55,7 +55,7 @@ class Easy_026_Remove_Duplicates_from_Sorted_Array_Test: XCTestCase, SolutionsTe
     private func asyncHelper(input ipt: [Int], expected: [Int]) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: Int = Easy_026_Remove_Duplicates_from_Sorted_Array.removeDuplicates(&input)
             assertHelper(expected == Array(input[0..<result]), problemName: Easy_026_Remove_Duplicates_from_Sorted_Array_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

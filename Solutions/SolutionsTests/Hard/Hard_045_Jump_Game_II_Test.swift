@@ -39,7 +39,7 @@ class Hard_045_Jump_Game_II_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_045_Jump_Game_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Hard_045_Jump_Game_II.jump(input)
             assertHelper(result == expected, problemName: Hard_045_Jump_Game_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

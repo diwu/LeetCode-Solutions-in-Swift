@@ -29,7 +29,7 @@ class Medium_049_Anagrams_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [String], expected: [String]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_049_Anagrams_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Medium_049_Anagrams.anagrams(input)
             assertHelper(Set(result) == Set(expected), problemName: Medium_049_Anagrams_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

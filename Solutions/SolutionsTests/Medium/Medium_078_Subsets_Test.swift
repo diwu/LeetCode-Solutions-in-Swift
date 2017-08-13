@@ -53,7 +53,7 @@ class Medium_078_Subsets_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_078_Subsets_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Medium_078_Subsets.subsets(input)
             let resultSet: NSSet = NSSet(array: result)
             let expectedSet: NSSet = NSSet(array: expected)

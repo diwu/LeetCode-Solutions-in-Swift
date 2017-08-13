@@ -90,7 +90,7 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words_Test: XCTestCase, Solut
     private func asyncHelper(input ipt: [Any?], expected: Set<Int>) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: [Int] = Hard_030_Substring_With_Concatenation_Of_All_Words.findSubstring(s: input[0] as! String?, words: input[1] as! [String])
             assertHelper(expected == Set(result), problemName: Hard_030_Substring_With_Concatenation_Of_All_Words_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

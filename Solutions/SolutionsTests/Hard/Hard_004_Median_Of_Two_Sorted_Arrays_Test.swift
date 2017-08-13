@@ -86,7 +86,7 @@ class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input0: [Int], input1: [Int], expected: Double) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_004_Median_Of_Two_Sorted_Arrays_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_swift: Double = Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(a: input0, b: input1)
 
             let result_objc: Double = ObjC_Hard_004_Median_Of_Two_Sorted_Arrays.findMedianSortedArrays(convertIntArrayToNumberArr(intArr: input0), b: convertIntArrayToNumberArr(intArr: input1))

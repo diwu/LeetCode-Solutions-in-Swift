@@ -41,7 +41,7 @@ class Medium_077_Combinations_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_077_Combinations_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Medium_077_Combinations.combine(n: input[0], k: input[1])
             let result2 = Medium_077_Combinations.combine_recursion(n: input[0], k: input[1])
             let resultSet: NSSet = NSSet(array: result)

@@ -49,7 +49,7 @@ class Medium_031_Next_Permutation_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_031_Next_Permutation_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             var result: [Int] = input
             Medium_031_Next_Permutation.nextPermutation(&result)
             assertHelper(expected == result, problemName: Medium_031_Next_Permutation_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)

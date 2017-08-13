@@ -34,7 +34,7 @@ class Hard_047_Permutations_II_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_047_Permutations_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             var result = Hard_047_Permutations_II.permuteUnique(input)
             if result.count != expected.count {
                 assertHelper(false, problemName: Hard_047_Permutations_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)

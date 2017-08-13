@@ -54,7 +54,7 @@ class Hard_032_Longest_Valid_Parentheses_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: String?, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_032_Longest_Valid_Parentheses_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: Int = Hard_032_Longest_Valid_Parentheses.longestValidParentheses(input)
             assertHelper(expected == result, problemName: Hard_032_Longest_Valid_Parentheses_Test.ProblemName, input: input as Any, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

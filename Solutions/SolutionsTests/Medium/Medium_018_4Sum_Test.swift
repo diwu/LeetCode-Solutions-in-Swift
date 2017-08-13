@@ -41,7 +41,7 @@ class Medium_018_4Sum_Test: XCTestCase, SolutionsTestCase {
 
     func asyncHelper(input: [Any], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_018_4Sum_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             var result: [[Int]] = Medium_018_4Sum.fourSum(num: input[0] as! [Int], target: input[1] as! Int)
             if result.count != expected.count {
                 assertHelper(false, problemName: Medium_018_4Sum_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)

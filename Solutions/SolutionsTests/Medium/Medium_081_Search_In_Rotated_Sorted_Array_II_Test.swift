@@ -105,7 +105,7 @@ class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase, SolutionsTe
     private func asyncHelper(input ipt: [Any], expected: Bool) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: Bool = Medium_081_Search_In_Rotated_Sorted_Array_II.search(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Medium_081_Search_In_Rotated_Sorted_Array_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

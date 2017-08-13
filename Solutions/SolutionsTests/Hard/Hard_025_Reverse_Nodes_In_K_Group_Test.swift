@@ -64,7 +64,7 @@ class Hard_025_Reverse_Nodes_In_K_Group_Test: XCTestCase, SolutionsTestCase {
 
     private func asyncHelper(input: [Any?], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_025_Reverse_Nodes_In_K_Group_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             var result: [Int]
             if input[0] != nil {
                 let head: Node = input[0] as! Node

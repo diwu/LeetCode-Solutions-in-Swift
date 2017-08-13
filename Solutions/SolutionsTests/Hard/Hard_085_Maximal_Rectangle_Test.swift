@@ -86,7 +86,7 @@ class Hard_085_Maximal_Rectangle_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [[Character]], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_085_Maximal_Rectangle_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Hard_085_Maximal_Rectangle.maximalRectangle(input)
             assertHelper(result == expected, problemName: Hard_085_Maximal_Rectangle_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

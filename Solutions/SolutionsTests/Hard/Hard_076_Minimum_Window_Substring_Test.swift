@@ -49,7 +49,7 @@ class Hard_076_Minimum_Window_Substring_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [String], expected: String) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_076_Minimum_Window_Substring_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Hard_076_Minimum_Window_Substring.minWindow(s: input[0], t: input[1])
             assertHelper(result == expected, problemName: Hard_076_Minimum_Window_Substring_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

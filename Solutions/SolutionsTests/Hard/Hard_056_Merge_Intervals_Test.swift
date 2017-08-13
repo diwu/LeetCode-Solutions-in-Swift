@@ -57,7 +57,7 @@ class Hard_056_Merge_Intervals_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [[Int]], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Hard_056_Merge_Intervals_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Hard_056_Merge_Intervals.merge(input)
             assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Hard_056_Merge_Intervals_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

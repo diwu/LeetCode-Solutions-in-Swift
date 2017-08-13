@@ -68,7 +68,7 @@ class Medium_082_Remove_Duplicates_From_Sorted_List_II_Test: XCTestCase, Solutio
     }
     func asyncHelper(input: [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_082_Remove_Duplicates_From_Sorted_List_II.deleteDuplicates(self.helper1(input)))
             assertHelper(expected == result, problemName: Medium_082_Remove_Duplicates_From_Sorted_List_II_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

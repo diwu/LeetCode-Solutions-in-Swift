@@ -47,7 +47,7 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: String, expected: [String]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_093_Restore_IP_Addresses_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_swift: [String] = Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
             let result_objc: [String] = ObjC_Medium_093_Restore_IP_Addresses.restoreIpAddresses(input)
             assertHelper(NSSet.init(array: result_swift) == NSSet.init(array: expected), problemName: Medium_093_Restore_IP_Addresses_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)

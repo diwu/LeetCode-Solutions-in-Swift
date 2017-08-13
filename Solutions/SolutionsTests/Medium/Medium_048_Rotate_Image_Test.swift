@@ -27,7 +27,7 @@ class Medium_048_Rotate_Image_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [[Int]], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_048_Rotate_Image_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             var result = input
             Medium_048_Rotate_Image.rotate(&result)
             assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: Medium_048_Rotate_Image_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)

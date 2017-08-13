@@ -68,7 +68,7 @@ class Medium_024_Swap_Nodes_In_Pairs_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: Node?, expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_024_Swap_Nodes_In_Pairs_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: [Int] = self.helper2(Medium_024_Swap_Nodes_In_Pairs.swapPairs(input))
             assertHelper(expected == result, problemName: Medium_024_Swap_Nodes_In_Pairs_Test.ProblemName, input: input as Any, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

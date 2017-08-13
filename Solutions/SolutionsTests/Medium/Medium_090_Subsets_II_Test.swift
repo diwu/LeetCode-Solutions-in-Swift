@@ -65,7 +65,7 @@ class Medium_090_Subsets_II_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_090_Subsets_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Medium_090_Subsets_II.subsetsWithDup(input)
             let resultSet: NSSet = NSSet(array: result)
             let expectedSet: NSSet = NSSet(array: expected)

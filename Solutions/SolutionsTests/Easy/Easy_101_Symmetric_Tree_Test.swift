@@ -70,7 +70,7 @@ class Easy_101_Symmetric_Tree_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: [Int], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_101_Symmetric_Tree_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_swift: Bool = Easy_101_Symmetric_Tree.isSymmetric(self.convertArrayToTree_swift(input))
             let result_objc: Bool = ObjC_Easy_101_Symmetric_Tree.isSymmetric(self.convertArrayToTree_objc(input))
             assertHelper(expected == result_swift, problemName: Easy_101_Symmetric_Tree_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)

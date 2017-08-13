@@ -45,7 +45,7 @@ class Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test: XCTestCase, Soluti
     private func asyncHelper(input ipt: [Int], expected: [Int] ) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_080_Remove_Duplicates_From_Sorted_Array_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             Medium_080_Remove_Duplicates_From_Sorted_Array_II.removeDuplicates(&input)
             let result = input
             for i in 0 ..< expected.count {

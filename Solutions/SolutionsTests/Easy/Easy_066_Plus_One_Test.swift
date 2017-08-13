@@ -35,7 +35,7 @@ class Easy_066_Plus_One_Test: XCTestCase, SolutionsTestCase {
     private func asyncHelper(input: inout [Int], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_066_Plus_One_Test.TimeOutName)
         var localInput = input
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             Easy_066_Plus_One.plusOne(&localInput)
             let result = localInput
             assertHelper(result == expected, problemName: Easy_066_Plus_One_Test.ProblemName, input: localInput, resultValue: result, expectedValue: expected)

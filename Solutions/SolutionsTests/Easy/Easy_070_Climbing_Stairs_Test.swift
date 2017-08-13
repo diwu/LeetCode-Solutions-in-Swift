@@ -49,7 +49,7 @@ class Easy_070_Climbing_Stairs_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input: Int, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_070_Climbing_Stairs_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Easy_070_Climbing_Stairs.climbStairs(input)
             assertHelper(result == expected, problemName: Easy_070_Climbing_Stairs_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

@@ -82,7 +82,7 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase, SolutionsTestCa
     }
     private func asyncHelper(input: Int, expected: NSSet) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_095_Unique_Binary_Search_Trees_II_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_swift: [Node_Swift?] = Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
             let result_objc: [Node_ObjC] = ObjC_Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
             var int_arr_swift: [[Int]] = []

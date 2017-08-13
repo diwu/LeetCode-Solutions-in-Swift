@@ -65,7 +65,7 @@ class Medium_035_Search_Insert_Position_Test: XCTestCase, SolutionsTestCase {
     private func asyncHelper(input ipt: [Any], expected: Int) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_035_Search_Insert_Position_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: Int = Medium_035_Search_Insert_Position.searchInsert(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Medium_035_Search_Insert_Position_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

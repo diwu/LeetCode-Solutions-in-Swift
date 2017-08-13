@@ -70,7 +70,7 @@ class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase, SolutionsTestCa
     }
     private func asyncHelper(input: String, expected: String) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_005_Longest_Palindromic_Substring_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_swift: String = Medium_005_Longest_Palindromic_Substring.longestPalindrome(input)
             let result_objc: String = ObjC_Medium_005_Longest_Palindromic_Substring.longestPalindrome(input)
             assertHelper(expected == result_swift, problemName: Medium_005_Longest_Palindromic_Substring_Test.ProblemName, input: input, resultValue: result_swift, expectedValue: expected)

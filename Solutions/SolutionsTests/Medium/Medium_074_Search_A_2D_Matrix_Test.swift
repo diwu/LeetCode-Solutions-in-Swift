@@ -44,7 +44,7 @@ class Medium_074_Search_A_2D_Matrix_Test: XCTestCase, SolutionsTestCase {
     }
     private func asyncHelper(input0: [[Int]], input1: Int, expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_074_Search_A_2D_Matrix_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result = Medium_074_Search_A_2D_Matrix.searchMatrix(matrix: input0, target: input1)
             assertHelper(result == expected, problemName: Medium_074_Search_A_2D_Matrix_Test.ProblemName, input: input0, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {

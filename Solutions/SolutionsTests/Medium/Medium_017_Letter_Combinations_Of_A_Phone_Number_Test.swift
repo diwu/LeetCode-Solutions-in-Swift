@@ -41,7 +41,7 @@ class Medium_017_Letter_Combinations_Of_A_Phone_Number_Test: XCTestCase, Solutio
     }
     private func asyncHelper(input: String, expected: [String]) {
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_017_Letter_Combinations_Of_A_Phone_Number_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_swift: Set<String> = Set(Medium_017_Letter_Combinations_Of_A_Phone_Number.letterCombinations(input))
             let result_objc: Set<String> = Set(ObjC_Medium_017_Letter_Combinations_Of_A_Phone_Number.letterCombinations(input))
             let expectedSet: Set<String> = Set(expected)

@@ -80,7 +80,7 @@ class Easy_028_Implement_StrStr_Test: XCTestCase, SolutionsTestCase {
     private func asyncHelper(input ipt: [Any?], expected: Int) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Easy_028_Implement_StrStr_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)
             let result_KMP: Int = Easy_028_Implement_StrStr.strStr_KMP(hayStack: input[0] as! String?, needle: input[1] as! String?)
             assertHelper(expected == result_brute_force && result_brute_force == result_KMP, problemName: Easy_028_Implement_StrStr_Test.ProblemName, input: input, resultValue: ["brute force: \(result_brute_force)", "KMP: \(result_KMP)"], expectedValue: expected)

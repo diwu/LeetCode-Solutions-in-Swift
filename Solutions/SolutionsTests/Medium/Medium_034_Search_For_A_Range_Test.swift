@@ -60,7 +60,7 @@ class Medium_034_Search_For_A_Range_Test: XCTestCase, SolutionsTestCase {
     private func asyncHelper(input ipt: [Any], expected: [Int]) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: Medium_034_Search_For_A_Range_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        serialQueue().async(execute: { () -> Void in
             let result: [Int] = Medium_034_Search_For_A_Range.searchRange(nums: input[0] as! [Int], target: input[1] as! Int)
             assertHelper(expected == result, problemName: Medium_034_Search_For_A_Range_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
