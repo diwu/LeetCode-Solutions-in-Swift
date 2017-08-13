@@ -20,6 +20,9 @@ protocol SolutionsTestCase {
 }
 
 extension SolutionsTestCase {
+    func problemName() -> String {
+        return String(describing: type(of: self))
+    }
     func timeOut() -> TimeInterval {
         return 0.01
     }
