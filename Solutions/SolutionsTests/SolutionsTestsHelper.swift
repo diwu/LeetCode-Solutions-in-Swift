@@ -24,7 +24,7 @@ extension SolutionsTestCase {
         return String(describing: type(of: self))
     }
     func timeOut() -> TimeInterval {
-        return 0.01
+        return 1
     }
     func timeOutSuffix() -> String {
         return " Time Out"
