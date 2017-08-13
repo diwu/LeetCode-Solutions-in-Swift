@@ -130,7 +130,6 @@ class Medium_029_Divide_Two_Integers_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     
-
     private func asyncHelper(input ipt: [Int], expected: Int) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description: timeOutName())
