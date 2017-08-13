@@ -23,8 +23,8 @@ Inspired by @yuyibestman at https://leetcode.com/discuss/8472/share-my-o-n-time-
 
 import Foundation
 
-class Medium_031_Next_Permutation {
-    class func reverseInPlace(nums: inout [Int], start: Int, end: Int) {
+struct Medium_031_Next_Permutation {
+    static func reverseInPlace(nums: inout [Int], start: Int, end: Int) {
         if start > end {
             return
         }
@@ -32,7 +32,7 @@ class Medium_031_Next_Permutation {
             nums.swapAt(i, start + end - i)
         }
     }
-    class func nextPermutation(_ nums: inout [Int]) {
+    static func nextPermutation(_ nums: inout [Int]) {
         let length: Int = nums.count
         if length < 2 {
             return

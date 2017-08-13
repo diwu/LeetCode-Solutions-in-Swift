@@ -16,8 +16,8 @@ Inspired by @lucastan & @ngcl at https://leetcode.com/discuss/11358/simple-o-log
 
 import Foundation
 
-class Medium_029_Divide_Two_Integers {
-    class func divide(dividend: Int, divisor: Int) -> Int {
+struct Medium_029_Divide_Two_Integers {
+    static func divide(dividend: Int, divisor: Int) -> Int {
         if divisor == 0 {
             return Int.max
         }
