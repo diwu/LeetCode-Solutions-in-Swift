@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_076_Minimum_Window_Substring_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_076_Minimum_Window_Substring"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
     func test_001() {
         let input: [String] = ["ADOBECODEBANC", "ABC"]
         let expected: String = "BANC"

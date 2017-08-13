@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_035_Search_Insert_Position_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_035_Search_Insert_Position"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Any] = [[1,3,5,6], 5]
         let expected: Int = 2

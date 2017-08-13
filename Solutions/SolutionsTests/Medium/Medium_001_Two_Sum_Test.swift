@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_001_Two_Sum_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_001_Two_Sum"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input0: [Int] = [2, 7, 11, 15]
         let input1: Int = 9

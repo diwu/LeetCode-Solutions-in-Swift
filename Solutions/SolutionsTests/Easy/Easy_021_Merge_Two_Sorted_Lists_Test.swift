@@ -10,9 +10,6 @@ import XCTest
 
 class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase, SolutionsTestCase {
 
-    private static let ProblemName: String = "Easy_020_Valid_Parentheses"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
 
     private typealias Node = Easy_021_Merge_Two_Sorted_Lists.Node
 

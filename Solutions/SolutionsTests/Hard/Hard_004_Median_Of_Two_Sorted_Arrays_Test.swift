@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_004_Median_Of_Two_Sorted_Arrays_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_004_Median_Of_Two_Sorted_Arrays"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
     func testCase001() {
         let input0: [Int] = [1, 2, 11]
         let input1: [Int] = [30, 40, 50]

@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_058_Length_Of_Last_Word_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_058_Length_Of_Last_Word"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: String = "Hello World"
         let expected: Int = 5

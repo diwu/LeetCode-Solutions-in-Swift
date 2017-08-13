@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_066_Plus_One_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_066_Plus_One"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 100
     func test_001() {
         var input: [Int] = [1, 9, 9]
         let expected: [Int] = [2, 0, 0]

@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_089_Gray_Code_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_089_Gray_Code"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: Int = 1
         asyncHelper(input: input)

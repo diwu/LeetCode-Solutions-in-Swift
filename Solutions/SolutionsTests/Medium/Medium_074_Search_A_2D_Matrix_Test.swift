@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_074_Search_A_2D_Matrix_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_074_Search_A_2D_Matrix"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input0: [[Int]] = [
             [1,   3,  5,  7],

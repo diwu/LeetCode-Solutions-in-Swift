@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_069_Sqrt_X_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_069_Sqrt_X"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
     func test_001() {
         let input: Int = 9
         let expected: Int = 3

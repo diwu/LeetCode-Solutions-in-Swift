@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_050_Pow_X_N_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_050_Pow_X_N"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Any] = [987.654, 4]
         let expected: Double = pow(987.654, 4)

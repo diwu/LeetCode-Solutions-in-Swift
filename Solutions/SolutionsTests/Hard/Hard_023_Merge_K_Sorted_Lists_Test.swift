@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_023_Merge_K_Sorted_Lists_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_023_Merge_K_Sorted_Lists"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
 
     private typealias Node = Hard_023_Merge_K_Sorted_Lists.Node
 

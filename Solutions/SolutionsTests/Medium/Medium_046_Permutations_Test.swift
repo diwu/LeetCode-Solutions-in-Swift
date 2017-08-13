@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_046_Permutations_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_046_Permutations"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
     func test_001() {
         let input: [Int] = [1, 2, 3]
         let expected: [[Int]] = [[1, 2, 3], [2, 1, 3], [1, 3, 2], [2, 3, 1], [3, 1, 2], [3, 2, 1]]

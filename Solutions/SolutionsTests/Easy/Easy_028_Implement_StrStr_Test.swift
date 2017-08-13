@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_028_Implement_StrStr_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_028_Implement_StrStr"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Any?] = ["abc", "a"]
         let expected: Int = 0

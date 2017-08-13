@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_045_Jump_Game_II_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_045_Jump_Game_II"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Int] = [2, 3, 1, 1, 4]
         let expected: Int = 2

@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_049_Anagrams_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_049_Anagrams"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [String] = ["cat", "rye", "aye", "dog", "god", "cud", "cat", "old", "fop", "bra"]
         let expected: [String] = ["cat","cat","dog","god"]

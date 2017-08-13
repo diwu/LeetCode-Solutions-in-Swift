@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_083_Remove_Duplicates_From_Sorted_List_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_083_Remove_Duplicates_From_Sorted_List"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     private typealias Node = Easy_083_Remove_Duplicates_From_Sorted_List.Node
     func test_001() {
         let input: [Int] = [1, 2, 3, 3, 4, 4, 5]

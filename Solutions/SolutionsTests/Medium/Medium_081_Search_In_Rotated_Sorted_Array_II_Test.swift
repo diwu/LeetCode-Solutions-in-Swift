@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_081_Search_In_Rotated_Sorted_Array_II"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Any] = [[4, 5, 6, 7, 0, 1, 2], 5]
         let expected: Bool = true

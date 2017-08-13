@@ -10,9 +10,6 @@ import XCTest
 
 class Easy_019_Remove_Nth_Node_From_End_Of_List_Test: XCTestCase, SolutionsTestCase {
 
-    private static let ProblemName: String = "Easy_019_Remove_Nth_Node_From_End_Of_List"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
 
     private typealias Node = Easy_019_Remove_Nth_Node_From_End_Of_List.Node
 

@@ -10,9 +10,6 @@ import XCTest
 
 class Medium_017_Letter_Combinations_Of_A_Phone_Number_Test: XCTestCase, SolutionsTestCase {
 
-    private static let ProblemName: String = "Medium_017_Letter_Combinations_Of_A_Phone_Number"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     
     func test_001() {
         let input: String = "23"

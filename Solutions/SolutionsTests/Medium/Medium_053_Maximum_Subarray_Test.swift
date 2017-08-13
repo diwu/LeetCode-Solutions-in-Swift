@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_053_Maximum_Subarray_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_053_Maximum_Subarray"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Int] = [-2 , 1, -3, 4, -1, 2, 1, -5, 4]
         let expected: Int = 6

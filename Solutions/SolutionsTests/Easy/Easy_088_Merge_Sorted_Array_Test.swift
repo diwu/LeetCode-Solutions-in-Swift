@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_088_Merge_Sorted_Array_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_088_Merge_Sorted_Array"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         var input0: [Int] = [0]
         let input1: [Int] = [1]

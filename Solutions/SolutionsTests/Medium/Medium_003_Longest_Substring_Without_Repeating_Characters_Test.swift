@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_003_Longest_Substring_Without_Repeating_Characters_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_003_Longest_Substring_Without_Repeating_Characters"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func testCase001() {
         let input: String = "abcabcdzaba"
         let expected: Int = 5

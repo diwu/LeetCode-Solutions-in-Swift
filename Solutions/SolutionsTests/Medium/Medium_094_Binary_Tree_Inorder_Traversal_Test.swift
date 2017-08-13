@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_094_Binary_Tree_Inorder_Traversal_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_094_Binary_Tree_Inorder_Traversal"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Medium_094_Binary_Tree_Inorder_Traversal.Node
     private typealias Node_ObjC = ObjC_Medium_094_Binary_Tree_Inorder_Traversal_Node
     func test_001() {

@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_075_Sort_Colors_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_071_Simplify_Path"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         var input: [Int] = [2, 1, 1, 2, 2, 1, 0, 0, 1, 2]
         let expected: [Int] = [0, 0, 1, 1, 1, 1, 2, 2, 2, 2]

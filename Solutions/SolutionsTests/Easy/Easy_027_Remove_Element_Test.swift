@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_027_Remove_Element_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_027_Remove_Element"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Any] = [[1, 2, 2, 3], 2]
         let expected: [Int] = [1, 3]

@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_067_Add_Binary_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_067_Add_Binary"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [String] = ["11", "1"]
         let expected: String = "100"

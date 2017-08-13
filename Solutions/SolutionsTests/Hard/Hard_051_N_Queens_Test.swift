@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_051_N_Queens_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_051_N_Queens"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: Int = 4
         let expected: [[String]] = [

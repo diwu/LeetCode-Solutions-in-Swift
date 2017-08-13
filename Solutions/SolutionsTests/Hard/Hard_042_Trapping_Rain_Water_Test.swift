@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_042_Trapping_Rain_Water_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_042_Trapping_Rain_Water"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Int] = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
         let expected: Int = 6

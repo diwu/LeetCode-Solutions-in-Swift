@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_087_Scramble_String_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_087_Scramble_String"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [String?] = ["rgtae", "great"]
         let expected: Bool = true

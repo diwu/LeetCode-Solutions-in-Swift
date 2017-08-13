@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_043_Multiply_Strings_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_043_Multiply_Strings"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value * 10
     func test_001() {
         let input: [String] = ["123", "9876"]
         let expected: String = "1214748"

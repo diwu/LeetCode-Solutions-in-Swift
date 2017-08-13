@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_039_Combination_Sum_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_039_Combination_Sum"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [Any] = [[2, 3, 6, 7], 7]
         let expected: [[Int]] = [[7], [2, 2, 3]]

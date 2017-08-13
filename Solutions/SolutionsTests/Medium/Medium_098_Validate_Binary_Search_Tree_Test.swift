@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_098_Validate_Binary_Search_Tree_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_098_Validate_Binary_Search_Tree"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Medium_098_Validate_Binary_Search_Tree.Node
     private typealias Node_ObjC = ObjC_Medium_098_Validate_Binary_Search_Tree_Node
     private func convertArrayToTree_swift(_ arr: [Int]) -> Node_Swift {

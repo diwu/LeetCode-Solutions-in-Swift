@@ -10,13 +10,12 @@ import XCTest
 
 class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
 
-    let ProblemName: String = "Medium_015_3Sum"
 
     func test_001() {
         let input: [Int] = []
         let result: [[Int]] = Medium_015_3Sum.threeSum(input)
         let expected: [[Int]] = []
-        assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_002() {
@@ -25,7 +24,7 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
         var expected: [[Int]] = [[-1, 0, 1], [-1, -1, 2]]
 
         if result.count != expected.count {
-            assertHelper(false, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(false, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
         } else {
             for i in 0 ..< expected.count {
                 var flag: Bool = false
@@ -39,7 +38,7 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
                     }
                 }
                 if flag == false {
-                    assertHelper(false, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+                    assertHelper(false, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
                 }
             }
         }
@@ -49,7 +48,7 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
         let input: [Int] = [-1, -2, -3]
         let result: [[Int]] = Medium_015_3Sum.threeSum(input)
         let expected: [[Int]] = []
-        assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+        assertHelper(compareTwoDimensionIntArray(arr0: result, arr1: expected), problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_004() {
@@ -58,7 +57,7 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
         var expected: [[Int]] = [[-10, 0, 10], [-9, 1, 8], [-3, 1, 2], [-10, 2, 8]]
 
         if result.count != expected.count {
-            assertHelper(false, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(false, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
         } else {
             for i in 0 ..< expected.count {
                 var flag: Bool = false
@@ -72,7 +71,7 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
                     }
                 }
                 if flag == false {
-                    assertHelper(false, problemName: ProblemName, input: input, resultValue: result, expectedValue: expected)
+                    assertHelper(false, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
                 }
             }
         }

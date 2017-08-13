@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_101_Symmetric_Tree_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_101_Symmetric_Tree"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Easy_101_Symmetric_Tree.Node
     private typealias Node_ObjC = ObjC_Easy_101_Symmetric_Tree_Node
     private func convertArrayToTree_swift(_ arr: [Int]) -> Node_Swift {

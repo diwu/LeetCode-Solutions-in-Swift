@@ -9,9 +9,6 @@
 import XCTest
 
 class Hard_085_Maximal_Rectangle_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Hard_085_Maximal_Rectangle"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: [[Character]] = [
             ["0","0","0","1"],

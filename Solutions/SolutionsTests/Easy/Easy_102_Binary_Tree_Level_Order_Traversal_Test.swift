@@ -9,9 +9,6 @@
 import XCTest
 
 class Easy_102_Binary_Tree_Level_Order_Traversal_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Easy_102_Binary_Tree_Level_Order_Traversal"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     private typealias Node_Swift = Easy_102_Binary_Tree_Level_Order_Traversal.Node
     private func convertArrayToTree_swift(_ arr: [Int]) -> Node_Swift? {
         guard arr.count > 0 else {

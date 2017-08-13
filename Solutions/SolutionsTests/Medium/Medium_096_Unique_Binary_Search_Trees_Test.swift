@@ -9,9 +9,6 @@
 import XCTest
 
 class Medium_096_Unique_Binary_Search_Trees_Test: XCTestCase, SolutionsTestCase {
-    private static let ProblemName: String = "Medium_096_Unique_Binary_Search_Trees"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
     func test_001() {
         let input: Int = 1
         let expected: Int = 1
