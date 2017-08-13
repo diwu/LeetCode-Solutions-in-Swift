@@ -8,10 +8,12 @@
 
 import XCTest
 
-class Medium_029_Divide_Two_Integers_Test: XCTestCase {
-    private static let ProblemName: String = "Medium_029_Divide_Two_Integers"
-    private static let TimeOutName = ProblemName + Default_Timeout_Suffix
-    private static let TimeOut = Default_Timeout_Value
+class Medium_029_Divide_Two_Integers_Test: XCTestCase, SolutionsTestCase {
+    
+    func problemName() -> String {
+        return "Medium_029_Divide_Two_Integers"
+    }
+    
     func test_001() {
         let input: [Int] = [3, 1]
         let expected: Int = 3
@@ -127,19 +129,21 @@ class Medium_029_Divide_Two_Integers_Test: XCTestCase {
         let expected: Int = 9876 / -54
         asyncHelper(input: input, expected: expected)
     }
+    
+
     private func asyncHelper(input ipt: [Int], expected: Int) {
         var input = ipt
-        weak var expectation: XCTestExpectation? = self.expectation(description: Medium_029_Divide_Two_Integers_Test.TimeOutName)
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
+        weak var expectation: XCTestExpectation? = self.expectation(description: timeOutName())
+        serialQueue().async(execute: { () -> Void in
             let result: Int = Medium_029_Divide_Two_Integers.divide(dividend: input[0], divisor: input[1])
-            assertHelper(expected == result, problemName: Medium_029_Divide_Two_Integers_Test.ProblemName, input: input, resultValue: result, expectedValue: expected)
+            assertHelper(expected == result, problemName: self.problemName(), input: input, resultValue: result, expectedValue: expected)
             if let unwrapped = expectation {
                 unwrapped.fulfill()
             }
         })
-        waitForExpectations(timeout: Medium_029_Divide_Two_Integers_Test.TimeOut) { (error: Error?) -> Void in
+        waitForExpectations(timeout: timeOut()) { (error: Error?) -> Void in
             if error != nil {
-                assertHelper(false, problemName: Medium_029_Divide_Two_Integers_Test.ProblemName, input: input, resultValue: Medium_029_Divide_Two_Integers_Test.TimeOutName, expectedValue: expected)
+                assertHelper(false, problemName: self.problemName(), input: input, resultValue: self.timeOutName(), expectedValue: expected)
             }
         }
     }
