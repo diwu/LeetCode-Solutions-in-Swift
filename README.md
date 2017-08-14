@@ -6,7 +6,7 @@ Where it all begins: [https://github.com/apple/swift](https://github.com/apple/s
 * Best time/space complexity guaranteed. (Think about **O(1) space** in Binary Tree Inorder Traversal. It's that good.)
 * Written with Swift-specific language features in mind. (**guard**/**defer**, **map**/**filter**/**reduce**, **optionality**, **inout/@noescape**, **characters as extended grapheme clusters**, etc)
 * Comprehensive test cases guarding against wrong answers and timeouts.
-* A work in progress. Currently at **102** / ( 635 - 130 Paid Subscription ) = 20.2%, with **636** test cases.
+* A work in progress. Currently at **102** / ( 635 - 130 Paid Subscription ) = 20.2%, with **638** test cases.
 
 Please note: Subscript-based O(1) time random access to characters inside a string is not supported by Swift, due to [the way Swift strings are stored](http://oleb.net/blog/2014/07/swift-strings/). Amortized O(1) time random access could be achieved if we manually slice the string and convert it into an array.
 
