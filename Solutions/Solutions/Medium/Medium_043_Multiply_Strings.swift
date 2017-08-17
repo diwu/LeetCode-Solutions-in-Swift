@@ -25,20 +25,20 @@ private extension String {
 struct Medium_043_Multiply_Strings {
     static func multiply(num1: String, num2: String) -> String {
         var sum = Array<Character>(repeating: "0", count: num1.characters.count+num2.characters.count)
+        let dict: [Character: Int] = [
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 5,
+            "6": 6,
+            "7": 7,
+            "8": 8,
+            "9": 9,
+            ]
         for i in (0 ... num1.characters.count - 1).reversed() {
             var carry = 0
-            var dict: [Character: Int] = [
-                "0": 0,
-                "1": 1,
-                "2": 2,
-                "3": 3,
-                "4": 4,
-                "5": 5,
-                "6": 6,
-                "7": 7,
-                "8": 8,
-                "9": 9,
-            ]
             for j in (0 ... num2.characters.count - 1).reversed() {
                 let tmp: Int = dict[sum[i + j + 1]]! + dict[num1[i]]! * dict[num2[j]]! + carry;
                 sum[i + j + 1] = Character("\(tmp % 10)")
