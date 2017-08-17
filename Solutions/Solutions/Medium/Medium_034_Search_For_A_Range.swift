@@ -22,8 +22,8 @@ Inspired by @stellari at https://leetcode.com/discuss/18242/clean-iterative-solu
 
 import Foundation
 
-class Medium_034_Search_For_A_Range {
-    class func searchRange(nums: [Int], target: Int) -> [Int] {
+struct Medium_034_Search_For_A_Range {
+    static func searchRange(nums: [Int], target: Int) -> [Int] {
         var i: Int = 0
         var j: Int = nums.count - 1
         var result: [Int] = Array<Int>(repeating: -1, count: 2)

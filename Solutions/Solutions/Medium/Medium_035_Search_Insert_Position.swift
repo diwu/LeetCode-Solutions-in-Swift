@@ -22,8 +22,8 @@ Inspired by @ouchxp at https://leetcode.com/discuss/8869/simple-binary-search-so
 
 import Foundation
 
-class Medium_035_Search_Insert_Position {
-    class func searchInsert(nums: [Int], target: Int) -> Int {
+struct Medium_035_Search_Insert_Position {
+    static func searchInsert(nums: [Int], target: Int) -> Int {
         var low: Int = 0
         var high: Int = nums.count - 1
         while low <= high {
