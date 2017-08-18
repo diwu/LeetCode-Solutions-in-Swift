@@ -26,24 +26,9 @@ struct Medium_046_Permutations {
             return
         }
         for i in begin..<nums.count {
-            
-            //FIXME: "Swap in place" causes runtime error!
-            
-            //This looks like a regresssion issue introduced in Xcode 7 Beta 6
-            //Open Radar https://openradar.appspot.com/22440946
-            //For now as a workaround we perform swap with an additional temporary variable
-            
-            //swap(&nums[begin], &nums[i])
-            var tmp: Int = nums[begin];
-            nums[begin] = nums[i];
-            nums[i] = tmp
-            
+            nums.swapAt(i, begin)
             permuteRecursive(nums: nums, begin: begin + 1, result: &result)
-            
-            //swap(&nums[begin], &nums[i])
-            tmp = nums[begin];
-            nums[begin] = nums[i];
-            nums[i] = tmp
+            nums.swapAt(i, begin)
         }
     }
     static func permute(_ nums: [Int]) -> [[Int]] {
