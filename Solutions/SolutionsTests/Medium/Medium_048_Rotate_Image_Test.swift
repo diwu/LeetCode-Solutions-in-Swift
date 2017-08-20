@@ -22,6 +22,58 @@ class Medium_048_Rotate_Image_Test: XCTestCase, SolutionsTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
+    func test_002() {
+        let input: [[Int]] = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12],
+            [13, 14, 15, 16]
+        ]
+        let expected: [[Int]] = [
+            [13, 9, 5, 1],
+            [14, 10, 6, 2],
+            [15, 11, 7, 3],
+            [16, 12, 8, 4]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_003() {
+        let input: [[Int]] = [
+            [1]
+        ]
+        let expected: [[Int]] = [
+            [1]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_004() {
+        let input: [[Int]] = [
+            [1, 2],
+            [3, 4]
+        ]
+        let expected: [[Int]] = [
+            [3, 1],
+            [4, 2]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_005() {
+        let input: [[Int]] = [
+            [1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10],
+            [11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20],
+            [21, 22, 23, 24, 25]
+        ]
+        let expected: [[Int]] = [
+            [21, 16, 11, 6, 1],
+            [22, 17, 12, 7, 2],
+            [23, 18, 13, 8, 3],
+            [24, 19, 14, 9, 4],
+            [25, 20, 15, 10, 5]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: [[Int]], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
