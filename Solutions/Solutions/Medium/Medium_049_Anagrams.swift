@@ -6,9 +6,18 @@ https://leetcode.com/problems/anagrams/
 
 Level: medium
 
-Given an array of strings, return all groups of strings that are anagrams.
-
-Note: All inputs will be in lower-case.
+ Given an array of strings, group anagrams together.
+ 
+ For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"], 
+ Return:
+ 
+ [
+     ["ate", "eat","tea"],
+     ["nat","tan"],
+     ["bat"]
+ ]
+ 
+ Note: All inputs will be in lower-case.
 
 Inspired by @zxyperfect at https://leetcode.com/discuss/18664/sharing-my-very-concise-solution-with-explanation
 
@@ -17,27 +26,23 @@ Inspired by @zxyperfect at https://leetcode.com/discuss/18664/sharing-my-very-co
 import Foundation
 
 struct Medium_049_Anagrams {
-    static func anagrams(_ strings: [String]) ->[String] {
-        var result: [String] = []
-        var sortedStrings = strings;
-        var map = [String: [Int]]()
-        for i in 0 ..< strings.count {
-            var arr: [Character] = Array(sortedStrings[i].characters)
-            arr.sort {$0 < $1}
-            sortedStrings[i] = String(arr)
-            if let _ = map[sortedStrings[i]] {
-                map[sortedStrings[i]]!.append(i)
+    private static func helper(_ str: String) -> String {
+        var arr = Array(str.characters)
+        arr.sort()
+        return String(arr)
+    }
+    static func anagrams(_ strings: [String]) -> [[String]] {
+        var dict: [String: [String]] = [:]
+        for s in strings {
+            let sortedS = helper(s)
+            var arr = dict[sortedS]
+            if let _ = arr {
+                arr!.append(s)
             } else {
-                map[sortedStrings[i]] = [i]
+                arr = [s]
             }
+            dict[sortedS] = arr!
         }
-        for (_, intArr) in map {
-            if intArr.count > 1 {
-                for i in 0 ..< intArr.count {
-                    result.append(strings[intArr[i]])
-                }
-            }
-        }
-        return result;
+        return Array(dict.values)
     }
 }
