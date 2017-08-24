@@ -39,6 +39,27 @@ class Medium_055_Jump_Game_Test: XCTestCase, SolutionsTestCase {
         let expected: Bool = true
         asyncHelper(input: input, expected: expected)
     }
+    func test_007() {
+        let input: [Int] = [3,2,2,0,4]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_008() {
+        let input: [Int] = [2, 8, 0, 0, 0, 0]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_009() {
+        let input: [Int] = [2, 0]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_010() {
+        let input: [Int] = [0, 2, 1]
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    
     private func asyncHelper(input: [Int], expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
