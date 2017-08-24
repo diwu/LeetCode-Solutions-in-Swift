@@ -25,49 +25,36 @@ Inspired by @qwl5004 at https://leetcode.com/discuss/12228/super-simple-and-easy
 import Foundation
 
 struct Medium_054_Spiral_Matrix {
+    private static func validate(_ rBegin: Int, _ rEnd: Int, _ cBegin: Int, _ cEnd: Int) -> Bool {
+        if rBegin > rEnd { return false }
+        if cBegin > cEnd { return false }
+        return true
+    }
     static func spiralOrder(_ matrix: [[Int]]) -> [Int] {
-        var res = [Int]()
-        if matrix.count == 0 {
-            return res
+        let m = matrix.count
+        if m == 0 { return [] }
+        let n = matrix[0].count
+        if n == 0 { return [] } 
+        var result = [Int]()
+        var rBegin = 0, cBegin = 0
+        var rEnd = m - 1
+        var cEnd = n - 1
+        while rBegin <= rEnd && cBegin <= cEnd {
+            for i in cBegin ... cEnd { result.append(matrix[rBegin][i]) }
+            rBegin += 1
+            if validate(rBegin, rEnd, cBegin, cEnd) == true {
+                for i in rBegin ... rEnd { result.append(matrix[i][cEnd]) }
+            }
+            cEnd -= 1
+            if validate(rBegin, rEnd, cBegin, cEnd) == true {
+                for i in (cBegin ... cEnd).reversed() { result.append(matrix[rEnd][i]) }
+            }
+            rEnd -= 1
+            if validate(rBegin, rEnd, cBegin, cEnd) == true {
+                for i in (rBegin ... rEnd).reversed() { result.append(matrix[i][cBegin]) }
+            }
+            cBegin += 1
         }
-        var rowBegin = 0
-        var rowEnd = matrix.count - 1
-        var colBegin = 0
-        var colEnd = matrix[0].count - 1
-        while rowBegin <= rowEnd && colBegin <= colEnd {
-            //Traverse Right
-            if colBegin <= colEnd {
-                for i in colBegin...colEnd {
-                    res.append(matrix[rowBegin][i])
-                }
-            }
-            rowBegin += 1
-            //Traverse Down
-            if rowBegin <= rowEnd {
-                for i in rowBegin...rowEnd {
-                    res.append(matrix[i][colEnd])
-                }
-            }
-            colEnd -= 1
-            if rowBegin <= rowEnd {
-                //Traverse Left
-                if colBegin <= colEnd {
-                    for i in (colBegin...colEnd).reversed() {
-                        res.append(matrix[rowEnd][i])
-                    }
-                }
-            }
-            rowEnd -= 1
-            if colBegin <= colEnd {
-                //Traverse Up
-                if rowBegin <= rowEnd {
-                    for i in (rowBegin...rowEnd).reversed() {
-                        res.append(matrix[i][colBegin])
-                    }
-                }
-            }
-            colBegin += 1
-        }
-        return res
+        return result
     }
 }
