@@ -44,6 +44,50 @@ class Medium_054_Spiral_Matrix_Test: XCTestCase, SolutionsTestCase {
         let expected: [Int] = [1]
         asyncHelper(input: input, expected: expected)
     }
+    func test_005() {
+        let input: [[Int]] = [
+            [1, 2]
+        ]
+        let expected: [Int] = [1, 2]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_006() {
+        let input: [[Int]] = [
+            [1],
+            [2]
+        ]
+        let expected: [Int] = [1, 2]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_007() {
+        let input: [[Int]] = [
+            []
+        ]
+        let expected: [Int] = []
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_008() {
+        let input: [[Int]] = [
+            [], []
+        ]
+        let expected: [Int] = []
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_009() {
+        let input: [[Int]] = [
+            [],
+            []
+        ]
+        let expected: [Int] = []
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_010() {
+        let input: [[Int]] = [
+        
+        ]
+        let expected: [Int] = []
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: [[Int]], expected: [Int]) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
