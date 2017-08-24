@@ -17,20 +17,18 @@ A = [2,3,1,1,4], return true.
 
 A = [3,2,1,0,4], return false.
 
-Inspired by @alexander7 at https://leetcode.com/discuss/15567/linear-and-simple-solution-in-c
-
 */
 
 import Foundation
 
 struct Medium_055_Jump_Game {
     static func canJump(_ nums: [Int]) -> Bool {
-        var i = 0
-        var reach = 0
-        while i < nums.count && i <= reach {
-            reach = max(i + nums[i], reach)
-            i += 1
+        if nums.count == 0 { return false }
+        var curr = nums[0]
+        for i in 1 ..< nums.count {
+            if curr == 0 { return false }
+            curr = max(curr - 1, nums[i])
         }
-        return i == nums.count
+        return true
     }
 }
