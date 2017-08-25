@@ -48,10 +48,29 @@ class Medium_061_Rotate_List_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     
+    func test_007() {
+        let input: [Any] = [[1], 99]
+        let expected: [Int] = [1]
+        asyncHelper(input: input, expected: expected)
+    }
+    
+    func test_008() {
+        let input: [Any] = [[1, 2], 99]
+        let expected: [Int] = [2, 1]
+        asyncHelper(input: input, expected: expected)
+    }
+    
+    func test_009() {
+        let input: [Any] = [[1, 2], 100]
+        let expected: [Int] = [1, 2]
+        asyncHelper(input: input, expected: expected)
+    }
+    
     private func helper1(_ intArray: [Int]) -> Node? {
         var nodeArray: [Node] = []
         for i in intArray {
-            let node: Node = Node(value: i, next: nil)
+            let node: Node = Node()
+            node.value = i
             nodeArray.append(node)
         }
         if nodeArray.count == 0 {
@@ -67,7 +86,7 @@ class Medium_061_Rotate_List_Test: XCTestCase, SolutionsTestCase {
         var res: [Int] = []
         var localHead = head
         while localHead != nil {
-            res.append(localHead!.value)
+            res.append(localHead!.value!)
             localHead = localHead?.next
         }
         return res

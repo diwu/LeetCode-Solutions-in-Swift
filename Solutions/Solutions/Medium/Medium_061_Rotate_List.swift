@@ -20,18 +20,14 @@ import Foundation
 
 class Medium_061_Rotate_List {
     class Node {
-        var value: Int
+        var value: Int?
         var next: Node?
-        init(value: Int, next: Node?) {
-            self.value = value
-            self.next = next
-        }
     }
     class func rotateRight(head: Node?, k: Int) -> Node? {
         if head == nil || head?.next == nil {
             return head;
         }
-        let dummy: Node = Node(value: 0, next: nil)
+        let dummy: Node = Node()
         dummy.next = head
         var fast: Node? = dummy
         var slow: Node? = dummy
@@ -41,7 +37,7 @@ class Medium_061_Rotate_List {
             i += 1
         }
         let count = i - k % i
-        for _ in (1 ... count).reversed() {
+        for _ in 0 ..< count {
             slow = slow?.next
         }
         fast?.next = dummy.next
