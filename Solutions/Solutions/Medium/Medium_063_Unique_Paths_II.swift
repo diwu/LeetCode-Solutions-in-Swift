@@ -36,6 +36,9 @@ struct Medium_063_Unique_Paths_II {
         if obstacleGrid.count == 0 {
             return 0
         }
+        if obstacleGrid[0].count == 0 {
+            return 0
+        }
         let rows = obstacleGrid.count
         let cols = obstacleGrid[0].count
         

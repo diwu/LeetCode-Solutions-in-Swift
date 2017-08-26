@@ -54,6 +54,13 @@ class Medium_063_Unique_Paths_II_Test: XCTestCase, SolutionsTestCase {
         let expected: Int = 10
         asyncHelper(input: input, expected: expected)
     }
+    func test_006() {
+        let input: [[Int]] = [
+            []
+        ]
+        let expected: Int = 0
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: [[Int]], expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
