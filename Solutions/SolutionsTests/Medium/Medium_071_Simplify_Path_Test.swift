@@ -10,8 +10,8 @@ import XCTest
 
 class Medium_071_Simplify_Path_Test: XCTestCase, SolutionsTestCase {
     func test_001() {
-        let input: String = "/..."
-        let expected: String = "/..."
+        let input: String = "/a/./b"
+        let expected: String = "/a/b"
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
@@ -25,23 +25,28 @@ class Medium_071_Simplify_Path_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func test_004() {
-        let input: String = "/abc/..."
-        let expected: String = "/abc/..."
+        let input: String = "/a/./b/"
+        let expected: String = "/a/b"
         asyncHelper(input: input, expected: expected)
     }
     func test_005() {
-        let input: String = "/.."
-        let expected: String = "/"
+        let input: String = "/a/./b/.."
+        let expected: String = "/a"
         asyncHelper(input: input, expected: expected)
     }
     func test_006() {
-        let input: String = "/."
+        let input: String = "/a/./b/../.."
         let expected: String = "/"
         asyncHelper(input: input, expected: expected)
     }
     func test_007() {
         let input: String = "/home//foo/"
         let expected: String = "/home/foo"
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_008() {
+        let input: String = "/a/./b/../"
+        let expected: String = "/a"
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input: String, expected: String) {
