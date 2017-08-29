@@ -28,17 +28,17 @@ struct Medium_071_Simplify_Path {
     static func simplifyPath(_ path: String) -> String {
         var stack: [String] = []
         let arr = path.characters.split {$0 == "/"}.map(String.init)
-                for (_, s) in arr.enumerated() {
+        for s in arr {
             if s == "" || s == "." {
                 continue
-            } else if s == ".." && stack.isEmpty == false {
-                stack.removeLast()
+            } else if s == ".." {
+                _ = stack.popLast()
             } else if s != ".." {
                 stack.append(s)
             }
         }
         var res = ""
-        for (_, s) in stack.enumerated() {
+        for s in stack {
             res += "/" + s
         }
         return res.isEmpty ? "/" : res
