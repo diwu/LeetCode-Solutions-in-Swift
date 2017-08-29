@@ -49,6 +49,16 @@ class Medium_071_Simplify_Path_Test: XCTestCase, SolutionsTestCase {
         let expected: String = "/a"
         asyncHelper(input: input, expected: expected)
     }
+    func test_009() {
+        let input: String = "/a/./b/../../.."
+        let expected: String = "/"
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_010() {
+        let input: String = "/aaa/./bbbb/../cc//ddd/eeee/./../f/"
+        let expected: String = "/aaa/cc/ddd/f"
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: String, expected: String) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
