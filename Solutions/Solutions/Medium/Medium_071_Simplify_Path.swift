@@ -26,21 +26,13 @@ import Foundation
 
 struct Medium_071_Simplify_Path {
     static func simplifyPath(_ path: String) -> String {
-        var stack: [String] = []
-        let arr = path.characters.split {$0 == "/"}.map(String.init)
+        let arr = path.characters.split{ $0=="/" }.map(String.init)
+        var stack = [String]()
         for s in arr {
-            if s == "" || s == "." {
-                continue
-            } else if s == ".." {
-                _ = stack.popLast()
-            } else if s != ".." {
-                stack.append(s)
-            }
+            if s == "" || s == "." { continue }
+            if s == ".." { _ = stack.popLast(); continue; }
+            stack.append(s)
         }
-        var res = ""
-        for s in stack {
-            res += "/" + s
-        }
-        return res.isEmpty ? "/" : res
+        return stack.isEmpty ? "/" : "/" + stack.joined(separator:"/")
     }
 }
