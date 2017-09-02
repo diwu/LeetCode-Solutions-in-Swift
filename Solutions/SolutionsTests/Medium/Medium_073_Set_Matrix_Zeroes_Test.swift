@@ -52,6 +52,44 @@ class Medium_073_Set_Matrix_Zeroes_Test: XCTestCase, SolutionsTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
+    func test_004() {
+        let input: [[Int]] = [
+            [1]
+        ]
+        let expected: [[Int]] = [
+            [1]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_005() {
+        let input: [[Int]] = [
+            [0]
+        ]
+        let expected: [[Int]] = [
+            [0]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_006() {
+        let input: [[Int]] = [
+            [0],
+            [1]
+        ]
+        let expected: [[Int]] = [
+            [0],
+            [0]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_007() {
+        let input: [[Int]] = [
+            [1, 0],
+        ]
+        let expected: [[Int]] = [
+            [0, 0],
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input ipt: [[Int]], expected: [[Int]]) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
