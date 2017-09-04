@@ -29,18 +29,21 @@ import Foundation
 
 struct Medium_074_Search_A_2D_Matrix {
     static func searchMatrix(matrix: [[Int]], target: Int) -> Bool {
-        let n = matrix.count
-        let m = matrix[0].count
-        var l = 0
-        var r = m * n - 1
-        while l != r {
-            let mid = (l + r - 1) >> 1
-            if matrix[mid/m][mid%m] < target {
-                l = mid + 1
-            } else {
-                r = mid
-            }
+        let m = matrix.count
+        guard m > 0 else { return false }
+        let n = matrix[0].count
+        guard n > 0 else { return false }
+        var lo = 0, hi = m * n - 1
+        while lo < hi {
+            let mid = (lo+hi)/2
+            let r = mid/n
+            let c = mid%n
+            let midV = matrix[r][c]
+            if target == midV { return true }
+            else if target < midV { hi = mid - 1 }
+            else { lo = mid + 1}
         }
-        return matrix[r/m][r%m] == target
+        let r = lo/n, c = lo%n, midV = matrix[r][c]
+        return midV == target
     }
 }
