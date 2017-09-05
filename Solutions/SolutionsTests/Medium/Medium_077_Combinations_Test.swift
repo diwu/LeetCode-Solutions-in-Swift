@@ -36,6 +36,49 @@ class Medium_077_Combinations_Test: XCTestCase, SolutionsTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
+    func test_004() {
+        let input: [Int] = [4, 1]
+        let expected: [[Int]] = [
+            [1],
+            [2],
+            [3],
+            [4]
+            ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_005() {
+        let input: [Int] = [4, 3]
+        let expected: [[Int]] = [
+            [1, 2, 3],
+            [1, 2, 4],
+            [1, 3, 4],
+            [2, 3, 4]
+            ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_006() {
+        let input: [Int] = [4, 4]
+        let expected: [[Int]] = [
+            [1, 2, 3, 4]
+            ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_007() {
+        let input: [Int] = [5, 2]
+        let expected: [[Int]] = [
+            [1,2],
+            [1,3],
+            [1,4],
+            [1,5],
+            [2,3],
+            [2,4],
+            [2,5],
+            [3,4],
+            [3,5],
+            [4,5]
+            ]
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: [Int], expected: [[Int]]) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
