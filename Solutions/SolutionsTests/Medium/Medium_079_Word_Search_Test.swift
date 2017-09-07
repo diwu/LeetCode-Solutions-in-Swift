@@ -39,6 +39,34 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
         let expected: Bool = false
         asyncHelper(input0: input0, input1: input1, expected: expected)
     }
+    func test_004() {
+        let input0: [[Character]] = [
+            Array("ABCE".characters),
+            Array("SFCS".characters),
+            Array("ADEE".characters),
+            ]
+        let input1: String = "SCD"
+        let expected: Bool = false
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    func test_005() {
+        let input0: [[Character]] = [
+            Array("A".characters),
+            Array("S".characters),
+            Array("A".characters),
+            ]
+        let input1: String = "ASA"
+        let expected: Bool = true
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
+    func test_006() {
+        let input0: [[Character]] = [
+            Array("ABCE".characters),
+            ]
+        let input1: String = "BC"
+        let expected: Bool = true
+        asyncHelper(input0: input0, input1: input1, expected: expected)
+    }
     private func asyncHelper(input0: [[Character]], input1: String, expected: Bool) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
