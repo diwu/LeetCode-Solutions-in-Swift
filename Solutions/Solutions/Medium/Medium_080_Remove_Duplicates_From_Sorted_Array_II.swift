@@ -21,18 +21,18 @@ Inspired by @dragonmigo at https://leetcode.com/discuss/2754/is-it-possible-to-s
 import Foundation
 
 struct Medium_080_Remove_Duplicates_From_Sorted_Array_II {
-    static func removeDuplicates(_ nums: inout [Int]) {
-        if nums.count <= 2 {
-            return
+    static func removeDuplicates(_ nums: inout [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
+        var curr = 0, count = 0, prev = Int.min
+        for i in 0..<nums.count {
+            let tmp = nums[i]
+            if tmp != prev || count < 2 {
+                count = (tmp != prev) ? 1 : 2
+                nums[curr] = tmp
+                curr += 1
+                prev = tmp
+            } else { continue }
         }
-        var len = 2
-        var iterator = 2
-        while iterator < nums.count {
-            if nums[iterator] != nums[len-2] {
-                nums[len] = nums[iterator]
-                len += 1
-            }
-            iterator += 1
-        }
+        return curr
     }
 }
