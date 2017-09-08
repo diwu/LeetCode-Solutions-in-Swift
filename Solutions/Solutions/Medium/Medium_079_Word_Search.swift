@@ -28,12 +28,6 @@ Inspired by @pavel-shlyk at https://leetcode.com/discuss/23165/accepted-very-sho
 
 import Foundation
 
-private extension String {
-    subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
-    }
-}
-
 struct Medium_079_Word_Search {
     static func exist(_ b: [[Character]], word: String) -> Bool {
         var board = b
@@ -53,7 +47,8 @@ struct Medium_079_Word_Search {
         if x < 0 || y < 0 || x == board.count || y == board[x].count {
             return false
         }
-        if board[x][y] != word[i] {
+        let wArr = [Character](word)
+        if board[x][y] != wArr[i] {
             return false
         }
 
