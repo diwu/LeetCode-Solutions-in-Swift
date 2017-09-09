@@ -124,6 +124,36 @@ class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase, SolutionsTe
         let expected: Bool = false
         asyncHelper(input: input, expected: expected)
     }
+    func test_024() {
+        let input: [Any] = [[1, 1, 1, 1, 1, 1, 1], 1]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_025() {
+        let input: [Any] = [[1, 1, 1, 1, 1, 1, 1], 0]
+        let expected: Bool = false
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_026() {
+        let input: [Any] = [[0, 1, 1, 1, 1, 1, 1], 0]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_027() {
+        let input: [Any] = [[1, 1, 1, 1, 1, 1, 0], 0]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_028() {
+        let input: [Any] = [[1, 1, 1, 0, 1, 1], 0]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_029() {
+        let input: [Any] = [[1, 1, 1, 0, 1, 1, 1], 0]
+        let expected: Bool = true
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input ipt: [Any], expected: Bool) {
         var input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
