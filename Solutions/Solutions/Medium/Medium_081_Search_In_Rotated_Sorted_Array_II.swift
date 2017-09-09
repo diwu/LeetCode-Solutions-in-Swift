@@ -21,28 +21,20 @@ import Foundation
 
 struct Medium_081_Search_In_Rotated_Sorted_Array_II {
     static func search(nums: [Int], target: Int) -> Bool {
-        var l = 0, r = nums.count - 1
-        while l <= r {
-            let m = l + (r - l)/2
-            if nums[m] == target {
-                return true
-            }
-            if nums[l] < nums[m] {  // left half is sorted
-                if nums[l] <= target && target < nums[m] {
-                    r = m - 1
-                } else {
-                    l = m + 1
-                }
-            } else if nums[l] > nums[m] {
-                if nums[m] < target && target <= nums[r] {
-                    l = m + 1
-                } else {
-                    r = m - 1
-                }
-            } else {
-                l += 1
-            }
+        guard nums.count > 0 else { return false }
+        var lo = 0, hi = nums.count - 1
+        while lo < hi {
+            let mid = (lo + hi)/2
+            if nums[mid] == target { return true }
+            if nums[lo] < nums[mid] {
+                if target < nums[mid] && target >= nums[lo] { hi = mid - 1 }
+                else { lo = mid + 1 }
+            } else if nums[lo] > nums[mid] {
+                if target > nums[mid] && target <= nums[hi] { lo = mid + 1 }
+                else { hi = mid - 1 }
+            } else { lo += 1 }
         }
-        return false
+        return nums[lo] == target
     }
+                
 }
