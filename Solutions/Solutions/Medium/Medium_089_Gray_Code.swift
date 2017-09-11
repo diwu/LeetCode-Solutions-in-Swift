@@ -24,7 +24,7 @@ For example, [0,2,3,1] is also a valid gray code sequence according to the above
 
 For now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.
 
-Inspired by @mike3 at https://leetcode.com/discuss/2978/what-solution-gray-code-problem-extra-space-used-recursion
+Inspired by @jinrf at https://discuss.leetcode.com/topic/8557/an-accepted-three-line-solution-in-java
 
 */
 
@@ -33,12 +33,8 @@ import Foundation
 struct Medium_089_Gray_Code {
     static func grayCode(_ n: Int) -> [Int] {
         var arr: [Int] = []
-        arr.append(0)
-        for i in 0 ..< n {
-            let tmp = 1 << i
-            for j in (0 ... arr.count - 1).reversed() {
-                arr.append(arr[j] + tmp)
-            }
+        for i in 0 ..< 1<<n {
+            arr.append(i ^ i>>1)
         }
         return arr
     }
