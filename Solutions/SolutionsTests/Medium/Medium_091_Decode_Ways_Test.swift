@@ -34,6 +34,37 @@ class Medium_091_Decode_Ways_Test: XCTestCase, SolutionsTestCase {
         let expected: Int = 3
         asyncHelper(input: input, expected: expected)
     }
+    func test_006() {
+        let input: String = "10"
+        let expected: Int = 1
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_007() {
+        let input: String = "1027"
+        let expected: Int = 1
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_008() {
+        let input: String = "10272"
+        let expected: Int = 1
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_009() {
+        let input: String = "102727"
+        let expected: Int = 1
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_010() {
+        let input: String = "10272720"
+        let expected: Int = 1
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_011() {
+        let input: String = "10272721"
+        let expected: Int = 2
+        asyncHelper(input: input, expected: expected)
+    }
+
     private func asyncHelper(input: String, expected: Int) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
