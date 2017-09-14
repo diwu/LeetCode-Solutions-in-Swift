@@ -25,31 +25,24 @@ Inspired by @manky at https://leetcode.com/discuss/8527/dp-solution-java-for-ref
 
 import Foundation
 
-private extension String {
-    subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
-    }
-    subscript (range: Range<Int>) -> String {
-        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!])
-    }
-}
-
 struct Medium_091_Decode_Ways {
     static func numDecodings(_ s: String) -> Int {
-        let n: Int = s.characters.count
-        if n == 0 {
-            return 0
-        }
-        var memo: [Int] = Array<Int>(repeating: 0, count: n+1)
-        memo[n] = 1
-        memo[n-1] = s[n-1] != "0" ? 1 : 0
-        for i in (0 ... n-2).reversed() {
-            if s[i] == "0" {
-                continue
-            } else {
-                memo[i] = Int(s[i..<i+2])! <= 26 ? memo[i+1]+memo[i+2] : memo[i+1]
+        let len = s.count
+        if len == 0 { return 0 }
+        let arr = [Character](s.characters)
+        var dp = [Int](repeating: 0, count: len+1)
+        dp[len] = 1
+        dp[len-1] = (arr[len-1] == "0") ? 0 : 1
+        for i in (0..<len-1).reversed() {
+            if arr[i] == "0" { continue }
+            else {
+                let v = Int(String(arr[i...i+1]))
+                if let vv = v {
+                    if vv <= 26 { dp[i] = dp[i+1] + dp[i+2] }
+                    else { dp[i] = dp[i+1] }
+                } else { fatalError() }
             }
         }
-        return memo[0]
+        return dp[0]
     }
 }
