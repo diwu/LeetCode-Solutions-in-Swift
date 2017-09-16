@@ -42,6 +42,20 @@ class Medium_093_Restore_IP_Addresses_Test: XCTestCase, SolutionsTestCase {
         ]
         asyncHelper(input: input, expected: expected)
     }
+    func test_005() {
+        let input: String = "01001000"
+        let expected: [String] = [
+            "0.100.100.0"
+            ]
+        asyncHelper(input: input, expected: expected)
+    }
+    func test_006() {
+        let input: String = "256000"
+        let expected: [String] = [
+            "25.60.0.0"
+            ]
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: String, expected: [String]) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
