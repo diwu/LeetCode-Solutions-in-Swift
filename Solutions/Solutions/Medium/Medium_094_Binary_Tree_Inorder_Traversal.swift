@@ -85,13 +85,10 @@ class Medium_094_Binary_Tree_Inorder_Traversal {
         return res
     }
     class func inorderTraversal_recursion_helper(root: Node?, arr: inout [Int]) {
-        if let unwrapped = root {
-            inorderTraversal_recursion_helper(root: unwrapped.left, arr: &arr)
-            arr.append(unwrapped.value)
-            inorderTraversal_recursion_helper(root: unwrapped.right, arr: &arr)
-        } else {
-            return
-        }
+        guard let root = root else { return }
+        inorderTraversal_recursion_helper(root: root.left, arr: &arr)
+        arr.append(root.value)
+        inorderTraversal_recursion_helper(root: root.right, arr: &arr)
     }
     // Recursion, t = O(N), average s = O(log(N)), worst s = O(N)
     class func inorderTraversal_recursion(_ root: Node?) -> [Int] {
