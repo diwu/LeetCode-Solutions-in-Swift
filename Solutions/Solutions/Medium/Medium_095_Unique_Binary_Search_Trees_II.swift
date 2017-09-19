@@ -40,7 +40,7 @@ class Medium_095_Unique_Binary_Search_Trees_II {
             ret.append(nil)
             return ret
         } else if start == end {
-            ret.append(Node.init(value: 1, left: nil, right: nil))
+            ret.append(Node(value: start, left: nil, right: nil))
             return ret
         }
         var left: [Node?] = []
@@ -50,7 +50,7 @@ class Medium_095_Unique_Binary_Search_Trees_II {
             right = genTrees(start: i + 1, end: end)
             for left_node in left {
                 for right_node in right {
-                    let root = Node.init(value: 1, left: left_node, right: right_node)
+                    let root = Node(value: i, left: left_node, right: right_node)
                     ret.append(root)
                 }
             }

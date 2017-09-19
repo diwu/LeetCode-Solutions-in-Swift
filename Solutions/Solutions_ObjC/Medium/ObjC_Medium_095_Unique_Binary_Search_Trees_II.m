@@ -46,7 +46,9 @@
     if (start > end) {
         return @[[NSNull null]];
     } else if (start == end) {
-        return @[[ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node new]];
+        ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node *node = [ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node new];
+        node.value = start;
+        return @[node];
     } else {
         NSMutableArray *ret = [NSMutableArray array];
         NSArray *left;
@@ -56,7 +58,7 @@
             right = [self genTreesWithStart:i+1 end:end];
             for (NSInteger j = 0; j < left.count; j++) {
                 for (NSInteger k = 0; k < right.count; k++) {
-                    ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node *node = [[ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node alloc] initWithValue:1 left:left[j] right:right[k]];
+                    ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node *node = [[ObjC_Medium_095_Unique_Binary_Search_Trees_II_Node alloc] initWithValue:i left:left[j] right:right[k]];
                     [ret addObject:node];
                 }
             }

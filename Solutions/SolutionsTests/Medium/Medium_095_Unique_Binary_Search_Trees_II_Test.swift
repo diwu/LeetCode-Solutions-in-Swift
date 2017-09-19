@@ -61,19 +61,19 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase, SolutionsTestCa
     func test_002() {
         let input: Int = 2
         let expected: NSSet = NSSet(array: [
-            [1, 1, Int.min, Int.min, Int.min],
-            [1, Int.min, 1, Int.min, Int.min],
+            [2, 1, Int.min, Int.min, Int.min],
+            [1, Int.min, 2, Int.min, Int.min],
             ])
         asyncHelper(input: input, expected: expected)
     }
     func test_003() {
         let input: Int = 3
         let expected: NSSet = NSSet(array: [
-            [1, Int.min, 1, 1, Int.min, Int.min, Int.min],
-            [1, 1, Int.min, 1, Int.min, Int.min, Int.min],
-            [1, 1, Int.min, Int.min, 1, Int.min, Int.min],
-            [1, 1, 1, Int.min, Int.min, Int.min, Int.min],
-            [1, Int.min, 1, Int.min, 1, Int.min, Int.min],
+            [1, Int.min, 3, 2, Int.min, Int.min, Int.min],
+            [3, 2, Int.min, 1, Int.min, Int.min, Int.min],
+            [3, 1, Int.min, Int.min, 2, Int.min, Int.min],
+            [2, 1, 3, Int.min, Int.min, Int.min, Int.min],
+            [1, Int.min, 2, Int.min, 3, Int.min, Int.min],
             ])
         asyncHelper(input: input, expected: expected)
     }
