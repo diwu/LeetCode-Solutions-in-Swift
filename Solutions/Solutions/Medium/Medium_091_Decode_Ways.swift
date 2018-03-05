@@ -29,7 +29,7 @@ struct Medium_091_Decode_Ways {
     static func numDecodings(_ s: String) -> Int {
         let len = s.count
         if len == 0 { return 0 }
-        let arr = [Character](s.characters)
+        let arr = [Character](s)
         var dp = [Int](repeating: 0, count: len+1)
         dp[len] = 1
         dp[len-1] = (arr[len-1] == "0") ? 0 : 1

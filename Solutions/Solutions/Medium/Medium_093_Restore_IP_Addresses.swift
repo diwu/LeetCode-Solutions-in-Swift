@@ -22,7 +22,7 @@ import Foundation
 struct Medium_093_Restore_IP_Addresses {
     // t = O(1), s = O(1)
     static func restoreIpAddresses(_ s: String) -> [String] {
-        let chars = [Character](s.characters)
+        let chars = [Character](s)
         let len = chars.count
         guard len >= 4 else { return [] }
         var result = [String]()

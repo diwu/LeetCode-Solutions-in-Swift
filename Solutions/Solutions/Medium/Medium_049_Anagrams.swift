@@ -27,7 +27,7 @@ import Foundation
 
 struct Medium_049_Anagrams {
     private static func helper(_ str: String) -> String {
-        var arr = Array(str.characters)
+        var arr = Array(str)
         arr.sort()
         return String(arr)
     }

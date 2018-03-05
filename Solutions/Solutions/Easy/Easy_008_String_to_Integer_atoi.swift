@@ -33,7 +33,7 @@ struct Easy_008_String_to_Integer_atoi {
     static func atoi(_ s: String) -> Int {
         var sign: Int?
         var base = 0
-        for char in s.characters {
+        for char in s {
             guard char != "+" else {
                 if let signUnwrapped = sign {
                     return base * signUnwrapped

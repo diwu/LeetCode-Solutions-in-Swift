@@ -11,9 +11,9 @@ import XCTest
 class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
     func test_001() {
         let input0: [[Character]] = [
-            Array("ABCE".characters),
-            Array("SFCS".characters),
-            Array("ADEE".characters),
+            Array("ABCE"),
+            Array("SFCS"),
+            Array("ADEE"),
         ]
         let input1: String = "ABCCED"
         let expected: Bool = true
@@ -21,9 +21,9 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
     }
     func test_002() {
         let input0: [[Character]] = [
-            Array("ABCE".characters),
-            Array("SFCS".characters),
-            Array("ADEE".characters),
+            Array("ABCE"),
+            Array("SFCS"),
+            Array("ADEE"),
         ]
         let input1: String = "SEE"
         let expected: Bool = true
@@ -31,9 +31,9 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
     }
     func test_003() {
         let input0: [[Character]] = [
-            Array("ABCE".characters),
-            Array("SFCS".characters),
-            Array("ADEE".characters),
+            Array("ABCE"),
+            Array("SFCS"),
+            Array("ADEE"),
         ]
         let input1: String = "ABCB"
         let expected: Bool = false
@@ -41,9 +41,9 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
     }
     func test_004() {
         let input0: [[Character]] = [
-            Array("ABCE".characters),
-            Array("SFCS".characters),
-            Array("ADEE".characters),
+            Array("ABCE"),
+            Array("SFCS"),
+            Array("ADEE"),
             ]
         let input1: String = "SCD"
         let expected: Bool = false
@@ -51,9 +51,9 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
     }
     func test_005() {
         let input0: [[Character]] = [
-            Array("A".characters),
-            Array("S".characters),
-            Array("A".characters),
+            Array("A"),
+            Array("S"),
+            Array("A"),
             ]
         let input1: String = "ASA"
         let expected: Bool = true
@@ -61,7 +61,7 @@ class Medium_079_Word_Search_Test: XCTestCase, SolutionsTestCase {
     }
     func test_006() {
         let input0: [[Character]] = [
-            Array("ABCE".characters),
+            Array("ABCE"),
             ]
         let input1: String = "BC"
         let expected: Bool = true

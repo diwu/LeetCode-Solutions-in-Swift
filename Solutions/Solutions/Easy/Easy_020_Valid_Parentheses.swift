@@ -18,7 +18,7 @@ import Foundation
 
 private extension String {
     func randomAccessCharacterArray() -> Array<Character> {
-        return Array(self.characters)
+        return Array(self)
     }
 }
 

@@ -33,7 +33,7 @@ private extension String {
      we could hopefully achieve amortized O(1) time for random access.
      */
     func randomAccessCharactersArray() -> [Character] {
-        return Array(self.characters)
+        return Array(self)
     }
 }
 
