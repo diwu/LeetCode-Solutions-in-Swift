@@ -51,13 +51,13 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        guard let localEndIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex) else {
-            return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.endIndex])
+        guard let localEndIndex = self.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex) else {
+            return String(self[self.index(self.startIndex, offsetBy: range.lowerBound)..<self.endIndex])
         }
-        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<localEndIndex])
+        return String(self[self.index(self.startIndex, offsetBy: range.lowerBound)..<localEndIndex])
     }
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -66,31 +66,31 @@ struct Hard_087_Scramble_String {
         return isScramble_recursion(s1: s1, s2: s2)
     }
     static func isScramble_recursion(s1: String?, s2: String?) -> Bool {
-        if s1 == nil || s2 == nil || s1?.characters.count != s2?.characters.count {
+        if s1 == nil || s2 == nil || s1?.count != s2?.count {
             return false
         }
         if s1 == s2 {
             return true
         }
-        if (s1?.characters.sorted())! != (s2?.characters.sorted())! {
+        if (s1?.sorted())! != (s2?.sorted())! {
             return false
         }
-        let count: Int = (s1?.characters.count)!
+        let count: Int = (s1?.count)!
         for i in 1 ..< count {
             if isScramble_recursion(s1: s1![0..<i], s2: s2![0..<i]) && isScramble_recursion(s1: s1![i..<Int.max], s2: s2![i..<Int.max]) {
                 return true
             }
-            if isScramble_recursion(s1: s1![0..<i], s2: s2![(s2?.characters.count)! - i..<Int.max]) && isScramble_recursion(s1: s1![i..<Int.max], s2: s2![0..<(s2?.characters.count)! - i]) {
+            if isScramble_recursion(s1: s1![0..<i], s2: s2![(s2?.count)! - i..<Int.max]) && isScramble_recursion(s1: s1![i..<Int.max], s2: s2![0..<(s2?.count)! - i]) {
                 return true
             }
         }
         return false
     }
     static func isScramble_iteration(s1: String?, s2: String?) -> Bool {
-        if s1 == nil || s2 == nil || s1?.characters.count != s2?.characters.count {
+        if s1 == nil || s2 == nil || s1?.count != s2?.count {
             return false
         }
-        let len = s1?.characters.count
+        let len = s1?.count
         var dp: Array<Array<Array<Bool>>> = Array<Array<Array<Bool>>>(repeating: Array<Array<Bool>>(repeating: Array<Bool>(repeating: false, count: 100), count: 100), count: 100)
         for i in (0...len! - 1).reversed() {
             for j in (0...len!-1).reversed() {

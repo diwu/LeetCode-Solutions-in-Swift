@@ -32,29 +32,29 @@ Inspired by @xiaohui7 at https://leetcode.com/discuss/18970/concise-recursive-an
 // Helper
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
     subscript (range: Range<Int>) -> String {
-        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)])
+        return String(self[self.index(self.startIndex, offsetBy: range.lowerBound)..<self.index(self.startIndex, offsetBy: range.upperBound)])
     }
 }
 
 class Hard_010_Regular_Expression_Matching {
     // recursion
     class func isMatch_recursion(s: String, p: String) -> Bool {
-        if p.characters.count == 0 {
-            return s.characters.count == 0
+        if p.count == 0 {
+            return s.count == 0
         }
-        if p.characters.count > 1 && p[1] == "*" {
-            return isMatch_recursion(s: s, p: p[2..<p.characters.count]) || s.characters.count != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<s.characters.count], p: p)
+        if p.count > 1 && p[1] == "*" {
+            return isMatch_recursion(s: s, p: p[2..<p.count]) || s.count != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<s.count], p: p)
         } else {
-            return s.characters.count != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<s.characters.count], p: p[1..<p.characters.count])
+            return s.count != 0 && (s[0] == p[0] || p[0] == ".") && isMatch_recursion(s: s[1..<s.count], p: p[1..<p.count])
         }
     }
     // dp
     class func isMatch(s: String, p: String) -> Bool {
-        let m: Int = s.characters.count
-        let n: Int = p.characters.count
+        let m: Int = s.count
+        let n: Int = p.count
         var f: [[Bool]] = Array<Array<Bool>>(repeating: Array<Bool>(repeating: false, count: n + 1), count: m + 1)
         f[0][0] = true
         for i in 1 ... m {

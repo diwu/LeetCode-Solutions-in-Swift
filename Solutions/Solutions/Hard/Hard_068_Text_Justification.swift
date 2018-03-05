@@ -47,8 +47,8 @@ struct Hard_068_Text_Justification {
         while i < words.count {
             k = 0
             l = 0
-            while i + k < words.count && l + words[i+k].characters.count <= maxWidth - k {
-                l += words[i+k].characters.count
+            while i + k < words.count && l + words[i+k].count <= maxWidth - k {
+                l += words[i+k].count
                 k += 1
             }
             var tmp = words[i]
@@ -66,7 +66,7 @@ struct Hard_068_Text_Justification {
                 }
                 tmp += words[i+j+1]
             }
-            let charArrLen = maxWidth - tmp.characters.count
+            let charArrLen = maxWidth - tmp.count
             let charArr: [Character] = Array(repeating: " ", count: charArrLen)
             tmp += String(charArr)
             res.append(tmp)

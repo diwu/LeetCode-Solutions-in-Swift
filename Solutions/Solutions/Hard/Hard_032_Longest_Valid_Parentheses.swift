@@ -20,7 +20,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -29,12 +29,12 @@ class Hard_032_Longest_Valid_Parentheses {
         if s == nil {
             return 0
         }
-        if (s!).characters.count <= 1 {
+        if (s!).count <= 1 {
             return 0
         }
         var currentMax: Int = 0
-        var longest: [Int] = Array<Int>(repeating: 0, count: (s!).characters.count)
-        for i in 1 ..< (s!).characters.count {
+        var longest: [Int] = Array<Int>(repeating: 0, count: (s!).count)
+        for i in 1 ..< (s!).count {
             let tmp: Int = i - longest[i-1] - 1
             if s![i] == ")" && tmp >= 0 && s![tmp] == "(" {
                 longest[i] = longest[i-1] + 2 + ((tmp - 1 >= 0) ? longest[tmp-1] : 0)

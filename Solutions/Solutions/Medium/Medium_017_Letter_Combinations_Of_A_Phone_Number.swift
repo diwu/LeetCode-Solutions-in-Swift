@@ -31,7 +31,7 @@ Inspired by @lirensun at https://leetcode.com/discuss/24431/my-java-solution-wit
 
 private extension String {
     subscript(index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -53,11 +53,11 @@ struct Medium_017_Letter_Combinations_Of_A_Phone_Number {
     static func letterCombinations(_ digits: String) -> [String] {
         var ans: [String] = []
         ans.append("")
-        for i in 0 ..< digits.characters.count {
+        for i in 0 ..< digits.count {
             let intValue: Int = Int(String(digits[i]))!
-            while ans.first?.characters.count == i {
+            while ans.first?.count == i {
                 let tmp: String = ans.removeFirst()
-                for c in mapping[intValue].characters {
+                for c in mapping[intValue] {
                     ans.append("\(tmp)\(c)")
                 }
             }

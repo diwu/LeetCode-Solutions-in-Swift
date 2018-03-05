@@ -14,7 +14,7 @@ Inspired by @hh1985 at https://leetcode.com/discuss/32204/simple-c-solution-8ms-
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!])
+        return String(self[self.index(self.startIndex, offsetBy: range.lowerBound)..<self.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex)!])
     }
     /*
      Ref: http://oleb.net/blog/2014/07/swift-strings/
@@ -31,24 +31,24 @@ private extension String {
 struct Medium_005_Longest_Palindromic_Substring {
     // t = O(N^2), s = O(1)
     static func longestPalindrome(_ s: String) -> String {
-        guard s.characters.count > 1 else {
+        guard s.count > 1 else {
             return s
         }
         var startIndex: Int = 0
         var maxLen: Int = 1
         var i = 0
         let charArr = s.randomAccessCharactersArray()
-        while i < s.characters.count {
-            guard s.characters.count - i > maxLen / 2 else {
+        while i < s.count {
+            guard s.count - i > maxLen / 2 else {
                 break
             }
             var j = i
             var k = i
-            while k < s.characters.count - 1 && charArr[k+1] == charArr[k] {
+            while k < s.count - 1 && charArr[k+1] == charArr[k] {
                 k += 1
             }
             i = k + 1
-            while k < s.characters.count - 1 && j > 0 && charArr[k+1] == charArr[j-1] {
+            while k < s.count - 1 && j > 0 && charArr[k+1] == charArr[j-1] {
                 k += 1
                 j -= 1
             }

@@ -33,7 +33,7 @@ import Foundation
 
 private extension String {
     subscript(index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -43,11 +43,11 @@ struct Hard_044_Wildcard_Matching {
         var pIndex = 0
         var match = 0
         var startIndex = -1
-        while sIndex < s.characters.count {
-            if pIndex < p.characters.count && (p[pIndex] == "?" || s[sIndex] == p[pIndex]) {
+        while sIndex < s.count {
+            if pIndex < p.count && (p[pIndex] == "?" || s[sIndex] == p[pIndex]) {
                 sIndex += 1
                 pIndex += 1
-            } else if pIndex < p.characters.count && p[pIndex] == "*" {
+            } else if pIndex < p.count && p[pIndex] == "*" {
                 startIndex = pIndex
                 match = sIndex
                 pIndex += 1
@@ -59,9 +59,9 @@ struct Hard_044_Wildcard_Matching {
                 return false
             }
         }
-        while pIndex < p.characters.count && p[pIndex] == "*" {
+        while pIndex < p.count && p[pIndex] == "*" {
             pIndex += 1
         }
-        return pIndex == p.characters.count
+        return pIndex == p.count
     }
 }

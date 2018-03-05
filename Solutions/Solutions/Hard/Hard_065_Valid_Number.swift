@@ -25,7 +25,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
     mutating func removeAtIndex(_ index: Int) -> Character {
         return self.remove(at: self.index(self.startIndex, offsetBy: index))
@@ -40,8 +40,8 @@ struct Hard_065_Valid_Number {
         while s[0] == " " {
             let _ = s.removeAtIndex(0)
         }
-        while s[s.characters.count-1] == " " {
-            let _ = s.removeAtIndex(s.characters.count-1)
+        while s[s.count-1] == " " {
+            let _ = s.removeAtIndex(s.count-1)
         }
         let digits: [Character: Int] = [
             "0": 0,
@@ -55,7 +55,7 @@ struct Hard_065_Valid_Number {
             "8": 8,
             "9": 9,
         ]
-        for i in 0 ..< s.characters.count {
+        for i in 0 ..< s.count {
             if digits[s[i]] != nil {
                 flag = 1
                 if state <= 2 {

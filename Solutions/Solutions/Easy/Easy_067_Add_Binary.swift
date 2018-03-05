@@ -19,7 +19,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -27,8 +27,8 @@ struct Easy_067_Add_Binary {
     static func addBinary(a: String, b: String) -> String {
         var s = ""
         var c: Int = 0
-        var i = a.characters.count - 1
-        var j = b.characters.count - 1
+        var i = a.count - 1
+        var j = b.count - 1
         let characterDict: [Character: Int] = [
             "0": 0,
             "1": 1,

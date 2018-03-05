@@ -18,7 +18,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -31,10 +31,10 @@ class Easy_028_Implement_StrStr {
         while true {
             var j = 0
             while true {
-                if j >= (needle!).characters.count {
+                if j >= (needle!).count {
                     return i
                 }
-                if i + j >= (hayStack!).characters.count {
+                if i + j >= (hayStack!).count {
                     return -1
                 }
                 if hayStack![i+j] != needle![j] {
@@ -49,17 +49,17 @@ class Easy_028_Implement_StrStr {
         if hayStack == nil || needle == nil {
             return -1
         }
-        if (needle!).characters.count == 0 {
+        if (needle!).count == 0 {
             return 0
         }
-        if (hayStack!).characters.count == 0 {
+        if (hayStack!).count == 0 {
             return -1
         }
         var arr: [Character] = Array((needle!).characters)
         var next: [Int] = makeNext(arr)
         var i = 0
         var j = 0
-        let end = (hayStack!).characters.count
+        let end = (hayStack!).count
         while i < end {
             if j == -1 || hayStack![i] == arr[j] {
                 j += 1

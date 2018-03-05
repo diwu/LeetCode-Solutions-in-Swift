@@ -23,10 +23,10 @@ import Foundation
 
 private extension String {
     subscript (range: Range<Int>) -> String {
-        guard let localEndIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex) else {
-            return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.endIndex])
+        guard let localEndIndex = self.index(self.startIndex, offsetBy: range.upperBound, limitedBy: self.endIndex) else {
+            return String(self[self.index(self.startIndex, offsetBy: range.lowerBound)..<self.endIndex])
         }
-        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<localEndIndex])
+        return String(self[self.index(self.startIndex, offsetBy: range.lowerBound)..<localEndIndex])
     }
 }
 
@@ -38,9 +38,9 @@ class Hard_030_Substring_With_Concatenation_Of_All_Words {
         var result: [Int] = []
         var dict1: [String: Int] = [String: Int]()
         var dict2: [String: Int] = [String: Int]()
-        let stringLength: Int = (s!).characters.count
+        let stringLength: Int = (s!).count
         let wordsListSize: Int = words.count
-        let wordLength: Int = words[0].characters.count
+        let wordLength: Int = words[0].count
         for i in 0 ..< wordsListSize {
             if dict1[words[i]] == nil {
                 dict1[words[i]] = 1

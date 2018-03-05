@@ -65,6 +65,11 @@ class Medium_005_Longest_Palindromic_Substring_Test: XCTestCase, SolutionsTestCa
         let expected: String = "aaaaaaa"
         asyncHelper(input: input, expected: expected)
     }
+    func test_012() {
+        let input: String = "abcdefghiabcba"
+        let expected: String = "abcba"
+        asyncHelper(input: input, expected: expected)
+    }
     private func asyncHelper(input: String, expected: String) {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in

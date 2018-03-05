@@ -22,7 +22,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -30,8 +30,8 @@ struct Hard_072_Edit_Distance {
     static func minDistance(word1 w1: String, word2 w2: String) -> Int {
         var word1 = w1
         var word2 = w2
-        var len1 = word1.characters.count
-        var len2 = word2.characters.count
+        var len1 = word1.count
+        var len2 = word2.count
         if len1 < len2 {
             swap(&word1, &word2)
             swap(&len1, &len2)

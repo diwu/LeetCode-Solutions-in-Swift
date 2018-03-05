@@ -24,19 +24,19 @@ import Foundation
 
 private extension String {
     subscript(index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
 struct Hard_097_Interleaving_String {
     // t = O(N*M), s = O(N*M)
     static func isInterleave(s1: String, s2: String, s3: String) -> Bool {
-        if s1.characters.count + s2.characters.count != s3.characters.count {
+        if s1.count + s2.count != s3.count {
             return false
         }
-        var dp: [[Bool]] = Array<Array<Bool>>(repeating: Array<Bool>(repeating: false, count: s2.characters.count+1), count: s1.characters.count+1)
-        for i in 0 ..< s1.characters.count + 1{
-            for j in 0 ..< s2.characters.count + 1{
+        var dp: [[Bool]] = Array<Array<Bool>>(repeating: Array<Bool>(repeating: false, count: s2.count+1), count: s1.count+1)
+        for i in 0 ..< s1.count + 1{
+            for j in 0 ..< s2.count + 1{
                 if i == 0 && j == 0 {
                     dp[0][0] = true
                 } else if i == 0 {
@@ -48,6 +48,6 @@ struct Hard_097_Interleaving_String {
                 }
             }
         }
-        return dp[s1.characters.count][s2.characters.count]
+        return dp[s1.count][s2.count]
     }
 }

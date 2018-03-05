@@ -14,12 +14,12 @@ Inspired by @garysui at https://leetcode.com/discuss/15755/optimal-solution
 
 private extension String {
     subscript(intIndex: Int) -> Character {
-        let index = self.characters.index(self.startIndex, offsetBy: intIndex)
+        let index = self.index(self.startIndex, offsetBy: intIndex)
         return self[index]
     }
     subscript(range: Range<Int>) -> String {
-        let lowerBoundIndex = self.characters.index(self.startIndex, offsetBy: range.lowerBound)
-        let upperBoundIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound)
+        let lowerBoundIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
+        let upperBoundIndex = self.index(self.startIndex, offsetBy: range.upperBound)
         let rangeInStringIndex = lowerBoundIndex ..< upperBoundIndex
         let stringSlice = self[rangeInStringIndex]
         return String(stringSlice)

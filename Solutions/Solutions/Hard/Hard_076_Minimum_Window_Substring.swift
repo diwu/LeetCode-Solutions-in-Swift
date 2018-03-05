@@ -26,7 +26,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -35,7 +35,7 @@ struct Hard_076_Minimum_Window_Substring {
         if s.isEmpty || t.isEmpty {
             return ""
         }
-        var count = t.characters.count
+        var count = t.count
         var charCountDict: Dictionary<Character, Int> = Dictionary()
         var charFlagDict: Dictionary<Character, Bool> = Dictionary()
         for ii in 0 ..< count {
@@ -50,10 +50,10 @@ struct Hard_076_Minimum_Window_Substring {
         var j = 0
         var minLen = Int.max
         var minIdx = 0
-        while i < s.characters.count && j < s.characters.count {
+        while i < s.count && j < s.count {
             if count > 0 {
                 i += 1
-                if i == s.characters.count {
+                if i == s.count {
                     continue
                 }
                 if let charCount = charCountDict[s[i]] {
@@ -87,7 +87,7 @@ struct Hard_076_Minimum_Window_Substring {
         if minLen == Int.max {
             return ""
         }
-        let range = s.characters.index(s.startIndex, offsetBy: minIdx) ..< s.characters.index(s.startIndex, offsetBy: minIdx + minLen)
+        let range = s.index(s.startIndex, offsetBy: minIdx) ..< s.index(s.startIndex, offsetBy: minIdx + minLen)
         return String(s[range])
     }
 }

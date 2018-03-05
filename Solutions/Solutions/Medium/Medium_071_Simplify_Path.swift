@@ -26,7 +26,7 @@ import Foundation
 
 struct Medium_071_Simplify_Path {
     static func simplifyPath(_ path: String) -> String {
-        let arr = path.characters.split{ $0=="/" }.map(String.init)
+        let arr = path.split{ $0=="/" }.map(String.init)
         var stack = [String]()
         for s in arr {
             if s == "" || s == "." { continue }

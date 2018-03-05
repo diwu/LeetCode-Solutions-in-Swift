@@ -41,7 +41,7 @@ struct Medium_079_Word_Search {
         return false
     }
     static private func exist_recursion_helper(board: inout [[Character]], x: Int, y: Int, word: String, i: Int) -> Bool {
-        if i == word.characters.count {
+        if i == word.count {
             return true
         }
         if x < 0 || y < 0 || x == board.count || y == board[x].count {

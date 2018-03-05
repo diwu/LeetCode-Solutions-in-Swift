@@ -24,7 +24,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -36,7 +36,7 @@ class Easy_038_Count_And_Say {
             result = ""
             var counter = 1
             var say: Character = previous[0]
-            for j in 1 ..< previous.characters.count {
+            for j in 1 ..< previous.count {
                 if previous[j] != say {
                     result = "\(result)\(counter)\(say)"
                     counter = 1

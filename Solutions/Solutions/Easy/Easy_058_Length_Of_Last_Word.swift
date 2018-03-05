@@ -24,7 +24,7 @@ import Foundation
 
 private extension String {
     subscript (index: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: index)]
+        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }
 
@@ -32,10 +32,10 @@ struct Easy_058_Length_Of_Last_Word {
     static func lengthOfLastWord(_ s: String) -> Int {
         var len = 0
         var i = 0
-        while i < s.characters.count {
+        while i < s.count {
             if s[i] != " " {
                 len += 1
-            } else if i + 1 < s.characters.count && s[i+1] != " "  {
+            } else if i + 1 < s.count && s[i+1] != " "  {
                 len = 0
             }
             i += 1
