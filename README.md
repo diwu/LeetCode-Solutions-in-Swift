@@ -1,3 +1,4 @@
+<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
 ![logo](https://github.com/diwu/ui-markdown-store/blob/master/swift_sample.png?raw=true)
 
 Where it all begins: [https://github.com/apple/swift](https://github.com/apple/swift).
