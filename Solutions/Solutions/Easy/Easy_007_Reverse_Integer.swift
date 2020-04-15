@@ -35,10 +35,10 @@ Inspired by @wshaoxuan at https://leetcode.com/discuss/120/how-do-we-handle-the-
 struct Easy_007_Reverse_Integer {
     // t = O(N), s = O(1)
     static func reverse(_ x: Int) -> Int {
-        var negtive: Bool
+        var negative: Bool
         var i: UInt
         if x < 0 {
-            negtive = true
+            negative = true
             if x == Int.min {
                 // The "minus 1 then add 1" trick is used to negate Int.min without overflow
                 i = UInt(-(x+1))
@@ -47,7 +47,7 @@ struct Easy_007_Reverse_Integer {
                 i = UInt(-x)
             }
         } else {
-            negtive = false
+            negative = false
             i = UInt(x)
         }
         var res:UInt = 0
@@ -55,16 +55,16 @@ struct Easy_007_Reverse_Integer {
             res = res * 10 + i % 10
             i = i / 10
         }
-        if negtive == false && res > UInt(Int.max) {
+        if negative == false && res > UInt(Int.max) {
             return 0
-        } else if negtive == true && res == UInt(Int.max) + 1 {
+        } else if negative == true && res == UInt(Int.max) + 1 {
             // When input is the reverse of Int.min
             return (-1) * Int(res-1) - 1
-        } else if negtive == true && res > UInt(Int.max) + 1 {
+        } else if negative == true && res > UInt(Int.max) + 1 {
             return 0
         }
 
-        if negtive {
+        if negative {
             return (-1) * Int(res)
         } else {
             return Int(res)
