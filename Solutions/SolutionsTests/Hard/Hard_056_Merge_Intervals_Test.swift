@@ -24,6 +24,7 @@ class Hard_056_Merge_Intervals_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     func test_002() {
+        // The code must work on an empty array also
         let input: [[Int]] = [
         ]
         let expected: [[Int]] = [
@@ -49,6 +50,16 @@ class Hard_056_Merge_Intervals_Test: XCTestCase, SolutionsTestCase {
             [15,18],
             [96, 97],
             [98, 101]
+        ]
+        asyncHelper(input: input, expected: expected)
+    }
+      func test_004() {
+          // to show that the merging must happen for even negative integers
+        let input: [[Int]] = [
+       [0,1],[-99,0],[1,99],[100,102]
+        ]
+        let expected: [[Int]] = [
+            [[-99,99],[100,102]]
         ]
         asyncHelper(input: input, expected: expected)
     }
