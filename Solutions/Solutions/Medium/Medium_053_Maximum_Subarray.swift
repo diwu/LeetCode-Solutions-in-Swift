@@ -19,7 +19,7 @@ import Foundation
 
 struct Medium_053_Maximum_Subarray {
     static func maxSubArray(_ n: [Int]) -> Int {
-        var nums = n
+        let nums = n
         var best = nums[0];
         var current = nums[0];
         

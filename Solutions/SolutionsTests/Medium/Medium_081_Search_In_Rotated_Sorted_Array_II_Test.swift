@@ -155,7 +155,7 @@ class Medium_081_Search_In_Rotated_Sorted_Array_II_Test: XCTestCase, SolutionsTe
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input ipt: [Any], expected: Bool) {
-        var input = ipt
+        let input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Bool = Medium_081_Search_In_Rotated_Sorted_Array_II.search(nums: input[0] as! [Int], target: input[1] as! Int)

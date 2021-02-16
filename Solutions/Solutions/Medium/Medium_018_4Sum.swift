@@ -52,7 +52,7 @@ class Medium_018_4Sum {
         if num.count < 4 {
             return res
         }
-        var sortedNum: [Int] = num.sorted { $0 < $1 }
+        let sortedNum: [Int] = num.sorted { $0 < $1 }
         var map: Dictionary<Int, [Pair]> = Dictionary<Int, [Pair]>()
         var array: [Int] = []
         for i in 0..<sortedNum.count {
@@ -84,7 +84,7 @@ class Medium_018_4Sum {
                 }
             } else if first == last {
                 if let unwrapped = map[first] {
-                    var list: [Pair] = unwrapped
+                    let list: [Pair] = unwrapped
                     for i in 0..<list.count {
                         let a: Pair = list[i]
                         if a.a == a.b {

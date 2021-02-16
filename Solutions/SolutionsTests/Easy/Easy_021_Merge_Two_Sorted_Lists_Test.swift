@@ -14,21 +14,21 @@ class Easy_021_Merge_Two_Sorted_Lists_Test: XCTestCase, SolutionsTestCase {
     private typealias Node = Easy_021_Merge_Two_Sorted_Lists.Node
 
     func test_001() {
-        var input: [Node] = [helper1([1]), helper1([2])]
+        let input: [Node] = [helper1([1]), helper1([2])]
         let expected: [Int] = [1, 2]
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: input[1]))
         assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_002() {
-        var input: [Node] = [helper1([0]), helper1([2])]
+        let input: [Node] = [helper1([0]), helper1([2])]
         let expected: [Int] = [2]
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: nil, l2: input[1]))
         assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
     }
 
     func test_003() {
-        var input: [Node] = [helper1([1]), helper1([0])]
+        let input: [Node] = [helper1([1]), helper1([0])]
         let expected: [Int] = [1]
         let result: [Int] = helper2(Easy_021_Merge_Two_Sorted_Lists.mergeTwoLists(l1: input[0], l2: nil))
         assertHelper(expected == result, problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)

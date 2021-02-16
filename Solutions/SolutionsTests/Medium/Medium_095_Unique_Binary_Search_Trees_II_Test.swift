@@ -81,13 +81,14 @@ class Medium_095_Unique_Binary_Search_Trees_II_Test: XCTestCase, SolutionsTestCa
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_swift: [Node_Swift?] = Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
-            let result_objc: [Node_ObjC] = ObjC_Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
+            let result_objc: [Any] = ObjC_Medium_095_Unique_Binary_Search_Trees_II.generateTrees(input)
             var int_arr_swift: [[Int]] = []
             var int_arr_objc: [[Int]] = []
             for node in result_swift {
                 int_arr_swift.append(self.convertTreeToArray_swift(node))
             }
-            for node in result_objc {
+            for n in result_objc {
+                let node = n as! Node_ObjC
                 int_arr_objc.append(self.convertTreeToArray_objc(node))
             }
             assertHelper(expected == NSSet(array: int_arr_swift), problemName:self.problemName(), input: input, resultValue: int_arr_swift, expectedValue: expected)

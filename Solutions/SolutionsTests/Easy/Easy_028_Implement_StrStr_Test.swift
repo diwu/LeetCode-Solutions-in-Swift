@@ -75,7 +75,7 @@ class Easy_028_Implement_StrStr_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input ipt: [Any?], expected: Int) {
-        var input = ipt
+        let input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result_brute_force: Int = Easy_028_Implement_StrStr.strStr_brute_force(hayStack: input[0] as! String?, needle: input[1] as! String?)

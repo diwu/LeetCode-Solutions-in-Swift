@@ -130,7 +130,7 @@ class Hard_037_Sudoku_Solver_Test: XCTestCase, SolutionsTestCase {
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             Hard_037_Sudoku_Solver.solveSudoku(&input)
-            var result: [[Character]] = input
+            let result: [[Character]] = input
             for i in 0..<9 {
                 assertHelper(expected[i] == result[i], problemName:self.problemName(), input: input, resultValue: result, expectedValue: expected)
             }

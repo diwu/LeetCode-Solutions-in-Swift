@@ -11,21 +11,21 @@ import XCTest
 class Easy_006_ZigZag_Conversion_Test: XCTestCase, SolutionsTestCase {
 
     func test_001() {
-        var input: [Any] = ["PAYPALISHIRING", 3]
+        let input: [Any] = ["PAYPALISHIRING", 3]
         let expected: String = "PAHNAPLSIIGYIR"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
     func test_002() {
-        var input: [Any] = ["PAYPALISHIRING", 1]
+        let input: [Any] = ["PAYPALISHIRING", 1]
         let expected: String = "PAYPALISHIRING"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
     }
     
     func test_003() {
-        var input: [Any] = ["", 3]
+        let input: [Any] = ["", 3]
         let expected: String = ""
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
@@ -38,7 +38,7 @@ class Easy_006_ZigZag_Conversion_Test: XCTestCase, SolutionsTestCase {
          Y A H R
          P   I
          */
-        var input: [Any] = ["PAYPALISHIRING", 4]
+        let input: [Any] = ["PAYPALISHIRING", 4]
         let expected: String = "PINALSIGYAHRPI"
         let result = Easy_006_ZigZag_Conversion.convert(s: input[0] as! String, nRows: input[1] as! Int)
         assertHelper(result == expected, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)

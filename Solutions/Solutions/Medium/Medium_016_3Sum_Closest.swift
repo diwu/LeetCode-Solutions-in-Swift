@@ -25,7 +25,7 @@ struct Medium_016_3Sum_Closest {
         } else {
             var ans: Int = 0
             var sum: Int
-            var sorted: [Int] = num.sorted { $0 < $1 }
+            let sorted: [Int] = num.sorted { $0 < $1 }
             ans = sorted[0] + sorted[1] + sorted[2]
             for i in 0 ..< n-2 {
                 var j: Int = i+1

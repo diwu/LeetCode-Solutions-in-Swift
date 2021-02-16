@@ -55,7 +55,7 @@ class Medium_034_Search_For_A_Range_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input ipt: [Any], expected: [Int]) {
-        var input = ipt
+        let input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: [Int] = Medium_034_Search_For_A_Range.searchRange(nums: input[0] as! [Int], target: input[1] as! Int)

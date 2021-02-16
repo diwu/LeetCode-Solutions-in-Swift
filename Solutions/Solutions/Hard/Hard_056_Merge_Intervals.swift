@@ -25,15 +25,15 @@ struct Hard_056_Merge_Intervals {
             return intervals
         }
         intervals.sort { (elm1, elm2) -> Bool in
-            var e1 = elm1
-            var e2 = elm2
+            let e1 = elm1
+            let e2 = elm2
             return e1[0] <= e2[0]
         }
         var res = [[Int]]()
         var start = intervals[0][0]
         var end = intervals[0][1]
         
-        for var i in intervals {
+        for i in intervals {
             if i[0] <= end {
                 end = max(end, i[1])
             } else {

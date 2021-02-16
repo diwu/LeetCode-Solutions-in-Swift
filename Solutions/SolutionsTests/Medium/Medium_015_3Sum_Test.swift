@@ -20,8 +20,8 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
 
     func test_002() {
         let input: [Int] = [-1, 0, 1, 2, -1, -4]
-        var result: [[Int]] = Medium_015_3Sum.threeSum(input)
-        var expected: [[Int]] = [[-1, 0, 1], [-1, -1, 2]]
+        let result: [[Int]] = Medium_015_3Sum.threeSum(input)
+        let expected: [[Int]] = [[-1, 0, 1], [-1, -1, 2]]
 
         if result.count != expected.count {
             assertHelper(false, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)
@@ -53,8 +53,8 @@ class Medium_015_3Sum_Test: XCTestCase, SolutionsTestCase {
 
     func test_004() {
         let input: [Int] = [-9, 8, 2, 0, 1, -3, 10, -9, 8, -10]
-        var result: [[Int]] = Medium_015_3Sum.threeSum(input)
-        var expected: [[Int]] = [[-10, 0, 10], [-9, 1, 8], [-3, 1, 2], [-10, 2, 8]]
+        let result: [[Int]] = Medium_015_3Sum.threeSum(input)
+        let expected: [[Int]] = [[-10, 0, 10], [-9, 1, 8], [-3, 1, 2], [-10, 2, 8]]
 
         if result.count != expected.count {
             assertHelper(false, problemName: problemName(), input: input, resultValue: result, expectedValue: expected)

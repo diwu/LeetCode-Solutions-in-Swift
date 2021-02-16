@@ -55,8 +55,8 @@ class Easy_028_Implement_StrStr {
         if (hayStack!).count == 0 {
             return -1
         }
-        var arr: [Character] = Array((needle!))
-        var next: [Int] = makeNext(arr)
+        let arr: [Character] = Array((needle!))
+        let next: [Int] = makeNext(arr)
         var i = 0
         var j = 0
         let end = (hayStack!).count

@@ -28,7 +28,7 @@ struct Medium_015_3Sum {
         if num.count < 3 {
             return res
         } else {
-            var sorted: [Int] = num.sorted {$0 < $1}
+            let sorted: [Int] = num.sorted {$0 < $1}
             var twoSum: Int
             let size: Int = sorted.count
             var i = 0

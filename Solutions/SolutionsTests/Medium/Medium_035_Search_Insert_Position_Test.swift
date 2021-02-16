@@ -60,7 +60,7 @@ class Medium_035_Search_Insert_Position_Test: XCTestCase, SolutionsTestCase {
         asyncHelper(input: input, expected: expected)
     }
     private func asyncHelper(input ipt: [Any], expected: Int) {
-        var input = ipt
+        let input = ipt
         weak var expectation: XCTestExpectation? = self.expectation(description:timeOutName())
         serialQueue().async(execute: { () -> Void in
             let result: Int = Medium_035_Search_Insert_Position.searchInsert(nums: input[0] as! [Int], target: input[1] as! Int)
