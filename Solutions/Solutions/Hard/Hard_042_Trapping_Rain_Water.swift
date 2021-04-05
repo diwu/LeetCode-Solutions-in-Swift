@@ -21,7 +21,7 @@ import Foundation
 
 struct Hard_042_Trapping_Rain_Water {
     static func trap(_ nums: [Int]) -> Int {
-        if nums.count == 0 {
+        guard nums.count > 0 else{
             return 0
         }
         var left = 0
